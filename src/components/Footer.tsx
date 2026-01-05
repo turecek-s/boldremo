@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 
 export const Footer = () => {
   const socialLinks = [
     { href: "https://www.facebook.com/BoldREMOllc/", label: "Facebook", icon: Facebook },
     { href: "https://www.instagram.com/boldremo", label: "Instagram", icon: Instagram },
-    { href: "https://twitter.com/boldremo", label: "X (Twitter)", icon: Twitter },
     { href: "https://www.youtube.com/@boldremo", label: "YouTube", icon: Youtube },
     { href: "https://www.linkedin.com/company/boldremo", label: "LinkedIn", icon: Linkedin },
   ];
