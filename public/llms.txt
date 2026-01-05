@@ -1,0 +1,30 @@
+# BoldRemo - Houston Bathroom Remodeling
+
+> BoldRemo is Houston's premier bathroom remodeling company serving Heights, Bellaire, River Oaks, and Kingwood.
+
+## About
+BoldRemo specializes in luxury bathroom renovations, custom tile installation, and flooring services in the Houston metropolitan area. We transform outdated bathrooms into stunning, functional spaces.
+
+## Services
+- Complete Bathroom Remodeling
+- Custom Tile Installation
+- Flooring Services
+- Shower and Tub Conversions
+- Vanity and Countertop Installation
+- Plumbing Fixtures Upgrades
+
+## Service Areas
+- Houston, TX
+- Houston Heights
+- Bellaire, TX
+- River Oaks
+- Kingwood, TX
+
+## Contact
+- Phone: (832) 513-5737
+- Website: https://www.boldremo.com
+- Email: info@boldremo.com
+
+## Social
+- Instagram: https://www.instagram.com/boldremo
+- Facebook: https://www.facebook.com/boldremo
