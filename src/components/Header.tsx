@@ -65,8 +65,9 @@ export const Header = () => {
           <a
             href="tel:+18325135737"
             className="flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            aria-label="Call us at (832) 513-5737"
           >
-            <Phone className="h-4 w-4" />
+            <Phone className="h-4 w-4" aria-hidden="true" />
             (832) 513-5737
           </a>
           <Button asChild variant="default" size="sm">
@@ -106,8 +107,9 @@ export const Header = () => {
             <a
               href="tel:+18325135737"
               className="flex items-center gap-2 text-base font-medium text-primary py-2"
+              aria-label="Call us at (832) 513-5737"
             >
-              <Phone className="h-5 w-5" />
+              <Phone className="h-5 w-5" aria-hidden="true" />
               (832) 513-5737
             </a>
             <Button asChild className="mt-4 w-full">
