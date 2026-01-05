@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 
@@ -8,12 +9,35 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-interface ContactEmailRequest {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  message: string;
+// Input validation schema
+const ContactSchema = z.object({
+  firstName: z.string().min(1, "First name is required").max(50, "First name too long").trim(),
+  lastName: z.string().min(1, "Last name is required").max(50, "Last name too long").trim(),
+  email: z.string().email("Invalid email address").max(100, "Email too long"),
+  phone: z.string().min(10, "Phone number too short").max(20, "Phone number too long").regex(/^[\d\s\-\+\(\)]+$/, "Invalid phone format"),
+  message: z.string().min(10, "Message too short").max(2000, "Message too long").trim(),
+});
+
+// Simple in-memory rate limiting (resets on function cold start)
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute
+const MAX_REQUESTS_PER_WINDOW = 3; // 3 requests per minute per IP
+
+function checkRateLimit(clientIP: string): boolean {
+  const now = Date.now();
+  const record = rateLimitMap.get(clientIP);
+
+  if (!record || now > record.resetTime) {
+    rateLimitMap.set(clientIP, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
+    return true;
+  }
+
+  if (record.count >= MAX_REQUESTS_PER_WINDOW) {
+    return false;
+  }
+
+  record.count++;
+  return true;
 }
 
 // HTML escape function to prevent XSS in email templates
@@ -36,9 +60,42 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { firstName, lastName, email, phone, message }: ContactEmailRequest = await req.json();
+    // Rate limiting check
+    const clientIP = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
+                     req.headers.get("x-real-ip") || 
+                     "unknown";
+    
+    if (!checkRateLimit(clientIP)) {
+      console.warn(`Rate limit exceeded for IP: ${clientIP}`);
+      return new Response(
+        JSON.stringify({ error: "Too many requests. Please wait a moment before trying again." }),
+        {
+          status: 429,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
 
-    console.log("Processing contact form for:", email);
+    // Parse and validate input
+    const rawData = await req.json();
+    const validationResult = ContactSchema.safeParse(rawData);
+    
+    if (!validationResult.success) {
+      console.warn("Validation failed:", validationResult.error.errors);
+      return new Response(
+        JSON.stringify({ 
+          error: "Invalid form data. Please check your inputs.",
+          details: validationResult.error.errors.map(e => e.message)
+        }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    const { firstName, lastName, email, phone, message } = validationResult.data;
+    console.log("Processing validated contact form for:", email);
 
     // Escape all user inputs to prevent XSS in email
     const safeFirstName = escapeHtml(firstName);
