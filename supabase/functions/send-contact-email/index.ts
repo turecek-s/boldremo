@@ -40,6 +40,12 @@ function checkRateLimit(clientIP: string): boolean {
   return true;
 }
 
+// Honeypot check - if filled, it's a bot
+function isHoneypotFilled(data: Record<string, unknown>): boolean {
+  const honeypotValue = data.website;
+  return typeof honeypotValue === 'string' && honeypotValue.trim().length > 0;
+}
+
 // HTML escape function to prevent XSS in email templates
 function escapeHtml(text: string): string {
   if (!text) return '';
@@ -76,8 +82,20 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Parse and validate input
+    // Parse input
     const rawData = await req.json();
+    
+    // Honeypot check - silently reject bot submissions
+    if (isHoneypotFilled(rawData)) {
+      console.warn("Honeypot triggered - likely bot submission");
+      // Return success to not alert the bot
+      return new Response(JSON.stringify({ success: true }), {
+        status: 200,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
+    }
+
+    // Validate input
     const validationResult = ContactSchema.safeParse(rawData);
     
     if (!validationResult.success) {
