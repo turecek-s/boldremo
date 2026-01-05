@@ -23,11 +23,11 @@ const testimonials = [
     date: "2024-10-08",
   },
   {
-    name: "David & Lisa K.",
-    location: "Bellaire, TX",
+    name: "Leah Whitten",
+    location: "Heights, Houston",
     rating: 5,
-    text: "After getting multiple quotes, we chose BoldRemo and couldn't be happier. They turned our outdated bathroom into a modern spa-like retreat. Worth every penny!",
-    date: "2024-08-14",
+    text: "I became acquainted with BoldREMO when they did a large remodel project for my next-door neighbor's house. It was the very best work that I have witnessed. So, I had them do a project in my kitchen area that was seamless from beginning to end. In baseball terms - They hit a home run! Highly recommend! Professional - Quality - Outstanding Work!",
+    date: "2024-09-15",
   },
 ];
 
