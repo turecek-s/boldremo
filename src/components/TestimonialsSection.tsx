@@ -116,7 +116,7 @@ export const TestimonialsSection = () => {
 
         <div className="text-center mt-10">
           <a
-            href="https://maps.app.goo.gl/wshQ1UK7LMBWniEp6"
+            href="https://share.google/ZwzDNVLRuFMgT4i9r"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
