@@ -9,11 +9,11 @@ const testimonials = [
     date: "2024-12-15",
   },
   {
-    name: "Michael R.",
-    location: "River Oaks, TX",
+    name: "Bob Daimler",
+    location: "Houston, TX",
     rating: 5,
-    text: "Professional from start to finish. The tile work exceeded our expectations. They were respectful of our home and cleaned up every day. Outstanding craftsmanship!",
-    date: "2024-10-22",
+    text: "Stan does more than just professional work. He takes such pride in what he does and leaves you with an outstanding product! He has remodeled my master shower and kitchen and now he has just torn out a bathtub and installed a new walk-in shower and installed a hidden trash bin in the kitchen. He comes with my highest recommendation from someone who has worked in construction his whole life.",
+    date: "2024-11-20",
   },
   {
     name: "Jennifer L.",
