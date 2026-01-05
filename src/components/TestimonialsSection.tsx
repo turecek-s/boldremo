@@ -16,11 +16,11 @@ const testimonials = [
     date: "2024-11-20",
   },
   {
-    name: "Jennifer L.",
+    name: "Crystal Magana",
     location: "Kingwood, TX",
     rating: 5,
-    text: "We've used BoldRemo twice now - first for our guest bath and then the master. Both times they delivered beautiful results. Fair pricing and excellent communication throughout.",
-    date: "2024-09-08",
+    text: "BoldREMO remodeled my bathroom and did a phenomenal job, they brought my vision to life!",
+    date: "2024-10-08",
   },
   {
     name: "David & Lisa K.",
