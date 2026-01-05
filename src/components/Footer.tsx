@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube, Linkedin } from "lucide-react";
 
 export const Footer = () => {
+  const socialLinks = [
+    { href: "https://www.facebook.com/boldremo", label: "Facebook", icon: Facebook },
+    { href: "https://www.instagram.com/boldremo", label: "Instagram", icon: Instagram },
+    { href: "https://twitter.com/boldremo", label: "X (Twitter)", icon: Twitter },
+    { href: "https://www.youtube.com/@boldremo", label: "YouTube", icon: Youtube },
+    { href: "https://www.linkedin.com/company/boldremo", label: "LinkedIn", icon: Linkedin },
+  ];
+
   return (
     <footer className="bg-primary text-primary-foreground" role="contentinfo">
       <div className="container-custom section-padding">
@@ -16,25 +24,19 @@ export const Footer = () => {
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
               Houston's Premier Bathroom Remodeling Company. Proudly serving Houston, Heights, Bellaire, River Oaks & Kingwood.
             </p>
-            <div className="flex gap-4">
-              <a
-                href="https://www.facebook.com/boldremo"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="p-2 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="https://www.instagram.com/boldremo"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="p-2 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
+            <div className="flex flex-wrap gap-3">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="p-2 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
+                >
+                  <social.icon className="h-5 w-5" />
+                </a>
+              ))}
             </div>
           </div>
 
