@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
-import heroBathroom from "@/assets/hero-bathroom.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
 
 const images = [
   { src: gallery1, alt: "Modern bathroom renovation with custom tile work in Houston" },
   { src: gallery2, alt: "Luxury bathroom remodel featuring contemporary design" },
-  { src: heroBathroom, alt: "Elegant bathroom transformation with premium finishes" },
+  { src: gallery3, alt: "Elegant master bathroom with marble flooring and freestanding tub" },
 ];
 
 export const GalleryPreview = () => {
