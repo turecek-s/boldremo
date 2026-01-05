@@ -2,11 +2,11 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah M.",
-    location: "Heights, TX",
+    name: "Neil Segel",
+    location: "Heights, Houston",
     rating: 5,
-    text: "BoldRemo completely transformed our master bathroom. The attention to detail was incredible, and they finished on time. Highly recommend for anyone in the Heights area!",
-    date: "2024-11-15",
+    text: "BoldREMO just finished remodeling our kitchen and guest bathroom - they did an AWESOME job!! Stan is very friendly and incredibly helpful with suggestions. Their price was VERY affordable, and they completed the project right on time. Zero complaints! We now have the dream kitchen we wanted in ONE WEEK! I highly recommend Stan and BoldREMO for any remodeling project - Stan has an incredible attention to detail and craftsmanship!",
+    date: "2024-12-15",
   },
   {
     name: "Michael R.",
