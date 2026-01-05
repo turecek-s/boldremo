@@ -5,7 +5,7 @@ export const Footer = () => {
   const socialLinks = [
     { href: "https://www.facebook.com/BoldREMOllc/", label: "Facebook", icon: Facebook },
     { href: "https://www.instagram.com/boldremo_llc/", label: "Instagram", icon: Instagram },
-    { href: "https://www.youtube.com/@boldremo", label: "YouTube", icon: Youtube },
+    { href: "https://youtube.com/@boldremo?si=JovZ4ob_r1JAzd3j", label: "YouTube", icon: Youtube },
     { href: "https://www.linkedin.com/company/boldremo", label: "LinkedIn", icon: Linkedin },
   ];
 
