@@ -22,7 +22,7 @@ const About = () => {
         <section className="pt-32 pb-16 bg-muted">
           <div className="container-custom text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-semibold text-foreground mb-4">
-              About BoldRemo
+              About BoldREMO
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Houston's trusted partner for luxury bathroom remodeling and home renovation.
@@ -39,7 +39,7 @@ const About = () => {
                   Your Vision, Our Expertise
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  At BoldRemo, we believe that your bathroom should be more than just a functional space—it should be a sanctuary that reflects your personal style and meets your unique needs.
+                  At BoldREMO, we believe that your bathroom should be more than just a functional space—it should be a sanctuary that reflects your personal style and meets your unique needs.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   Serving Houston's finest neighborhoods including Heights, Bellaire, River Oaks, and Kingwood, our team of skilled craftsmen brings years of experience in bathroom remodeling, tile installation, and home renovation. We're committed to transforming your vision into reality with precision, care, and attention to detail.
@@ -56,7 +56,7 @@ const About = () => {
               <div className="relative">
                 <img
                   src={showcase1}
-                  alt="BoldRemo bathroom remodeling craftsmanship"
+                  alt="BoldREMO bathroom remodeling craftsmanship"
                   className="w-full rounded-lg shadow-xl"
                   loading="lazy"
                 />

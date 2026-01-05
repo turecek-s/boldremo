@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "What areas of Houston do you serve?",
     answer:
-      "BoldRemo proudly serves the greater Houston metropolitan area including Houston Heights, Bellaire, River Oaks, Kingwood, The Woodlands, Katy, Sugar Land, and surrounding communities. Our team of experienced contractors travels throughout the region to bring quality bathroom remodeling and tile installation services to homeowners across Harris County and beyond.",
+      "BoldREMO proudly serves the greater Houston metropolitan area including Houston Heights, Bellaire, River Oaks, Kingwood, The Woodlands, Katy, Sugar Land, and surrounding communities. Our team of experienced contractors travels throughout the region to bring quality bathroom remodeling and tile installation services to homeowners across Harris County and beyond.",
   },
   {
     question: "Do you offer free estimates?",
@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "Are you licensed and insured?",
     answer:
-      "Yes, BoldRemo carries general liability insurance to protect our clients and their property. We also work exclusively with licensed tradespeople for all plumbing and electrical work, ensuring every aspect of your project meets Texas code requirements. We're happy to provide proof of insurance upon request.",
+      "Yes, BoldREMO carries general liability insurance to protect our clients and their property. We also work exclusively with licensed tradespeople for all plumbing and electrical work, ensuring every aspect of your project meets Texas code requirements. We're happy to provide proof of insurance upon request.",
   },
   {
     question: "Can you work with my existing layout or do I need a complete redesign?",
