@@ -5,8 +5,8 @@ import { GalleryPreview } from "@/components/GalleryPreview";
 import { ServicesSection } from "@/components/ServicesSection";
 import { ProcessSection } from "@/components/ProcessSection";
 import { ShowcaseGrid } from "@/components/ShowcaseGrid";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { CTASection } from "@/components/CTASection";
-
 const Index = () => {
   return (
     <>
@@ -17,6 +17,7 @@ const Index = () => {
         <ServicesSection />
         <ProcessSection />
         <ShowcaseGrid />
+        <TestimonialsSection />
         <CTASection />
       </main>
       <Footer />
