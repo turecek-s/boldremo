@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "Are you licensed and insured?",
     answer:
-      "BoldRemo is fully insured to perform bathroom remodeling and tile installation work in Texas. We carry comprehensive liability insurance and workers' compensation coverage to protect both our clients and our team. Note that Texas does not require a General Contractor license for residential remodeling work, so our focus is on quality craftsmanship and proper insurance coverage. We're happy to provide proof of insurance upon request.",
+      "Yes, BoldRemo carries general liability insurance to protect our clients and their property. We also work exclusively with licensed tradespeople for all plumbing and electrical work, ensuring every aspect of your project meets Texas code requirements. We're happy to provide proof of insurance upon request.",
   },
   {
     question: "Can you work with my existing layout or do I need a complete redesign?",
