@@ -4,14 +4,16 @@ import serviceTile from "@/assets/service-tile.jpg";
 
 const services = [
   {
-    title: "Bathroom",
-    description: "Complete bathroom remodeling services tailored to your style and needs.",
+    title: "Bathroom Remodeling",
+    description:
+      "Transform your outdated bathroom into a luxurious retreat with our comprehensive remodeling services. From modern walk-in showers and freestanding tubs to custom vanities and energy-efficient fixtures, we handle every aspect of your bathroom renovation. Our Houston-based team specializes in both master bath transformations and guest bathroom updates.",
     image: serviceBathroom,
     alt: "Bathroom remodeling service in Houston TX",
   },
   {
     title: "Tile & Flooring",
-    description: "Expert tile and flooring installation for a stunning foundation.",
+    description:
+      "Elevate your home with expert tile and flooring installation. We work with ceramic, porcelain, natural stone, and luxury vinyl to create stunning floors, backsplashes, and shower surrounds. Our precision craftsmanship ensures lasting beauty and durability for years to come.",
     image: serviceTile,
     alt: "Professional tile and flooring installation Houston",
   },

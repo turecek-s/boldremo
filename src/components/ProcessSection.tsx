@@ -6,19 +6,22 @@ const steps = [
   {
     icon: MessageSquare,
     title: "Consultation",
-    description: "Describe Your Dream Space",
+    description:
+      "Share your vision with our remodeling experts during a free in-home consultation. We'll discuss your goals, preferences, and budget to create a personalized plan for your bathroom transformation.",
     number: "01",
   },
   {
     icon: Paintbrush,
-    title: "Design",
-    description: "We Design Your Dream",
+    title: "Design & Planning",
+    description:
+      "Our team creates detailed designs and material selections tailored to your style. We handle permits, coordinate with suppliers, and prepare everything for a smooth renovation process.",
     number: "02",
   },
   {
     icon: Home,
-    title: "Living",
-    description: "You Enjoy Your Updated Home",
+    title: "Expert Installation",
+    description:
+      "Our skilled craftsmen bring your vision to life with precision and care. From demolition to final touches, we ensure quality workmanship and minimal disruption to your daily routine.",
     number: "03",
   },
 ];
