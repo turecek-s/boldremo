@@ -17,7 +17,7 @@ export const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
               <span className="text-2xl font-serif font-bold text-primary-foreground">
-                BOLD<span className="text-secondary">REMO</span>
+                Bold<span className="text-secondary">REMO</span>
               </span>
             </Link>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
@@ -113,7 +113,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center">
           <p className="text-primary-foreground/60 text-sm">
-            © {new Date().getFullYear()} BoldRemo. All rights reserved. | Bathroom Remodeling in Houston, Heights, Bellaire, River Oaks & Kingwood
+            © {new Date().getFullYear()} BoldREMO. All rights reserved. | Bathroom Remodeling in Houston, Heights, Bellaire, River Oaks & Kingwood
           </p>
         </div>
       </div>

@@ -6,10 +6,10 @@ import showcase5 from "@/assets/showcase-5.jpg";
 
 const images = [
   { src: showcase1, alt: "Dual shower head installation in Kingwood Texas" },
-  { src: showcase2, alt: "Custom bathroom tile work by BoldRemo" },
+  { src: showcase2, alt: "Custom bathroom tile work by BoldREMO" },
   { src: showcase3, alt: "Modern bathroom design in Houston" },
   { src: showcase4, alt: "Kitchen tile installation in Kingwood Texas" },
-  { src: showcase5, alt: "Premium tile and flooring work by BoldRemo" },
+  { src: showcase5, alt: "Premium tile and flooring work by BoldREMO" },
 ];
 
 export const ShowcaseGrid = () => {
