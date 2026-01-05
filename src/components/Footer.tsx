@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube, Linkedin } 
 
 export const Footer = () => {
   const socialLinks = [
-    { href: "https://www.facebook.com/boldremo", label: "Facebook", icon: Facebook },
+    { href: "https://www.facebook.com/BoldREMOllc/", label: "Facebook", icon: Facebook },
     { href: "https://www.instagram.com/boldremo", label: "Instagram", icon: Instagram },
     { href: "https://twitter.com/boldremo", label: "X (Twitter)", icon: Twitter },
     { href: "https://www.youtube.com/@boldremo", label: "YouTube", icon: Youtube },
