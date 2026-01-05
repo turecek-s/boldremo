@@ -6,8 +6,8 @@ import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 
 const images = [
-  { src: gallery1, alt: "Modern bathroom renovation with custom tile work in Houston" },
-  { src: gallery2, alt: "Luxury bathroom remodel featuring contemporary design" },
+  { src: gallery1, alt: "Modern bathroom with decorative tile accent wall and freestanding tub" },
+  { src: gallery2, alt: "Luxury bathroom remodel with glass shower and herringbone tile" },
   { src: gallery3, alt: "Elegant master bathroom with marble flooring and freestanding tub" },
 ];
 
