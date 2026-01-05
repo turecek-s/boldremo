@@ -8,7 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- Preload fonts with font-display: swap to prevent render blocking -->
+    <!-- Preload critical font files directly to flatten dependency chain -->
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/cormorantgaramond/v16/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYrEtFmSqn.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2" crossorigin />
+    
+    <!-- Load fonts with font-display: swap to prevent render blocking -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
     <noscript>
@@ -81,6 +85,7 @@
 
   <body>
     <div id="root"></div>
+    <!-- Defer non-critical JS parsing -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
