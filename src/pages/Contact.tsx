@@ -35,6 +35,7 @@ const Contact = () => {
           email: formData.get("email"),
           phone: formData.get("phone"),
           message: formData.get("message"),
+          website: formData.get("website"), // honeypot field
         },
       });
 
@@ -149,6 +150,12 @@ const Contact = () => {
                   Request a Free Quote
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot field - hidden from users, bots will fill it */}
+                  <div className="absolute -left-[9999px]" aria-hidden="true">
+                    <Label htmlFor="website">Website</Label>
+                    <Input id="website" name="website" tabIndex={-1} autoComplete="off" />
+                  </div>
+                  
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="firstName">First Name</Label>
