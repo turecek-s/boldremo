@@ -12,7 +12,11 @@ export const HeroSection = () => {
           src={heroBathroom}
           alt="Luxury bathroom remodel in Houston, Texas"
           className="w-full h-full object-cover"
+          width={1920}
+          height={1080}
           loading="eager"
+          decoding="async"
+          fetchPriority="high"
         />
         <div className="hero-overlay absolute inset-0" />
       </div>
