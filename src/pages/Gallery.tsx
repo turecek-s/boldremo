@@ -36,7 +36,7 @@ const Gallery = () => {
               Our Work
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Browse our portfolio of bathroom remodeling and tile installation projects throughout Houston, Texas.
+              Browse our portfolio of bathroom remodeling and tile installation projects in Houston, Heights, Bellaire, River Oaks & Kingwood.
             </p>
           </div>
         </section>

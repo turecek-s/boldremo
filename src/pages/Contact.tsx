@@ -93,9 +93,9 @@ const Contact = () => {
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Service Area</h3>
+                      <h3 className="font-semibold text-foreground mb-1">Service Areas</h3>
                       <p className="text-muted-foreground">
-                        Houston, Kingwood, The Woodlands, and surrounding areas
+                        Houston, Heights, Bellaire, River Oaks & Kingwood
                       </p>
                     </div>
                   </div>
