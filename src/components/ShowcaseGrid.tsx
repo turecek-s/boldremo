@@ -28,7 +28,10 @@ export const ShowcaseGrid = () => {
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                width={300}
+                height={300}
                 loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300" />
             </div>
