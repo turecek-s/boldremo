@@ -16,6 +16,17 @@ interface ContactEmailRequest {
   message: string;
 }
 
+// HTML escape function to prevent XSS in email templates
+function escapeHtml(text: string): string {
+  if (!text) return '';
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
 const handler = async (req: Request): Promise<Response> => {
   console.log("Received contact form submission request");
 
@@ -29,6 +40,13 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Processing contact form for:", email);
 
+    // Escape all user inputs to prevent XSS in email
+    const safeFirstName = escapeHtml(firstName);
+    const safeLastName = escapeHtml(lastName);
+    const safeEmail = escapeHtml(email);
+    const safePhone = escapeHtml(phone);
+    const safeMessage = escapeHtml(message);
+
     // Send notification email to business using Resend API directly
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -39,14 +57,14 @@ const handler = async (req: Request): Promise<Response> => {
       body: JSON.stringify({
         from: "Boldremo Contact Form <onboarding@resend.dev>",
         to: ["info@boldremo.com"],
-        subject: `New Contact Form Submission from ${firstName} ${lastName}`,
+        subject: `New Contact Form Submission from ${safeFirstName} ${safeLastName}`,
         html: `
           <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone}</p>
+          <p><strong>Name:</strong> ${safeFirstName} ${safeLastName}</p>
+          <p><strong>Email:</strong> ${safeEmail}</p>
+          <p><strong>Phone:</strong> ${safePhone}</p>
           <h3>Message:</h3>
-          <p>${message}</p>
+          <p>${safeMessage}</p>
           <hr>
           <p style="color: #666; font-size: 12px;">Submitted at: ${new Date().toLocaleString()}</p>
         `,
@@ -71,8 +89,9 @@ const handler = async (req: Request): Promise<Response> => {
     });
   } catch (error: any) {
     console.error("Error in send-contact-email function:", error);
+    // Return generic error message to prevent information leakage
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: "Failed to send message. Please try again later." }),
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },
