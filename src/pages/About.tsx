@@ -42,7 +42,7 @@ const About = () => {
                   At BoldRemo, we believe that your bathroom should be more than just a functional space—it should be a sanctuary that reflects your personal style and meets your unique needs.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Serving Houston, Kingwood, The Woodlands, and surrounding areas, our team of skilled craftsmen brings years of experience in bathroom remodeling, tile installation, and home renovation. We're committed to transforming your vision into reality with precision, care, and attention to detail.
+                  Serving Houston's finest neighborhoods including Heights, Bellaire, River Oaks, and Kingwood, our team of skilled craftsmen brings years of experience in bathroom remodeling, tile installation, and home renovation. We're committed to transforming your vision into reality with precision, care, and attention to detail.
                 </p>
                 <ul className="space-y-3">
                   {values.map((value) => (

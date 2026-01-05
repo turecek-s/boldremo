@@ -14,7 +14,7 @@ export const Footer = () => {
               </span>
             </Link>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
-              Houston's Premier Bathroom Remodeling Company. Transform your space into a reflection of your style.
+              Houston's Premier Bathroom Remodeling Company. Proudly serving Houston, Heights, Bellaire, River Oaks & Kingwood.
             </p>
             <div className="flex gap-4">
               <a
@@ -112,7 +112,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center">
           <p className="text-primary-foreground/60 text-sm">
-            © {new Date().getFullYear()} BoldRemo. All rights reserved. | Luxury Bathroom Remodeling in Houston, TX
+            © {new Date().getFullYear()} BoldRemo. All rights reserved. | Bathroom Remodeling in Houston, Heights, Bellaire, River Oaks & Kingwood
           </p>
         </div>
       </div>
