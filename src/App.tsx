@@ -6,8 +6,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FloatingContactButton } from "@/components/FloatingContactButton";
 
-// Lazy load pages to reduce initial bundle size
-const Index = lazy(() => import("./pages/Index"));
+// Eager load Index page to eliminate chain - it's always needed on homepage
+import Index from "./pages/Index";
+
+// Lazy load secondary pages to reduce initial bundle
 const Gallery = lazy(() => import("./pages/Gallery"));
 const About = lazy(() => import("./pages/About"));
 const Services = lazy(() => import("./pages/Services"));
