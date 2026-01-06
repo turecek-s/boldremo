@@ -121,7 +121,13 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- SSR fallback for SEO crawlers that don't execute JavaScript -->
+      <noscript>
+        <h1>BoldREMO - Houston's Premier Bathroom Remodeling Company</h1>
+        <p>Transform your bathroom with Houston's trusted luxury bathroom remodeling experts. Custom tile, flooring & full bathroom renovations.</p>
+      </noscript>
+    </div>
     <!-- Defer non-critical JS parsing -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
