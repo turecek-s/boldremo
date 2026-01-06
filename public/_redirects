@@ -1,0 +1,3 @@
+# Redirect non-www to www to prevent duplicate content
+https://boldremo.com/* https://www.boldremo.com/:splat 301!
+http://boldremo.com/* https://www.boldremo.com/:splat 301!
