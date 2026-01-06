@@ -1,27 +1,27 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
-import { ResponsiveImage } from "@/components/ResponsiveImage";
 import heroBathroom from "@/assets/hero-bathroom.jpg";
 
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image - LCP element, priority loaded */}
+      {/* Background Image - LCP element, priority loaded with native img for fastest paint */}
       <div className="absolute inset-0">
-        <ResponsiveImage
+        <img
           src={heroBathroom}
           alt="Luxury bathroom remodel in Houston, Texas"
           className="w-full h-full object-cover"
           width={1920}
           height={1080}
-          sizes="100vw"
-          priority
+          loading="eager"
+          decoding="sync"
+          fetchPriority="high"
         />
         <div className="hero-overlay absolute inset-0" />
       </div>
 
-      {/* Content */}
+      {/* Content - visible immediately, animation applied via CSS */}
       <div className="relative z-10 container-custom text-center px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-semibold text-primary mb-6 animate-fade-up text-balance drop-shadow-lg">
@@ -30,11 +30,13 @@ export const HeroSection = () => {
             <span className="text-foreground">Enjoy renovation.</span>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-foreground font-medium mb-10 animate-fade-up opacity-0 drop-shadow-md" style={{ animationDelay: "0.2s" }}>
+          <p 
+            className="text-lg sm:text-xl md:text-2xl text-foreground font-medium mb-10 drop-shadow-md animate-fade-up-delayed"
+          >
             Houston's Premier Remodeling Company
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up opacity-0" style={{ animationDelay: "0.4s" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up-delayed-2">
             <Button asChild size="lg" className="min-w-[200px]">
               <a href="tel:+18325135737" className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
