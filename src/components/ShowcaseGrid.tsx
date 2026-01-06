@@ -1,3 +1,4 @@
+import { ResponsiveImage } from "@/components/ResponsiveImage";
 import showcase1 from "@/assets/showcase-1.jpg";
 import showcase2 from "@/assets/showcase-2.jpg";
 import showcase3 from "@/assets/showcase-3.jpg";
@@ -24,14 +25,13 @@ export const ShowcaseGrid = () => {
               key={index}
               className="group relative aspect-square overflow-hidden rounded-lg"
             >
-              <img
+              <ResponsiveImage
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 width={300}
                 height={300}
-                loading="lazy"
-                decoding="async"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
               />
               <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300" />
             </div>

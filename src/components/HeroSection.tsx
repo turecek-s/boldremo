@@ -1,22 +1,22 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
 import heroBathroom from "@/assets/hero-bathroom.jpg";
 
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image - LCP element, priority loaded */}
       <div className="absolute inset-0">
-        <img
+        <ResponsiveImage
           src={heroBathroom}
           alt="Luxury bathroom remodel in Houston, Texas"
           className="w-full h-full object-cover"
           width={1920}
           height={1080}
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
+          sizes="100vw"
+          priority
         />
         <div className="hero-overlay absolute inset-0" />
       </div>

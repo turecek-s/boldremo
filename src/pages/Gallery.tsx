@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import heroBathroom from "@/assets/hero-bathroom.jpg";
@@ -51,14 +52,14 @@ const Gallery = () => {
                   key={index}
                   className="group relative aspect-square overflow-hidden rounded-lg shadow-md"
                 >
-                  <img
+                  <ResponsiveImage
                     src={image.src}
                     alt={image.alt}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     width={400}
                     height={400}
-                    loading={index < 3 ? "eager" : "lazy"}
-                    decoding="async"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority={index < 3}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
