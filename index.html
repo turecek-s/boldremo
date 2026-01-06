@@ -4,13 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTP9HTWC5D"></script>
+    <!-- Google Analytics - deferred to avoid blocking FCP -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YTP9HTWC5D');
+      // Defer GA loading until after page becomes interactive
+      window.addEventListener('load', function() {
+        var ga = document.createElement('script');
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-YTP9HTWC5D';
+        ga.async = true;
+        document.head.appendChild(ga);
+        ga.onload = function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', 'G-YTP9HTWC5D');
+        };
+      });
     </script>
     <!-- Critical inline CSS for above-the-fold content - eliminates render blocking -->
     <style>
