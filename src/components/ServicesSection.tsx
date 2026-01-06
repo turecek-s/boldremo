@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
 import serviceBathroom from "@/assets/service-bathroom.jpg";
 import serviceTile from "@/assets/service-tile.jpg";
 
@@ -40,14 +41,13 @@ export const ServicesSection = () => {
               className="group block bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
             >
               <div className="aspect-[4/5] overflow-hidden">
-                <img
+                <ResponsiveImage
                   src={service.image}
                   alt={service.alt}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   width={400}
                   height={500}
-                  loading="lazy"
-                  decoding="async"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="p-6">

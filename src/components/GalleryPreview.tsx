@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -27,14 +28,13 @@ export const GalleryPreview = () => {
               key={index}
               className="group relative aspect-square overflow-hidden rounded-lg"
             >
-              <img
+              <ResponsiveImage
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 width={400}
                 height={400}
-                loading="lazy"
-                decoding="async"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300" />
             </div>
