@@ -18,6 +18,8 @@ export const ResponsiveImage = ({
   sizes = "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw",
   priority = false,
   className,
+  width,
+  height,
   ...props
 }: ResponsiveImageProps) => {
   return (
@@ -26,6 +28,8 @@ export const ResponsiveImage = ({
       alt={alt}
       sizes={sizes}
       className={className}
+      width={width}
+      height={height}
       loading={priority ? "eager" : "lazy"}
       decoding={priority ? "sync" : "async"}
       fetchPriority={priority ? "high" : "auto"}
