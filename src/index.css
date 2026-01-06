@@ -132,6 +132,16 @@
     animation: fadeUp 0.6s ease-out forwards;
   }
 
+  .animate-fade-up-delayed {
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out 0.2s forwards;
+  }
+
+  .animate-fade-up-delayed-2 {
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out 0.4s forwards;
+  }
+
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
   }
