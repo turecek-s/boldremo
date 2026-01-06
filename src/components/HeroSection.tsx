@@ -12,8 +12,7 @@ export const HeroSection = () => {
           src={heroBathroom}
           alt="Luxury bathroom remodel in Houston, Texas"
           className="w-full h-full object-cover"
-          width={1920}
-          height={1080}
+          sizes="100vw"
           loading="eager"
           decoding="sync"
           fetchPriority="high"
