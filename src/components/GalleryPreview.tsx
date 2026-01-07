@@ -7,9 +7,9 @@ import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 
 const images = [
-  { src: gallery1, alt: "Modern bathroom with decorative tile accent wall and freestanding tub" },
-  { src: gallery2, alt: "Luxury bathroom remodel with glass shower and herringbone tile" },
-  { src: gallery3, alt: "Elegant master bathroom with marble flooring and freestanding tub" },
+  { src: gallery1, alt: "Luxury bathroom remodel with custom tile work in Houston Heights TX" },
+  { src: gallery2, alt: "Modern bathroom renovation featuring premium fixtures in Bellaire Houston" },
+  { src: gallery3, alt: "Master bathroom transformation with walk-in shower in River Oaks TX" },
 ];
 
 export const GalleryPreview = () => {

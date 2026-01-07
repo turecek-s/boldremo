@@ -6,11 +6,11 @@ import showcase4 from "@/assets/showcase-4.jpg";
 import showcase5 from "@/assets/showcase-5.jpg";
 
 const images = [
-  { src: showcase1, alt: "Dual shower head installation in Kingwood Texas" },
-  { src: showcase2, alt: "Custom bathroom tile work by BoldREMO" },
-  { src: showcase3, alt: "Modern bathroom design in Houston" },
-  { src: showcase4, alt: "Kitchen tile installation in Kingwood Texas" },
-  { src: showcase5, alt: "Premium tile and flooring work by BoldREMO" },
+  { src: showcase1, alt: "Custom shower remodel with dual shower heads in Kingwood Houston TX" },
+  { src: showcase2, alt: "Professional bathroom tile installation contractor in Houston Heights" },
+  { src: showcase3, alt: "Contemporary bathroom renovation with modern vanity in Bellaire TX" },
+  { src: showcase4, alt: "Expert tile and flooring installation in River Oaks Houston" },
+  { src: showcase5, alt: "Luxury bathroom remodeling services in Kingwood Texas by BoldREMO" },
 ];
 
 export const ShowcaseGrid = () => {

@@ -10,7 +10,7 @@ export const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroBathroom}
-          alt="Luxury bathroom remodel in Houston, Texas"
+          alt="Professional bathroom remodeling contractor in Houston TX - BoldREMO serves Heights, Bellaire, River Oaks and Kingwood"
           className="w-full h-full object-cover"
           sizes="100vw"
           loading="eager"
