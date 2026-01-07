@@ -28,6 +28,8 @@ const Admin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoggingIn, setIsLoggingIn] = useState(false);
+  const [isSigningUp, setIsSigningUp] = useState(false);
+  const [showSignup, setShowSignup] = useState(false);
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [loadingSubmissions, setLoadingSubmissions] = useState(false);
 
@@ -95,6 +97,32 @@ const Admin = () => {
     setIsLoggingIn(false);
   };
 
+  const handleSignup = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSigningUp(true);
+
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        emailRedirectTo: window.location.origin,
+      },
+    });
+
+    if (error) {
+      toast({
+        title: "Signup failed",
+        description: error.message,
+        variant: "destructive",
+      });
+    } else {
+      toast({
+        title: "Account created!",
+        description: "You are now logged in.",
+      });
+    }
+  };
+
   const handleLogout = async () => {
     await supabase.auth.signOut();
     setSubmissions([]);
@@ -143,10 +171,12 @@ const Admin = () => {
           <div className="container-custom max-w-md">
             <Card>
               <CardHeader>
-                <CardTitle className="text-center">Admin Login</CardTitle>
+                <CardTitle className="text-center">
+                  {showSignup ? "Create Admin Account" : "Admin Login"}
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleLogin} className="space-y-4">
+                <form onSubmit={showSignup ? handleSignup : handleLogin} className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
                     <Input
@@ -165,12 +195,29 @@ const Admin = () => {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       required
+                      minLength={6}
                     />
                   </div>
-                  <Button type="submit" className="w-full" disabled={isLoggingIn}>
-                    {isLoggingIn ? "Logging in..." : "Login"}
+                  <Button 
+                    type="submit" 
+                    className="w-full" 
+                    disabled={isLoggingIn || isSigningUp}
+                  >
+                    {showSignup 
+                      ? (isSigningUp ? "Creating account..." : "Create Account")
+                      : (isLoggingIn ? "Logging in..." : "Login")
+                    }
                   </Button>
                 </form>
+                <div className="mt-4 text-center">
+                  <button
+                    type="button"
+                    onClick={() => setShowSignup(!showSignup)}
+                    className="text-sm text-muted-foreground hover:text-primary underline"
+                  >
+                    {showSignup ? "Already have an account? Login" : "Need to create an account? Sign up"}
+                  </button>
+                </div>
               </CardContent>
             </Card>
           </div>
