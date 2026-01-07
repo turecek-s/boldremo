@@ -1,8 +1,10 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
-const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+const GMAIL_USER = Deno.env.get("GMAIL_USER");
+const GMAIL_APP_PASSWORD = Deno.env.get("GMAIL_APP_PASSWORD");
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
 const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
@@ -145,17 +147,25 @@ const handler = async (req: Request): Promise<Response> => {
     const safePhone = escapeHtml(phone);
     const safeMessage = escapeHtml(message);
 
-    // Send notification email to business using Resend API directly
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${RESEND_API_KEY}`,
-      },
-      body: JSON.stringify({
-        from: "Boldremo Contact Form <onboarding@resend.dev>",
-        to: ["info@boldremo.com"],
+    // Send notification email via Gmail SMTP
+    try {
+      const client = new SMTPClient({
+        connection: {
+          hostname: "smtp.gmail.com",
+          port: 465,
+          tls: true,
+          auth: {
+            username: GMAIL_USER!,
+            password: GMAIL_APP_PASSWORD!,
+          },
+        },
+      });
+
+      await client.send({
+        from: GMAIL_USER!,
+        to: GMAIL_USER!,
         subject: `New Contact Form Submission from ${safeFirstName} ${safeLastName}`,
+        content: "auto",
         html: `
           <h2>New Contact Form Submission</h2>
           <p><strong>Name:</strong> ${safeFirstName} ${safeLastName}</p>
@@ -166,16 +176,13 @@ const handler = async (req: Request): Promise<Response> => {
           <hr>
           <p style="color: #666; font-size: 12px;">Submitted at: ${new Date().toLocaleString()}</p>
         `,
-      }),
-    });
+      });
 
-    if (!res.ok) {
-      const errorData = await res.text();
-      console.error("Resend API error:", errorData);
+      await client.close();
+      console.log("Email sent successfully via Gmail SMTP");
+    } catch (emailError) {
+      console.error("Gmail SMTP error:", emailError);
       // Don't throw - submission was saved to DB
-    } else {
-      const emailResponse = await res.json();
-      console.log("Email sent successfully:", emailResponse);
     }
 
     return new Response(JSON.stringify({ success: true }), {
