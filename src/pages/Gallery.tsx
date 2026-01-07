@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
-import heroBathroom from "@/assets/hero-bathroom.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
 import showcase1 from "@/assets/showcase-1.jpg";
 import showcase2 from "@/assets/showcase-2.jpg";
 import showcase3 from "@/assets/showcase-3.jpg";
@@ -15,7 +15,7 @@ import serviceTile from "@/assets/service-tile.jpg";
 const images = [
   { src: gallery1, alt: "Luxury bathroom remodel with custom tile work in Houston Heights TX" },
   { src: gallery2, alt: "Modern bathroom renovation featuring premium fixtures in Bellaire Houston" },
-  { src: heroBathroom, alt: "Professional bathroom remodeling contractor serving Houston TX area" },
+  { src: gallery3, alt: "Master bathroom transformation with walk-in shower in River Oaks TX" },
   { src: showcase1, alt: "Custom shower remodel with dual shower heads in Kingwood Houston TX" },
   { src: showcase2, alt: "Professional bathroom tile installation contractor in Houston Heights" },
   { src: showcase3, alt: "Contemporary bathroom renovation with modern vanity in Bellaire TX" },
