@@ -311,7 +311,7 @@ const Resources = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-primary text-primary-foreground">
+        <section id="resources-cta" className="section-padding bg-primary text-primary-foreground">
           <div className="container-custom text-center">
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
               Ready to Start Your Bathroom Remodel?
@@ -324,7 +324,12 @@ const Resources = () => {
               <Button asChild size="lg" variant="secondary">
                 <Link to="/contact">Get Your Free Quote</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="!bg-transparent !border-primary-foreground !text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              >
                 <Link to="/gallery">View Our Work</Link>
               </Button>
             </div>
