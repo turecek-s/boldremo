@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -18,30 +19,45 @@ const Resources = lazy(() => import("./pages/Resources"));
 const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
+// Service Area Pages
+const Houston = lazy(() => import("./pages/service-areas/Houston"));
+const Heights = lazy(() => import("./pages/service-areas/Heights"));
+const Bellaire = lazy(() => import("./pages/service-areas/Bellaire"));
+const RiverOaks = lazy(() => import("./pages/service-areas/RiverOaks"));
+const Kingwood = lazy(() => import("./pages/service-areas/Kingwood"));
+
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <CanonicalUrl />
-        <Suspense fallback={<div className="min-h-screen bg-background" />}>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-        <FloatingContactButton />
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <CanonicalUrl />
+          <Suspense fallback={<div className="min-h-screen bg-background" />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/contact" element={<Contact />} />
+              {/* Service Area Routes */}
+              <Route path="/service-areas/houston" element={<Houston />} />
+              <Route path="/service-areas/heights" element={<Heights />} />
+              <Route path="/service-areas/bellaire" element={<Bellaire />} />
+              <Route path="/service-areas/river-oaks" element={<RiverOaks />} />
+              <Route path="/service-areas/kingwood" element={<Kingwood />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+          <FloatingContactButton />
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;
