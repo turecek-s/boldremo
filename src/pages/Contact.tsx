@@ -28,7 +28,7 @@ const Contact = () => {
     };
 
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+      const { data: responseData, error } = await supabase.functions.invoke('send-contact-email', {
         body: {
           firstName: formData.get("firstName"),
           lastName: formData.get("lastName"),
@@ -40,6 +40,17 @@ const Contact = () => {
       });
 
       if (error) throw error;
+      
+      // Check for validation errors from the edge function
+      if (responseData?.error) {
+        const errorMessage = responseData.details?.join(", ") || responseData.error;
+        toast({
+          title: "Please check your form",
+          description: errorMessage,
+          variant: "destructive",
+        });
+        return;
+      }
 
       toast({
         title: "Message Sent!",
@@ -185,7 +196,9 @@ const Contact = () => {
                       rows={4}
                       placeholder="Describe your bathroom remodeling needs..."
                       required
+                      minLength={10}
                     />
+                    <p className="text-xs text-muted-foreground">Minimum 10 characters</p>
                   </div>
                   
                   <Button type="submit" className="w-full" disabled={isSubmitting}>
