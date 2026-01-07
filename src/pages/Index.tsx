@@ -2,6 +2,8 @@ import { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import ImageGallerySchema from "@/components/ImageGallerySchema";
 
 // Lazy load below-the-fold sections to reduce initial JS
 const GalleryPreview = lazy(() => import("@/components/GalleryPreview").then(m => ({ default: m.GalleryPreview })));
@@ -17,6 +19,8 @@ const SectionFallback = () => <div className="section-padding bg-background" />;
 const Index = () => {
   return (
     <>
+      <LocalBusinessSchema />
+      <ImageGallerySchema />
       <Header />
       <main>
         <HeroSection />
