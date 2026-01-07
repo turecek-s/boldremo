@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { Mail, Phone, Calendar, Check, LogOut } from "lucide-react";
+import { Mail, Phone, Calendar, Check, LogOut, Trash2, ShieldX } from "lucide-react";
 
 interface Submission {
   id: string;
@@ -24,30 +24,51 @@ interface Submission {
 const Admin = () => {
   const { toast } = useToast();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoggingIn, setIsLoggingIn] = useState(false);
-  const [isSigningUp, setIsSigningUp] = useState(false);
-  const [showSignup, setShowSignup] = useState(false);
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [loadingSubmissions, setLoadingSubmissions] = useState(false);
 
+  const checkAdminRole = async (userId: string) => {
+    const { data: roleData, error } = await supabase
+      .from('user_roles')
+      .select('role')
+      .eq('user_id', userId)
+      .eq('role', 'admin')
+      .single();
+
+    if (roleData && !error) {
+      setIsAdmin(true);
+      setIsAuthenticated(true);
+      fetchSubmissions();
+    } else {
+      setIsAdmin(false);
+      setIsAuthenticated(true);
+    }
+  };
+
   useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      setIsAuthenticated(!!session);
-      setIsLoading(false);
-      if (session) {
-        fetchSubmissions();
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (session?.user?.id) {
+        await checkAdminRole(session.user.id);
+      } else {
+        setIsAuthenticated(false);
+        setIsAdmin(false);
       }
+      setIsLoading(false);
     });
 
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setIsAuthenticated(!!session);
-      setIsLoading(false);
-      if (session) {
-        fetchSubmissions();
+    supabase.auth.getSession().then(async ({ data: { session } }) => {
+      if (session?.user?.id) {
+        await checkAdminRole(session.user.id);
+      } else {
+        setIsAuthenticated(false);
+        setIsAdmin(false);
       }
+      setIsLoading(false);
     });
 
     return () => subscription.unsubscribe();
@@ -97,35 +118,10 @@ const Admin = () => {
     setIsLoggingIn(false);
   };
 
-  const handleSignup = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSigningUp(true);
-
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        emailRedirectTo: window.location.origin,
-      },
-    });
-
-    if (error) {
-      toast({
-        title: "Signup failed",
-        description: error.message,
-        variant: "destructive",
-      });
-    } else {
-      toast({
-        title: "Account created!",
-        description: "You are now logged in.",
-      });
-    }
-  };
-
   const handleLogout = async () => {
     await supabase.auth.signOut();
     setSubmissions([]);
+    setIsAdmin(false);
   };
 
   const markAsRead = async (id: string) => {
@@ -144,6 +140,27 @@ const Admin = () => {
       setSubmissions(submissions.map(s => 
         s.id === id ? { ...s, is_read: true } : s
       ));
+    }
+  };
+
+  const deleteSubmission = async (id: string) => {
+    const { error } = await supabase
+      .from("contact_submissions")
+      .delete()
+      .eq("id", id);
+
+    if (error) {
+      toast({
+        title: "Error",
+        description: "Failed to delete submission",
+        variant: "destructive",
+      });
+    } else {
+      setSubmissions(submissions.filter(s => s.id !== id));
+      toast({
+        title: "Deleted",
+        description: "Submission removed successfully",
+      });
     }
   };
 
@@ -171,12 +188,10 @@ const Admin = () => {
           <div className="container-custom max-w-md">
             <Card>
               <CardHeader>
-                <CardTitle className="text-center">
-                  {showSignup ? "Create Admin Account" : "Admin Login"}
-                </CardTitle>
+                <CardTitle className="text-center">Admin Login</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={showSignup ? handleSignup : handleLogin} className="space-y-4">
+                <form onSubmit={handleLogin} className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
                     <Input
@@ -201,23 +216,38 @@ const Admin = () => {
                   <Button 
                     type="submit" 
                     className="w-full" 
-                    disabled={isLoggingIn || isSigningUp}
+                    disabled={isLoggingIn}
                   >
-                    {showSignup 
-                      ? (isSigningUp ? "Creating account..." : "Create Account")
-                      : (isLoggingIn ? "Logging in..." : "Login")
-                    }
+                    {isLoggingIn ? "Logging in..." : "Login"}
                   </Button>
                 </form>
-                <div className="mt-4 text-center">
-                  <button
-                    type="button"
-                    onClick={() => setShowSignup(!showSignup)}
-                    className="text-sm text-muted-foreground hover:text-primary underline"
-                  >
-                    {showSignup ? "Already have an account? Login" : "Need to create an account? Sign up"}
-                  </button>
-                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  // User is authenticated but not an admin
+  if (!isAdmin) {
+    return (
+      <>
+        <Header />
+        <main className="min-h-screen bg-muted pt-32 pb-16">
+          <div className="container-custom max-w-md">
+            <Card>
+              <CardContent className="py-12 text-center">
+                <ShieldX className="h-16 w-16 mx-auto text-destructive mb-4" />
+                <h2 className="text-xl font-semibold mb-2">Access Denied</h2>
+                <p className="text-muted-foreground mb-6">
+                  You don't have admin privileges to access this page.
+                </p>
+                <Button variant="outline" onClick={handleLogout}>
+                  <LogOut className="h-4 w-4 mr-2" />
+                  Logout
+                </Button>
               </CardContent>
             </Card>
           </div>
@@ -293,16 +323,26 @@ const Admin = () => {
                           </span>
                         </div>
                       </div>
-                      {!submission.is_read && (
+                      <div className="flex gap-2">
+                        {!submission.is_read && (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => markAsRead(submission.id)}
+                          >
+                            <Check className="h-4 w-4 mr-1" />
+                            Mark Read
+                          </Button>
+                        )}
                         <Button
                           variant="outline"
                           size="sm"
-                          onClick={() => markAsRead(submission.id)}
+                          className="text-destructive hover:text-destructive"
+                          onClick={() => deleteSubmission(submission.id)}
                         >
-                          <Check className="h-4 w-4 mr-1" />
-                          Mark Read
+                          <Trash2 className="h-4 w-4" />
                         </Button>
-                      )}
+                      </div>
                     </div>
                     <div className="bg-muted rounded-lg p-4">
                       <p className="whitespace-pre-wrap">{submission.message}</p>
