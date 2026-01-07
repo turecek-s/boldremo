@@ -1,16 +1,16 @@
 import { ResponsiveImage } from "@/components/ResponsiveImage";
-import showcase1 from "@/assets/showcase-1.jpg";
-import showcase2 from "@/assets/showcase-2.jpg";
-import showcase3 from "@/assets/showcase-3.jpg";
-import showcase4 from "@/assets/showcase-4.jpg";
-import showcase5 from "@/assets/showcase-5.jpg";
+import boldremo4 from "@/assets/boldremo-4.jpg";
+import boldremo5 from "@/assets/boldremo-5.jpg";
+import boldremo6 from "@/assets/boldremo-6.jpg";
+import boldremo7 from "@/assets/boldremo-7.jpg";
+import boldremo8 from "@/assets/boldremo-8.jpg";
 
 const images = [
-  { src: showcase1, alt: "Custom shower remodel with dual shower heads in Kingwood Houston TX" },
-  { src: showcase2, alt: "Professional bathroom tile installation contractor in Houston Heights" },
-  { src: showcase3, alt: "Contemporary bathroom renovation with modern vanity in Bellaire TX" },
-  { src: showcase4, alt: "Expert tile and flooring installation in River Oaks Houston" },
-  { src: showcase5, alt: "Luxury bathroom remodeling services in Kingwood Texas by BoldREMO" },
+  { src: boldremo4, alt: "Walk-in tub with LED lighting and marble tile in Houston Heights TX" },
+  { src: boldremo5, alt: "Freestanding soaking tub with modern fixtures in Kingwood Houston" },
+  { src: boldremo6, alt: "Custom walk-in shower with marble walls and bench in Bellaire TX" },
+  { src: boldremo7, alt: "Herringbone tile shower surround with mosaic niche in River Oaks Houston" },
+  { src: boldremo8, alt: "Bathroom vanity with hexagon tile backsplash in Houston Heights TX" },
 ];
 
 export const ShowcaseGrid = () => {

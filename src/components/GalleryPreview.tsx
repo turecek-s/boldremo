@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
+import boldremo1 from "@/assets/boldremo-1.jpg";
+import boldremo2 from "@/assets/boldremo-2.jpg";
+import boldremo3 from "@/assets/boldremo-3.jpg";
 
 const images = [
-  { src: gallery1, alt: "Luxury bathroom remodel with custom tile work in Houston Heights TX" },
-  { src: gallery2, alt: "Modern bathroom renovation featuring premium fixtures in Bellaire Houston" },
-  { src: gallery3, alt: "Master bathroom transformation with walk-in shower in River Oaks TX" },
+  { src: boldremo1, alt: "Glass walk-in shower with marble tile and freestanding tub in Houston TX" },
+  { src: boldremo2, alt: "Luxury master bathroom with chandelier and glass shower in Bellaire Houston" },
+  { src: boldremo3, alt: "Modern bathroom with decorative tile accent wall and soaking tub in River Oaks TX" },
 ];
 
 export const GalleryPreview = () => {
