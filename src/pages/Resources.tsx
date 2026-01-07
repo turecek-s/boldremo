@@ -324,7 +324,7 @@ const Resources = () => {
               <Button asChild size="lg" variant="secondary">
                 <Link to="/contact">Get Your Free Quote</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
                 <Link to="/gallery">View Our Work</Link>
               </Button>
             </div>
