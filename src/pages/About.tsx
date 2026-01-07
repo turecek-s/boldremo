@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { CheckCircle } from "lucide-react";
-import showcase1 from "@/assets/showcase-1.jpg";
+import boldremo9 from "@/assets/boldremo-9.jpg";
 
 const values = [
   "Quality craftsmanship on every project",
@@ -55,7 +55,7 @@ const About = () => {
               </div>
               <div className="relative">
                 <img
-                  src={showcase1}
+                  src={boldremo9}
                   alt="BoldREMO bathroom remodeling craftsmanship"
                   className="w-full rounded-lg shadow-xl"
                   loading="lazy"

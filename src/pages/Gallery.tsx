@@ -11,8 +11,6 @@ import boldremo7 from "@/assets/boldremo-7.jpg";
 import boldremo8 from "@/assets/boldremo-8.jpg";
 import boldremo9 from "@/assets/boldremo-9.jpg";
 import boldremo10 from "@/assets/boldremo-10.jpg";
-import serviceBathroom from "@/assets/service-bathroom.jpg";
-import serviceTile from "@/assets/service-tile.jpg";
 
 const images = [
   { src: boldremo1, alt: "Glass walk-in shower with marble tile and freestanding tub in Houston TX" },
@@ -25,8 +23,6 @@ const images = [
   { src: boldremo8, alt: "Bathroom vanity with hexagon tile backsplash in Houston Heights TX" },
   { src: boldremo9, alt: "Luxury master bathroom with marble floors and glass shower in Kingwood TX" },
   { src: boldremo10, alt: "Modern bathroom with patterned tile floor and green vanity in Houston Heights" },
-  { src: serviceBathroom, alt: "Bathroom remodeling contractor in Houston TX - serving Heights, Bellaire, River Oaks" },
-  { src: serviceTile, alt: "Tile and flooring installation services in Houston Heights and Kingwood TX" },
 ];
 
 const Gallery = () => {
