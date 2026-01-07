@@ -35,10 +35,10 @@ export const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="min-w-[200px]">
-              <Link to="/contact" className="flex items-center gap-2">
+              <a href="tel:+18325135737" className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
                 Contact Us
-              </Link>
+              </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="min-w-[200px] bg-background/80 backdrop-blur-sm">
               <Link to="/gallery" className="flex items-center gap-2">
