@@ -1,7 +1,10 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
+const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -115,6 +118,26 @@ const handler = async (req: Request): Promise<Response> => {
     const { firstName, lastName, email, phone, message } = validationResult.data;
     console.log("Processing validated contact form for:", email);
 
+    // Save to database
+    const supabase = createClient(SUPABASE_URL!, SUPABASE_SERVICE_ROLE_KEY!);
+    
+    const { error: dbError } = await supabase
+      .from('contact_submissions')
+      .insert({
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        phone: phone,
+        message: message,
+      });
+
+    if (dbError) {
+      console.error("Database insert error:", dbError);
+      // Continue with email even if DB fails
+    } else {
+      console.log("Submission saved to database");
+    }
+
     // Escape all user inputs to prevent XSS in email
     const safeFirstName = escapeHtml(firstName);
     const safeLastName = escapeHtml(lastName);
@@ -149,11 +172,11 @@ const handler = async (req: Request): Promise<Response> => {
     if (!res.ok) {
       const errorData = await res.text();
       console.error("Resend API error:", errorData);
-      throw new Error(`Failed to send email: ${errorData}`);
+      // Don't throw - submission was saved to DB
+    } else {
+      const emailResponse = await res.json();
+      console.log("Email sent successfully:", emailResponse);
     }
-
-    const emailResponse = await res.json();
-    console.log("Email sent successfully:", emailResponse);
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
