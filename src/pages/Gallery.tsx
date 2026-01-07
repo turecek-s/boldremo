@@ -13,16 +13,16 @@ import serviceBathroom from "@/assets/service-bathroom.jpg";
 import serviceTile from "@/assets/service-tile.jpg";
 
 const images = [
-  { src: gallery1, alt: "Modern bathroom renovation with white tile and contemporary fixtures in Houston" },
-  { src: gallery2, alt: "Luxury dark tile bathroom remodel with premium finishes" },
-  { src: heroBathroom, alt: "Elegant bathroom transformation with natural lighting" },
-  { src: showcase1, alt: "Dual shower head installation in Kingwood, Texas" },
-  { src: showcase2, alt: "Custom bathroom tile work with intricate patterns" },
-  { src: showcase3, alt: "Contemporary bathroom design featuring modern vanity" },
-  { src: showcase4, alt: "Kitchen tile installation with premium materials in Kingwood" },
-  { src: showcase5, alt: "Premium tile and flooring craftsmanship" },
-  { src: serviceBathroom, alt: "Full bathroom remodeling service showcase" },
-  { src: serviceTile, alt: "Professional tile installation expertise" },
+  { src: gallery1, alt: "Luxury bathroom remodel with custom tile work in Houston Heights TX" },
+  { src: gallery2, alt: "Modern bathroom renovation featuring premium fixtures in Bellaire Houston" },
+  { src: heroBathroom, alt: "Professional bathroom remodeling contractor serving Houston TX area" },
+  { src: showcase1, alt: "Custom shower remodel with dual shower heads in Kingwood Houston TX" },
+  { src: showcase2, alt: "Professional bathroom tile installation contractor in Houston Heights" },
+  { src: showcase3, alt: "Contemporary bathroom renovation with modern vanity in Bellaire TX" },
+  { src: showcase4, alt: "Expert tile and flooring installation in River Oaks Houston" },
+  { src: showcase5, alt: "Luxury bathroom remodeling services in Kingwood Texas by BoldREMO" },
+  { src: serviceBathroom, alt: "Bathroom remodeling contractor in Houston TX - serving Heights, Bellaire, River Oaks" },
+  { src: serviceTile, alt: "Tile and flooring installation services in Houston Heights and Kingwood TX" },
 ];
 
 const Gallery = () => {
