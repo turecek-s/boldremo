@@ -4,6 +4,7 @@ import { CTASection } from "@/components/CTASection";
 import { BrandName } from "@/components/BrandName";
 import { CheckCircle } from "lucide-react";
 import boldremo9 from "@/assets/boldremo-9.jpg";
+import stanHeadshot from "@/assets/stan-headshot.webp";
 
 const values = [
   "Quality craftsmanship on every project",
@@ -67,6 +68,39 @@ const About = () => {
                     <span className="text-sm">Years Experience</span>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Meet the Founder */}
+        <section className="section-padding bg-muted">
+          <div className="container-custom">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="relative order-2 lg:order-1">
+                <img
+                  src={stanHeadshot}
+                  alt="Stan - Lead Craftsman & Owner of BoldREMO"
+                  className="w-full max-w-md mx-auto rounded-lg shadow-xl"
+                  loading="lazy"
+                />
+              </div>
+              <div className="order-1 lg:order-2">
+                <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-foreground mb-4">
+                  Meet the Founder
+                </h2>
+                <h3 className="text-xl font-semibold text-primary mb-6">
+                  Stan – Lead Craftsman & Owner
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Hi, I'm Stan, and I started <BrandName /> with a simple mission: to bring honest, high-quality craftsmanship to every home I work in. With over a decade of hands-on experience in bathroom remodeling and tile installation, I've built my reputation on doing the job right—the first time.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  I believe every project is personal. When you invite me into your home, you're trusting me with your vision, and I take that seriously. I'm not just a contractor—I'm the one who will be there from the first measurement to the final tile, making sure every detail exceeds your expectations.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  When I'm not transforming bathrooms across Houston, you'll find me spending time with my family and staying up-to-date on the latest design trends and materials. I'm proud to serve the Heights, Bellaire, River Oaks, Kingwood, and greater Houston communities—and I'd love to help bring your dream bathroom to life.
+                </p>
               </div>
             </div>
           </div>
