@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { BrandName } from "@/components/BrandName";
 import { MessageSquare, Paintbrush, Home } from "lucide-react";
 
 const steps = [
@@ -32,7 +33,7 @@ export const ProcessSection = () => {
       <div className="container-custom">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 id="process-heading" className="text-3xl sm:text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
-            BoldREMO Process
+            <BrandName /> Process
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
             "Transform your living space into a reflection of your style and needs with our easy and personalized home remodeling process, tailored to suit the unique vision you have for your home"

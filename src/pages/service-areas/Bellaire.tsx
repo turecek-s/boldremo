@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { BrandName } from "@/components/BrandName";
 import { Phone, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
 import serviceBathroom from "@/assets/service-bathroom.jpg";
 
@@ -55,7 +56,7 @@ const Bellaire = () => {
                 Bathroom Remodeling in Bellaire, Texas
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                Create the luxury bathroom you deserve in your Bellaire home. BoldRemo delivers sophisticated bathroom renovations with the quality and attention to detail that Bellaire homeowners expect.
+                Create the luxury bathroom you deserve in your Bellaire home. <BrandName /> delivers sophisticated bathroom renovations with the quality and attention to detail that Bellaire homeowners expect.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" variant="secondary">
@@ -111,7 +112,7 @@ const Bellaire = () => {
         <section className="section-padding bg-muted">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-12">
-              Why Bellaire Homeowners Choose BoldRemo
+              Why Bellaire Homeowners Choose <BrandName />
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card p-8 rounded-lg shadow-sm">
