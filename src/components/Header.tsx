@@ -36,9 +36,9 @@ export const Header = () => {
       <nav className="container-custom flex items-center justify-between" aria-label="Main navigation">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2" aria-label="BoldREMO Home">
-          <span className="text-2xl font-serif font-bold">
-            <span className="text-primary">Bold</span>
-            <span className={isScrolled ? "text-foreground" : "text-primary"}>REMO</span>
+          <span className="text-2xl font-serif">
+            <span className="font-extrabold text-primary">Bold</span>
+            <span className={`font-medium ${isScrolled ? "text-foreground" : "text-primary"}`}>REMO</span>
           </span>
         </Link>
 

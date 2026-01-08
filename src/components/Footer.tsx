@@ -22,8 +22,8 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
-              <span className="text-2xl font-serif font-bold text-primary-foreground">
-                Bold<span className="text-secondary">REMO</span>
+              <span className="text-2xl font-serif text-primary-foreground">
+                <span className="font-extrabold">Bold</span><span className="font-medium text-secondary">REMO</span>
               </span>
             </Link>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
