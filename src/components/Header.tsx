@@ -3,21 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const BoldRemoLogo = ({ className }: { className?: string }) => (
-  <svg 
-    className={className} 
-    viewBox="0 0 40 40" 
-    fill="none" 
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect width="40" height="40" rx="8" fill="currentColor" />
-    <path 
-      d="M12 10H22C24.5 10 26.5 11 27.8 12.5C29 14 29.5 16 29 18C28.5 20 27 21.5 25 22.5C27.5 23 29.5 24.5 30 27C30.5 29.5 29 32 26 33H12V10ZM17 14V19H21C22.5 19 23.5 18 23.5 16.5C23.5 15 22.5 14 21 14H17ZM17 23V29H22C24 29 25.5 28 25.5 26C25.5 24 24 23 22 23H17Z" 
-      fill="white"
-    />
-  </svg>
-);
-
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "Gallery", path: "/gallery" },
@@ -50,8 +35,7 @@ export const Header = () => {
     >
       <nav className="container-custom flex items-center justify-between" aria-label="Main navigation">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2.5" aria-label="BoldREMO Home">
-          <BoldRemoLogo className="h-9 w-9 text-primary" />
+        <Link to="/" className="flex items-center gap-2" aria-label="BoldREMO Home">
           <span className="text-2xl font-serif">
             <span className="font-extrabold text-primary">Bold</span>
             <span className={`font-medium ${isScrolled ? "text-foreground" : "text-primary"}`}>REMO</span>
