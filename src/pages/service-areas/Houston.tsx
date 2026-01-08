@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { BrandName } from "@/components/BrandName";
 import { Phone, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
 import serviceBathroom from "@/assets/service-bathroom.jpg";
 
@@ -53,7 +54,7 @@ const Houston = () => {
                 Bathroom Remodeling in Houston, Texas
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                Houston's trusted bathroom renovation experts. From luxurious master suites to efficient guest baths, BoldRemo delivers exceptional craftsmanship throughout the Greater Houston area.
+                Houston's trusted bathroom renovation experts. From luxurious master suites to efficient guest baths, <BrandName /> delivers exceptional craftsmanship throughout the Greater Houston area.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" variant="secondary">
@@ -79,7 +80,7 @@ const Houston = () => {
                   Houston's Premier Bathroom Remodeling Company
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  For years, Houston homeowners have trusted BoldRemo to transform their bathrooms into beautiful, functional spaces. We understand the unique needs of Houston homes, from addressing humidity challenges to creating designs that complement the diverse architectural styles found throughout the city.
+                  For years, Houston homeowners have trusted <BrandName /> to transform their bathrooms into beautiful, functional spaces. We understand the unique needs of Houston homes, from addressing humidity challenges to creating designs that complement the diverse architectural styles found throughout the city.
                 </p>
                 <p className="text-muted-foreground mb-8">
                   Whether you're in a historic Heights bungalow, a Bellaire family home, or a River Oaks estate, our team delivers quality bathroom renovations tailored to your home and lifestyle.
@@ -139,7 +140,7 @@ const Houston = () => {
         <section className="section-padding bg-background">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-12">
-              Why Houston Homeowners Choose BoldRemo
+              Why Houston Homeowners Choose <BrandName />
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">

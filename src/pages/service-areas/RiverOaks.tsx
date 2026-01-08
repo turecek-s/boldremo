@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { BrandName } from "@/components/BrandName";
 import { Phone, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
 import serviceBathroom from "@/assets/service-bathroom.jpg";
 
@@ -55,7 +56,7 @@ const RiverOaks = () => {
                 Bathroom Remodeling in River Oaks
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                Elevate your River Oaks estate with world-class bathroom renovations. BoldRemo brings unparalleled expertise and craftsmanship to Houston's most prestigious neighborhood.
+                Elevate your River Oaks estate with world-class bathroom renovations. <BrandName /> brings unparalleled expertise and craftsmanship to Houston's most prestigious neighborhood.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" variant="secondary">
@@ -111,7 +112,7 @@ const RiverOaks = () => {
         <section className="section-padding bg-muted">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-center mb-12">
-              Why River Oaks Estates Trust BoldRemo
+              Why River Oaks Estates Trust <BrandName />
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card p-8 rounded-lg shadow-sm">
