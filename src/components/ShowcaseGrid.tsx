@@ -1,16 +1,16 @@
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import boldremo4 from "@/assets/boldremo-4.jpg";
 import boldremo5 from "@/assets/boldremo-5.jpg";
+import boldremo9 from "@/assets/boldremo-9.jpg";
+import boldremo10 from "@/assets/boldremo-10.jpg";
 import boldremo6 from "@/assets/boldremo-6.jpg";
-import boldremo7 from "@/assets/boldremo-7.jpg";
-import boldremo8 from "@/assets/boldremo-8.jpg";
 
 const images = [
   { src: boldremo4, alt: "Walk-in tub with LED lighting and marble tile in Houston Heights TX" },
+  { src: boldremo9, alt: "Luxury master bathroom with marble floors and glass shower in Kingwood TX" },
   { src: boldremo5, alt: "Freestanding soaking tub with modern fixtures in Kingwood Houston" },
+  { src: boldremo10, alt: "Modern bathroom with patterned tile floor and green vanity in Houston Heights" },
   { src: boldremo6, alt: "Custom walk-in shower with marble walls and bench in Bellaire TX" },
-  { src: boldremo7, alt: "Herringbone tile shower surround with mosaic niche in River Oaks Houston" },
-  { src: boldremo8, alt: "Bathroom vanity with hexagon tile backsplash in Houston Heights TX" },
 ];
 
 export const ShowcaseGrid = () => {
