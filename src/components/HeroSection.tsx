@@ -12,6 +12,8 @@ export const HeroSection = () => {
           src={heroBathroom}
           alt="Professional bathroom remodeling contractor in Houston, Heights, Bellaire, River Oaks & Kingwood TX"
           className="w-full h-full object-cover"
+          width={1920}
+          height={1280}
           sizes="100vw"
           loading="eager"
           decoding="sync"
