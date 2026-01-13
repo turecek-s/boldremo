@@ -130,6 +130,10 @@ const quickTips = [
 ];
 
 const Resources = () => {
+  const handlePrintChecklist = () => {
+    window.print();
+  };
+
   return (
     <>
       <Header />
@@ -198,10 +202,14 @@ const Resources = () => {
         <section className="section-padding bg-secondary">
           <div className="container-custom">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
+              <Button
+                variant="outline"
+                onClick={handlePrintChecklist}
+                className="gap-2 mb-4"
+              >
                 <Download className="h-4 w-4" aria-hidden="true" />
-                <span className="text-sm font-medium">Printable Checklist</span>
-              </div>
+                Print Checklist
+              </Button>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
                 Bathroom Remodel Checklist
               </h2>
