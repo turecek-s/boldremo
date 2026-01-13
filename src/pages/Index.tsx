@@ -14,7 +14,14 @@ const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"
 const FAQSection = lazy(() => import("@/components/FAQSection").then(m => ({ default: m.FAQSection })));
 const CTASection = lazy(() => import("@/components/CTASection").then(m => ({ default: m.CTASection })));
 
-const SectionFallback = () => <div className="section-padding bg-background" />;
+const SectionFallback = () => <div className="section-padding bg-background" aria-hidden="true" />;
+
+// Wrapper for below-fold sections with content-visibility optimization
+const LazySection = ({ children }: { children: React.ReactNode }) => (
+  <div className="content-visibility-auto">
+    {children}
+  </div>
+);
 
 const Index = () => {
   return (
@@ -24,27 +31,41 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <Suspense fallback={<SectionFallback />}>
-          <GalleryPreview />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <ServicesSection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <ProcessSection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <ShowcaseGrid />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <TestimonialsSection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <FAQSection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <CTASection />
-        </Suspense>
+        <LazySection>
+          <Suspense fallback={<SectionFallback />}>
+            <GalleryPreview />
+          </Suspense>
+        </LazySection>
+        <LazySection>
+          <Suspense fallback={<SectionFallback />}>
+            <ServicesSection />
+          </Suspense>
+        </LazySection>
+        <LazySection>
+          <Suspense fallback={<SectionFallback />}>
+            <ProcessSection />
+          </Suspense>
+        </LazySection>
+        <LazySection>
+          <Suspense fallback={<SectionFallback />}>
+            <ShowcaseGrid />
+          </Suspense>
+        </LazySection>
+        <LazySection>
+          <Suspense fallback={<SectionFallback />}>
+            <TestimonialsSection />
+          </Suspense>
+        </LazySection>
+        <LazySection>
+          <Suspense fallback={<SectionFallback />}>
+            <FAQSection />
+          </Suspense>
+        </LazySection>
+        <LazySection>
+          <Suspense fallback={<SectionFallback />}>
+            <CTASection />
+          </Suspense>
+        </LazySection>
       </main>
       <Footer />
     </>
