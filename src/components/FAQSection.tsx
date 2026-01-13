@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "What areas of Houston do you serve?",
     answer:
-      "BoldREMO proudly serves the greater Houston metropolitan area including Houston Heights, Bellaire, River Oaks, Kingwood, The Woodlands, Katy, Sugar Land, and surrounding communities. Our team of experienced contractors travels throughout the region to bring quality bathroom remodeling and tile installation services to homeowners across Harris County and beyond.",
+      "BoldREMO proudly serves Houston, Heights, Bellaire, River Oaks & Kingwood. Our team of experienced contractors brings quality bathroom remodeling and tile installation services to homeowners throughout these communities.",
   },
   {
     question: "Do you offer free estimates?",

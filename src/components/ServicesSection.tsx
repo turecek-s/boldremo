@@ -9,14 +9,14 @@ const services = [
     description:
       "Transform your outdated bathroom into a luxurious retreat with our comprehensive remodeling services. From modern walk-in showers and freestanding tubs to custom vanities and energy-efficient fixtures, we handle every aspect of your bathroom renovation. Our Houston-based team specializes in both master bath transformations and guest bathroom updates.",
     image: boldremo7,
-    alt: "Bathroom remodeling contractor in Houston TX - serving Heights, Bellaire, River Oaks and Kingwood",
+    alt: "Bathroom remodeling contractor in Houston, Heights, Bellaire, River Oaks & Kingwood TX",
   },
   {
     title: "Tile & Flooring",
     description:
       "Elevate your home with expert tile and flooring installation. We work with ceramic, porcelain, natural stone, and luxury vinyl to create stunning floors, backsplashes, and shower surrounds. Our precision craftsmanship ensures lasting beauty and durability for years to come.",
     image: boldremo8,
-    alt: "Tile and flooring installation services in Houston Heights, Bellaire, River Oaks and Kingwood TX",
+    alt: "Tile and flooring installation services in Houston, Heights, Bellaire, River Oaks & Kingwood TX",
   },
 ];
 

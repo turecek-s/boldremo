@@ -5,7 +5,7 @@ const LocalBusinessSchema = () => {
     "@id": "https://boldremo.com/#organization",
     "name": "BoldREMO",
     "alternateName": "BoldREMO Bathroom Remodeling",
-    "description": "Professional bathroom remodeling and tile installation contractor serving Houston, Heights, Bellaire, River Oaks, and Kingwood TX. Specializing in luxury bathroom renovations, walk-in showers, custom tile work, and flooring installation.",
+    "description": "Professional bathroom remodeling and tile installation contractor serving Houston, Heights, Bellaire, River Oaks & Kingwood TX. Specializing in luxury bathroom renovations, walk-in showers, custom tile work, and flooring installation.",
     "url": "https://boldremo.com",
     "telephone": "+1-713-396-7116",
     "email": "boldremo@gmail.com",
@@ -28,7 +28,7 @@ const LocalBusinessSchema = () => {
       },
       {
         "@type": "Neighborhood",
-        "name": "Houston Heights"
+        "name": "Heights"
       },
       {
         "@type": "Neighborhood",
