@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FloatingContactButton } from "@/components/FloatingContactButton";
 import { CanonicalUrl } from "@/components/CanonicalUrl";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 // Eager load Index page to eliminate chain - it's always needed on homepage
 import Index from "./pages/Index";
@@ -36,6 +37,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <CanonicalUrl />
           <Suspense fallback={<div className="min-h-screen bg-background" />}>
             <Routes>

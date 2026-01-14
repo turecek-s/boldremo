@@ -35,7 +35,12 @@ export const Header = () => {
     >
       <nav className="container-custom flex items-center justify-between" aria-label="Main navigation">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2" aria-label="BoldREMO Home">
+        <Link 
+          to="/" 
+          className="flex items-center gap-2" 
+          aria-label="BoldREMO Home"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
           <span className="text-2xl font-serif">
             <span className="font-extrabold text-primary">Bold</span>
             <span className={`font-medium ${isScrolled ? "text-foreground" : "text-primary"}`}>REMO</span>
@@ -48,6 +53,11 @@ export const Header = () => {
             <Link
               key={link.path}
               to={link.path}
+              onClick={() => {
+                if (link.path === "/" || location.pathname === link.path) {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
               className={`text-sm font-medium tracking-wide transition-colors hover:text-primary ${
                 location.pathname === link.path
                   ? "text-primary"
@@ -95,7 +105,12 @@ export const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  if (link.path === "/" || location.pathname === link.path) {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }}
                 className={`text-base font-medium py-2 transition-colors hover:text-primary ${
                   location.pathname === link.path
                     ? "text-primary"
