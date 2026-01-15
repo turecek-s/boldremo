@@ -64,7 +64,7 @@ const Houston = () => {
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  <Link to="/contact">Get Free Estimate</Link>
+                  <Link to="/contact">Book Bathroom Consult</Link>
                 </Button>
               </div>
             </div>
@@ -181,11 +181,11 @@ const Houston = () => {
               Ready to Transform Your Houston Bathroom?
             </h2>
             <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-8">
-              Get a free, no-obligation estimate for your bathroom renovation. Our team is ready to bring your vision to life.
+              Get a free rough estimate by phone or email, or book a $75 design consultation (credited toward your project).
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/contact">Get Your Free Quote</Link>
+                <Link to="/contact">Book Bathroom Consult</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 <Link to="/gallery" className="flex items-center gap-2">

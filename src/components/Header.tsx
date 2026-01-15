@@ -82,7 +82,7 @@ export const Header = () => {
             (832) 513-5737
           </a>
           <Button asChild variant="default" size="sm">
-            <Link to="/contact">Contact Us</Link>
+            <Link to="/contact">Book Bathroom Consult</Link>
           </Button>
         </div>
 
@@ -130,7 +130,7 @@ export const Header = () => {
             </a>
             <Button asChild className="mt-4 w-full">
               <Link to="/contact" onClick={() => setIsOpen(false)}>
-                Contact Us
+                Book Bathroom Consult
               </Link>
             </Button>
           </nav>

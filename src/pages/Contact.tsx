@@ -77,10 +77,10 @@ const Contact = () => {
         <section className="pt-32 pb-16 bg-muted">
           <div className="container-custom text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-semibold text-foreground mb-4">
-              Contact Us
+              Book Your Bathroom Consult
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Ready to transform your bathroom? Get in touch for a free consultation.
+              Get a free rough estimate by phone or email, or book a $75 in-person design consultation (credited toward your project).
             </p>
           </div>
         </section>
@@ -94,8 +94,11 @@ const Contact = () => {
                 <h2 className="text-3xl font-serif font-semibold text-foreground mb-6">
                   Get In Touch
                 </h2>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  <strong>Free Rough Estimates:</strong> Call or email us for a quick estimate on straightforward projects.
+                </p>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  We'd love to hear about your project. Contact us today for a free consultation and quote on your bathroom remodeling needs.
+                  <strong>$75 Design Consultation:</strong> Book an in-person visit where we assess your space, discuss your vision, and create a personalized plan. This fee is credited toward your project if you move forward with us.
                 </p>
 
                 <div className="space-y-6">
@@ -158,7 +161,7 @@ const Contact = () => {
               {/* Contact Form */}
               <div className="bg-card border border-border rounded-lg p-8">
                 <h2 className="text-2xl font-serif font-semibold text-foreground mb-6">
-                  Request a Free Quote
+                  Book Design Consultation
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Honeypot field - hidden from users, bots will fill it */}

@@ -6,9 +6,9 @@ import { MessageSquare, Paintbrush, Home } from "lucide-react";
 const steps = [
   {
     icon: MessageSquare,
-    title: "Consultation",
+    title: "Design Consultation",
     description:
-      "Share your vision with our remodeling experts during a free in-home consultation. We'll discuss your goals, preferences, and budget to create a personalized plan for your bathroom transformation.",
+      "Share your vision with our remodeling experts. Get a free rough estimate by phone or email, or book a $75 in-person design consultation where we assess your space and create a personalized plan. The consultation fee is credited toward your project.",
     number: "01",
   },
   {

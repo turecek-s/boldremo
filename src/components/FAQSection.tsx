@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "Do you offer free estimates?",
     answer:
-      "Yes, we offer free, no-obligation estimates for all bathroom remodeling and tile installation projects. During your consultation, our experts will assess your space, discuss your vision and budget, and provide a detailed written estimate. Call us at (832) 513-5737 to schedule your free consultation today.",
+      "We offer free rough estimates by phone or email for straightforward projects. For detailed planning, we offer a $75 in-person design consultation where our experts visit your home, assess your space, discuss your vision and budget, and create a personalized plan. This consultation fee is credited toward your project if you move forward with us. Call us at (832) 513-5737 or email info@boldremo.com for a free rough estimate.",
   },
   {
     question: "What types of tile do you install?",

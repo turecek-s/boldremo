@@ -66,7 +66,7 @@ const RiverOaks = () => {
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  <Link to="/contact">Get Free Estimate</Link>
+                  <Link to="/contact">Book Bathroom Consult</Link>
                 </Button>
               </div>
             </div>
