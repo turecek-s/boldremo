@@ -9,7 +9,7 @@ export const CTASection = () => {
           Discover Your Vision,<br className="hidden sm:block" /> Connect with Us
         </h2>
         <Button asChild size="lg" className="min-w-[200px]">
-          <Link to="/contact">Contact Us</Link>
+          <Link to="/contact">Book Bathroom Consult</Link>
         </Button>
       </div>
     </section>

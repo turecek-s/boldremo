@@ -83,7 +83,7 @@ const Services = () => {
                 Ready to start your bathroom renovation project?
               </p>
               <Button asChild size="lg">
-                <Link to="/contact">Get a Free Quote</Link>
+                <Link to="/contact">Book Bathroom Consult</Link>
               </Button>
             </div>
           </div>

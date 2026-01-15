@@ -326,11 +326,11 @@ const Resources = () => {
             </h2>
             <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
               Put these resources to work with Houston&apos;s trusted bathroom remodeling experts. 
-              Get a free, no-obligation consultation and quote.
+              Get a free rough estimate by phone or email, or book a $75 design consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/contact">Get Your Free Quote</Link>
+                <Link to="/contact">Book Bathroom Consult</Link>
               </Button>
               <Button
                 asChild

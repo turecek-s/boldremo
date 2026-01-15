@@ -39,7 +39,7 @@ export const HeroSection = () => {
             <Button asChild size="lg" className="min-w-[200px]">
               <a href="tel:+18325135737" className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
-                Contact Us
+                Book Bathroom Consult
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="min-w-[200px] bg-background/80 backdrop-blur-sm">
