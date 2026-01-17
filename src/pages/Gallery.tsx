@@ -13,16 +13,76 @@ import boldremo9 from "@/assets/boldremo-9.jpg";
 import boldremo10 from "@/assets/boldremo-10.jpg";
 
 const images = [
-  { src: boldremo1, alt: "Glass walk-in shower with marble tile and freestanding tub in Houston TX" },
-  { src: boldremo2, alt: "Luxury master bathroom with chandelier and glass shower in Bellaire Houston" },
-  { src: boldremo3, alt: "Modern bathroom with decorative tile accent wall and soaking tub in River Oaks TX" },
-  { src: boldremo4, alt: "Walk-in tub with LED lighting and marble tile in Houston Heights TX" },
-  { src: boldremo5, alt: "Freestanding soaking tub with modern fixtures in Kingwood Houston" },
-  { src: boldremo6, alt: "Custom walk-in shower with marble walls and bench in Bellaire TX" },
-  { src: boldremo7, alt: "Herringbone tile shower surround with mosaic niche in River Oaks Houston" },
-  { src: boldremo8, alt: "Bathroom vanity with hexagon tile backsplash in Houston Heights TX" },
-  { src: boldremo9, alt: "Luxury master bathroom with marble floors and glass shower in Kingwood TX" },
-  { src: boldremo10, alt: "Modern bathroom with patterned tile floor and green vanity in Houston Heights" },
+  { 
+    src: boldremo1, 
+    alt: "Glass walk-in shower with marble tile and freestanding tub in Houston TX",
+    caption: "Master Bath Transformation",
+    location: "River Oaks",
+    value: "$29,000"
+  },
+  { 
+    src: boldremo2, 
+    alt: "Luxury master bathroom with chandelier and glass shower in Bellaire Houston",
+    caption: "Luxury Suite Renovation",
+    location: "Bellaire",
+    value: "$42,000"
+  },
+  { 
+    src: boldremo3, 
+    alt: "Modern bathroom with decorative tile accent wall and soaking tub in River Oaks TX",
+    caption: "Spa-Style Retreat",
+    location: "River Oaks",
+    value: "$38,000"
+  },
+  { 
+    src: boldremo4, 
+    alt: "Walk-in tub with LED lighting and marble tile in Houston Heights TX",
+    caption: "Accessible Luxury Bath",
+    location: "Heights",
+    value: "$24,000"
+  },
+  { 
+    src: boldremo5, 
+    alt: "Freestanding soaking tub with modern fixtures in Kingwood Houston",
+    caption: "Modern Soaking Tub Install",
+    location: "Kingwood",
+    value: "$18,500"
+  },
+  { 
+    src: boldremo6, 
+    alt: "Custom walk-in shower with marble walls and bench in Bellaire TX",
+    caption: "Walk-In Shower Remodel",
+    location: "Bellaire",
+    value: "$22,000"
+  },
+  { 
+    src: boldremo7, 
+    alt: "Herringbone tile shower surround with mosaic niche in River Oaks Houston",
+    caption: "Herringbone Tile Feature",
+    location: "River Oaks",
+    value: "$26,000"
+  },
+  { 
+    src: boldremo8, 
+    alt: "Bathroom vanity with hexagon tile backsplash in Houston Heights TX",
+    caption: "Guest Bath Refresh",
+    location: "Heights",
+    value: "$12,500"
+  },
+  { 
+    src: boldremo9, 
+    alt: "Luxury master bathroom with marble floors and glass shower in Kingwood TX",
+    caption: "Complete Master Overhaul",
+    location: "Kingwood",
+    value: "$35,000"
+  },
+  { 
+    src: boldremo10, 
+    alt: "Modern bathroom with patterned tile floor and green vanity in Houston Heights",
+    caption: "Bold Pattern Statement",
+    location: "Heights",
+    value: "$14,000"
+  },
 ];
 
 const Gallery = () => {
@@ -37,7 +97,7 @@ const Gallery = () => {
               Our Work
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Browse our portfolio of bathroom remodeling and tile installation projects in Houston, Heights, Bellaire, River Oaks & Kingwood.
+              Browse our portfolio of luxury bathroom remodeling projects across Houston, Heights, Bellaire, River Oaks & Kingwood.
             </p>
           </div>
         </section>
@@ -61,7 +121,15 @@ const Gallery = () => {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     priority={index < 3}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  {/* Overlay with project details */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <p className="text-primary-foreground font-serif font-semibold text-lg">
+                      {image.caption}
+                    </p>
+                    <p className="text-primary-foreground/90 text-sm">
+                      {image.location} — {image.value}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

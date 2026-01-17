@@ -1,28 +1,27 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { BrandName } from "@/components/BrandName";
-import { MessageSquare, Paintbrush, Home } from "lucide-react";
+import { Phone, Home, FileText } from "lucide-react";
 
 const steps = [
   {
-    icon: MessageSquare,
-    title: "Design Consultation",
+    icon: Phone,
+    title: "Free Rough Estimate",
     description:
-      "Share your vision with our remodeling experts. Get a free rough estimate by phone or email, or book a $75 in-person design consultation where we assess your space and create a personalized plan. The consultation fee is credited toward your project.",
+      "Get a quick estimate by phone or email. No home visit required. Perfect for understanding ballpark costs before committing to a consultation.",
     number: "01",
   },
   {
-    icon: Paintbrush,
-    title: "Design & Planning",
+    icon: Home,
+    title: "$75 In-Home Design Consult",
     description:
-      "Our team creates detailed designs and material selections tailored to your style. We handle permits, coordinate with suppliers, and prepare everything for a smooth renovation process.",
+      "Our expert visits your home for detailed measurements, scope discussion, and realistic pricing. This fee is credited toward your project if you move forward.",
     number: "02",
   },
   {
-    icon: Home,
-    title: "Expert Installation",
+    icon: FileText,
+    title: "Written Proposal & Timeline",
     description:
-      "Our skilled craftsmen bring your vision to life with precision and care. From demolition to final touches, we ensure quality workmanship and minimal disruption to your daily routine.",
+      "Receive a comprehensive proposal with itemized costs, material selections, and a clear project timeline. No surprises—just transparent planning.",
     number: "03",
   },
 ];
@@ -33,15 +32,15 @@ export const ProcessSection = () => {
       <div className="container-custom">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 id="process-heading" className="text-3xl sm:text-4xl md:text-5xl font-serif font-semibold text-foreground mb-6">
-            <BrandName /> Process
+            How Our Estimates & Consults Work
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            "Transform your living space into a reflection of your style and needs with our easy and personalized home remodeling process, tailored to suit the unique vision you have for your home"
+            A simple, transparent process designed to give you confidence and clarity before any work begins.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {steps.map((step, index) => (
+          {steps.map((step) => (
             <div
               key={step.title}
               className="relative bg-card border border-border rounded-lg p-8 text-center hover:border-primary/50 transition-colors duration-300"
@@ -64,7 +63,7 @@ export const ProcessSection = () => {
 
         <div className="text-center">
           <Button asChild size="lg">
-            <Link to="/about">About Us</Link>
+            <Link to="/contact">Start With a Free Estimate</Link>
           </Button>
         </div>
       </div>

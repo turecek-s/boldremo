@@ -7,29 +7,39 @@ import {
 
 const faqs = [
   {
+    question: "What qualifies for a free rough estimate?",
+    answer:
+      "Free rough estimates are available by phone or email for straightforward projects where you can describe the scope of work. This gives you a ballpark range to help with budgeting before committing to an in-person consultation. Simply call us at (832) 513-5737 or email info@boldremo.com with details about your project.",
+  },
+  {
+    question: "What happens during the $75 in-home design consult?",
+    answer:
+      "During the consultation, our design expert visits your home to take precise measurements, assess your existing plumbing and electrical, discuss your vision and preferences, and review material options. You'll receive detailed, realistic pricing and a preliminary project timeline. The $75 fee is credited toward your project if you choose to move forward with us.",
+  },
+  {
     question: "How long does a typical bathroom remodel take?",
     answer:
-      "A standard bathroom remodel typically takes 2-4 weeks depending on the scope of work. Simple updates like new fixtures and paint may take just a week, while complete gut renovations with custom tile work, new plumbing, and electrical updates can extend to 4-6 weeks. We provide detailed timelines during your consultation and keep you informed throughout the project.",
+      "Timeline depends on the scope: Refresh Remodels (cosmetic updates) typically take 7-10 days. Signature Remodels (full renovation with custom tile) usually run 14-21 days. Luxury Spa Remodels with heated floors, frameless glass, and premium materials may take 21+ days. We provide a detailed timeline during your consultation and keep you informed throughout.",
   },
   {
-    question: "What areas of Houston do you serve?",
+    question: "Do you help with design decisions?",
     answer:
-      "BoldREMO proudly serves Houston, Heights, Bellaire, River Oaks & Kingwood. Our team of experienced contractors brings quality bathroom remodeling and tile installation services to homeowners throughout these communities.",
-  },
-  {
-    question: "Do you offer free estimates?",
-    answer:
-      "We offer free rough estimates by phone or email for straightforward projects. For detailed planning, we offer a $75 in-person design consultation where our experts visit your home, assess your space, discuss your vision and budget, and create a personalized plan. This consultation fee is credited toward your project if you move forward with us. Call us at (832) 513-5737 or email info@boldremo.com for a free rough estimate.",
-  },
-  {
-    question: "What types of tile do you install?",
-    answer:
-      "Our skilled craftsmen work with all types of tile including ceramic, porcelain, natural stone (marble, granite, travertine, slate), glass mosaic, and large-format tiles. We handle everything from classic subway tile patterns to intricate custom designs. Whether you want modern minimalist aesthetics or traditional elegance, we have the expertise to bring your vision to life.",
+      "Absolutely! Our team guides you through every design choice—from tile patterns and color palettes to fixture styles and layout optimization. We bring material samples, share inspiration photos, and leverage our experience to help you create a bathroom that reflects your style while maximizing functionality and value.",
   },
   {
     question: "Are you licensed and insured?",
     answer:
-      "Yes, BoldREMO carries general liability insurance to protect our clients and their property. We also work exclusively with licensed tradespeople for all plumbing and electrical work, ensuring every aspect of your project meets Texas code requirements. We're happy to provide proof of insurance upon request.",
+      "Yes, BoldREMO carries general liability insurance to protect our clients and their property. We work exclusively with licensed tradespeople for all plumbing and electrical work, ensuring every aspect of your project meets Texas code requirements. We're happy to provide proof of insurance upon request.",
+  },
+  {
+    question: "How do payments work?",
+    answer:
+      "We require a deposit to secure your project date and order materials. Progress payments are tied to project milestones, with final payment due upon completion. We provide a detailed payment schedule in your proposal so there are no surprises. We accept checks, credit cards, and financing options for qualified buyers.",
+  },
+  {
+    question: "What areas of Houston do you serve?",
+    answer:
+      "BoldREMO proudly serves Houston, Heights, Bellaire, River Oaks, Kingwood, and surrounding communities. Our team of experienced contractors brings quality bathroom remodeling and tile installation services to homeowners throughout these areas.",
   },
   {
     question: "Can you work with my existing layout or do I need a complete redesign?",
