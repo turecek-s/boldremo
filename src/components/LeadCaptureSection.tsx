@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { FileText, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 export const LeadCaptureSection = () => {
   const [name, setName] = useState("");
@@ -21,19 +22,44 @@ export const LeadCaptureSection = () => {
       return;
     }
 
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast({
+        title: "Please enter a valid email address",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     
-    // Simulate form submission - in production, this would connect to an email service
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Guide on the way!",
-      description: "Check your email for the Bathroom Remodel Planning Guide.",
-    });
-    
-    setName("");
-    setEmail("");
-    setIsSubmitting(false);
+    try {
+      const { data, error } = await supabase.functions.invoke('send-guide-email', {
+        body: { name: name.trim(), email: email.trim() }
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Guide on the way!",
+        description: "Check your email for the Bathroom Remodel Planning Guide.",
+      });
+      
+      setName("");
+      setEmail("");
+    } catch (error: any) {
+      console.error("Error sending guide:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
