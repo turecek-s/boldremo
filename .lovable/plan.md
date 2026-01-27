@@ -1,33 +1,33 @@
 
 
-## Update Guide Email Sender Address
+## Fix Guide Email Sender Address
 
-### Change Required
+### The Problem
+The edge function is still using `onboarding@resend.dev` as the sender email (line 303), which Resend rejects when sending to external recipients. The code needs to be updated to use your verified domain.
 
-Update the `send-guide-email` Edge Function to use your verified domain email address.
-
-### Technical Details
+### The Fix
 
 **File:** `supabase/functions/send-guide-email/index.ts`
 
-**Current line (~line 179):**
+**Line 303 - Change from:**
 ```typescript
 from: "BoldREMO <onboarding@resend.dev>",
 ```
 
-**Updated to:**
+**To:**
 ```typescript
 from: "BoldREMO <info@boldremo.com>",
 ```
 
-### What This Fixes
+### What Happens After This Fix
 
-The Resend API was rejecting emails because `onboarding@resend.dev` can only send to the account owner's email. With your verified domain, emails can now be sent to any recipient who requests the planning guide.
+1. The edge function will be redeployed automatically
+2. Emails will be sent from `info@boldremo.com` (your verified domain)
+3. Users will receive the comprehensive planning guide in their inbox
 
-### After This Change
+### Files to Modify
 
-The lead capture form will:
-1. Save lead data to the database
-2. Send the comprehensive planning guide email from `info@boldremo.com`
-3. Show success message to the user
+| File | Change |
+|------|--------|
+| `supabase/functions/send-guide-email/index.ts` | Update `from` field on line 303 to use `info@boldremo.com` |
 
