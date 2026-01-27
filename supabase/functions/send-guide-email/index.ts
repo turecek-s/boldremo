@@ -300,7 +300,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email via Resend
     try {
       const { error: emailError } = await resend.emails.send({
-        from: "BoldREMO <onboarding@resend.dev>",
+        from: "BoldREMO <info@boldremo.com>",
         to: [email],
         subject: "Your Houston Bathroom Remodel Planning Guide - From BoldREMO",
         html: generateGuideEmailHtml(name),
