@@ -25,44 +25,44 @@
   :root {
     /* BoldRemo Brand Colors - Navy & Warm Taupe */
     --background: 40 20% 98%;
-    --foreground: 220 50% 15%;
+    --foreground: 220 50% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 50% 15%;
+    --card-foreground: 220 50% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 50% 15%;
+    --popover-foreground: 220 50% 12%;
 
     /* Navy Primary - Brand Blue */
-    --primary: 225 60% 20%;
-    --primary-foreground: 40 20% 98%;
+    --primary: 225 60% 18%;
+    --primary-foreground: 0 0% 100%;
 
     /* Warm Taupe Secondary */
-    --secondary: 25 15% 75%;
-    --secondary-foreground: 220 50% 15%;
+    --secondary: 25 12% 70%;
+    --secondary-foreground: 220 50% 12%;
 
-    --muted: 30 10% 92%;
-    --muted-foreground: 220 25% 30%;
+    --muted: 30 10% 90%;
+    --muted-foreground: 220 30% 35%;
 
     /* Warm Accent */
-    --accent: 30 20% 85%;
-    --accent-foreground: 220 50% 15%;
+    --accent: 30 15% 82%;
+    --accent-foreground: 220 50% 12%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 30 15% 88%;
-    --input: 30 15% 88%;
-    --ring: 225 60% 20%;
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 225 60% 18%;
 
     --radius: 0.25rem;
 
     /* Custom Brand Variables */
-    --hero-overlay: 25 15% 70%;
-    --navy: 225 60% 20%;
-    --taupe: 25 15% 75%;
+    --hero-overlay: 220 50% 12%;
+    --navy: 225 60% 18%;
+    --taupe: 25 12% 70%;
     --warm-white: 40 20% 98%;
-    --gold-accent: 38 70% 50%;
+    --gold-accent: 38 70% 45%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
