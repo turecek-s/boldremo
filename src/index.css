@@ -57,8 +57,8 @@
 
     --radius: 0.25rem;
 
-    /* Custom Brand Variables */
-    --hero-overlay: 220 50% 12%;
+    /* Custom Brand Variables - Light overlay for dark text contrast */
+    --hero-overlay: 30 20% 88%;
     --navy: 225 60% 18%;
     --taupe: 25 12% 70%;
     --warm-white: 40 20% 98%;
