@@ -7,6 +7,13 @@ const TikTokIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const serviceAreaLinks = [
+  { name: "The Heights", path: "/service-areas/heights" },
+  { name: "River Oaks", path: "/service-areas/river-oaks" },
+  { name: "Bellaire", path: "/service-areas/bellaire" },
+  { name: "Kingwood", path: "/service-areas/kingwood" },
+];
+
 export const Footer = () => {
   const socialLinks = [
     { href: "https://www.facebook.com/BoldREMOllc/", label: "Facebook", icon: Facebook },
@@ -70,24 +77,23 @@ export const Footer = () => {
             </nav>
           </div>
 
-          {/* Services */}
+          {/* Service Areas */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Our Services</h3>
-            <ul className="space-y-3">
-              {[
-                "Bathroom Remodeling",
-                "Tile & Flooring",
-                "Custom Showers",
-                "Vanity Installation",
-                "Full Renovations",
-              ].map((service) => (
-                <li key={service}>
-                  <span className="text-primary-foreground/80 text-sm">
-                    {service}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <h3 className="text-lg font-semibold mb-4">Service Areas</h3>
+            <nav aria-label="Service area navigation">
+              <ul className="space-y-3">
+                {serviceAreaLinks.map((area) => (
+                  <li key={area.path}>
+                    <Link
+                      to={area.path}
+                      className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
+                    >
+                      {area.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
 
           {/* Contact Info */}
@@ -119,7 +125,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center">
           <p className="text-primary-foreground/60 text-sm">
-            © {new Date().getFullYear()} BoldREMO. All rights reserved. | Bathroom Remodeling in Houston, Heights, Bellaire, River Oaks & Kingwood
+            © {new Date().getFullYear()} BoldREMO LLC. All rights reserved. | Luxury Bathroom Remodeling in Houston, Heights, Bellaire, River Oaks & Kingwood TX
           </p>
         </div>
       </div>

@@ -2,17 +2,18 @@ const LocalBusinessSchema = () => {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    "@id": "https://boldremo.com/#organization",
-    "name": "BoldREMO",
-    "alternateName": "BoldREMO Bathroom Remodeling",
-    "description": "Professional bathroom remodeling and tile installation contractor serving Houston, Heights, Bellaire, River Oaks & Kingwood TX. Specializing in luxury bathroom renovations, walk-in showers, custom tile work, and flooring installation.",
-    "url": "https://boldremo.com",
-    "telephone": "+1-713-396-7116",
-    "email": "boldremo@gmail.com",
+    "@id": "https://www.boldremo.com/#organization",
+    "name": "BoldREMO LLC",
+    "alternateName": "BoldREMO Luxury Bathroom Remodeling",
+    "description": "BoldREMO LLC is a professional luxury bathroom remodeling and tile installation contractor serving Houston, The Heights, Bellaire, River Oaks & Kingwood TX. Specializing in luxury bathroom renovations, walk-in showers, custom tile work, and flooring installation.",
+    "url": "https://www.boldremo.com",
+    "telephone": "+1-832-513-5737",
+    "email": "info@boldremo.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Houston",
       "addressRegion": "TX",
+      "postalCode": "77007",
       "addressCountry": "US"
     },
     "geo": {
@@ -28,41 +29,58 @@ const LocalBusinessSchema = () => {
       },
       {
         "@type": "Neighborhood",
-        "name": "Heights"
+        "name": "The Heights",
+        "containedInPlace": {
+          "@type": "City",
+          "name": "Houston"
+        }
       },
       {
         "@type": "Neighborhood",
-        "name": "Bellaire"
+        "name": "River Oaks",
+        "containedInPlace": {
+          "@type": "City",
+          "name": "Houston"
+        }
       },
       {
         "@type": "Neighborhood",
-        "name": "River Oaks"
+        "name": "Bellaire",
+        "containedInPlace": {
+          "@type": "City",
+          "name": "Houston"
+        }
       },
       {
         "@type": "Neighborhood",
-        "name": "Kingwood"
+        "name": "Kingwood",
+        "containedInPlace": {
+          "@type": "City",
+          "name": "Houston"
+        }
       }
     ],
     "serviceType": [
-      "Bathroom Remodeling",
+      "Luxury Bathroom Remodeling",
       "Bathroom Renovation",
       "Walk-in Shower Installation",
       "Tile Installation",
       "Flooring Installation",
       "Custom Vanity Installation",
       "Shower Remodel",
-      "Bathtub to Shower Conversion"
+      "Bathtub to Shower Conversion",
+      "Spa Bathroom Design"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Bathroom Remodeling Services",
+      "name": "Luxury Bathroom Remodeling Services",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
             "name": "Complete Bathroom Remodeling",
-            "description": "Full bathroom renovation including fixtures, tile, vanities, and more"
+            "description": "Full luxury bathroom renovation including fixtures, tile, vanities, and more"
           }
         },
         {
@@ -80,10 +98,18 @@ const LocalBusinessSchema = () => {
             "name": "Walk-in Shower Installation",
             "description": "Custom walk-in shower design and installation with modern features"
           }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Luxury Spa Bathroom",
+            "description": "Premium spa-inspired bathroom design and build with high-end finishes"
+          }
         }
       ]
     },
-    "priceRange": "$$",
+    "priceRange": "$$-$$$",
     "paymentAccepted": ["Cash", "Check", "Credit Card"],
     "currenciesAccepted": "USD",
     "openingHoursSpecification": [
@@ -101,10 +127,13 @@ const LocalBusinessSchema = () => {
       }
     ],
     "sameAs": [
-      "https://www.google.com/maps/place/BoldREMO"
+      "https://www.facebook.com/BoldREMOllc/",
+      "https://www.instagram.com/boldremo_llc/",
+      "https://www.linkedin.com/company/boldremo",
+      "https://youtube.com/@boldremo"
     ],
-    "image": "https://boldremo.com/og-image.jpg",
-    "logo": "https://boldremo.com/favicon.ico"
+    "image": "https://www.boldremo.com/og-image.jpg",
+    "logo": "https://www.boldremo.com/favicon.png"
   };
 
   return (

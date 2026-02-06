@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -12,9 +12,19 @@ const navLinks = [
   { name: "Contact", path: "/contact" },
 ];
 
+const serviceAreaLinks = [
+  { name: "The Heights", path: "/service-areas/heights" },
+  { name: "River Oaks", path: "/service-areas/river-oaks" },
+  { name: "Bellaire", path: "/service-areas/bellaire" },
+  { name: "Kingwood", path: "/service-areas/kingwood" },
+];
+
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isAreasOpen, setIsAreasOpen] = useState(false);
+  const [isMobileAreasOpen, setIsMobileAreasOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -24,6 +34,19 @@ export const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close dropdown on click outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setIsAreasOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const isServiceAreaActive = location.pathname.startsWith("/service-areas");
 
   return (
     <header
@@ -69,6 +92,44 @@ export const Header = () => {
               {link.name}
             </Link>
           ))}
+
+          {/* Service Areas Dropdown */}
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setIsAreasOpen(!isAreasOpen)}
+              className={`flex items-center gap-1 text-sm font-medium tracking-wide transition-colors hover:text-primary ${
+                isServiceAreaActive
+                  ? "text-primary"
+                  : isScrolled
+                  ? "text-foreground"
+                  : "text-foreground/80"
+              }`}
+              aria-expanded={isAreasOpen}
+              aria-haspopup="true"
+            >
+              Service Areas
+              <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${isAreasOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            {isAreasOpen && (
+              <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-md shadow-lg z-50 py-2 animate-fade-in">
+                {serviceAreaLinks.map((area) => (
+                  <Link
+                    key={area.path}
+                    to={area.path}
+                    onClick={() => setIsAreasOpen(false)}
+                    className={`block px-4 py-2.5 text-sm transition-colors hover:bg-muted hover:text-primary ${
+                      location.pathname === area.path
+                        ? "text-primary bg-muted"
+                        : "text-foreground"
+                    }`}
+                  >
+                    {area.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* CTA Button */}
@@ -120,6 +181,42 @@ export const Header = () => {
                 {link.name}
               </Link>
             ))}
+
+            {/* Mobile Service Areas Accordion */}
+            <div>
+              <button
+                onClick={() => setIsMobileAreasOpen(!isMobileAreasOpen)}
+                className={`flex items-center justify-between w-full text-base font-medium py-2 transition-colors hover:text-primary ${
+                  isServiceAreaActive ? "text-primary" : "text-foreground"
+                }`}
+                aria-expanded={isMobileAreasOpen}
+              >
+                Service Areas
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isMobileAreasOpen ? "rotate-180" : ""}`} />
+              </button>
+              {isMobileAreasOpen && (
+                <div className="pl-4 flex flex-col gap-1 mt-1">
+                  {serviceAreaLinks.map((area) => (
+                    <Link
+                      key={area.path}
+                      to={area.path}
+                      onClick={() => {
+                        setIsOpen(false);
+                        setIsMobileAreasOpen(false);
+                      }}
+                      className={`text-sm font-medium py-2 transition-colors hover:text-primary ${
+                        location.pathname === area.path
+                          ? "text-primary"
+                          : "text-muted-foreground"
+                      }`}
+                    >
+                      {area.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <a
               href="tel:+18325135737"
               className="flex items-center gap-2 text-base font-medium text-primary py-2"

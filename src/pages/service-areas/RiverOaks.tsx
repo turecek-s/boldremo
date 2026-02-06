@@ -29,14 +29,14 @@ const RiverOaks = () => {
   return (
     <>
       <Helmet>
-        <title>Bathroom Remodeling River Oaks TX | BoldRemo</title>
+        <title>Luxury Bathroom Remodeling in River Oaks TX | BoldREMO</title>
         <meta
           name="description"
-          content="Elite bathroom remodeling for River Oaks estates. BoldRemo delivers exceptional craftsmanship for Houston's most prestigious homes. Call (832) 513-5737."
+          content="Luxury bathroom remodeling for River Oaks estates. BoldREMO delivers world-class craftsmanship for Houston's most prestigious homes. Book a $75 design consult — (832) 513-5737."
         />
         <meta
           name="keywords"
-          content="bathroom remodeling River Oaks, River Oaks bathroom renovation, luxury bathroom contractor River Oaks TX, high-end bathroom remodel Houston"
+          content="luxury bathroom remodeling River Oaks, River Oaks bathroom renovation, high-end bathroom contractor River Oaks TX, luxury bathroom remodel Houston"
         />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/river-oaks" />
       </Helmet>
