@@ -29,14 +29,14 @@ const Bellaire = () => {
   return (
     <>
       <Helmet>
-        <title>Bathroom Remodeling Bellaire TX | BoldRemo</title>
+        <title>Luxury Bathroom Remodeling in Bellaire TX | BoldREMO</title>
         <meta
           name="description"
-          content="Luxury bathroom remodeling in Bellaire, TX. BoldRemo creates stunning spa-inspired bathrooms for discerning homeowners. Free estimates. Call (832) 513-5737."
+          content="Luxury bathroom remodeling in Bellaire, TX. BoldREMO creates stunning spa-inspired bathrooms with premium materials & expert craftsmanship. Book a $75 design consult — (832) 513-5737."
         />
         <meta
           name="keywords"
-          content="bathroom remodeling Bellaire, Bellaire bathroom renovation, luxury bathroom contractor Bellaire TX, bathroom remodel Bellaire"
+          content="luxury bathroom remodeling Bellaire TX, Bellaire bathroom renovation, luxury bathroom contractor Bellaire, spa bathroom remodel Bellaire"
         />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/bellaire" />
       </Helmet>

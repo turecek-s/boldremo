@@ -29,14 +29,14 @@ const Kingwood = () => {
   return (
     <>
       <Helmet>
-        <title>Bathroom Remodeling Kingwood TX | BoldRemo</title>
+        <title>Luxury Bathroom Remodeling in Kingwood TX | BoldREMO</title>
         <meta
           name="description"
-          content="Expert bathroom remodeling in Kingwood, TX. BoldRemo transforms outdated bathrooms into stunning spaces. Free estimates for Kingwood homeowners. Call (832) 513-5737."
+          content="Luxury bathroom remodeling in Kingwood, TX. BoldREMO transforms bathrooms with expert craftsmanship & quality materials. Book a $75 design consult — (832) 513-5737."
         />
         <meta
           name="keywords"
-          content="bathroom remodeling Kingwood, Kingwood bathroom renovation, bathroom contractor Kingwood TX, tile installation Kingwood"
+          content="luxury bathroom remodeling Kingwood TX, Kingwood bathroom renovation, bathroom contractor Kingwood, luxury tile installation Kingwood"
         />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/kingwood" />
       </Helmet>

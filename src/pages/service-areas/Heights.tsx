@@ -29,14 +29,14 @@ const Heights = () => {
   return (
     <>
       <Helmet>
-        <title>Bathroom Remodeling Houston Heights TX | BoldRemo</title>
+        <title>Luxury Bathroom Remodeling in The Heights TX | BoldREMO</title>
         <meta
           name="description"
-          content="Expert bathroom remodeling in Houston Heights. BoldRemo specializes in historic home renovations and modern updates. Free estimates. Call (832) 513-5737."
+          content="Luxury bathroom remodeling in Houston Heights, TX. BoldREMO specializes in historic home renovations, custom tile work & spa-inspired designs. Book a $75 design consult — (832) 513-5737."
         />
         <meta
           name="keywords"
-          content="bathroom remodeling Houston Heights, Heights bathroom renovation, bathroom contractor Heights TX, historic home bathroom remodel"
+          content="luxury bathroom remodeling Heights TX, bathroom renovation Houston Heights, bathroom contractor Heights, historic home bathroom remodel Heights"
         />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/heights" />
       </Helmet>
