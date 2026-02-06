@@ -65,7 +65,7 @@ const Kingwood = () => {
                     (832) 513-5737
                   </a>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button asChild size="lg" className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                   <Link to="/contact">Book Bathroom Consult</Link>
                 </Button>
               </div>
@@ -172,7 +172,7 @@ const Kingwood = () => {
               <Button asChild size="lg" variant="secondary">
                 <Link to="/contact">Book Bathroom Consult</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button asChild size="lg" className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 <Link to="/gallery" className="flex items-center gap-2">
                   View Our Work
                   <ArrowRight className="h-5 w-5" />
