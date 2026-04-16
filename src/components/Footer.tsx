@@ -8,6 +8,7 @@ const TikTokIcon = ({ className }: { className?: string }) => (
 );
 
 const serviceAreaLinks = [
+  { name: "Houston", path: "/service-areas/houston" },
   { name: "The Heights", path: "/service-areas/heights" },
   { name: "River Oaks", path: "/service-areas/river-oaks" },
   { name: "Bellaire", path: "/service-areas/bellaire" },
