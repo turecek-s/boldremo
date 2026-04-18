@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import { prerenderRoutes } from "./vite-plugin-prerender";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -35,6 +36,8 @@ export default defineConfig(({ mode }) => ({
       cache: true,
       cacheLocation: "node_modules/.cache/image-optimizer",
     }),
+    // Generate per-route static HTML files for SEO (must run after build)
+    prerenderRoutes(),
   ].filter(Boolean),
   resolve: {
     alias: {
