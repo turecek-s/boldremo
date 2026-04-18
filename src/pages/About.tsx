@@ -19,6 +19,7 @@ const values = [
 const About = () => {
   return (
     <>
+      <SeoHead path="/about" />
       <Header />
       <main>
         {/* Hero */}

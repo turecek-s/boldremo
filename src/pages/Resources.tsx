@@ -137,6 +137,7 @@ const Resources = () => {
 
   return (
     <>
+      <SeoHead path="/resources" />
       <Header />
       <main>
         {/* Hero Section */}

@@ -89,6 +89,7 @@ const images = [
 const Gallery = () => {
   return (
     <>
+      <SeoHead path="/gallery" />
       <Header />
       <main>
         {/* Hero */}
