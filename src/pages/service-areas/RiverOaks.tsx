@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { BrandName } from "@/components/BrandName";
+import { SeoFallback } from "@/components/SeoFallback";
 import { Phone, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
 import serviceBathroom from "@/assets/service-bathroom.jpg";
 
@@ -41,6 +42,7 @@ const RiverOaks = () => {
         <link rel="canonical" href="https://www.boldremo.com/service-areas/river-oaks" />
       </Helmet>
 
+      <SeoFallback path="/service-areas/river-oaks" />
       <Header />
 
       <main>

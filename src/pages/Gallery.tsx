@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
+import { SeoHead } from "@/components/SeoHead";
 import boldremo1 from "@/assets/boldremo-1.jpg";
 import boldremo2 from "@/assets/boldremo-2.jpg";
 import boldremo3 from "@/assets/boldremo-3.jpg";
@@ -88,6 +89,7 @@ const images = [
 const Gallery = () => {
   return (
     <>
+      <SeoHead path="/gallery" />
       <Header />
       <main>
         {/* Hero */}
