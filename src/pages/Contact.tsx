@@ -72,6 +72,7 @@ const Contact = () => {
 
   return (
     <>
+      <SeoHead path="/contact" />
       <Header />
       <main>
         {/* Hero */}
