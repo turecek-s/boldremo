@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
+import { SeoHead } from "@/components/SeoHead";
 import { Button } from "@/components/ui/button";
 import { Bath, Grid3X3, Paintbrush, Home, Droplets, Wrench } from "lucide-react";
 
@@ -41,6 +42,7 @@ const services = [
 const Services = () => {
   return (
     <>
+      <SeoHead path="/services" />
       <Header />
       <main>
         {/* Hero */}

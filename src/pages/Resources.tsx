@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
+import { SeoHead } from "@/components/SeoHead";
 import { 
   FileText, 
   CheckSquare, 
