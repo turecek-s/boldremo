@@ -37,6 +37,24 @@ Deno.serve(async (req) => {
       );
     }
 
+    // Debug helper: ?find=BoldREMO to look up a Place ID
+    const reqUrl = new URL(req.url);
+    const find = reqUrl.searchParams.get("find");
+    if (find) {
+      const lookup = new URL("https://maps.googleapis.com/maps/api/place/findplacefromtext/json");
+      lookup.searchParams.set("input", find);
+      lookup.searchParams.set("inputtype", "textquery");
+      lookup.searchParams.set("fields", "place_id,name,formatted_address");
+      lookup.searchParams.set("key", apiKey);
+      const r = await fetch(lookup.toString());
+      const j = await r.json();
+      return new Response(JSON.stringify(j), {
+        status: 200,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+
     // Serve from cache if fresh
     if (cache && Date.now() - cache.fetchedAt < CACHE_TTL_MS) {
       return new Response(JSON.stringify({ ...cache.payload, cached: true }), {
