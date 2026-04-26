@@ -137,6 +137,19 @@ const Resources = () => {
     window.print();
   };
 
+  // Scroll to hash anchor when navigating from another page (e.g. /resources#guides)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const hash = window.location.hash;
+    if (!hash) return;
+    const id = hash.replace("#", "");
+    const t = window.setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 80);
+    return () => window.clearTimeout(t);
+  }, []);
+
   return (
     <>
       <SeoHead path="/resources" />
