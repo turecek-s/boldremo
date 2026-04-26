@@ -21,6 +21,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Admin = lazy(() => import("./pages/Admin"));
 const Press = lazy(() => import("./pages/Press"));
 const RealtorsDesigners = lazy(() => import("./pages/RealtorsDesigners"));
+const CostCalculator = lazy(() => import("./pages/CostCalculator"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Service Area Pages
@@ -52,6 +53,7 @@ const App = () => (
               <Route path="/admin" element={<Admin />} />
               <Route path="/press" element={<Press />} />
               <Route path="/realtors-designers" element={<RealtorsDesigners />} />
+              <Route path="/cost-calculator" element={<CostCalculator />} />
               {/* Service Area Routes */}
               <Route path="/service-areas/houston" element={<Houston />} />
               <Route path="/service-areas/heights" element={<Heights />} />

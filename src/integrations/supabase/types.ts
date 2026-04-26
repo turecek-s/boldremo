@@ -14,6 +14,36 @@ export type Database = {
   }
   public: {
     Tables: {
+      calculator_leads: {
+        Row: {
+          created_at: string
+          email: string
+          high_estimate: number
+          id: string
+          inputs: Json
+          low_estimate: number
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          high_estimate: number
+          id?: string
+          inputs: Json
+          low_estimate: number
+          name: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          high_estimate?: number
+          id?: string
+          inputs?: Json
+          low_estimate?: number
+          name?: string
+        }
+        Relationships: []
+      }
       contact_submissions: {
         Row: {
           created_at: string
