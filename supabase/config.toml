@@ -8,3 +8,6 @@ verify_jwt = false
 
 [functions.send-calculator-estimate]
 verify_jwt = false
+
+[functions.get-google-reviews]
+verify_jwt = false
