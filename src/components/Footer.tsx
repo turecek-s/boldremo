@@ -63,6 +63,8 @@ export const Footer = () => {
                   { name: "Gallery", path: "/gallery" },
                   { name: "About Us", path: "/about" },
                   { name: "Services", path: "/services" },
+                  { name: "Press & Partners", path: "/press" },
+                  { name: "For Realtors & Designers", path: "/realtors-designers" },
                   { name: "Contact", path: "/contact" },
                 ].map((link) => (
                   <li key={link.path}>

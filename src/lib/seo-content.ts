@@ -160,6 +160,40 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       <p>Call BoldREMO at (832) 513-5737 to book your River Oaks bathroom consult.</p>
     `,
   },
+  "/press": {
+    path: "/press",
+    title: "Press, Partners & Recognition | BoldREMO Houston",
+    description:
+      "BoldREMO's media coverage, trusted Houston suppliers, designer & realtor partners, and contractor certifications. Houston luxury bathroom remodeling.",
+    bodyHtml: `
+      <h1>BoldREMO Press, Partners &amp; Recognition</h1>
+      <p>BoldREMO partners with Houston's leading suppliers, designers, and realtors to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.</p>
+      <h2>As Featured In</h2>
+      <p>Recent and upcoming media coverage includes Houstonia Magazine, PaperCity, Houston Chronicle Home &amp; Garden, CultureMap Houston, Houston Modern Luxury, and the Houston Business Journal.</p>
+      <h2>Trusted Partners</h2>
+      <p>BoldREMO sources premium tile, stone, and plumbing fixtures from Daltile Houston, Cosentino, Ferguson Bath Kitchen &amp; Lighting, and Architectural Design Resource. We work alongside Houston's top interior designers and luxury realtors.</p>
+      <h2>Certifications</h2>
+      <p>Licensed and insured Texas contractor (TDLR registered), BBB accredited, Houzz Pro member, NARI Houston member.</p>
+      <p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com.</p>
+    `,
+  },
+  "/realtors-designers": {
+    path: "/realtors-designers",
+    title: "Realtor & Designer Partnerships | BoldREMO Houston",
+    description:
+      "Refer your clients to BoldREMO. Earn referral fees, give clients trade-priority scheduling, and partner with Houston's luxury bathroom remodeler.",
+    bodyHtml: `
+      <h1>For Realtors, Interior Designers &amp; Architects</h1>
+      <p>BoldREMO partners with Houston's top realtors, interior designers, and architects across Heights, Bellaire, River Oaks, Kingwood, and Memorial. Refer your clients with confidence.</p>
+      <h2>Why partner with BoldREMO</h2>
+      <p>Generous referral fees on every closed project. Trade-priority scheduling for your clients. Professional after photos for your listings and portfolio. White-glove client experience that protects your reputation.</p>
+      <h2>How partnership works</h2>
+      <p>1. Apply through our partnership form. 2. Quick 15-minute intro call to align on referral terms. 3. Start referring clients and earning fees on closed projects.</p>
+      <h2>Co-marketing benefits</h2>
+      <p>Featured logo and link on our Press &amp; Partners page, trade pricing on the $75 in-home design consult, joint social media features, first access to project photography, and a quarterly partner email with Houston market trends.</p>
+      <p>Apply today or call BoldREMO at (832) 513-5737.</p>
+    `,
+  },
   "/service-areas/kingwood": {
     path: "/service-areas/kingwood",
     title: "Bathroom Remodeling Kingwood TX | BoldREMO",

@@ -52,6 +52,20 @@ const ROUTES: RouteSeo[] = [
     bodyHtml: `<h1>Contact BoldREMO — Book Your Houston Bathroom Consult</h1><p>Get a free rough estimate by phone or email, or book a $75 in-home design consultation.</p><p>Call (832) 513-5737 Monday-Friday 8AM-6PM. Email info@boldremo.com.</p><p>Service area: Houston, Heights, Bellaire, River Oaks, Kingwood, Memorial, West University, Montrose, The Woodlands, Sugar Land.</p>`,
   },
   {
+    path: "/press",
+    title: "Press, Partners & Recognition | BoldREMO Houston",
+    description:
+      "BoldREMO's media coverage, trusted Houston suppliers, designer & realtor partners, and contractor certifications.",
+    bodyHtml: `<h1>BoldREMO Press, Partners &amp; Recognition</h1><p>BoldREMO partners with Houston's leading suppliers, designers, and realtors to deliver luxury bathroom remodels.</p><h2>As Featured In</h2><p>Houstonia Magazine, PaperCity, Houston Chronicle Home &amp; Garden, CultureMap Houston, Houston Modern Luxury, Houston Business Journal.</p><h2>Trusted Partners</h2><p>Daltile Houston, Cosentino, Ferguson Bath Kitchen &amp; Lighting, Architectural Design Resource.</p><h2>Certifications</h2><p>Licensed Texas contractor, BBB accredited, Houzz Pro member, NARI Houston member.</p><p>Call (832) 513-5737.</p>`,
+  },
+  {
+    path: "/realtors-designers",
+    title: "Realtor & Designer Partnerships | BoldREMO Houston",
+    description:
+      "Refer your clients to BoldREMO. Earn referral fees and partner with Houston's luxury bathroom remodeler.",
+    bodyHtml: `<h1>For Realtors, Interior Designers &amp; Architects</h1><p>Refer your clients to BoldREMO with confidence. Generous referral fees, trade-priority scheduling, professional after photos, white-glove client experience.</p><h2>How partnership works</h2><p>Apply, 15-minute intro call, start referring.</p><h2>Co-marketing benefits</h2><p>Featured logo on our Press page, trade pricing, joint social features, project photography access.</p><p>Apply today or call (832) 513-5737.</p>`,
+  },
+  {
     path: "/service-areas/houston",
     title: "Bathroom Remodeling Houston TX | BoldREMO",
     description:
