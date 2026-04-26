@@ -8,9 +8,17 @@ const corsHeaders = {
 const PLACE_ID = "ChIJC2de_m7HQIYRNyLNGz8FSNg";
 const CACHE_TTL_MS = 12 * 60 * 60 * 1000; // 12 hours
 
+type ReviewsPayload = {
+  name: string | null;
+  rating: number | null;
+  totalReviews: number;
+  googleUrl: string | null;
+  reviews: Array<Record<string, unknown>>;
+};
+
 type CachedReviews = {
   fetchedAt: number;
-  payload: unknown;
+  payload: ReviewsPayload;
 };
 
 let cache: CachedReviews | null = null;
