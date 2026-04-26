@@ -32,7 +32,10 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isAreasOpen, setIsAreasOpen] = useState(false);
   const [isMobileAreasOpen, setIsMobileAreasOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const resourcesDropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -43,11 +46,14 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close dropdown on click outside
+  // Close dropdowns on click outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setIsAreasOpen(false);
+      }
+      if (resourcesDropdownRef.current && !resourcesDropdownRef.current.contains(e.target as Node)) {
+        setIsResourcesOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -55,6 +61,7 @@ export const Header = () => {
   }, []);
 
   const isServiceAreaActive = location.pathname.startsWith("/service-areas");
+  const isResourcesActive = location.pathname === "/resources";
 
   return (
     <header
@@ -100,6 +107,47 @@ export const Header = () => {
               {link.name}
             </Link>
           ))}
+
+          {/* Resources Dropdown */}
+          <div className="relative" ref={resourcesDropdownRef}>
+            <button
+              onClick={() => setIsResourcesOpen(!isResourcesOpen)}
+              className={`flex items-center gap-1 text-sm font-medium tracking-wide transition-colors hover:text-primary ${
+                isResourcesActive
+                  ? "text-primary"
+                  : isScrolled
+                  ? "text-foreground"
+                  : "text-foreground/80"
+              }`}
+              aria-expanded={isResourcesOpen}
+              aria-haspopup="true"
+            >
+              Resources
+              <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${isResourcesOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            {isResourcesOpen && (
+              <div className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-md shadow-lg z-50 py-2 animate-fade-in">
+                <Link
+                  to="/resources"
+                  onClick={() => setIsResourcesOpen(false)}
+                  className="block px-4 py-2.5 text-sm font-medium text-foreground hover:bg-muted hover:text-primary transition-colors border-b border-border mb-1"
+                >
+                  All Resources
+                </Link>
+                {resourceLinks.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsResourcesOpen(false)}
+                    className="block px-4 py-2.5 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* Service Areas Dropdown */}
           <div className="relative" ref={dropdownRef}>
