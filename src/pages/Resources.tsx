@@ -12,7 +12,8 @@ import {
   Droplets,
   Shield,
   Leaf,
-  Download
+  Download,
+  Calculator
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -151,6 +152,27 @@ const Resources = () => {
                 Free guides, checklists, and expert tips to help you plan your perfect bathroom renovation. 
                 Whether you&apos;re a first-time remodeler or experienced homeowner, these resources will help you make informed decisions.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Cost Calculator Highlight */}
+        <section className="section-padding bg-background">
+          <div className="container-custom">
+            <div className="max-w-4xl mx-auto bg-gradient-to-br from-primary to-primary/85 text-primary-foreground rounded-lg p-8 md:p-12 text-center shadow-lg">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary-foreground/15 mb-5">
+                <Calculator className="h-7 w-7" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-3">
+                Houston Bathroom Cost Calculator
+              </h2>
+              <p className="text-primary-foreground/85 text-lg max-w-2xl mx-auto mb-7">
+                Get a realistic price range for your bathroom remodel in under 60 seconds —
+                tailored to your size, scope, neighborhood, and finishes.
+              </p>
+              <Button asChild size="lg" variant="secondary">
+                <Link to="/cost-calculator">Try the Free Calculator</Link>
+              </Button>
             </div>
           </div>
         </section>
