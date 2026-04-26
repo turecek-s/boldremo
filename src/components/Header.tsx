@@ -8,8 +8,15 @@ const navLinks = [
   { name: "Gallery", path: "/gallery" },
   { name: "About Us", path: "/about" },
   { name: "Services", path: "/services" },
-  { name: "Resources", path: "/resources" },
   { name: "Contact", path: "/contact" },
+];
+
+const resourceLinks = [
+  { name: "Cost Calculator", path: "/resources#cost-calculator" },
+  { name: "In-Depth Guides", path: "/resources#guides" },
+  { name: "Remodel Checklist", path: "/resources#checklist" },
+  { name: "Quick Tips from Pros", path: "/resources#tips" },
+  { name: "Houston Remodeling Guide", path: "/resources#houston-guide" },
 ];
 
 const serviceAreaLinks = [
