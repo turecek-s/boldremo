@@ -130,7 +130,12 @@ export const Header = () => {
               <div className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-md shadow-lg z-50 py-2 animate-fade-in">
                 <Link
                   to="/resources"
-                  onClick={() => setIsResourcesOpen(false)}
+                  onClick={() => {
+                    setIsResourcesOpen(false);
+                    if (location.pathname === "/resources") {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }}
                   className="block px-4 py-2.5 text-sm font-medium text-foreground hover:bg-muted hover:text-primary transition-colors border-b border-border mb-1"
                 >
                   All Resources
