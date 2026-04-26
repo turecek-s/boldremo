@@ -1,66 +1,108 @@
+## Plan: Backlink support — 4 deliverables
 
+I'll do these in order so you can start outreach immediately while the bigger builds happen.
 
-## Why Google isn't seeing all your pages
+---
 
-Here's what's actually going on, in plain English. There are 4 separate causes — some are easy fixes, some need patience.
+### Deliverable 1 — Houston Backlink Target List (PDF)
 
-### 1. Your site is a Single Page App (SPA) — Google sees a blank page first
+A printable, prioritized PDF of the top 20+ backlink targets, written specifically for a Houston luxury bathroom remodeler. For each target: name, URL, type (directory / press / partner / community), priority (🟢🟡🔴), estimated effort, what to send, and a sample pitch line.
 
-Your site is built in React. When Google's crawler first loads any page, the HTML it gets is essentially **empty** — all the real content (services, gallery, neighborhood pages) is rendered later by JavaScript in the browser.
+**Sections:**
+1. Foundation citations (free, do this week) — Google Business Profile, Houzz, Yelp, BBB, Angi, NextDoor, Foursquare, Manta, Yellowpages, Hotfrog
+2. Houston-specific directories — Greater Houston Builders Association, Houston Chamber of Commerce, NARI Houston, Visit Houston business directory
+3. Local press & lifestyle media — *Houstonia*, *PaperCity*, *Houston Chronicle Home*, *Houston Modern Luxury*, *CultureMap Houston*
+4. Partnership targets — local realtors, interior designers, tile/plumbing suppliers (with template outreach email)
+5. Ongoing tactics — HARO/Qwoted/Featured.com, podcasts, sponsorships
+6. Sample pitch templates (3 versions: realtor, journalist, supplier)
 
-Google *can* run JavaScript, but:
-- It does so on a **second pass**, days or weeks later
-- Smaller sites get less crawl budget, so the JS render is often delayed or skipped
-- Bing, DuckDuckGo, and most AI crawlers don't render JS at all
+**Output:** `/mnt/documents/BoldREMO-Backlink-Targets.pdf` (~6–8 pages, branded with logo color, printable). Generated with ReportLab + visual QA.
 
-You've worked around this on the homepage with the hidden "SEO fallback content" block (800+ words in `index.html`), but **that block only exists for the homepage**. Your `/services`, `/gallery`, `/about`, `/resources`, `/contact`, and all 5 `/service-areas/*` pages serve the *same* `index.html` — meaning Google sees the homepage content for every URL until it re-renders with JS.
+---
 
-### 2. Missing pages from your sitemap
+### Deliverable 2 — Press & Partners page
 
-Your `sitemap.xml` is missing real pages that exist in your routes:
-- `/services` ✅ in sitemap (good)
-- Blog posts like `/post/walk-in-showers-vs-soaking-tubs...` — **not in sitemap** (analytics shows people visiting these)
-- `/blog/tags/...` — **not in sitemap**
+New route `/press` showing media mentions, partner logos, trust badges, and certifications. Built to look credible even when empty (placeholder copy + skeleton badges) so you have a real page to point pitches at on day one.
 
-If routes for blog posts exist but aren't in the sitemap, Google won't discover them via the sitemap.
+**Files:**
+- **Create** `src/pages/Press.tsx`
+- **Create** `src/data/press-mentions.ts` — easily editable array of `{ outlet, logo, quote, url, date }`
+- **Create** `src/data/partners.ts` — `{ name, type, logo, url }`
+- **Edit** `src/App.tsx` — add `/press` lazy route
+- **Edit** `src/components/Footer.tsx` — add Press link
+- **Edit** `src/lib/seo-content.ts` — add SEO content for `/press`
+- **Edit** `vite-plugin-prerender.ts` — add `/press` to prerender list
+- **Edit** `public/sitemap.xml` — add `/press` URL
 
-### 3. Stale `lastmod` dates
+**Sections on the page:** "As featured in" logo strip (with placeholder slots ready), "Trusted partners" grid (suppliers/designers/realtors), "Certifications & memberships" badges (BBB, NARI, Houzz Pro placeholders), CTA to "Become a partner" → links to `/realtors-designers`.
 
-Every URL in `sitemap.xml` says `<lastmod>2026-01-07</lastmod>`. Google uses this signal to decide whether to re-crawl. If the date never changes, Google deprioritizes re-crawling.
+---
 
-### 4. The site is brand new with very few backlinks
+### Deliverable 3 — For Realtors & Designers page
 
-Analytics shows: **47 visitors in 7 days, only 1 from Google, 2 from Yelp**. Google's index trust takes 3–6 months for a new domain to build, especially without inbound links.
+New route `/realtors-designers` — partnership landing page with a clear pitch and intake form that emails Stan directly via the existing `send-contact-email` edge function (you confirmed: no DB table needed).
 
-### What I recommend fixing (in priority order)
+**Files:**
+- **Create** `src/pages/RealtorsDesigners.tsx` with sections:
+  1. Hero — "Partner with Houston's luxury bathroom remodeler"
+  2. Why partner with BoldREMO — referral fee structure, white-glove client treatment, fast turnarounds, professional photos for your listings
+  3. How it works — 3-step partnership process
+  4. Co-marketing benefits — featured on `/press` page, trade pricing on consults, joint social posts
+  5. Testimonials slot (placeholder ready)
+  6. Partner intake form — name, business name, role (Realtor / Interior Designer / Architect / Other), email, phone, message
+- **Edit** `supabase/functions/send-contact-email/index.ts` — accept optional `formType` field; when `formType === 'partnership'`, change subject to "🤝 New Partnership Inquiry" and add business name + role to the email body. Backwards-compatible with the existing contact form.
+- **Edit** `src/App.tsx` — add `/realtors-designers` lazy route
+- **Edit** `src/components/Footer.tsx` — add "For Realtors & Designers" link
+- **Edit** `src/lib/seo-content.ts` — SEO for `/realtors-designers`
+- **Edit** `vite-plugin-prerender.ts` — prerender it
+- **Edit** `public/sitemap.xml` — add it
 
-1. **Pre-render or SSR the key pages** so Google sees real HTML on the first crawl. The cleanest fix is adding `vite-plugin-prerender` or `react-snap` to generate static HTML files for `/services`, `/gallery`, `/about`, `/contact`, and all 5 service-area pages at build time. This is the single biggest win.
-2. **Update `sitemap.xml`**: add any blog/post routes that exist, refresh all `lastmod` dates to today, and verify every URL returns content.
-3. **Submit the sitemap in Google Search Console** and use "Request Indexing" on each priority URL. (You need to do this — I can't do it for you.)
-4. **Check Google Search Console "Coverage" report** to see exactly which pages Google has tried to crawl and what errors it found. This tells us the real story instead of guessing.
+---
 
-### What I'd do in code if you approve
+### Deliverable 4 — Houston Bathroom Cost Calculator (link bait + lead magnet)
 
-```text
-[fix 1] Add static pre-rendering at build (vite-plugin-prerender)
-        → /services, /gallery, /about, /resources, /contact,
-          /service-areas/houston, /heights, /bellaire,
-          /river-oaks, /kingwood
-        → each gets unique <title>, <meta description>, real <body> HTML
+New route `/cost-calculator` — interactive estimator that produces a price range. After the result, optional email capture sends the full estimate as a branded PDF (lead magnet).
 
-[fix 2] Rewrite public/sitemap.xml
-        → refresh lastmod to today's date
-        → audit routes vs sitemap, add any missing pages
+**Calculator inputs (7):**
+1. Bathroom size — Half / Small full (~40 sq ft) / Standard (~60 sq ft) / Large master (~100+ sq ft)
+2. Scope — Refresh / Mid-range remodel / Full luxury renovation
+3. Neighborhood — Houston / Heights / Bellaire / River Oaks / Kingwood / Memorial / Other (modifies multiplier slightly to reflect local labor/material expectations)
+4. Shower — Keep existing / New standard / Walk-in glass / Walk-in glass with custom tile
+5. Vanity count — Single / Double
+6. Tile grade — Standard ceramic / Porcelain / Natural stone or marble
+7. Plumbing changes — None / Minor / Major (move fixtures)
 
-[fix 3] Add a per-route SEO content fallback (similar to the
-        homepage hidden block) for non-JS crawlers
-```
+**Output:** Low–high price range with a one-paragraph explanation, breakdown bar (labor / tile / fixtures / vanity / plumbing / contingency), and a "Book your $75 in-home design consult" CTA.
 
-### What needs your action (I can't do these)
+**Email capture (optional):** "Email me a printable PDF estimate" → name + email → submits to a new edge function that saves to a new `calculator_leads` table and emails the user a branded PDF estimate (generated server-side with `pdf-lib` in the edge function), and emails Stan a notification.
 
-- **Google Search Console**: verify ownership of `boldremo.com`, submit `sitemap.xml`, request indexing for each page, watch the Coverage report.
-- **Build backlinks**: get listed on Houzz, Angi, BBB, local Houston business directories, and your Yelp profile. Backlinks are the single biggest factor in how fast Google trusts and indexes a new site.
-- **Patience**: even with everything perfect, full indexing for a new domain takes 4–12 weeks.
+**Files:**
+- **Create** `src/pages/CostCalculator.tsx` — multi-step calculator UI with progress indicator
+- **Create** `src/lib/calculator-pricing.ts` — pricing logic (multipliers, base costs per Houston market) — kept transparent and easy to tune
+- **Create** `src/components/CalculatorResult.tsx` — results display + breakdown chart + email-PDF form
+- **Create** `supabase/functions/send-calculator-estimate/index.ts` — generates PDF, saves lead, emails customer + Stan via the existing Gmail SMTP setup (reusing `GMAIL_USER` / `GMAIL_APP_PASSWORD` secrets — no new secrets required)
+- **Migration** — new `calculator_leads` table: `id, name, email, inputs jsonb, low_estimate int, high_estimate int, created_at`. RLS: deny anon all, service-role insert, admin select (mirroring `guide_requests`).
+- **Edit** `src/integrations/supabase/types.ts` — auto-regenerated, no manual edit
+- **Edit** `src/App.tsx` — add `/cost-calculator` lazy route
+- **Edit** `src/components/Header.tsx` — add "Cost Calculator" to main nav (it's link bait, should be discoverable)
+- **Edit** `src/components/Footer.tsx` — add Cost Calculator link
+- **Edit** `src/lib/seo-content.ts` — strong SEO content for `/cost-calculator`
+- **Edit** `vite-plugin-prerender.ts` — prerender it (with descriptive meta for Google snippets)
+- **Edit** `public/sitemap.xml` — add it
+- **Edit** `src/pages/Resources.tsx` — add a card linking to the calculator
 
-Want me to proceed with fixes 1–3 (pre-rendering, sitemap rewrite, per-route SEO fallbacks)?
+---
 
+### Sequencing
+
+1. Generate the **PDF first** so it's in your hands within minutes
+2. Build **Press & Partners** (smallest, sets up the partner page link target)
+3. Build **For Realtors & Designers** (needs the email function tweak)
+4. Build **Cost Calculator** (largest — calculator UI + PDF generation + new table + new edge function)
+
+### What's NOT in this plan (clarify if you want any added)
+
+- Auto-deploying any of this — you'll publish from the editor when ready
+- Submitting to Google Search Console / directories / GBP — those still require your action; the PDF lists every step
+- Real partner logos — placeholders shipped; you swap them as deals close
+- Real press mentions — placeholders shipped; you swap them as you earn coverage

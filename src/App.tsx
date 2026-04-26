@@ -19,6 +19,8 @@ const Services = lazy(() => import("./pages/Services"));
 const Resources = lazy(() => import("./pages/Resources"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Admin = lazy(() => import("./pages/Admin"));
+const Press = lazy(() => import("./pages/Press"));
+const RealtorsDesigners = lazy(() => import("./pages/RealtorsDesigners"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Service Area Pages
@@ -48,6 +50,8 @@ const App = () => (
               <Route path="/resources" element={<Resources />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/admin" element={<Admin />} />
+              <Route path="/press" element={<Press />} />
+              <Route path="/realtors-designers" element={<RealtorsDesigners />} />
               {/* Service Area Routes */}
               <Route path="/service-areas/houston" element={<Houston />} />
               <Route path="/service-areas/heights" element={<Heights />} />
