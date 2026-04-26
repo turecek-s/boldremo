@@ -305,7 +305,7 @@ const handler = async (req: Request): Promise<Response> => {
         to: ["info@boldremo.com"],
         subject: `🧮 New Calculator Lead: ${name} ($${result.low.toLocaleString()}–$${result.high.toLocaleString()})`,
         html: generateOwnerNotification(name, email, inputs, result),
-        replyTo: email,
+        reply_to: email,
       });
       console.log("Owner notification sent");
     } catch (e) {
