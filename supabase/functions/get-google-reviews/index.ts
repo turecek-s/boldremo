@@ -37,16 +37,19 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Debug helper: ?find=BoldREMO to look up a Place ID
+    // Debug helper: ?find=BoldREMO uses Places API (New) v1 textSearch
     const reqUrl = new URL(req.url);
     const find = reqUrl.searchParams.get("find");
     if (find) {
-      const lookup = new URL("https://maps.googleapis.com/maps/api/place/findplacefromtext/json");
-      lookup.searchParams.set("input", find);
-      lookup.searchParams.set("inputtype", "textquery");
-      lookup.searchParams.set("fields", "place_id,name,formatted_address");
-      lookup.searchParams.set("key", apiKey);
-      const r = await fetch(lookup.toString());
+      const r = await fetch("https://places.googleapis.com/v1/places:searchText", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Goog-Api-Key": apiKey,
+          "X-Goog-FieldMask": "places.id,places.displayName,places.formattedAddress,places.rating,places.userRatingCount",
+        },
+        body: JSON.stringify({ textQuery: find }),
+      });
       const j = await r.json();
       return new Response(JSON.stringify(j), {
         status: 200,
