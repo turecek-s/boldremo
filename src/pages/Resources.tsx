@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
@@ -132,9 +134,23 @@ const quickTips = [
 ];
 
 const Resources = () => {
+  const location = useLocation();
   const handlePrintChecklist = () => {
     window.print();
   };
+
+  // Scroll to hash anchor on mount and whenever the hash changes
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const hash = location.hash;
+    if (!hash) return;
+    const id = hash.replace("#", "");
+    const t = window.setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 80);
+    return () => window.clearTimeout(t);
+  }, [location.hash, location.key]);
 
   return (
     <>
@@ -157,7 +173,7 @@ const Resources = () => {
         </section>
 
         {/* Cost Calculator Highlight */}
-        <section className="section-padding bg-background">
+        <section id="cost-calculator" className="section-padding bg-background scroll-mt-28">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto bg-gradient-to-br from-primary to-primary/85 text-primary-foreground rounded-lg p-8 md:p-12 text-center shadow-lg">
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary-foreground/15 mb-5">
@@ -178,7 +194,7 @@ const Resources = () => {
         </section>
 
         {/* Guides Section */}
-        <section className="section-padding bg-background">
+        <section id="guides" className="section-padding bg-background scroll-mt-28">
           <div className="container-custom">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
@@ -268,7 +284,7 @@ const Resources = () => {
         </section>
 
         {/* Quick Tips Section */}
-        <section className="section-padding bg-background">
+        <section id="tips" className="section-padding bg-background scroll-mt-28">
           <div className="container-custom">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
@@ -298,7 +314,7 @@ const Resources = () => {
         </section>
 
         {/* Houston-Specific Section */}
-        <section className="section-padding bg-secondary">
+        <section id="houston-guide" className="section-padding bg-secondary scroll-mt-28">
           <div className="container-custom">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6 text-center">
