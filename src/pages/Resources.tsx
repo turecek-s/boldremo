@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
@@ -133,14 +134,15 @@ const quickTips = [
 ];
 
 const Resources = () => {
+  const location = useLocation();
   const handlePrintChecklist = () => {
     window.print();
   };
 
-  // Scroll to hash anchor when navigating from another page (e.g. /resources#guides)
+  // Scroll to hash anchor on mount and whenever the hash changes
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const hash = window.location.hash;
+    const hash = location.hash;
     if (!hash) return;
     const id = hash.replace("#", "");
     const t = window.setTimeout(() => {
@@ -148,7 +150,7 @@ const Resources = () => {
       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 80);
     return () => window.clearTimeout(t);
-  }, []);
+  }, [location.hash, location.key]);
 
   return (
     <>
