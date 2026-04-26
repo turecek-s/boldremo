@@ -9,7 +9,6 @@ const navLinks = [
   { name: "About Us", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Resources", path: "/resources" },
-  { name: "Cost Calculator", path: "/cost-calculator" },
   { name: "Contact", path: "/contact" },
 ];
 
