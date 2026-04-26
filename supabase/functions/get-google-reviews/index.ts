@@ -1,5 +1,9 @@
 // Public edge function: fetches Google Place reviews and caches in-memory for 12h.
-import { corsHeaders } from "@supabase/supabase-js/cors";
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type",
+};
 
 const PLACE_ID = "ChIJC2de_m7HQIYRNyLNGz8FSNg";
 const CACHE_TTL_MS = 12 * 60 * 60 * 1000; // 12 hours
