@@ -262,6 +262,9 @@ export const Header = () => {
                     onClick={() => {
                       setIsOpen(false);
                       setIsMobileResourcesOpen(false);
+                      if (location.pathname === "/resources") {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
                     }}
                     className="text-sm font-medium py-2 text-foreground hover:text-primary transition-colors"
                   >
