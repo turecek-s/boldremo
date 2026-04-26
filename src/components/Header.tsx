@@ -238,6 +238,47 @@ export const Header = () => {
               </Link>
             ))}
 
+            {/* Mobile Resources Accordion */}
+            <div>
+              <button
+                onClick={() => setIsMobileResourcesOpen(!isMobileResourcesOpen)}
+                className={`flex items-center justify-between w-full text-base font-medium py-2 transition-colors hover:text-primary ${
+                  isResourcesActive ? "text-primary" : "text-foreground"
+                }`}
+                aria-expanded={isMobileResourcesOpen}
+              >
+                Resources
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isMobileResourcesOpen ? "rotate-180" : ""}`} />
+              </button>
+              {isMobileResourcesOpen && (
+                <div className="pl-4 flex flex-col gap-1 mt-1">
+                  <Link
+                    to="/resources"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setIsMobileResourcesOpen(false);
+                    }}
+                    className="text-sm font-medium py-2 text-foreground hover:text-primary transition-colors"
+                  >
+                    All Resources
+                  </Link>
+                  {resourceLinks.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => {
+                        setIsOpen(false);
+                        setIsMobileResourcesOpen(false);
+                      }}
+                      className="text-sm font-medium py-2 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {/* Mobile Service Areas Accordion */}
             <div>
               <button
