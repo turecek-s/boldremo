@@ -177,6 +177,24 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       <p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com.</p>
     `,
   },
+  "/cost-calculator": {
+    path: "/cost-calculator",
+    title: "Houston Bathroom Remodel Cost Calculator | BoldREMO",
+    description:
+      "Free Houston bathroom remodel cost calculator. Get an instant price range based on size, scope, neighborhood & finishes. Built on real Houston project data.",
+    bodyHtml: `
+      <h1>Houston Bathroom Remodel Cost Calculator</h1>
+      <p>Use BoldREMO's free Houston bathroom remodel cost calculator to get a realistic price range for your project in under 60 seconds. Pricing is based on real Houston-area labor and material costs from our completed projects in Heights, Bellaire, River Oaks, Kingwood, Memorial, and across the greater Houston area.</p>
+      <h2>How the Calculator Works</h2>
+      <p>Answer 7 quick questions about your bathroom: size, scope (refresh, mid-range, or luxury), Houston neighborhood, shower type, vanity count, tile grade, and any plumbing changes. The calculator returns a low–high price range with a complete cost breakdown across labor, tile, fixtures, vanity, plumbing, and contingency.</p>
+      <h2>Houston Bathroom Remodel Cost Ranges</h2>
+      <p>Half bath refresh: $4,500 – $9,000. Small full bath mid-range remodel: $14,000 – $22,000. Standard bathroom mid-range remodel: $18,000 – $28,000. Large master bath full luxury renovation: $45,000 – $85,000+. River Oaks and Memorial projects typically run 15-25% higher due to local rates and material expectations.</p>
+      <h2>What Drives Bathroom Remodel Costs in Houston</h2>
+      <p>Labor accounts for 40-50% of total cost. Tile material (ceramic, porcelain, or natural stone) and the square footage covered have the biggest material impact. Walk-in glass showers and double vanities each add several thousand dollars. Moving plumbing fixtures requires opening walls and adds $1,200 – $4,500.</p>
+      <h2>Get an Exact Quote</h2>
+      <p>For an exact written proposal, book a $75 in-home design consult with BoldREMO. We'll measure, discuss material selections, and deliver a detailed proposal. The $75 is credited toward your project. Call (832) 513-5737 or email info@boldremo.com.</p>
+    `,
+  },
   "/realtors-designers": {
     path: "/realtors-designers",
     title: "Realtor & Designer Partnerships | BoldREMO Houston",
