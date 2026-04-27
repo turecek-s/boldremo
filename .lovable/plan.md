@@ -1,108 +1,55 @@
-## Plan: Backlink support — 4 deliverables
+# Fix "Duplicate, Google chose different canonical than user"
 
-I'll do these in order so you can start outreach immediately while the bigger builds happen.
+## What Google is telling you
 
----
+Google found pages where the canonical URL **you declared** doesn't match the canonical URL **Google picked**. So Google is dropping your declared URL and indexing a different one instead. The pages are still indexed — just under a URL you didn't intend.
 
-### Deliverable 1 — Houston Backlink Target List (PDF)
+## Root cause: three competing canonical sources fight each other
 
-A printable, prioritized PDF of the top 20+ backlink targets, written specifically for a Houston luxury bathroom remodeler. For each target: name, URL, type (directory / press / partner / community), priority (🟢🟡🔴), estimated effort, what to send, and a sample pitch line.
+Your site declares `<link rel="canonical">` from **three different places**, and they don't agree on the same URL at the same moment:
 
-**Sections:**
-1. Foundation citations (free, do this week) — Google Business Profile, Houzz, Yelp, BBB, Angi, NextDoor, Foursquare, Manta, Yellowpages, Hotfrog
-2. Houston-specific directories — Greater Houston Builders Association, Houston Chamber of Commerce, NARI Houston, Visit Houston business directory
-3. Local press & lifestyle media — *Houstonia*, *PaperCity*, *Houston Chronicle Home*, *Houston Modern Luxury*, *CultureMap Houston*
-4. Partnership targets — local realtors, interior designers, tile/plumbing suppliers (with template outreach email)
-5. Ongoing tactics — HARO/Qwoted/Featured.com, podcasts, sponsorships
-6. Sample pitch templates (3 versions: realtor, journalist, supplier)
+1. **`index.html`** ships with `<link rel="canonical" href="https://www.boldremo.com/" />` (homepage, hard-coded). An inline script then rewrites it based on `window.location.pathname`.
+2. **`vite-plugin-prerender.ts`** generates `dist/services/index.html`, `dist/about/index.html`, etc. and rewrites the canonical to the route URL — good. But it **only covers 12 routes**. The 5 service-area pages plus `/press` are missing from the prerender list, so those crawled URLs ship the homepage canonical until JS runs.
+3. **`SeoHead.tsx`** uses `react-helmet-async` to inject yet another canonical when the React app mounts. Plus **`CanonicalUrl.tsx`** in `App.tsx` injects a fourth one on every route change.
 
-**Output:** `/mnt/documents/BoldREMO-Backlink-Targets.pdf` (~6–8 pages, branded with logo color, printable). Generated with ReportLab + visual QA.
+When Googlebot fetches a URL like `/service-areas/heights`, the **initial HTML** it sees has `canonical = https://www.boldremo.com/` (the homepage). Google reads that, decides "this page claims to be the homepage," and consolidates the URL under the homepage canonical — exactly the "Google chose different canonical than user" error.
 
----
+The prerendered routes have a similar but smaller version of the problem: the static HTML canonical is correct, but Helmet + CanonicalUrl + the inline script all re-write it after hydration. If any of them write a slightly different value (trailing slash, www mismatch, query string, etc.), Google logs the mismatch.
 
-### Deliverable 2 — Press & Partners page
+## The fix — one source of truth
 
-New route `/press` showing media mentions, partner logos, trust badges, and certifications. Built to look credible even when empty (placeholder copy + skeleton badges) so you have a real page to point pitches at on day one.
+**Step 1 — Make the prerender plugin cover every public route**
+Add the 5 service-area routes and `/press` to the `ROUTES` array in `vite-plugin-prerender.ts` so every sitemap URL ships pre-baked HTML with its own canonical, title, and description. After this, Googlebot's first-pass crawler sees the correct canonical immediately for every URL — no JS execution required.
 
-**Files:**
-- **Create** `src/pages/Press.tsx`
-- **Create** `src/data/press-mentions.ts` — easily editable array of `{ outlet, logo, quote, url, date }`
-- **Create** `src/data/partners.ts` — `{ name, type, logo, url }`
-- **Edit** `src/App.tsx` — add `/press` lazy route
-- **Edit** `src/components/Footer.tsx` — add Press link
-- **Edit** `src/lib/seo-content.ts` — add SEO content for `/press`
-- **Edit** `vite-plugin-prerender.ts` — add `/press` to prerender list
-- **Edit** `public/sitemap.xml` — add `/press` URL
+**Step 2 — Remove the runtime canonical rewriters**
+Delete the inline canonical-rewriting `<script>` block in `index.html` (lines 92–112). Delete the `<CanonicalUrl />` component from `App.tsx` and remove the file. These were band-aids for the SPA-shell problem — once every route has its own prerendered HTML, they only cause conflicts.
 
-**Sections on the page:** "As featured in" logo strip (with placeholder slots ready), "Trusted partners" grid (suppliers/designers/realtors), "Certifications & memberships" badges (BBB, NARI, Houzz Pro placeholders), CTA to "Become a partner" → links to `/realtors-designers`.
+**Step 3 — Stop SeoHead from emitting `<link rel="canonical">`**
+Remove the canonical/og:url Helmet tags from `SeoHead.tsx`. Keep title and description (those are fine to update at runtime). The canonical now lives **only** in the prerendered HTML — exactly one declaration per URL, set at build time, never overwritten.
 
----
+**Step 4 — Normalize URL format**
+Audit canonicals to guarantee:
+- Always `https://www.boldremo.com` (www, https) — already enforced via `_redirects`.
+- No trailing slash except on root.
+- No query strings or fragments.
 
-### Deliverable 3 — For Realtors & Designers page
+**Step 5 — Resubmit in Search Console**
+After deploying, open the affected URLs in Search Console → "Validate fix." Google typically re-crawls within 1–2 weeks. The sitemap is already correct, so no sitemap changes needed.
 
-New route `/realtors-designers` — partnership landing page with a clear pitch and intake form that emails Stan directly via the existing `send-contact-email` edge function (you confirmed: no DB table needed).
+## Files to change
 
-**Files:**
-- **Create** `src/pages/RealtorsDesigners.tsx` with sections:
-  1. Hero — "Partner with Houston's luxury bathroom remodeler"
-  2. Why partner with BoldREMO — referral fee structure, white-glove client treatment, fast turnarounds, professional photos for your listings
-  3. How it works — 3-step partnership process
-  4. Co-marketing benefits — featured on `/press` page, trade pricing on consults, joint social posts
-  5. Testimonials slot (placeholder ready)
-  6. Partner intake form — name, business name, role (Realtor / Interior Designer / Architect / Other), email, phone, message
-- **Edit** `supabase/functions/send-contact-email/index.ts` — accept optional `formType` field; when `formType === 'partnership'`, change subject to "🤝 New Partnership Inquiry" and add business name + role to the email body. Backwards-compatible with the existing contact form.
-- **Edit** `src/App.tsx` — add `/realtors-designers` lazy route
-- **Edit** `src/components/Footer.tsx` — add "For Realtors & Designers" link
-- **Edit** `src/lib/seo-content.ts` — SEO for `/realtors-designers`
-- **Edit** `vite-plugin-prerender.ts` — prerender it
-- **Edit** `public/sitemap.xml` — add it
+- `vite-plugin-prerender.ts` — add the 5 service-area routes + `/press` to `ROUTES`.
+- `index.html` — remove the canonical-rewriting inline script (lines 92–112).
+- `src/App.tsx` — remove `<CanonicalUrl />` import and usage.
+- `src/components/CanonicalUrl.tsx` — delete file.
+- `src/components/SeoHead.tsx` — remove the canonical and og:url Helmet tags.
 
----
+## Why this works
 
-### Deliverable 4 — Houston Bathroom Cost Calculator (link bait + lead magnet)
+After the fix, every URL Google crawls returns HTML with **exactly one** `<link rel="canonical">`, set at build time, pointing at itself. No runtime rewrites, no race conditions, no homepage canonical on a service-area page. Google's declared and chosen canonicals will match.
 
-New route `/cost-calculator` — interactive estimator that produces a price range. After the result, optional email capture sends the full estimate as a branded PDF (lead magnet).
+## What you'll need to do after deploy
 
-**Calculator inputs (7):**
-1. Bathroom size — Half / Small full (~40 sq ft) / Standard (~60 sq ft) / Large master (~100+ sq ft)
-2. Scope — Refresh / Mid-range remodel / Full luxury renovation
-3. Neighborhood — Houston / Heights / Bellaire / River Oaks / Kingwood / Memorial / Other (modifies multiplier slightly to reflect local labor/material expectations)
-4. Shower — Keep existing / New standard / Walk-in glass / Walk-in glass with custom tile
-5. Vanity count — Single / Double
-6. Tile grade — Standard ceramic / Porcelain / Natural stone or marble
-7. Plumbing changes — None / Minor / Major (move fixtures)
-
-**Output:** Low–high price range with a one-paragraph explanation, breakdown bar (labor / tile / fixtures / vanity / plumbing / contingency), and a "Book your $75 in-home design consult" CTA.
-
-**Email capture (optional):** "Email me a printable PDF estimate" → name + email → submits to a new edge function that saves to a new `calculator_leads` table and emails the user a branded PDF estimate (generated server-side with `pdf-lib` in the edge function), and emails Stan a notification.
-
-**Files:**
-- **Create** `src/pages/CostCalculator.tsx` — multi-step calculator UI with progress indicator
-- **Create** `src/lib/calculator-pricing.ts` — pricing logic (multipliers, base costs per Houston market) — kept transparent and easy to tune
-- **Create** `src/components/CalculatorResult.tsx` — results display + breakdown chart + email-PDF form
-- **Create** `supabase/functions/send-calculator-estimate/index.ts` — generates PDF, saves lead, emails customer + Stan via the existing Gmail SMTP setup (reusing `GMAIL_USER` / `GMAIL_APP_PASSWORD` secrets — no new secrets required)
-- **Migration** — new `calculator_leads` table: `id, name, email, inputs jsonb, low_estimate int, high_estimate int, created_at`. RLS: deny anon all, service-role insert, admin select (mirroring `guide_requests`).
-- **Edit** `src/integrations/supabase/types.ts` — auto-regenerated, no manual edit
-- **Edit** `src/App.tsx` — add `/cost-calculator` lazy route
-- **Edit** `src/components/Header.tsx` — add "Cost Calculator" to main nav (it's link bait, should be discoverable)
-- **Edit** `src/components/Footer.tsx` — add Cost Calculator link
-- **Edit** `src/lib/seo-content.ts` — strong SEO content for `/cost-calculator`
-- **Edit** `vite-plugin-prerender.ts` — prerender it (with descriptive meta for Google snippets)
-- **Edit** `public/sitemap.xml` — add it
-- **Edit** `src/pages/Resources.tsx` — add a card linking to the calculator
-
----
-
-### Sequencing
-
-1. Generate the **PDF first** so it's in your hands within minutes
-2. Build **Press & Partners** (smallest, sets up the partner page link target)
-3. Build **For Realtors & Designers** (needs the email function tweak)
-4. Build **Cost Calculator** (largest — calculator UI + PDF generation + new table + new edge function)
-
-### What's NOT in this plan (clarify if you want any added)
-
-- Auto-deploying any of this — you'll publish from the editor when ready
-- Submitting to Google Search Console / directories / GBP — those still require your action; the PDF lists every step
-- Real partner logos — placeholders shipped; you swap them as deals close
-- Real press mentions — placeholders shipped; you swap them as you earn coverage
+1. Trigger a redeploy so the new prerendered HTML is live.
+2. In Search Console → Pages → "Duplicate, Google chose different canonical than user" → click **Validate fix**.
+3. Optionally use the URL Inspection tool on `/service-areas/heights` etc. and click **Request indexing** to speed things up.
