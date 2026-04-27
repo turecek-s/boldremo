@@ -19,7 +19,12 @@ export const SeoHead = ({ path, title, description }: SeoHeadProps) => {
   const seo = path ? ROUTE_SEO[path] : undefined;
   const finalTitle = title ?? seo?.title;
   const finalDescription = description ?? seo?.description;
-  const canonical = path ? `https://www.boldremo.com${path}` : undefined;
+
+  // NOTE: canonical & og:url are intentionally NOT set here. They are baked
+  // into the prerendered HTML at build time (vite-plugin-prerender) so each
+  // route ships with exactly one canonical declaration — preventing the
+  // "Duplicate, Google chose different canonical than user" issue caused
+  // by runtime rewrites racing the static value.
 
   return (
     <>
@@ -30,8 +35,6 @@ export const SeoHead = ({ path, title, description }: SeoHeadProps) => {
         {finalDescription && <meta name="description" content={finalDescription} />}
         {finalDescription && <meta property="og:description" content={finalDescription} />}
         {finalDescription && <meta name="twitter:description" content={finalDescription} />}
-        {canonical && <link rel="canonical" href={canonical} />}
-        {canonical && <meta property="og:url" content={canonical} />}
       </Helmet>
       {seo && (
         <div

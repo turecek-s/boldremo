@@ -87,29 +87,8 @@
     <meta name="twitter:title" content="BoldREMO | Houston's Premier Bathroom Remodeling Company" />
     <meta name="twitter:description" content="Transform your bathroom with BoldREMO. Houston's trusted luxury bathroom remodeling experts." />
     
-    <!-- Canonical URL -->
+    <!-- Canonical URL (rewritten per-route at build time by vite-plugin-prerender) -->
     <link rel="canonical" href="https://www.boldremo.com/" />
-    <script>
-      (function () {
-        var baseUrl = "https://www.boldremo.com";
-        var path = window.location && window.location.pathname ? window.location.pathname : "/";
-        var canonicalUrl = baseUrl + (path === "/" ? "" : path);
-
-        var canonicalLink = document.querySelector('link[rel="canonical"]');
-        if (!canonicalLink) {
-          canonicalLink = document.createElement("link");
-          canonicalLink.setAttribute("rel", "canonical");
-          document.head.appendChild(canonicalLink);
-        }
-        canonicalLink.setAttribute("href", canonicalUrl);
-
-        var ogUrl = document.querySelector('meta[property="og:url"]');
-        if (ogUrl) ogUrl.setAttribute("content", canonicalUrl);
-
-        var twitterUrl = document.querySelector('meta[name="twitter:url"]');
-        if (twitterUrl) twitterUrl.setAttribute("content", canonicalUrl);
-      })();
-    </script>
 
     <!-- Schema.org LocalBusiness Structured Data -->
     <script type="application/ld+json">
