@@ -100,6 +100,13 @@ const ROUTES: RouteSeo[] = [
       "Kingwood bathroom remodeling experts. Quality craftsmanship and attention to detail for Kingwood homeowners. Call (832) 513-5737.",
     bodyHtml: `<h1>Bathroom Remodeling in Kingwood, TX</h1><p>BoldREMO serves Kingwood homeowners with quality bathroom remodeling — full remodels, custom tile and shower installation, vanity upgrades, accessibility renovations, and complete spa-style transformations.</p><p>Call (832) 513-5737.</p>`,
   },
+  {
+    path: "/press",
+    title: "Press, Partners & Recognition | BoldREMO Houston",
+    description:
+      "BoldREMO's media coverage, trusted Houston suppliers, designer & realtor partners, and contractor certifications.",
+    bodyHtml: `<h1>BoldREMO Press, Partners &amp; Recognition</h1><p>BoldREMO partners with Houston's leading suppliers, designers, and realtors to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.</p><h2>As Featured In</h2><p>Houstonia Magazine, PaperCity, Houston Chronicle Home &amp; Garden, CultureMap Houston, Houston Modern Luxury, Houston Business Journal.</p><h2>Trusted Partners</h2><p>Daltile Houston, Cosentino, Ferguson Bath Kitchen &amp; Lighting, Architectural Design Resource.</p><h2>Certifications</h2><p>Licensed and insured Texas contractor (TDLR registered), BBB accredited, Houzz Pro member, NARI Houston member.</p><p>Call (832) 513-5737.</p>`,
+  },
 ];
 
 /**
