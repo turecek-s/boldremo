@@ -58,6 +58,10 @@ const ImageGallerySchema = () => {
           "name": img.name,
           "description": img.description,
           "contentUrl": img.contentUrl,
+          "license": "https://boldremo.com/about",
+          "acquireLicensePage": "https://boldremo.com/contact",
+          "creditText": "BoldREMO",
+          "copyrightNotice": "© 2025 BoldREMO. All rights reserved.",
           "creator": {
             "@type": "Organization",
             "name": "BoldREMO"
