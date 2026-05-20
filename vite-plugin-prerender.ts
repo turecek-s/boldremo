@@ -62,7 +62,7 @@ const ROUTES: RouteSeo[] = [
     path: "/cost-calculator",
     title: "Houston Bathroom Remodel Cost Calculator | BoldREMO",
     description:
-      "Free Houston bathroom remodel cost calculator. Get an instant price range based on size, scope, neighborhood & finishes. Built on real Houston project data.",
+      "Free Houston bathroom remodel cost calculator. Instant price range by size, scope, neighborhood & finishes. Built on real Houston project data.",
     bodyHtml: `<h1>Houston Bathroom Remodel Cost Calculator</h1><p>Get a realistic price range for your Houston bathroom remodel in under 60 seconds. Pricing based on real Houston-area labor and material costs from our completed projects.</p><h2>How It Works</h2><p>Answer 7 quick questions about size, scope, neighborhood, shower, vanity, tile grade, and plumbing changes. Returns a low–high range with full cost breakdown.</p><h2>Houston Cost Ranges</h2><p>Half bath refresh: $4,500–$9,000. Standard mid-range remodel: $18,000–$28,000. Large master luxury renovation: $45,000–$85,000+. River Oaks and Memorial projects typically 15-25% higher.</p><h2>What Drives Cost</h2><p>Labor 40-50% of total. Tile material and coverage. Walk-in glass showers and double vanities. Moving plumbing fixtures adds $1,200–$4,500.</p><p>For an exact written proposal, book a $75 in-home consult. Call (832) 513-5737.</p>`,
   },
   {
