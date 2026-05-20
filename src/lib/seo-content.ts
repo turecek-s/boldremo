@@ -181,7 +181,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/cost-calculator",
     title: "Houston Bathroom Remodel Cost Calculator | BoldREMO",
     description:
-      "Free Houston bathroom remodel cost calculator. Instant price range by size, scope, neighborhood &amp; finishes. Built on real Houston project data.",
+      "Free Houston bathroom remodel cost calculator. Instant price range by size, scope, neighborhood & finishes. Built on real Houston project data.",
     bodyHtml: `
       <h1>Houston Bathroom Remodel Cost Calculator</h1>
       <p>Use BoldREMO's free Houston bathroom remodel cost calculator to get a realistic price range for your project in under 60 seconds. Pricing is based on real Houston-area labor and material costs from our completed projects in Heights, Bellaire, River Oaks, Kingwood, Memorial, and across the greater Houston area.</p>
