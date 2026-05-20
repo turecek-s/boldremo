@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { BrandName } from "@/components/BrandName";
 import { SeoHead } from "@/components/SeoHead";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { CheckCircle } from "lucide-react";
 import boldremo9 from "@/assets/boldremo-9.jpg";
 import stanHeadshot from "@/assets/stan-headshot.webp";
@@ -20,6 +21,7 @@ const About = () => {
   return (
     <>
       <SeoHead path="/about" />
+      <LocalBusinessSchema />
       <Header />
       <main>
         {/* Hero */}
