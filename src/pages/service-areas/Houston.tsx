@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { Button } from "@/components/ui/button";
 import { BrandName } from "@/components/BrandName";
 import { SeoFallback } from "@/components/SeoFallback";
@@ -41,6 +42,7 @@ const Houston = () => {
       </Helmet>
 
       <SeoFallback path="/service-areas/houston" />
+      <LocalBusinessSchema />
       <Header />
 
       <main>
