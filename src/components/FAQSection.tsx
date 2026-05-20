@@ -48,12 +48,34 @@ const faqs = [
   },
 ];
 
+const FAQPageSchema = () => {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.answer,
+      },
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+    />
+  );
+};
+
 export const FAQSection = () => {
   return (
     <section
       className="section-padding bg-muted"
       aria-labelledby="faq-heading"
     >
+      <FAQPageSchema />
       <div className="container-custom">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2
