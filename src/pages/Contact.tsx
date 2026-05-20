@@ -74,6 +74,7 @@ const Contact = () => {
   return (
     <>
       <SeoHead path="/contact" />
+      <LocalBusinessSchema />
       <Header />
       <main>
         {/* Hero */}
