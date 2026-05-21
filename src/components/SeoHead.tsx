@@ -19,12 +19,13 @@ export const SeoHead = ({ path, title, description }: SeoHeadProps) => {
   const seo = path ? ROUTE_SEO[path] : undefined;
   const finalTitle = title ?? seo?.title;
   const finalDescription = description ?? seo?.description;
+  const finalUrl = path ? `https://www.boldremo.com${path}` : "https://www.boldremo.com/";
 
-  // NOTE: canonical & og:url are intentionally NOT set here. They are baked
-  // into the prerendered HTML at build time (vite-plugin-prerender) so each
-  // route ships with exactly one canonical declaration — preventing the
-  // "Duplicate, Google chose different canonical than user" issue caused
-  // by runtime rewrites racing the static value.
+  // NOTE: <link rel="canonical"> is intentionally NOT set here because
+  // link tags don't dedupe by rel in react-helmet-async, which can create
+  // duplicate canonicals. Canonical is baked into the prerendered HTML at
+  // build time (vite-plugin-prerender). og:url and twitter:url are safe to
+  // set here because meta tags with the same property/name are replaced.
 
   return (
     <>
@@ -35,6 +36,8 @@ export const SeoHead = ({ path, title, description }: SeoHeadProps) => {
         {finalDescription && <meta name="description" content={finalDescription} />}
         {finalDescription && <meta property="og:description" content={finalDescription} />}
         {finalDescription && <meta name="twitter:description" content={finalDescription} />}
+        <meta property="og:url" content={finalUrl} />
+        <meta property="twitter:url" content={finalUrl} />
       </Helmet>
       {seo && (
         <div
