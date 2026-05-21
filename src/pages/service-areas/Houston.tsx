@@ -38,6 +38,12 @@ const Houston = () => {
           name="keywords"
           content="bathroom remodeling Houston, Houston bathroom renovation, bathroom contractor Houston TX, bathroom remodel Houston Texas"
         />
+        <meta property="og:title" content="Bathroom Remodeling Houston TX | BoldRemo" />
+        <meta property="og:description" content="Houston's premier bathroom remodeling. BoldREMO transforms bathrooms across Heights, Bellaire, River Oaks & Kingwood. Call (832) 513-5737." />
+        <meta property="og:url" content="https://www.boldremo.com/service-areas/houston" />
+        <meta name="twitter:title" content="Bathroom Remodeling Houston TX | BoldRemo" />
+        <meta name="twitter:description" content="Houston's premier bathroom remodeling. BoldREMO transforms bathrooms across Heights, Bellaire, River Oaks & Kingwood. Call (832) 513-5737." />
+        <meta name="twitter:url" content="https://www.boldremo.com/service-areas/houston" />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/houston" />
       </Helmet>
 
