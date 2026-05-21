@@ -9,11 +9,19 @@ const NotFound = () => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
   }, [location.pathname]);
 
+  const pageUrl = `https://www.boldremo.com${location.pathname}`;
+
   return (
     <>
       <Helmet>
         <title>Page Not Found | BoldREMO</title>
         <meta name="robots" content="noindex, nofollow" />
+        <meta property="og:title" content="Page Not Found | BoldREMO" />
+        <meta property="og:description" content="The page you are looking for does not exist." />
+        <meta property="og:url" content={pageUrl} />
+        <meta name="twitter:title" content="Page Not Found | BoldREMO" />
+        <meta name="twitter:description" content="The page you are looking for does not exist." />
+        <meta name="twitter:url" content={pageUrl} />
       </Helmet>
       <div className="flex min-h-screen items-center justify-center bg-muted">
         <div className="text-center">
