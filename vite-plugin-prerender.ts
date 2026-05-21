@@ -10,7 +10,7 @@ import { resolve, dirname } from "path";
  *
  * IMPORTANT: keep this list in sync with src/lib/seo-content.ts.
  */
-type RouteSeo = { path: string; title: string; description: string; bodyHtml: string };
+type RouteSeo = { path: string; title: string; description: string; bodyHtml: string; noindex?: boolean };
 
 const HIDDEN_STYLE =
   "position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;";
@@ -107,6 +107,14 @@ const ROUTES: RouteSeo[] = [
       "BoldREMO's media coverage, trusted Houston suppliers, designer & realtor partners, and contractor certifications.",
     bodyHtml: `<h1>BoldREMO Press, Partners &amp; Recognition</h1><p>BoldREMO partners with Houston's leading suppliers, designers, and realtors to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.</p><h2>As Featured In</h2><p>Houstonia Magazine, PaperCity, Houston Chronicle Home &amp; Garden, CultureMap Houston, Houston Modern Luxury, Houston Business Journal.</p><h2>Trusted Partners</h2><p>Daltile Houston, Cosentino, Ferguson Bath Kitchen &amp; Lighting, Architectural Design Resource.</p><h2>Certifications</h2><p>Licensed and insured Texas contractor (TDLR registered), BBB accredited, Houzz Pro member, NARI Houston member.</p><p>Call (832) 513-5737.</p>`,
   },
+  {
+    path: "/admin",
+    title: "Admin Dashboard | BoldREMO",
+    description:
+      "Private admin dashboard for BoldREMO staff. Authentication required.",
+    bodyHtml: `<h1>Admin</h1><p>Private staff area.</p>`,
+    noindex: true,
+  },
 ];
 
 /**
@@ -177,6 +185,14 @@ export function prerenderRoutes(): Plugin {
           /<link rel="canonical" href="[^"]*" \/>/,
           `<link rel="canonical" href="${canonical}" />`,
         );
+
+        // Add noindex robots meta for private routes
+        if (route.noindex) {
+          html = html.replace(
+            /<\/head>/,
+            `  <meta name="robots" content="noindex,nofollow" />\n  </head>`,
+          );
+        }
 
         // Inject route-specific hidden body content right after <div id="root">
         const routeBlock = `<div style="${HIDDEN_STYLE}" aria-hidden="true">${route.bodyHtml}</div>`;

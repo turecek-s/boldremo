@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SeoHead } from "@/components/SeoHead";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -169,6 +170,7 @@ const Admin = () => {
   if (isLoading) {
     return (
       <>
+        <SeoHead title="Admin Dashboard | BoldREMO" description="Private admin dashboard for BoldREMO staff. Authentication required." noindex />
         <Header />
         <main className="min-h-screen bg-muted pt-32 pb-16">
           <div className="container-custom text-center">
@@ -183,6 +185,7 @@ const Admin = () => {
   if (!isAuthenticated) {
     return (
       <>
+        <SeoHead title="Admin Dashboard | BoldREMO" description="Private admin dashboard for BoldREMO staff. Authentication required." noindex />
         <Header />
         <main className="min-h-screen bg-muted pt-32 pb-16">
           <div className="container-custom max-w-md">
@@ -234,6 +237,7 @@ const Admin = () => {
   if (!isAdmin) {
     return (
       <>
+        <SeoHead title="Admin Dashboard | BoldREMO" description="Private admin dashboard for BoldREMO staff. Authentication required." noindex />
         <Header />
         <main className="min-h-screen bg-muted pt-32 pb-16">
           <div className="container-custom max-w-md">
@@ -259,7 +263,8 @@ const Admin = () => {
 
   return (
     <>
-      <Header />
+      <SeoHead title="Admin Dashboard | BoldREMO" description="Private admin dashboard for BoldREMO staff. Authentication required." noindex />
+        <Header />
       <main className="min-h-screen bg-muted pt-32 pb-16">
         <div className="container-custom">
           <div className="flex justify-between items-center mb-8">
