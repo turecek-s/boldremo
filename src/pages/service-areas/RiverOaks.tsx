@@ -34,7 +34,7 @@ const RiverOaks = () => {
         <title>Luxury Bathroom Remodeling in River Oaks TX | BoldREMO</title>
         <meta
           name="description"
-          content="Luxury bathroom remodeling for River Oaks estates. BoldREMO delivers world-class craftsmanship for Houston's most prestigious homes. Book a $75 design consult — (832) 513-5737."
+          content="Luxury bathroom remodeling for River Oaks estates. World-class craftsmanship for Houston's finest homes. Book a $75 consult — (832) 513-5737."
         />
         <meta
           name="keywords"
