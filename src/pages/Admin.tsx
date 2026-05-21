@@ -170,7 +170,7 @@ const Admin = () => {
   if (isLoading) {
     return (
       <>
-        <SeoHead title="Admin Dashboard | BoldREMO" description="Private admin dashboard for BoldREMO staff. Authentication required." noindex />
+        <SeoHead path="/admin" title="Admin Dashboard | BoldREMO" description="Private admin dashboard for BoldREMO staff. Authentication required." noindex />
         <Header />
         <main className="min-h-screen bg-muted pt-32 pb-16">
           <div className="container-custom text-center">
@@ -185,7 +185,7 @@ const Admin = () => {
   if (!isAuthenticated) {
     return (
       <>
-        <SeoHead title="Admin Dashboard | BoldREMO" description="Private admin dashboard for BoldREMO staff. Authentication required." noindex />
+        <SeoHead path="/admin" title="Admin Dashboard | BoldREMO" description="Private admin dashboard for BoldREMO staff. Authentication required." noindex />
         <Header />
         <main className="min-h-screen bg-muted pt-32 pb-16">
           <div className="container-custom max-w-md">
@@ -237,7 +237,7 @@ const Admin = () => {
   if (!isAdmin) {
     return (
       <>
-        <SeoHead title="Admin Dashboard | BoldREMO" description="Private admin dashboard for BoldREMO staff. Authentication required." noindex />
+        <SeoHead path="/admin" title="Admin Dashboard | BoldREMO" description="Private admin dashboard for BoldREMO staff. Authentication required." noindex />
         <Header />
         <main className="min-h-screen bg-muted pt-32 pb-16">
           <div className="container-custom max-w-md">
@@ -263,7 +263,7 @@ const Admin = () => {
 
   return (
     <>
-      <SeoHead title="Admin Dashboard | BoldREMO" description="Private admin dashboard for BoldREMO staff. Authentication required." noindex />
+      <SeoHead path="/admin" title="Admin Dashboard | BoldREMO" description="Private admin dashboard for BoldREMO staff. Authentication required." noindex />
         <Header />
       <main className="min-h-screen bg-muted pt-32 pb-16">
         <div className="container-custom">
