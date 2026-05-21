@@ -10,6 +10,8 @@ interface SeoHeadProps {
   description?: string;
   /** Add <meta name="robots" content="noindex,nofollow"> for private pages. */
   noindex?: boolean;
+  /** Optional JSON-LD structured data object for this route. */
+  jsonLd?: Record<string, unknown>;
 }
 
 /**
@@ -17,7 +19,7 @@ interface SeoHeadProps {
  * fallback HTML block so non-JS crawlers (Bing, DuckDuckGo, AI bots)
  * can index unique content for this route.
  */
-export const SeoHead = ({ path, title, description, noindex }: SeoHeadProps) => {
+export const SeoHead = ({ path, title, description, noindex, jsonLd }: SeoHeadProps) => {
   const seo = path ? ROUTE_SEO[path] : undefined;
   const finalTitle = title ?? seo?.title;
   const finalDescription = description ?? seo?.description;
@@ -42,6 +44,12 @@ export const SeoHead = ({ path, title, description, noindex }: SeoHeadProps) => 
         <meta property="twitter:url" content={finalUrl} />
         {noindex && <meta name="robots" content="noindex,nofollow" />}
       </Helmet>
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
       {seo && (
         <div
           aria-hidden="true"
