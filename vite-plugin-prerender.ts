@@ -10,7 +10,7 @@ import { resolve, dirname } from "path";
  *
  * IMPORTANT: keep this list in sync with src/lib/seo-content.ts.
  */
-type RouteSeo = { path: string; title: string; description: string; bodyHtml: string };
+type RouteSeo = { path: string; title: string; description: string; bodyHtml: string; noindex?: boolean };
 
 const HIDDEN_STYLE =
   "position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;";
