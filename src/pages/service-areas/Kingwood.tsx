@@ -34,7 +34,7 @@ const Kingwood = () => {
         <title>Luxury Bathroom Remodeling in Kingwood TX | BoldREMO</title>
         <meta
           name="description"
-          content="Luxury bathroom remodeling in Kingwood, TX. BoldREMO transforms bathrooms with expert craftsmanship & quality materials. Book a $75 design consult — (832) 513-5737."
+          content="Luxury bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult — (832) 513-5737."
         />
         <meta
           name="keywords"
