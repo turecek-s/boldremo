@@ -59,7 +59,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/about",
     title: "About BoldREMO | Houston Bathroom Remodeling Company",
     description:
-      "Meet BoldREMO — Houston's trusted luxury bathroom remodeling team led by Stan. Licensed, insured, and committed to quality craftsmanship and transparent pricing.",
+      "Meet BoldREMO — Houston's trusted luxury bathroom remodeling team. Licensed, insured, with transparent pricing and quality craftsmanship.",
     bodyHtml: `
       <h1>About BoldREMO — Houston's Luxury Bathroom Remodeling Team</h1>
       <p>BoldREMO is Houston's trusted partner for luxury bathroom remodeling and home renovation. Founded by Stan, our team brings decades of combined craftsmanship experience to every project across Houston, Heights, Bellaire, River Oaks, and Kingwood.</p>
@@ -94,7 +94,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/contact",
     title: "Contact BoldREMO | Houston Bathroom Remodeling Consultation",
     description:
-      "Contact BoldREMO for a free rough estimate or $75 in-home design consult. Call (832) 513-5737 or email info@boldremo.com. Houston bathroom remodeling experts.",
+      "Contact BoldREMO for a free rough estimate or $75 in-home design consult. Call (832) 513-5737. Houston bathroom remodeling experts.",
     bodyHtml: `
       <h1>Contact BoldREMO — Book Your Houston Bathroom Consult</h1>
       <p>Ready to transform your bathroom? Get a free rough estimate by phone or email, or book a $75 in-home design consultation with BoldREMO.</p>
