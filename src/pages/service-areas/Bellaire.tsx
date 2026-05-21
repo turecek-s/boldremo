@@ -34,7 +34,7 @@ const Bellaire = () => {
         <title>Luxury Bathroom Remodeling in Bellaire TX | BoldREMO</title>
         <meta
           name="description"
-          content="Luxury bathroom remodeling in Bellaire, TX. BoldREMO creates stunning spa-inspired bathrooms with premium materials & expert craftsmanship. Book a $75 design consult — (832) 513-5737."
+          content="Luxury bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult — (832) 513-5737."
         />
         <meta
           name="keywords"
