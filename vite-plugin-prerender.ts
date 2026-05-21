@@ -170,6 +170,10 @@ export function prerenderRoutes(): Plugin {
           `<meta name="twitter:description" content="${escapeAttr(route.description)}" />`,
         );
         html = html.replace(
+          /<meta name="twitter:url" content="[^"]*" \/>/,
+          `<meta name="twitter:url" content="${canonical}" />`,
+        );
+        html = html.replace(
           /<link rel="canonical" href="[^"]*" \/>/,
           `<link rel="canonical" href="${canonical}" />`,
         );
