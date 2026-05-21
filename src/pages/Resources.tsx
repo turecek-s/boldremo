@@ -133,6 +133,31 @@ const quickTips = [
   }
 ];
 
+const resourcesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Bathroom Remodeling Resources & Planning Guides",
+  "description": "Free bathroom remodeling guides, cost breakdowns, planning checklists, and tips from Houston's BoldREMO team. Plan your renovation with confidence.",
+  "url": "https://www.boldremo.com/resources",
+  "author": {
+    "@type": "Organization",
+    "name": "BoldREMO",
+    "url": "https://www.boldremo.com",
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BoldREMO",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.boldremo.com/og-image.jpg",
+    },
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.boldremo.com/resources",
+  },
+};
+
 const Resources = () => {
   const location = useLocation();
   const handlePrintChecklist = () => {
@@ -154,7 +179,7 @@ const Resources = () => {
 
   return (
     <>
-      <SeoHead path="/resources" />
+      <SeoHead path="/resources" jsonLd={resourcesJsonLd} />
       <Header />
       <main>
         {/* Hero Section */}
