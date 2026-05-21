@@ -8,6 +8,8 @@ interface SeoHeadProps {
   title?: string;
   /** Override description. */
   description?: string;
+  /** Add <meta name="robots" content="noindex,nofollow"> for private pages. */
+  noindex?: boolean;
 }
 
 /**
@@ -15,7 +17,7 @@ interface SeoHeadProps {
  * fallback HTML block so non-JS crawlers (Bing, DuckDuckGo, AI bots)
  * can index unique content for this route.
  */
-export const SeoHead = ({ path, title, description }: SeoHeadProps) => {
+export const SeoHead = ({ path, title, description, noindex }: SeoHeadProps) => {
   const seo = path ? ROUTE_SEO[path] : undefined;
   const finalTitle = title ?? seo?.title;
   const finalDescription = description ?? seo?.description;
@@ -38,6 +40,7 @@ export const SeoHead = ({ path, title, description }: SeoHeadProps) => {
         {finalDescription && <meta name="twitter:description" content={finalDescription} />}
         <meta property="og:url" content={finalUrl} />
         <meta property="twitter:url" content={finalUrl} />
+        {noindex && <meta name="robots" content="noindex,nofollow" />}
       </Helmet>
       {seo && (
         <div
