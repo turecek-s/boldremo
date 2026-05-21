@@ -186,6 +186,14 @@ export function prerenderRoutes(): Plugin {
           `<link rel="canonical" href="${canonical}" />`,
         );
 
+        // Add noindex robots meta for private routes
+        if (route.noindex) {
+          html = html.replace(
+            /<\/head>/,
+            `  <meta name="robots" content="noindex,nofollow" />\n  </head>`,
+          );
+        }
+
         // Inject route-specific hidden body content right after <div id="root">
         const routeBlock = `<div style="${HIDDEN_STYLE}" aria-hidden="true">${route.bodyHtml}</div>`;
         html = html.replace(
