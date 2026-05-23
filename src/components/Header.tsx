@@ -70,7 +70,7 @@ export const Header = () => {
           : "bg-background/80 md:backdrop-blur-sm"
       }`}
     >
-      <nav className="container-custom flex items-center lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-6" aria-label="Main navigation">
+      <nav className="container-custom flex items-center lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-6" aria-label="Main navigation">
         {/* Logo */}
         <Link
           to="/"
