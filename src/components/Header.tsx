@@ -79,9 +79,9 @@ export const Header = () => {
           aria-label="BoldREMO Home"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <span className="text-2xl font-serif">
+          <span className="text-3xl font-serif tracking-tight">
             <span className="font-extrabold text-primary">Bold</span>
-            <span className={`font-medium ${isScrolled ? "text-foreground" : "text-primary"}`}>REMO</span>
+            <span className={`font-semibold ${isScrolled ? "text-foreground" : "text-primary"}`}>REMO</span>
           </span>
         </Link>
 
