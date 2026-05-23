@@ -207,6 +207,7 @@ export const Header = () => {
             <Phone className="h-4 w-4" aria-hidden="true" />
             (832) 513-5737
           </a>
+          <span className="h-5 w-px bg-border" aria-hidden="true" />
           <Button asChild variant="default" size="sm">
             <Link to="/contact">Book Bathroom Consult</Link>
           </Button>
