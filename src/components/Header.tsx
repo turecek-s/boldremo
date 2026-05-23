@@ -205,6 +205,9 @@ export const Header = () => {
 
 
 
+        {/* Desktop right spacer to balance grid */}
+        <div className="hidden lg:block" aria-hidden="true" />
+
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
