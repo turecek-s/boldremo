@@ -115,7 +115,7 @@ export const Header = () => {
             ))}
           </div>
 
-          <span className="h-5 w-px bg-border" aria-hidden="true" />
+
 
           {/* Resources Dropdown */}
           <div className="relative" ref={resourcesDropdownRef}>
