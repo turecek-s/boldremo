@@ -64,17 +64,17 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 py-5 transition-colors duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 py-6 lg:py-7 transition-colors duration-300 ${
         isScrolled
           ? "bg-background/95 md:backdrop-blur-md shadow-sm"
           : "bg-background/80 md:backdrop-blur-sm"
       }`}
     >
-      <nav className="container-custom relative flex items-center" aria-label="Main navigation">
+      <nav className="container-custom flex items-center lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-6" aria-label="Main navigation">
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center lg:absolute lg:left-4 xl:left-8"
+          className="flex items-center"
           aria-label="BoldREMO Home"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
@@ -92,7 +92,7 @@ export const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex flex-1 items-center justify-center gap-6">
+        <div className="hidden lg:flex items-center justify-center gap-6">
           <div className="flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
@@ -204,6 +204,9 @@ export const Header = () => {
         </div>
 
 
+
+        {/* Desktop right spacer to balance grid */}
+        <div className="hidden lg:block" aria-hidden="true" />
 
         {/* Mobile Menu Button */}
         <button
