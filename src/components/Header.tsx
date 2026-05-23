@@ -70,7 +70,7 @@ export const Header = () => {
           : "bg-background/80 md:backdrop-blur-sm"
       }`}
     >
-      <nav className="container-custom flex items-center lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-6" aria-label="Main navigation">
+      <nav className="container-custom relative flex items-center justify-center lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-6" aria-label="Main navigation">
         {/* Logo */}
         <Link
           to="/"
@@ -211,7 +211,7 @@ export const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden ml-auto p-2 text-foreground"
+          className="lg:hidden absolute right-0 p-2 text-foreground"
           aria-label="Toggle menu"
           aria-expanded={isOpen}
         >
