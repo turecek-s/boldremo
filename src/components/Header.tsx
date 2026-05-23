@@ -83,8 +83,10 @@ export const Header = () => {
               <span className="font-extrabold text-primary-foreground">Bold</span>
               <span className="font-semibold text-secondary">REMO</span>
             </span>
-            <span className="text-[9px] font-medium tracking-[1em] uppercase text-primary-foreground/70 mt-1 text-center w-full leading-tight">
-              Luxury Bathroom Remodeling
+            <span className="flex justify-between w-full text-[9px] font-medium uppercase text-primary-foreground/70 mt-1 leading-tight whitespace-nowrap">
+              {"LUXURY BATHROOM REMODELING".split("").map((ch, i) => (
+                <span key={i}>{ch === " " ? "\u00A0" : ch}</span>
+              ))}
             </span>
           </span>
         </Link>
