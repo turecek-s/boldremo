@@ -92,7 +92,7 @@ export const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex flex-1 items-center justify-center gap-6">
+        <div className="hidden lg:flex items-center justify-center gap-6">
           <div className="flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
