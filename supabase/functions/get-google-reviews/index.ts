@@ -37,22 +37,6 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Debug helper: ?find=BoldREMO uses legacy Find Place
-    const reqUrl = new URL(req.url);
-    const find = reqUrl.searchParams.get("find");
-    if (find) {
-      const findUrl = new URL("https://maps.googleapis.com/maps/api/place/findplacefromtext/json");
-      findUrl.searchParams.set("input", find);
-      findUrl.searchParams.set("inputtype", "textquery");
-      findUrl.searchParams.set("fields", "place_id,name,formatted_address,rating,user_ratings_total");
-      findUrl.searchParams.set("key", apiKey);
-      const r = await fetch(findUrl.toString());
-      const j = await r.json();
-      return new Response(JSON.stringify(j), {
-        status: 200,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
-    }
 
 
     // Serve from cache if fresh
@@ -80,11 +64,7 @@ Deno.serve(async (req) => {
     if (data.status !== "OK") {
       console.error("Google Places API error:", data.status, data.error_message);
       return new Response(
-        JSON.stringify({
-          error: "Google Places API error",
-          status: data.status,
-          message: data.error_message,
-        }),
+        JSON.stringify({ error: "Reviews temporarily unavailable" }),
         { status: 502, headers: { ...corsHeaders, "Content-Type": "application/json" } },
       );
     }
@@ -118,7 +98,7 @@ Deno.serve(async (req) => {
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : "Unknown error";
     console.error("get-google-reviews error:", message);
-    return new Response(JSON.stringify({ error: message }), {
+    return new Response(JSON.stringify({ error: "Reviews temporarily unavailable" }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
