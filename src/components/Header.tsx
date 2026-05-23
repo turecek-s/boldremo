@@ -70,11 +70,11 @@ export const Header = () => {
           : "bg-background/80 md:backdrop-blur-sm"
       }`}
     >
-      <nav className="container-custom relative flex items-center" aria-label="Main navigation">
+      <nav className="container-custom flex items-center lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-6" aria-label="Main navigation">
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center lg:absolute lg:left-4 xl:left-8"
+          className="flex items-center"
           aria-label="BoldREMO Home"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
