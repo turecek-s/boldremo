@@ -65,10 +65,10 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 py-4 transition-colors duration-300 ${
         isScrolled
-          ? "bg-background/95 md:backdrop-blur-md shadow-sm py-3"
-          : "bg-background/80 md:backdrop-blur-sm py-5"
+          ? "bg-background/95 md:backdrop-blur-md shadow-sm"
+          : "bg-background/80 md:backdrop-blur-sm"
       }`}
     >
       <nav className="container-custom flex items-center justify-between" aria-label="Main navigation">
@@ -115,7 +115,7 @@ export const Header = () => {
             ))}
           </div>
 
-          <span className="h-5 w-px bg-border" aria-hidden="true" />
+
 
           {/* Resources Dropdown */}
           <div className="relative" ref={resourcesDropdownRef}>
@@ -203,20 +203,12 @@ export const Header = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="hidden lg:flex items-center gap-4">
-          <a
-            href="tel:+18325135737"
-            className="flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-            aria-label="Call us at (832) 513-5737"
-          >
-            <Phone className="h-4 w-4" aria-hidden="true" />
-            (832) 513-5737
-          </a>
-          <span className="h-5 w-px bg-border" aria-hidden="true" />
+        <div className="hidden lg:flex items-center">
           <Button asChild variant="default" size="sm">
             <Link to="/contact">Book Bathroom Consult</Link>
           </Button>
         </div>
+
 
         {/* Mobile Menu Button */}
         <button
