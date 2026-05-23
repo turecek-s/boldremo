@@ -86,27 +86,31 @@ export const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              onClick={() => {
-                if (link.path === "/" || location.pathname === link.path) {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }
-              }}
-              className={`text-sm font-medium tracking-wide transition-colors hover:text-primary ${
-                location.pathname === link.path
-                  ? "text-primary"
-                  : isScrolled
-                  ? "text-foreground"
-                  : "text-foreground/80"
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
+        <div className="hidden lg:flex items-center gap-6">
+          <div className="flex items-center gap-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => {
+                  if (link.path === "/" || location.pathname === link.path) {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }}
+                className={`text-sm font-medium tracking-wide transition-colors hover:text-primary ${
+                  location.pathname === link.path
+                    ? "text-primary"
+                    : isScrolled
+                    ? "text-foreground"
+                    : "text-foreground/80"
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          <span className="h-5 w-px bg-border" aria-hidden="true" />
 
           {/* Resources Dropdown */}
           <div className="relative" ref={resourcesDropdownRef}>
