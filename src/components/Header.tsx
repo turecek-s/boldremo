@@ -70,11 +70,11 @@ export const Header = () => {
           : "bg-background/80 md:backdrop-blur-sm"
       }`}
     >
-      <nav className="container-custom flex items-center justify-between" aria-label="Main navigation">
+      <nav className="container-custom relative flex items-center" aria-label="Main navigation">
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center"
+          className="flex items-center lg:absolute lg:left-4 xl:left-8"
           aria-label="BoldREMO Home"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
@@ -92,7 +92,7 @@ export const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex flex-1 items-center justify-center gap-6">
           <div className="flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
@@ -208,7 +208,7 @@ export const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 text-foreground"
+          className="lg:hidden ml-auto p-2 text-foreground"
           aria-label="Toggle menu"
           aria-expanded={isOpen}
         >
