@@ -64,11 +64,7 @@ Deno.serve(async (req) => {
     if (data.status !== "OK") {
       console.error("Google Places API error:", data.status, data.error_message);
       return new Response(
-        JSON.stringify({
-          error: "Google Places API error",
-          status: data.status,
-          message: data.error_message,
-        }),
+        JSON.stringify({ error: "Reviews temporarily unavailable" }),
         { status: 502, headers: { ...corsHeaders, "Content-Type": "application/json" } },
       );
     }
