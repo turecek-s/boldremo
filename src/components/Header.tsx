@@ -64,7 +64,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 py-6 lg:py-7 transition-colors duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 py-4 lg:py-5 transition-colors duration-300 ${
         isScrolled
           ? "bg-background/95 md:backdrop-blur-md shadow-sm"
           : "bg-background/80 md:backdrop-blur-sm"
@@ -78,12 +78,12 @@ export const Header = () => {
           aria-label="BoldREMO Home"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <span className="flex flex-col items-center bg-primary px-4 py-2 rounded-xl shadow-lg shadow-primary/20 ring-1 ring-primary-foreground/10">
-            <span className="text-3xl font-serif tracking-tight leading-none">
+          <span className="flex flex-col items-center bg-primary px-3 py-1.5 rounded-lg shadow-lg shadow-primary/20 ring-1 ring-primary-foreground/10">
+            <span className="text-2xl font-serif tracking-tight leading-none">
               <span className="font-extrabold text-primary-foreground">Bold</span>
               <span className="font-semibold text-secondary">REMO</span>
             </span>
-            <span className="flex justify-between w-full text-[7px] font-medium uppercase text-primary-foreground/70 mt-1 leading-tight whitespace-nowrap">
+            <span className="flex justify-between w-full text-[6px] font-medium uppercase text-primary-foreground/70 mt-0.5 leading-tight whitespace-nowrap">
               {"LUXURY BATHROOM REMODELING".split("").map((ch, i) => (
                 <span key={i}>{ch === " " ? "\u00A0" : ch}</span>
               ))}
