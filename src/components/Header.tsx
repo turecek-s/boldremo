@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -202,12 +201,6 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden lg:flex items-center">
-          <Button asChild variant="default" size="sm">
-            <Link to="/contact">Book Bathroom Consult</Link>
-          </Button>
-        </div>
 
 
         {/* Mobile Menu Button */}
@@ -332,11 +325,6 @@ export const Header = () => {
               <Phone className="h-5 w-5" aria-hidden="true" />
               (832) 513-5737
             </a>
-            <Button asChild className="mt-4 w-full">
-              <Link to="/contact" onClick={() => setIsOpen(false)}>
-                Book Bathroom Consult
-              </Link>
-            </Button>
           </nav>
         </div>
       )}
