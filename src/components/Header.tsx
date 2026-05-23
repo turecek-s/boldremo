@@ -73,15 +73,15 @@ export const Header = () => {
     >
       <nav className="container-custom flex items-center justify-between" aria-label="Main navigation">
         {/* Logo */}
-        <Link 
-          to="/" 
-          className="flex items-center gap-2" 
+        <Link
+          to="/"
+          className="flex items-center"
           aria-label="BoldREMO Home"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <span className="text-3xl font-serif tracking-tight">
-            <span className="font-extrabold text-primary">Bold</span>
-            <span className={`font-semibold ${isScrolled ? "text-foreground" : "text-primary"}`}>REMO</span>
+          <span className="inline-flex items-center gap-0 text-3xl font-serif tracking-tight bg-primary px-5 py-2.5 rounded-xl shadow-lg shadow-primary/20 ring-1 ring-primary-foreground/10">
+            <span className="font-extrabold text-primary-foreground">Bold</span>
+            <span className="font-semibold text-secondary">REMO</span>
           </span>
         </Link>
 
