@@ -42,7 +42,7 @@ export default defineConfig(({ mode }) => ({
       name: "rewrite-hero-preload",
       apply: "build" as const,
       enforce: "post" as const,
-      generateBundle(_options, bundle) {
+      generateBundle(_options: unknown, bundle: Record<string, { type: string; source?: string | Uint8Array }>) {
         let heroFile: string | undefined;
         for (const fileName of Object.keys(bundle)) {
           if (/assets\/hero-bathroom-[^/]+\.(jpg|jpeg|webp)$/i.test(fileName)) {
