@@ -34,7 +34,7 @@ export const Footer = () => {
                 <span className="font-extrabold">Bold</span><span className="font-medium text-secondary">REMO</span>
               </span>
             </Link>
-            <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
+            <p className="text-primary-foreground/90 text-sm leading-relaxed mb-6">
               Houston's Premier Bathroom Remodeling Company. Proudly serving Houston, Heights, Bellaire, River Oaks & Kingwood.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -70,7 +70,7 @@ export const Footer = () => {
                   <li key={link.path}>
                     <Link
                       to={link.path}
-                      className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
+                      className="text-primary-foreground/90 hover:text-primary-foreground text-sm transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -89,7 +89,7 @@ export const Footer = () => {
                   <li key={area.path}>
                     <Link
                       to={area.path}
-                      className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
+                      className="text-primary-foreground/90 hover:text-primary-foreground text-sm transition-colors"
                     >
                       {area.name}
                     </Link>
@@ -105,19 +105,19 @@ export const Footer = () => {
             <address className="not-italic space-y-4">
               <a
                 href="tel:+18325135737"
-                className="flex items-center gap-3 text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
+                className="flex items-center gap-3 text-primary-foreground/90 hover:text-primary-foreground text-sm transition-colors"
               >
                 <Phone className="h-4 w-4 flex-shrink-0" />
                 (832) 513-5737
               </a>
               <a
                 href="mailto:info@boldremo.com"
-                className="flex items-center gap-3 text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
+                className="flex items-center gap-3 text-primary-foreground/90 hover:text-primary-foreground text-sm transition-colors"
               >
                 <Mail className="h-4 w-4 flex-shrink-0" />
                 info@boldremo.com
               </a>
-              <div className="flex items-start gap-3 text-primary-foreground/80 text-sm">
+              <div className="flex items-start gap-3 text-primary-foreground/90 text-sm">
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
                 <span>Houston, Texas</span>
               </div>
