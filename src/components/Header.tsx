@@ -78,12 +78,12 @@ export const Header = () => {
           aria-label="BoldREMO Home"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <span className="flex flex-col items-center bg-primary px-6 py-3 rounded-xl shadow-lg shadow-primary/20 ring-1 ring-primary-foreground/10">
-            <span className="text-5xl font-serif tracking-tight leading-none">
+          <span className="flex flex-col items-center bg-primary px-5 py-2.5 rounded-xl shadow-lg shadow-primary/20 ring-1 ring-primary-foreground/10">
+            <span className="text-4xl font-serif tracking-tight leading-none">
               <span className="font-extrabold text-primary-foreground">Bold</span>
               <span className="font-semibold text-secondary">REMO</span>
             </span>
-            <span className="flex justify-between w-full text-[10px] font-medium uppercase text-primary-foreground/70 mt-1 leading-tight whitespace-nowrap">
+            <span className="flex justify-between w-full text-[8px] font-medium uppercase text-primary-foreground/70 mt-1 leading-tight whitespace-nowrap">
               {"LUXURY BATHROOM REMODELING".split("").map((ch, i) => (
                 <span key={i}>{ch === " " ? "\u00A0" : ch}</span>
               ))}
