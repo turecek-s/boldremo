@@ -85,6 +85,8 @@ export const Header = () => {
           </span>
         </Link>
 
+        <span className="hidden lg:block h-5 w-px bg-border" aria-hidden="true" />
+
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-6">
           <div className="flex items-center gap-6">
