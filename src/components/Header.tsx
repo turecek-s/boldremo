@@ -64,7 +64,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 py-5 transition-colors duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 py-6 lg:py-7 transition-colors duration-300 ${
         isScrolled
           ? "bg-background/95 md:backdrop-blur-md shadow-sm"
           : "bg-background/80 md:backdrop-blur-sm"
