@@ -65,10 +65,10 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 py-4 transition-colors duration-300 ${
         isScrolled
-          ? "bg-background/95 md:backdrop-blur-md shadow-sm py-3"
-          : "bg-background/80 md:backdrop-blur-sm py-5"
+          ? "bg-background/95 md:backdrop-blur-md shadow-sm"
+          : "bg-background/80 md:backdrop-blur-sm"
       }`}
     >
       <nav className="container-custom flex items-center justify-between" aria-label="Main navigation">
