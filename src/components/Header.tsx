@@ -81,10 +81,11 @@ export const Header = () => {
         >
           <span className="text-2xl font-serif flex items-center gap-2">
             <span className="font-extrabold text-primary">Bold</span>
-            <span className="h-5 w-px bg-border" aria-hidden="true" />
             <span className={`font-medium ${isScrolled ? "text-foreground" : "text-primary"}`}>REMO</span>
           </span>
         </Link>
+
+        <span className="hidden lg:block h-5 w-px bg-border" aria-hidden="true" />
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-6">
