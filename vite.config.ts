@@ -36,6 +36,29 @@ export default defineConfig(({ mode }) => ({
       cache: true,
       cacheLocation: "node_modules/.cache/image-optimizer",
     }),
+    // Rewrite the hardcoded hero image preload href in index.html to match
+    // the actually emitted hashed asset filename (prevents stale LCP preloads).
+    {
+      name: "rewrite-hero-preload",
+      apply: "build" as const,
+      enforce: "post" as const,
+      generateBundle(_options: unknown, bundle: Record<string, { type: string; source?: string | Uint8Array }>) {
+        let heroFile: string | undefined;
+        for (const fileName of Object.keys(bundle)) {
+          if (/assets\/hero-bathroom-[^/]+\.(jpg|jpeg|webp)$/i.test(fileName)) {
+            heroFile = fileName;
+            break;
+          }
+        }
+        const html = bundle["index.html"];
+        if (heroFile && html && html.type === "asset" && typeof html.source === "string") {
+          html.source = html.source.replace(
+            /href="\/assets\/hero-bathroom-[^"]+\.(?:jpg|jpeg|webp)"/i,
+            `href="/${heroFile}"`,
+          );
+        }
+      },
+    },
     // Generate per-route static HTML files for SEO (must run after build)
     prerenderRoutes(),
   ].filter(Boolean),
