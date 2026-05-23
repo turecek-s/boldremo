@@ -79,13 +79,13 @@ export const Header = () => {
           aria-label="BoldREMO Home"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <span className="inline-flex items-center bg-primary px-5 py-2.5 rounded-xl shadow-lg shadow-primary/20 ring-1 ring-primary-foreground/10 gap-3">
+          <span className="flex flex-col items-center bg-primary px-5 py-2.5 rounded-xl shadow-lg shadow-primary/20 ring-1 ring-primary-foreground/10">
             <span className="text-4xl font-serif tracking-tight leading-none">
               <span className="font-extrabold text-primary-foreground">Bold</span>
               <span className="font-semibold text-secondary">REMO</span>
             </span>
-            <span className="text-[9px] font-medium tracking-[0.15em] uppercase text-primary-foreground/70 border-l border-primary-foreground/20 pl-3">
-              Luxury Bathroom<br />Remodeling
+            <span className="text-[9px] font-medium tracking-[1.5em] uppercase text-primary-foreground/70 mt-1">
+              Luxury Bathroom Remodeling
             </span>
           </span>
         </Link>
