@@ -37,22 +37,6 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Debug helper: ?find=BoldREMO uses legacy Find Place
-    const reqUrl = new URL(req.url);
-    const find = reqUrl.searchParams.get("find");
-    if (find) {
-      const findUrl = new URL("https://maps.googleapis.com/maps/api/place/findplacefromtext/json");
-      findUrl.searchParams.set("input", find);
-      findUrl.searchParams.set("inputtype", "textquery");
-      findUrl.searchParams.set("fields", "place_id,name,formatted_address,rating,user_ratings_total");
-      findUrl.searchParams.set("key", apiKey);
-      const r = await fetch(findUrl.toString());
-      const j = await r.json();
-      return new Response(JSON.stringify(j), {
-        status: 200,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
-    }
 
 
     // Serve from cache if fresh
