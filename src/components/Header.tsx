@@ -84,7 +84,7 @@ export const Header = () => {
               <span className="font-extrabold text-primary-foreground">Bold</span>
               <span className="font-semibold text-secondary">REMO</span>
             </span>
-            <span className="text-[9px] font-medium tracking-[1.5em] uppercase text-primary-foreground/70 mt-1">
+            <span className="text-[9px] font-medium tracking-[0.25em] uppercase text-primary-foreground/70 mt-1 whitespace-nowrap text-center indent-[0.25em]">
               Luxury Bathroom Remodeling
             </span>
           </span>
