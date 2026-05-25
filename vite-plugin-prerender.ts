@@ -201,12 +201,21 @@ export function prerenderRoutes(): Plugin {
           `<div id="root">${routeBlock}`,
         );
 
-        // Write to dist/<route>/index.html
-        const outPath = resolve(distDir, `.${route.path}/index.html`);
-        mkdirSync(dirname(outPath), { recursive: true });
-        writeFileSync(outPath, html, "utf-8");
+        // Write to BOTH dist/<route>/index.html AND dist/<route>.html
+        // The flat .html file is what Lovable's static hosting resolves when
+        // a request comes in for /<route> (without trailing slash), before
+        // the SPA fallback to root index.html fires.
+        const dirPath = resolve(distDir, `.${route.path}/index.html`);
+        mkdirSync(dirname(dirPath), { recursive: true });
+        writeFileSync(dirPath, html, "utf-8");
+
+        const flatPath = resolve(distDir, `.${route.path}.html`);
+        mkdirSync(dirname(flatPath), { recursive: true });
+        writeFileSync(flatPath, html, "utf-8");
+
         // eslint-disable-next-line no-console
-        console.log(`[prerenderRoutes] wrote ${route.path}/index.html`);
+        console.log(`[prerenderRoutes] wrote ${route.path}.html and ${route.path}/index.html`);
+
       }
     },
   };
