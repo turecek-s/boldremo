@@ -142,7 +142,11 @@ export function prerenderRoutes(): Plugin {
 
       for (const route of ROUTES) {
         let html = baseHtml;
-        const canonical = `https://www.boldremo.com${route.path}`;
+        // Trailing slash form — Lovable hosting resolves /services/ to
+        // dist/services/index.html. The extensionless /services hits the
+        // SPA fallback, so canonical and sitemap MUST advertise the slash form.
+        const canonical = `https://www.boldremo.com${route.path}/`;
+
 
         // Replace <title>
         html = html.replace(
