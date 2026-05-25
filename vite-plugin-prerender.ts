@@ -148,46 +148,21 @@ export function prerenderRoutes(): Plugin {
         const canonical = `https://www.boldremo.com${route.path}/`;
 
 
-        // Replace <title>
+        // Inject route-specific head tags right after <head>. Browsers and
+        // crawlers honor the FIRST occurrence of <title> and the first
+        // <link rel="canonical">, so this overrides whatever is later in
+        // the static index.html head without needing fragile regex replaces.
         html = html.replace(
-          /<title>[\s\S]*?<\/title>/,
-          `<title>${escapeHtml(route.title)}</title>`,
-        );
-
-        // Replace primary description meta
-        html = html.replace(
-          /<meta name="description" content="[^"]*" \/>/,
-          `<meta name="description" content="${escapeAttr(route.description)}" />`,
-        );
-
-        // Replace OG title/description/url and Twitter equivalents + canonical
-        html = html.replace(
-          /<meta property="og:title" content="[^"]*" \/>/,
-          `<meta property="og:title" content="${escapeAttr(route.title)}" />`,
-        );
-        html = html.replace(
-          /<meta property="og:description" content="[^"]*" \/>/,
-          `<meta property="og:description" content="${escapeAttr(route.description)}" />`,
-        );
-        html = html.replace(
-          /<meta property="og:url" content="[^"]*" \/>/,
-          `<meta property="og:url" content="${canonical}" />`,
-        );
-        html = html.replace(
-          /<meta name="twitter:title" content="[^"]*" \/>/,
-          `<meta name="twitter:title" content="${escapeAttr(route.title)}" />`,
-        );
-        html = html.replace(
-          /<meta name="twitter:description" content="[^"]*" \/>/,
-          `<meta name="twitter:description" content="${escapeAttr(route.description)}" />`,
-        );
-        html = html.replace(
-          /<meta name="twitter:url" content="[^"]*" \/>/,
-          `<meta name="twitter:url" content="${canonical}" />`,
-        );
-        html = html.replace(
-          /<link rel="canonical" href="[^"]*" \/>/,
-          `<link rel="canonical" href="${canonical}" />`,
+          '<head>',
+          `<head>
+  <title>${escapeHtml(route.title)}</title>
+  <meta name="description" content="${escapeAttr(route.description)}" />
+  <link rel="canonical" href="${canonical}" />
+  <meta property="og:title" content="${escapeAttr(route.title)}" />
+  <meta property="og:description" content="${escapeAttr(route.description)}" />
+  <meta property="og:url" content="${canonical}" />
+  <meta name="twitter:title" content="${escapeAttr(route.title)}" />
+  <meta name="twitter:description" content="${escapeAttr(route.description)}" />`,
         );
 
         // Add noindex robots meta for private routes
