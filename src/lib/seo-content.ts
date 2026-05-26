@@ -37,7 +37,31 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       <p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com to book your bathroom consult.</p>
     `,
   },
-  "/tub-to-shower-conversion-houston": {
+  "/bathroom-remodel-cost-houston": {
+    path: "/bathroom-remodel-cost-houston",
+    title: "How Much Does a Bathroom Remodel Cost in Houston? | BoldREMO",
+    description:
+      "Real bathroom remodel cost data for Houston homeowners from BoldREMO. What you pay BoldREMO, what you spend on materials, and what to expect total. Call (832) 513-5737.",
+    bodyHtml: `
+      <h1>How Much Does a Bathroom Remodel Cost in Houston?</h1>
+      <p>The honest answer is it depends — but here's how BoldREMO breaks it down so you know what to expect before you call anyone.</p>
+      <h2>How BoldREMO Pricing Works</h2>
+      <p>BoldREMO charges for labor and installation materials — waterproofing, GoBoard, thinset, grout, shower glass, and everything needed to do the job right. You purchase your own finish materials — tile, toilet, vanity, faucets, fixtures, mirror, and hardware.</p>
+      <h2>What You Pay BoldREMO</h2>
+      <p>Shower-only conversion starting at $7,000. Full bathroom transformation $8,000 to $15,000. Master bathroom renovation $15,000 to $35,000. Luxury spa build $35,000 and up.</p>
+      <h2>What You Budget for Finish Materials</h2>
+      <p>Smaller bathroom $2,000 to $6,000. Master bathroom $5,000 to $20,000+. Material costs vary significantly based on where you shop.</p>
+      <h2>Total All-In Investment</h2>
+      <p>Smaller full bathroom transformation $10,000 to $21,000 total. Master bathroom renovation $20,000 to $55,000+ total. Luxury spa build $50,000 and up.</p>
+      <h2>What Drives Cost Up</h2>
+      <p>Layout changes, larger tile formats, custom shower details, heated floors, high-end stone, and bathroom size.</p>
+      <h2>A Few Things People Ask</h2>
+      <p>Why do remodel quotes vary so much? Because scope, materials, and layout changes all drive cost. Can I supply my own materials? Yes. How long does a remodel take? 7 to 12 days for smaller full bathroom, 3 to 6 weeks for master renovation.</p>
+      <h2>How to Get an Accurate Number</h2>
+      <p>Call (832) 513-5737 for a free rough estimate by phone. For exact pricing, schedule a $75 in-person consultation. The $75 is credited to your project.</p>
+    `,
+  },
+    "/tub-to-shower-conversion-houston": {
     path: "/tub-to-shower-conversion-houston",
     title:
       "Tub to Shower Conversion Houston TX | Full Bathroom Transformation | BoldREMO",
