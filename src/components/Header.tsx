@@ -19,6 +19,7 @@ const resourceLinks = [
   { name: "Remodel Checklist", path: "/resources#checklist" },
   { name: "Quick Tips from Pros", path: "/resources#tips" },
   { name: "Houston Remodeling Guide", path: "/resources#houston-guide" },
+  { name: "Bathroom Remodel Cost", path: "/bathroom-remodel-cost-houston" },
 ];
 
 const serviceAreaLinks = [
@@ -69,7 +70,9 @@ export const Header = () => {
   }, []);
 
   const isServiceAreaActive = location.pathname.startsWith("/service-areas");
-  const isResourcesActive = location.pathname === "/resources";
+  const isResourcesActive =
+    location.pathname === "/resources" ||
+    resourceLinks.some((r) => r.path === location.pathname);
   const isServicesActive =
     location.pathname === "/services" ||
     serviceLinks.some((s) => s.path === location.pathname);
