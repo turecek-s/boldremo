@@ -6,8 +6,11 @@ const navLinks = [
   { name: "Home", path: "/" },
   { name: "Gallery", path: "/gallery" },
   { name: "About Us", path: "/about" },
-  { name: "Services", path: "/services" },
   { name: "Contact", path: "/contact" },
+];
+
+const serviceLinks = [
+  { name: "Tub to Shower Conversion", path: "/tub-to-shower-conversion-houston" },
 ];
 
 const resourceLinks = [
