@@ -147,6 +147,41 @@ const Kingwood = () => {
           </div>
         </section>
 
+        {/* Neighborhood Detail */}
+        <section className="section-padding bg-background">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto space-y-6 text-muted-foreground">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+                What Kingwood Bathroom Remodels Usually Look Like
+              </h2>
+              <p>
+                Most Kingwood homes were built between the 1970s and early 2000s, and the bathrooms we're called into still reflect their era — beige tile, builder-grade vanities, garden tubs nobody uses, and fiberglass shower surrounds that have seen better days. The most common project we do here is a full master bath update: pulling the old tub-and-shower combo, building a larger walk-in shower with a bench and niche, replacing the double vanity, and re-tiling the floor. Guest bath refreshes and powder room updates are close behind, often timed with a kitchen project or before listing the home.
+              </p>
+              <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
+                What <BrandName /> Brings to Kingwood
+              </h3>
+              <p>
+                We work clean in homes where you're still living, communicate daily about what's happening, and handle the HOA paperwork without making it your problem. We're familiar with the soil movement issues that affect older Kingwood foundations and how that shows up in tile work, and we plan for it instead of pretending it isn't there.
+              </p>
+              <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
+                How Our Pricing Works
+              </h3>
+              <p>
+                <BrandName /> charges for labor and installation materials — thinset, grout, backerboard, fasteners, plumbing rough-in parts — separately from the finish materials you supply. You pick the tile, vanity, fixtures, and lighting at whatever budget you want, and you only pay us to install them well. No markup on materials we never touched.
+              </p>
+              <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
+                How to Get Started
+              </h3>
+              <p>
+                Send us photos of the bathroom and rough dimensions, or just tell us what you want changed. We'll ballpark it on the phone in about ten minutes. If the numbers make sense, we come out for a $75 in-person consultation, measure properly, and write you a real proposal.
+              </p>
+              <p className="text-foreground font-medium pt-2">
+                Call (832) 513-5737 for a free rough estimate by phone, or book a $75 in-person consultation credited to your project.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Areas Served */}
         <section className="section-padding bg-background">
           <div className="container-custom">

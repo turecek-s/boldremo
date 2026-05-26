@@ -147,6 +147,41 @@ const RiverOaks = () => {
           </div>
         </section>
 
+        {/* Neighborhood Detail */}
+        <section className="section-padding bg-background">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto space-y-6 text-muted-foreground">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+                What River Oaks Bathroom Remodels Usually Look Like
+              </h2>
+              <p>
+                River Oaks bathrooms are usually the largest and most detailed work we do. The homes range from original 1920s and 30s estates to extensive recent rebuilds, and the bathroom projects reflect that — primary suite renovations with stone slab walls, custom millwork vanities, steam showers, freestanding tubs in proper alcoves, heated floors, and lighting designed by the homeowner's designer. Guest bath and powder room updates also come up regularly, often as part of a broader interior refresh.
+              </p>
+              <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
+                What <BrandName /> Brings to River Oaks
+              </h3>
+              <p>
+                We work directly with the designers, architects, and decorators you've already hired, we follow their drawings exactly, and we don't try to redirect the design. We're meticulous about protecting finished floors, art, and millwork in the rest of the house. We meet the standard of finish River Oaks homeowners expect — tile lines that read straight from across the room, consistent grout joints, and hardware that lands where it's supposed to land.
+              </p>
+              <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
+                How Our Pricing Works
+              </h3>
+              <p>
+                <BrandName /> charges for labor and installation materials separately from the finish materials you supply through your designer or directly. You see exactly what you're paying us versus what you're paying for stone, tile, fixtures, and cabinetry. No hidden markup on materials we didn't buy.
+              </p>
+              <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
+                How to Get Started
+              </h3>
+              <p>
+                Have your designer send drawings and a finish schedule, or send us photos and dimensions and tell us what you want changed. We'll give you a rough estimate by phone. For exact pricing we schedule a $75 in-person consultation, walk the space, and send you a written proposal.
+              </p>
+              <p className="text-foreground font-medium pt-2">
+                Call (832) 513-5737 for a free rough estimate by phone, or book a $75 in-person consultation credited to your project.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Areas Served */}
         <section className="section-padding bg-background">
           <div className="container-custom">

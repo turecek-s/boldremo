@@ -147,6 +147,41 @@ const Bellaire = () => {
           </div>
         </section>
 
+        {/* Neighborhood Detail */}
+        <section className="section-padding bg-background">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto space-y-6 text-muted-foreground">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+                What Bellaire Bathroom Remodels Usually Look Like
+              </h2>
+              <p>
+                Bellaire is largely teardowns and new-builds at this point, but plenty of the original ranch homes are still standing and getting renovated rather than replaced. In the older homes, the jobs are usually master bath gut renovations — knocking out a wall to steal closet space, adding a walk-in shower, doubling up the vanity, and modernizing the plumbing. In the newer two-story homes built in the last fifteen years, the work is more about refreshing builder-grade finishes that aged faster than the house did: tile that looks dated, hardware that's chipping, mirrors and lighting chosen for resale rather than for living.
+              </p>
+              <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
+                What <BrandName /> Brings to Bellaire
+              </h3>
+              <p>
+                We protect floors, woodwork, and stair railings on the way to second-floor bathrooms, we keep dust contained, and we work around the school-day schedule for families who can't have a job site loud at pickup time. We're used to coordinating with the City of Bellaire's permitting process when scope requires it.
+              </p>
+              <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
+                How Our Pricing Works
+              </h3>
+              <p>
+                <BrandName /> charges for labor and installation materials separately from the finish materials you supply. You source the tile, vanity, fixtures, and lighting at the price points you want, and we install them. You see exactly what's labor and what's materials — no markup on things we didn't buy.
+              </p>
+              <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
+                How to Get Started
+              </h3>
+              <p>
+                Send photos, rough dimensions, and what you'd change. We'll give you a rough estimate by phone in about ten minutes. For exact numbers we schedule a $75 in-person consultation, measure the space, and write you a proposal.
+              </p>
+              <p className="text-foreground font-medium pt-2">
+                Call (832) 513-5737 for a free rough estimate by phone, or book a $75 in-person consultation credited to your project.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Areas Served */}
         <section className="section-padding bg-background">
           <div className="container-custom">
