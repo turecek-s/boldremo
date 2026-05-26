@@ -37,6 +37,28 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       <p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com to book your bathroom consult.</p>
     `,
   },
+  "/tub-to-shower-conversion-houston": {
+    path: "/tub-to-shower-conversion-houston",
+    title:
+      "Tub to Shower Conversion Houston TX | Full Bathroom Transformation | BoldREMO",
+    description:
+      "BoldREMO transforms Houston bathrooms — replace your unused tub with a custom shower and refresh the whole space. Honest pricing, quality work. Call (832) 513-5737.",
+    bodyHtml: `
+      <h1>Tub to Shower Conversion in Houston, TX</h1>
+      <p>Most bathtubs in Houston stop being used long before anyone does something about them. When you're ready, BoldREMO turns that unused tub into a custom walk-in shower — and while we're there, we transform the whole bathroom. New floor tile, vanity, toilet, fixtures, mirror, and paint.</p>
+      <h2>What's Included</h2>
+      <p>Custom shower build with Schluter waterproofing and GoBoard backer, tile walls, center drain, frameless glass. New floor tile, vanity and sink, toilet, light fixtures, mirror, and paint. Optional linen cabinet. We supply all labor and installation materials.</p>
+      <h2>What You Supply</h2>
+      <p>You pick finish materials: tile, toilet, vanity and sink, faucet and hardware, light fixtures, mirror, and paint color.</p>
+      <h2>What It Costs</h2>
+      <p>Labor and installation materials run $8,000 to $15,000. Finish materials typically $2,000 to $6,000 on top. Total all-in $10,000 to $21,000. Written proposal with exact numbers before work begins.</p>
+      <h2>How Long It Takes</h2>
+      <p>Most full bathroom transformations take 7 to 12 days.</p>
+      <h2>FAQs</h2>
+      <p>Shower-only conversions start at $7,000. We work with tile you've purchased. We install frameless glass through a local Houston supplier.</p>
+      <p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com. Serving Heights, Bellaire, River Oaks, Kingwood, and all of Houston.</p>
+    `,
+  },
   "/gallery": {
     path: "/gallery",
     title: "Bathroom Remodel Gallery Houston | BoldREMO Project Photos",
