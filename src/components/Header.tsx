@@ -302,6 +302,52 @@ export const Header = () => {
               </Link>
             ))}
 
+            {/* Mobile Services Accordion */}
+            <div>
+              <button
+                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                className={`flex items-center justify-between w-full text-base font-medium py-2 transition-colors hover:text-primary ${
+                  isServicesActive ? "text-primary" : "text-foreground"
+                }`}
+                aria-expanded={isMobileServicesOpen}
+              >
+                Services
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180" : ""}`} />
+              </button>
+              {isMobileServicesOpen && (
+                <div className="pl-4 flex flex-col gap-1 mt-1">
+                  <Link
+                    to="/services"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setIsMobileServicesOpen(false);
+                      if (location.pathname === "/services") {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
+                    className="text-sm font-medium py-2 text-foreground hover:text-primary transition-colors"
+                  >
+                    All Services
+                  </Link>
+                  {serviceLinks.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => {
+                        setIsOpen(false);
+                        setIsMobileServicesOpen(false);
+                      }}
+                      className={`text-sm font-medium py-2 transition-colors hover:text-primary ${
+                        location.pathname === item.path ? "text-primary" : "text-muted-foreground"
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {/* Mobile Resources Accordion */}
             <div>
               <button
