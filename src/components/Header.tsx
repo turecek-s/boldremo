@@ -36,8 +36,11 @@ export const Header = () => {
   const [isMobileAreasOpen, setIsMobileAreasOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const resourcesDropdownRef = useRef<HTMLDivElement>(null);
+  const servicesDropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -57,6 +60,9 @@ export const Header = () => {
       if (resourcesDropdownRef.current && !resourcesDropdownRef.current.contains(e.target as Node)) {
         setIsResourcesOpen(false);
       }
+      if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(e.target as Node)) {
+        setIsServicesOpen(false);
+      }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -64,6 +70,9 @@ export const Header = () => {
 
   const isServiceAreaActive = location.pathname.startsWith("/service-areas");
   const isResourcesActive = location.pathname === "/resources";
+  const isServicesActive =
+    location.pathname === "/services" ||
+    serviceLinks.some((s) => s.path === location.pathname);
 
   return (
     <header
