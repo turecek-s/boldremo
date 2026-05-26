@@ -24,6 +24,14 @@ const ROUTES: RouteSeo[] = [
     bodyHtml: `<h1>Bathroom Remodeling Services in Houston, TX</h1><p>BoldREMO offers comprehensive bathroom remodeling and home renovation services across Houston, Heights, Bellaire, River Oaks, and Kingwood. Every project is handled by licensed, insured craftsmen with transparent pricing and clear timelines.</p><h2>Complete Bathroom Remodeling</h2><p>Full bathroom renovations tailored to your style and needs.</p><h2>Tile and Flooring Installation</h2><p>Expert tile installation including subway tiles, mosaic patterns, large format tiles, marble, porcelain, and natural stone.</p><h2>Custom Showers</h2><p>Walk-in showers, frameless glass enclosures, rain shower heads, and custom tile work.</p><h2>Vanity and Cabinetry</h2><p>Custom vanity installation, bathroom cabinets, and storage solutions.</p><h2>Plumbing Fixtures</h2><p>Professional installation of faucets, toilets, sinks, and all plumbing fixtures.</p><h2>Full Home Renovations</h2><p>Beyond bathrooms, we offer comprehensive home renovation services.</p><p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com.</p>`,
   },
   {
+    path: "/tub-to-shower-conversion-houston",
+    title:
+      "Tub to Shower Conversion Houston TX | Full Bathroom Transformation | BoldREMO",
+    description:
+      "BoldREMO transforms Houston bathrooms — replace your unused tub with a custom shower and refresh the whole space. Honest pricing, quality work. Call (832) 513-5737.",
+    bodyHtml: `<h1>Tub to Shower Conversion in Houston, TX</h1><p>BoldREMO turns your unused tub into a custom walk-in shower and transforms the whole bathroom — new floor tile, vanity, toilet, fixtures, mirror, and paint.</p><h2>What's Included</h2><p>Custom shower with Schluter waterproofing and GoBoard backer, tile walls, center drain, frameless glass. New floor tile, vanity, toilet, light fixtures, mirror, paint. All labor and installation materials included.</p><h2>What You Supply</h2><p>Tile, toilet, vanity, faucet and hardware, light fixtures, mirror, paint color.</p><h2>Cost</h2><p>Labor and installation materials $8,000–$15,000. Finish materials typically $2,000–$6,000 on top. Total all-in $10,000–$21,000.</p><h2>Timeline</h2><p>7 to 12 days for most projects.</p><h2>FAQs</h2><p>Shower-only conversions start at $7,000. We work with tile you've purchased. We install frameless glass through a local Houston supplier.</p><p>Call (832) 513-5737 or email info@boldremo.com. Serving Heights, Bellaire, River Oaks, Kingwood, and all of Houston.</p>`,
+  },
+  {
     path: "/gallery",
     title: "Bathroom Remodel Gallery Houston | BoldREMO Project Photos",
     description:

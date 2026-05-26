@@ -6,8 +6,11 @@ const navLinks = [
   { name: "Home", path: "/" },
   { name: "Gallery", path: "/gallery" },
   { name: "About Us", path: "/about" },
-  { name: "Services", path: "/services" },
   { name: "Contact", path: "/contact" },
+];
+
+const serviceLinks = [
+  { name: "Tub to Shower Conversion", path: "/tub-to-shower-conversion-houston" },
 ];
 
 const resourceLinks = [
@@ -33,8 +36,11 @@ export const Header = () => {
   const [isMobileAreasOpen, setIsMobileAreasOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const resourcesDropdownRef = useRef<HTMLDivElement>(null);
+  const servicesDropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -54,6 +60,9 @@ export const Header = () => {
       if (resourcesDropdownRef.current && !resourcesDropdownRef.current.contains(e.target as Node)) {
         setIsResourcesOpen(false);
       }
+      if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(e.target as Node)) {
+        setIsServicesOpen(false);
+      }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -61,6 +70,9 @@ export const Header = () => {
 
   const isServiceAreaActive = location.pathname.startsWith("/service-areas");
   const isResourcesActive = location.pathname === "/resources";
+  const isServicesActive =
+    location.pathname === "/services" ||
+    serviceLinks.some((s) => s.path === location.pathname);
 
   return (
     <header
@@ -117,6 +129,53 @@ export const Header = () => {
           </div>
 
 
+          {/* Services Dropdown */}
+          <div className="relative" ref={servicesDropdownRef}>
+            <button
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
+              className={`flex items-center gap-1 text-sm font-medium tracking-wide transition-colors hover:text-primary ${
+                isServicesActive
+                  ? "text-primary"
+                  : isScrolled
+                  ? "text-foreground"
+                  : "text-foreground/80"
+              }`}
+              aria-expanded={isServicesOpen}
+              aria-haspopup="true"
+            >
+              Services
+              <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            {isServicesOpen && (
+              <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-md shadow-lg z-50 py-2 animate-fade-in">
+                <Link
+                  to="/services"
+                  onClick={() => {
+                    setIsServicesOpen(false);
+                    if (location.pathname === "/services") {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }}
+                  className="block px-4 py-2.5 text-sm font-medium text-foreground hover:bg-muted hover:text-primary transition-colors border-b border-border mb-1"
+                >
+                  All Services
+                </Link>
+                {serviceLinks.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsServicesOpen(false)}
+                    className={`block px-4 py-2.5 text-sm transition-colors hover:bg-muted hover:text-primary ${
+                      location.pathname === item.path ? "text-primary bg-muted" : "text-foreground"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* Resources Dropdown */}
           <div className="relative" ref={resourcesDropdownRef}>
@@ -242,6 +301,52 @@ export const Header = () => {
                 {link.name}
               </Link>
             ))}
+
+            {/* Mobile Services Accordion */}
+            <div>
+              <button
+                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                className={`flex items-center justify-between w-full text-base font-medium py-2 transition-colors hover:text-primary ${
+                  isServicesActive ? "text-primary" : "text-foreground"
+                }`}
+                aria-expanded={isMobileServicesOpen}
+              >
+                Services
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180" : ""}`} />
+              </button>
+              {isMobileServicesOpen && (
+                <div className="pl-4 flex flex-col gap-1 mt-1">
+                  <Link
+                    to="/services"
+                    onClick={() => {
+                      setIsOpen(false);
+                      setIsMobileServicesOpen(false);
+                      if (location.pathname === "/services") {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
+                    className="text-sm font-medium py-2 text-foreground hover:text-primary transition-colors"
+                  >
+                    All Services
+                  </Link>
+                  {serviceLinks.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => {
+                        setIsOpen(false);
+                        setIsMobileServicesOpen(false);
+                      }}
+                      className={`text-sm font-medium py-2 transition-colors hover:text-primary ${
+                        location.pathname === item.path ? "text-primary" : "text-muted-foreground"
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Mobile Resources Accordion */}
             <div>
