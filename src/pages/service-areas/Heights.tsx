@@ -147,6 +147,41 @@ const Heights = () => {
           </div>
         </section>
 
+        {/* Neighborhood Detail */}
+        <section className="section-padding bg-background">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto space-y-6 text-muted-foreground">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+                What Heights Bathroom Remodels Usually Look Like
+              </h2>
+              <p>
+                The Heights is a mix of 1920s bungalows, mid-century cottages, and new construction squeezed onto old lots — no two bathrooms we work on look alike. In original Heights homes the recurring job is opening up a tight hall bath, dealing with cast iron drains and galvanized supply lines, and fitting a usable shower into a footprint built when people bathed in tubs. In renovated or new-build Heights homes the work shifts toward design-driven master baths: zero-entry showers, freestanding tubs, large-format porcelain, and custom vanities.
+              </p>
+              <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
+                What <BrandName /> Brings to the Heights
+              </h3>
+              <p>
+                We have experience working in old houses that aren't square, plumb, or level — and the patience to make the finished bathroom look like it is. We know which inspectors handle this part of the city, we plan demo around tight street parking and narrow side yards, and we coordinate the plumbers and electricians needed when you open a 1925 wall and find surprises.
+              </p>
+              <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
+                How Our Pricing Works
+              </h3>
+              <p>
+                <BrandName /> charges for labor and installation materials separately from the finish materials you supply. You pick the tile, fixtures, vanity, and lighting at your budget; we install them. Nothing hidden, nothing marked up that we didn't actually buy.
+              </p>
+              <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
+                How to Get Started
+              </h3>
+              <p>
+                Text or email us photos of the existing bathroom along with rough dimensions and what you want changed. Most projects we can ballpark on the phone in about ten minutes. If you want exact pricing, we schedule a $75 in-person consultation, walk the space, talk through materials, and send you a written proposal.
+              </p>
+              <p className="text-foreground font-medium pt-2">
+                Call (832) 513-5737 for a free rough estimate by phone, or book a $75 in-person consultation credited to your project.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Areas Served */}
         <section className="section-padding bg-background">
           <div className="container-custom">
