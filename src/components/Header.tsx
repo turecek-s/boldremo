@@ -129,6 +129,53 @@ export const Header = () => {
           </div>
 
 
+          {/* Services Dropdown */}
+          <div className="relative" ref={servicesDropdownRef}>
+            <button
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
+              className={`flex items-center gap-1 text-sm font-medium tracking-wide transition-colors hover:text-primary ${
+                isServicesActive
+                  ? "text-primary"
+                  : isScrolled
+                  ? "text-foreground"
+                  : "text-foreground/80"
+              }`}
+              aria-expanded={isServicesOpen}
+              aria-haspopup="true"
+            >
+              Services
+              <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            {isServicesOpen && (
+              <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-md shadow-lg z-50 py-2 animate-fade-in">
+                <Link
+                  to="/services"
+                  onClick={() => {
+                    setIsServicesOpen(false);
+                    if (location.pathname === "/services") {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }}
+                  className="block px-4 py-2.5 text-sm font-medium text-foreground hover:bg-muted hover:text-primary transition-colors border-b border-border mb-1"
+                >
+                  All Services
+                </Link>
+                {serviceLinks.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsServicesOpen(false)}
+                    className={`block px-4 py-2.5 text-sm transition-colors hover:bg-muted hover:text-primary ${
+                      location.pathname === item.path ? "text-primary bg-muted" : "text-foreground"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* Resources Dropdown */}
           <div className="relative" ref={resourcesDropdownRef}>
