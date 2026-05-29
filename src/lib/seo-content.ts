@@ -209,12 +209,12 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/press",
     title: "Press, Partners & Recognition | BoldREMO Houston",
     description:
-      "BoldREMO partners with Houston's leading suppliers and designers to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.",
+      "BoldREMO partners with Houston's leading suppliers to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.",
     bodyHtml: `
       <h1>BoldREMO Press, Partners &amp; Recognition</h1>
-      <p>BoldREMO partners with Houston's leading suppliers and designers to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.</p>
+      <p>BoldREMO partners with Houston's leading suppliers to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.</p>
       <h2>Trusted Suppliers</h2>
-      <p>Daltile Houston, Ferguson Bath Kitchen &amp; Lighting, Architectural Design Resource.</p>
+      <p>Ferguson Bath Kitchen &amp; Lighting.</p>
       <h2>Certifications</h2>
       <p>Licensed and insured Texas contractor. Call (832) 513-5737.</p>
     `,
