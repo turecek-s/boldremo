@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { SeoHead } from "@/components/SeoHead";
 import { Button } from "@/components/ui/button";
-import { Bath, Grid3X3, Paintbrush, Home, Droplets, Wrench } from "lucide-react";
+import { Bath, Grid3X3, Paintbrush, Droplets, Wrench } from "lucide-react";
 
 const services = [
   {
@@ -32,11 +32,7 @@ const services = [
     title: "Plumbing Fixtures",
     description: "Professional installation of faucets, toilets, sinks, and all plumbing fixtures with quality craftsmanship.",
   },
-  {
-    icon: Home,
-    title: "Full Home Renovations",
-    description: "Beyond bathrooms, we offer comprehensive home renovation services to transform your entire living space.",
-  },
+
 ];
 
 const Services = () => {

@@ -21,7 +21,7 @@ const ROUTES: RouteSeo[] = [
     title: "Bathroom Remodeling Services Houston | BoldREMO",
     description:
       "Complete bathroom remodeling, custom showers, tile installation, vanities & full home renovations in Houston, Heights, Bellaire, River Oaks & Kingwood.",
-    bodyHtml: `<h1>Bathroom Remodeling Services in Houston, TX</h1><p>BoldREMO offers comprehensive bathroom remodeling and home renovation services across Houston, Heights, Bellaire, River Oaks, and Kingwood. Every project is handled by licensed, insured craftsmen with transparent pricing and clear timelines.</p><h2>Complete Bathroom Remodeling</h2><p>Full bathroom renovations tailored to your style and needs.</p><h2>Tile and Flooring Installation</h2><p>Expert tile installation including subway tiles, mosaic patterns, large format tiles, marble, porcelain, and natural stone.</p><h2>Custom Showers</h2><p>Walk-in showers, frameless glass enclosures, rain shower heads, and custom tile work.</p><h2>Vanity and Cabinetry</h2><p>Custom vanity installation, bathroom cabinets, and storage solutions.</p><h2>Plumbing Fixtures</h2><p>Professional installation of faucets, toilets, sinks, and all plumbing fixtures.</p><h2>Full Home Renovations</h2><p>Beyond bathrooms, we offer comprehensive home renovation services.</p><p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com.</p>`,
+    bodyHtml: `<h1>Bathroom Remodeling Services in Houston, TX</h1><p>BoldREMO offers comprehensive bathroom remodeling services across Houston, Heights, Bellaire, River Oaks, and Kingwood. Every project is handled by licensed, insured craftsmen with transparent pricing and clear timelines.</p><h2>Complete Bathroom Remodeling</h2><p>Full bathroom renovations tailored to your style and needs.</p><h2>Tile and Flooring Installation</h2><p>Expert tile installation including subway tiles, mosaic patterns, large format tiles, porcelain, and ceramic.</p><h2>Custom Showers</h2><p>Walk-in showers, frameless glass enclosures, rain shower heads, and custom tile work.</p><h2>Vanity and Cabinetry</h2><p>Custom vanity installation, bathroom cabinets, and storage solutions.</p><h2>Plumbing Fixtures</h2><p>Professional installation of faucets, toilets, sinks, and all plumbing fixtures.</p><p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com.</p>`,
   },
   {
     path: "/tub-to-shower-conversion-houston",
@@ -161,6 +161,12 @@ export function prerenderRoutes(): Plugin {
         // dist/services/index.html. The extensionless /services hits the
         // SPA fallback, so canonical and sitemap MUST advertise the slash form.
         const canonical = `https://www.boldremo.com${route.path}/`;
+
+        // Remove any existing canonical link from the base HTML so the
+        // route-specific one we inject below is the only canonical.
+        html = html.replace(/\s*<link\s+rel=["']canonical["'][^>]*\/?>/gi, "");
+
+
 
 
         // Inject route-specific head tags right after <head>. Browsers and

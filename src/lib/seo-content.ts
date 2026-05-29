@@ -25,16 +25,15 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       <h2>Complete Bathroom Remodeling</h2>
       <p>Full bathroom renovations tailored to your style and needs. From layout redesign to fixture selection, we handle every detail of your bathroom transformation.</p>
       <h2>Tile and Flooring Installation</h2>
-      <p>Expert tile installation including subway tiles, mosaic patterns, large format tiles, marble, porcelain, and natural stone. We deliver perfectly aligned grout lines and lasting craftsmanship.</p>
+      <p>Expert tile installation including subway tiles, mosaic patterns, large format tiles, porcelain, and ceramic. We deliver perfectly aligned grout lines and lasting craftsmanship.</p>
       <h2>Custom Showers</h2>
       <p>Walk-in showers, frameless glass enclosures, rain shower heads, and custom tile work for a spa-like bathing experience.</p>
       <h2>Vanity and Cabinetry</h2>
       <p>Custom vanity installation, bathroom cabinets, and storage solutions designed to maximize space and complement your style.</p>
       <h2>Plumbing Fixtures</h2>
       <p>Professional installation of faucets, toilets, sinks, and all plumbing fixtures with quality craftsmanship and licensed plumbers.</p>
-      <h2>Full Home Renovations</h2>
-      <p>Beyond bathrooms, we offer comprehensive home renovation services to transform your entire living space.</p>
       <p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com to book your bathroom consult.</p>
+
     `,
   },
   "/bathroom-remodel-cost-houston": {
