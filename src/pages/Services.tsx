@@ -32,11 +32,7 @@ const services = [
     title: "Plumbing Fixtures",
     description: "Professional installation of faucets, toilets, sinks, and all plumbing fixtures with quality craftsmanship.",
   },
-  {
-    icon: Home,
-    title: "Full Home Renovations",
-    description: "Beyond bathrooms, we offer comprehensive home renovation services to transform your entire living space.",
-  },
+
 ];
 
 const Services = () => {
