@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { SeoHead } from "@/components/SeoHead";
 import { Button } from "@/components/ui/button";
-import { Bath, Grid3X3, Paintbrush, Home, Droplets, Wrench } from "lucide-react";
+import { Bath, Grid3X3, Paintbrush, Droplets, Wrench } from "lucide-react";
 
 const services = [
   {
