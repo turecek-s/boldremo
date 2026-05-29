@@ -106,7 +106,7 @@ const ROUTES: RouteSeo[] = [
     title: "Luxury Bathroom Remodeling River Oaks | BoldREMO",
     description:
       "High-end bathroom remodeling for River Oaks estates. BoldREMO delivers spa-quality renovations with premium materials. Call (832) 513-5737.",
-    bodyHtml: `<h1>Luxury Bathroom Remodeling in River Oaks</h1><p>BoldREMO delivers high-end bathroom renovations for River Oaks estates featuring premium marble, frameless glass, freestanding soaking tubs, heated floors, and smart home integration.</p><p>Call (832) 513-5737.</p>`,
+    bodyHtml: `<h1>Luxury Bathroom Remodeling in River Oaks</h1><p>BoldREMO delivers high-end bathroom renovations for River Oaks estates featuring premium porcelain and custom tile, frameless glass, freestanding soaking tubs, heated floors, and smart home integration.</p><p>Call (832) 513-5737.</p>`,
   },
   {
     path: "/service-areas/kingwood",
