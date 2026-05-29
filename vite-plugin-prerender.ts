@@ -162,6 +162,12 @@ export function prerenderRoutes(): Plugin {
         // SPA fallback, so canonical and sitemap MUST advertise the slash form.
         const canonical = `https://www.boldremo.com${route.path}/`;
 
+        // Remove any existing canonical link from the base HTML so the
+        // route-specific one we inject below is the only canonical.
+        html = html.replace(/\s*<link\s+rel=["']canonical["'][^>]*\/?>/gi, "");
+
+
+
 
         // Inject route-specific head tags right after <head>. Browsers and
         // crawlers honor the FIRST occurrence of <title> and the first
