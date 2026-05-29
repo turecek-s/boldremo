@@ -106,7 +106,7 @@ const ROUTES: RouteSeo[] = [
     title: "Luxury Bathroom Remodeling River Oaks | BoldREMO",
     description:
       "High-end bathroom remodeling for River Oaks estates. BoldREMO delivers spa-quality renovations with premium materials. Call (832) 513-5737.",
-    bodyHtml: `<h1>Luxury Bathroom Remodeling in River Oaks</h1><p>BoldREMO delivers high-end bathroom renovations for River Oaks estates featuring premium marble, frameless glass, freestanding soaking tubs, heated floors, and smart home integration.</p><p>Call (832) 513-5737.</p>`,
+    bodyHtml: `<h1>Luxury Bathroom Remodeling in River Oaks</h1><p>BoldREMO delivers high-end bathroom renovations for River Oaks estates featuring premium porcelain and custom tile, frameless glass, freestanding soaking tubs, heated floors, and smart home integration.</p><p>Call (832) 513-5737.</p>`,
   },
   {
     path: "/service-areas/kingwood",
@@ -121,6 +121,13 @@ const ROUTES: RouteSeo[] = [
     description:
       "BoldREMO's media coverage, trusted Houston suppliers, designer & realtor partners, and contractor certifications.",
     bodyHtml: `<h1>BoldREMO Press, Partners &amp; Recognition</h1><p>BoldREMO partners with Houston's leading suppliers, designers, and realtors to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.</p><h2>As Featured In</h2><p>Houstonia Magazine, PaperCity, Houston Chronicle Home &amp; Garden, CultureMap Houston, Houston Modern Luxury, Houston Business Journal.</p><h2>Trusted Partners</h2><p>Daltile Houston, Cosentino, Ferguson Bath Kitchen &amp; Lighting, Architectural Design Resource.</p><h2>Certifications</h2><p>Licensed and insured Texas contractor (TDLR registered), BBB accredited, Houzz Pro member, NARI Houston member.</p><p>Call (832) 513-5737.</p>`,
+  },
+  {
+    path: "/custom-shower-installation-houston",
+    title: "Custom Shower Installation Houston TX | BoldREMO",
+    description:
+      "BoldREMO builds custom walk-in showers in Houston from scratch. GoBoard waterproofing, precision tile work, frameless glass. Call (832) 513-5737.",
+    bodyHtml: `<h1>Custom Shower Installation in Houston, TX</h1><p>BoldREMO builds custom walk-in showers from scratch across Houston. GoBoard waterproofing, precision tile work, frameless glass, no subcontractors.</p><p>Call (832) 513-5737 for a free rough estimate or book a $75 in-person consultation.</p>`,
   },
   {
     path: "/admin",
