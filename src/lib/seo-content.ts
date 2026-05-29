@@ -209,17 +209,14 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/press",
     title: "Press, Partners & Recognition | BoldREMO Houston",
     description:
-      "BoldREMO's media coverage, trusted Houston suppliers, designer & realtor partners, and contractor certifications. Houston luxury bathroom remodeling.",
+      "BoldREMO partners with Houston's leading suppliers and designers to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.",
     bodyHtml: `
       <h1>BoldREMO Press, Partners &amp; Recognition</h1>
-      <p>BoldREMO partners with Houston's leading suppliers, designers, and realtors to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.</p>
-      <h2>As Featured In</h2>
-      <p>Recent and upcoming media coverage includes Houstonia Magazine, PaperCity, Houston Chronicle Home &amp; Garden, CultureMap Houston, Houston Modern Luxury, and the Houston Business Journal.</p>
-      <h2>Trusted Partners</h2>
-      <p>BoldREMO sources premium tile, stone, and plumbing fixtures from Daltile Houston, Cosentino, Ferguson Bath Kitchen &amp; Lighting, and Architectural Design Resource. We work alongside Houston's top interior designers and luxury realtors.</p>
+      <p>BoldREMO partners with Houston's leading suppliers and designers to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.</p>
+      <h2>Trusted Suppliers</h2>
+      <p>Daltile Houston, Ferguson Bath Kitchen &amp; Lighting, Architectural Design Resource.</p>
       <h2>Certifications</h2>
-      <p>Licensed and insured Texas contractor (TDLR registered), BBB accredited, Houzz Pro member, NARI Houston member.</p>
-      <p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com.</p>
+      <p>Licensed and insured Texas contractor. Call (832) 513-5737.</p>
     `,
   },
   "/cost-calculator": {
