@@ -169,10 +169,22 @@ export function prerenderRoutes(): Plugin {
 
 
 
-        // Inject route-specific head tags right after <head>. Browsers and
-        // crawlers honor the FIRST occurrence of <title> and the first
-        // <link rel="canonical">, so this overrides whatever is later in
-        // the static index.html head without needing fragile regex replaces.
+        // Strip the ORIGINAL head tags we're about to override so the final
+        // HTML doesn't ship duplicates. Crawlers honor the first occurrence,
+        // but duplicates are still invalid and can confuse parsers.
+        html = html
+          .replace(/\s*<title>[\s\S]*?<\/title>/i, "")
+          .replace(/\s*<link\s+rel=["']canonical["'][^>]*\/?>/gi, "")
+          .replace(/\s*<meta\s+name=["']description["'][^>]*\/?>/gi, "")
+          .replace(/\s*<meta\s+property=["']og:title["'][^>]*\/?>/gi, "")
+          .replace(/\s*<meta\s+property=["']og:description["'][^>]*\/?>/gi, "")
+          .replace(/\s*<meta\s+property=["']og:url["'][^>]*\/?>/gi, "")
+          .replace(/\s*<meta\s+name=["']twitter:title["'][^>]*\/?>/gi, "")
+          .replace(/\s*<meta\s+name=["']twitter:description["'][^>]*\/?>/gi, "")
+          .replace(/\s*<meta\s+name=["']twitter:url["'][^>]*\/?>/gi, "")
+          .replace(/\s*<meta\s+property=["']twitter:url["'][^>]*\/?>/gi, "");
+
+        // Inject route-specific head tags right after <head>.
         html = html.replace(
           '<head>',
           `<head>
@@ -183,8 +195,10 @@ export function prerenderRoutes(): Plugin {
   <meta property="og:description" content="${escapeAttr(route.description)}" />
   <meta property="og:url" content="${canonical}" />
   <meta name="twitter:title" content="${escapeAttr(route.title)}" />
-  <meta name="twitter:description" content="${escapeAttr(route.description)}" />`,
+  <meta name="twitter:description" content="${escapeAttr(route.description)}" />
+  <meta name="twitter:url" content="${canonical}" />`,
         );
+
 
         // Add noindex robots meta for private routes
         if (route.noindex) {
