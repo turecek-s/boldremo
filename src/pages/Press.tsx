@@ -31,58 +31,6 @@ const Press = () => {
           </div>
         </section>
 
-        {/* Press / "As featured in" */}
-        <section className="section-padding bg-background">
-          <div className="container-custom">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-foreground mb-3">
-                As Featured In
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Recent media coverage of BoldREMO's work across Houston's most prestigious neighborhoods.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {PRESS_MENTIONS.map((mention) => {
-                const isPlaceholder = !mention.url;
-                const Wrapper: React.ElementType = isPlaceholder ? "div" : "a";
-                const wrapperProps = isPlaceholder
-                  ? {}
-                  : { href: mention.url, target: "_blank", rel: "noopener noreferrer" };
-                return (
-                  <Wrapper
-                    key={mention.outlet}
-                    {...wrapperProps}
-                    className={`group bg-card border border-border rounded-lg p-6 transition-all ${
-                      isPlaceholder
-                        ? "opacity-70"
-                        : "hover:border-primary hover:shadow-md cursor-pointer"
-                    }`}
-                  >
-                    <div className="flex items-start justify-between gap-3 mb-3">
-                      <h3 className="text-base font-semibold text-foreground leading-snug">
-                        {mention.outlet}
-                      </h3>
-                      {!isPlaceholder && (
-                        <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary flex-shrink-0 mt-0.5" />
-                      )}
-                    </div>
-                    {mention.quote && (
-                      <p className="text-sm text-muted-foreground italic leading-relaxed">
-                        &ldquo;{mention.quote}&rdquo;
-                      </p>
-                    )}
-                    {mention.date && (
-                      <p className="text-xs text-muted-foreground mt-3">{mention.date}</p>
-                    )}
-                  </Wrapper>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
         {/* Trusted Partners */}
         <section className="section-padding bg-muted">
           <div className="container-custom">
