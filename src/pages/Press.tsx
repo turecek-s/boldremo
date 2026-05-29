@@ -24,7 +24,7 @@ const Press = () => {
               Trusted by Houston
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              BoldREMO partners with Houston's leading suppliers, designers, and realtors
+              BoldREMO partners with Houston's leading suppliers
               to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks,
               Kingwood, and beyond.
             </p>
@@ -43,8 +43,7 @@ const Press = () => {
                 Our Trusted Partners
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                BoldREMO sources premium materials and works alongside Houston's best
-                designers and realtors to deliver every project.
+                BoldREMO sources premium materials to deliver every project.
               </p>
             </div>
 
