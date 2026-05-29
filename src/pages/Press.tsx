@@ -4,8 +4,7 @@ import { SeoHead } from "@/components/SeoHead";
 import { CTASection } from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Newspaper, Award, Handshake, ShieldCheck, ExternalLink } from "lucide-react";
-import { PRESS_MENTIONS } from "@/data/press-mentions";
+import { Award, Handshake, ShieldCheck } from "lucide-react";
 import { PARTNERS, CERTIFICATIONS } from "@/data/partners";
 
 const Press = () => {
