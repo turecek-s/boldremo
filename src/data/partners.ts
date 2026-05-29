@@ -24,7 +24,4 @@ export const PARTNERS: Partner[] = [
 
 export const CERTIFICATIONS: Partner[] = [
   { name: "Licensed & Insured Texas Contractor", type: "certification", description: "TDLR registered" },
-  { name: "BBB Accredited Business", type: "certification", description: "A+ Rating Pending" },
-  { name: "Houzz Pro Member", type: "certification", description: "Verified professional" },
-  { name: "NARI Houston Member", type: "certification", description: "Membership pending" },
 ];

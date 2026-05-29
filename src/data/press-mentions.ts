@@ -13,28 +13,4 @@ export type PressMention = {
 };
 
 export const PRESS_MENTIONS: PressMention[] = [
-  {
-    outlet: "Houstonia Magazine",
-    quote: "Coming soon — pending feature.",
-  },
-  {
-    outlet: "PaperCity Magazine",
-    quote: "Coming soon — pending feature.",
-  },
-  {
-    outlet: "Houston Chronicle Home & Garden",
-    quote: "Coming soon — pending feature.",
-  },
-  {
-    outlet: "CultureMap Houston",
-    quote: "Coming soon — pending feature.",
-  },
-  {
-    outlet: "Houston Modern Luxury",
-    quote: "Coming soon — pending feature.",
-  },
-  {
-    outlet: "Houston Business Journal",
-    quote: "Coming soon — pending feature.",
-  },
 ];
