@@ -17,16 +17,16 @@ const Press = () => {
         <section className="pt-32 pb-16 bg-muted">
           <div className="container-custom text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-background border border-border text-xs font-medium text-muted-foreground mb-6">
-              <Newspaper className="h-3.5 w-3.5" />
-              Press, Partners & Recognition
+              <Handshake className="h-3.5 w-3.5" />
+              Partners & Recognition
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-semibold text-foreground mb-4">
-              In the Press &amp; Trusted by Houston
+              Trusted by Houston
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
               BoldREMO partners with Houston's leading suppliers, designers, and realtors
               to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks,
-              Kingwood, and beyond. Below: media coverage, partners, and certifications.
+              Kingwood, and beyond.
             </p>
           </div>
         </section>
