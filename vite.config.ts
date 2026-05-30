@@ -13,28 +13,6 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === "development" && componentTagger(),
-    // Optimize images during build - compress and convert to modern formats
-    ViteImageOptimizer({
-      jpg: {
-        quality: 80,
-        progressive: true,
-      },
-      jpeg: {
-        quality: 80,
-        progressive: true,
-      },
-      png: {
-        quality: 80,
-        compressionLevel: 9,
-      },
-      webp: {
-        quality: 80,
-        lossless: false,
-      },
-      // Generate WebP versions for supported browsers
-      cache: true,
-      cacheLocation: "node_modules/.cache/image-optimizer",
-    }),
     // Rewrite the hardcoded hero image preload href in index.html to match
     // the actually emitted hashed asset filename (prevents stale LCP preloads).
     {
