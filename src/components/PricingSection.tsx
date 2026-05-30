@@ -6,7 +6,7 @@ const pricingTiers = [
   {
     icon: Bath,
     title: "Guest / Hall Bathroom Remodel",
-    priceRange: "$8,500 – $16,000",
+    priceRange: "$8,000 – $15,000",
     description: "Cosmetic updates, tile, fixtures, lighting",
     features: ["New tile flooring", "Updated fixtures", "Modern lighting", "Fresh paint & finishes"],
   },
