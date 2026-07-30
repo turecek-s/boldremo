@@ -53,15 +53,26 @@ export const Footer = () => {
             </div>
             <div className="mt-5">
               <p className="text-xs uppercase tracking-wider text-primary-foreground/70 mb-2">Reviews</p>
-              <a
-                href="https://share.google/ZwzDNVLRuFMgT4i9r"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-primary-foreground/90 hover:text-primary-foreground underline underline-offset-4 transition-colors"
-              >
-                <Star className="h-4 w-4" />
-                Google Reviews
-              </a>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://share.google/ZwzDNVLRuFMgT4i9r"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-primary-foreground/90 hover:text-primary-foreground underline underline-offset-4 transition-colors"
+                >
+                  <Star className="h-4 w-4" />
+                  Google Reviews
+                </a>
+                <a
+                  href="https://www.yelp.com/biz/boldremo-kingwood-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-primary-foreground/90 hover:text-primary-foreground underline underline-offset-4 transition-colors"
+                >
+                  <Star className="h-4 w-4" />
+                  Yelp Reviews
+                </a>
+              </div>
             </div>
           </div>
 
