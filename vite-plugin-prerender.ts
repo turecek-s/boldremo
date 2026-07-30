@@ -116,6 +116,21 @@ const ROUTES: RouteSeo[] = [
     bodyHtml: `<h1>Bathroom Remodeling in Kingwood, TX</h1><p>BoldREMO serves Kingwood homeowners with quality bathroom remodeling — full remodels, custom tile and shower installation, vanity upgrades, accessibility renovations, and complete spa-style transformations.</p><p>Call (832) 513-5737.</p>`,
   },
   {
+    path: "/blog",
+    title: "Blog | BoldREMO Bathroom Remodeling Houston",
+    description:
+      "Bathroom remodeling guides, project breakdowns, and honest cost information from BoldREMO, Houston's luxury bathroom remodeling company.",
+    bodyHtml: `<h1>BoldREMO Blog</h1><p>Project breakdowns, honest pricing, and practical guidance from the BoldREMO bathroom remodeling crew serving Houston, Heights, Bellaire, River Oaks, and Kingwood. Call (832) 513-5737.</p>`,
+  },
+  {
+    path: "/blog/walk-in-tub-installation-houston",
+    title:
+      "Walk-In Tub Installation Houston: What Goes Into an Aging-in-Place Bathroom Remodel",
+    description:
+      "Considering a walk-in tub for aging in place? See what a proper walk-in tub installation actually involves in a Houston bathroom remodel, from waterproofing to door seal testing.",
+    bodyHtml: `<h1>Walk-In Tub Installation Houston: What Goes Into an Aging-in-Place Bathroom Remodel</h1><p>A walk-in tub installation in Houston involves floor leveling, full waterproofing, plumbing changes, door seal testing, and finish tile work. Labor and installation typically fall in the $8,000 to $15,000 range, with the tub unit and finish materials adding to that. BoldREMO installs walk-in tubs across Houston, the Heights, Bellaire, River Oaks, and Kingwood. Call (832) 513-5737.</p>`,
+  },
+  {
     path: "/press",
     title: "Press, Partners & Recognition | BoldREMO Houston",
     description:

@@ -88,6 +88,7 @@ export const Footer = () => {
                   { name: "About Us", path: "/about" },
                   { name: "Services", path: "/services" },
                   { name: "Cost Calculator", path: "/cost-calculator" },
+                  { name: "Blog", path: "/blog" },
                   { name: "For Realtors & Designers", path: "/realtors-designers" },
                   { name: "Contact", path: "/contact" },
                 ].map((link) => (
