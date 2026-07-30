@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "sdk_version": "0.25.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://ubbparyexygltuyjpdqg.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "boldremo-website",
+      "version": "0.1.0",
+      "title": "BoldREMO website"
+    },
+    "tools": [
+      {
+        "name": "get_company_info",
+        "title": "Get company info",
+        "description": "Get BoldREMO's contact details, service areas, and consultation process.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_pricing",
+        "title": "Get remodel pricing tiers",
+        "description": "Get BoldREMO's typical Houston bathroom remodel packages with price ranges and included work.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_contact_submissions",
+        "title": "List contact submissions",
+        "description": "List website contact form submissions, newest first. Requires an admin account.",
+        "annotations": {
+          "readOnlyHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "limit": {
+              "default": 20,
+              "description": "How many submissions to return (max 100).",
+              "type": "integer",
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            },
+            "unread_only": {
+              "default": false,
+              "description": "Only return unread submissions.",
+              "type": "boolean"
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "mark_submission_read",
+        "title": "Mark submission as read",
+        "description": "Mark a website contact submission as read. Requires an admin account.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "The submission id (uuid)."
+            }
+          },
+          "required": [
+            "id"
+          ]
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
