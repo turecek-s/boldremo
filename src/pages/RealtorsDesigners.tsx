@@ -29,7 +29,7 @@ const benefits = [
     icon: HandCoins,
     title: "Generous referral fees",
     description:
-      "We pay a meaningful referral fee on every closed project — paid promptly after project completion.",
+      "We pay a meaningful referral fee on every closed project, paid promptly after project completion.",
   },
   {
     icon: Calendar,
@@ -41,7 +41,7 @@ const benefits = [
     icon: Camera,
     title: "Professional after photos",
     description:
-      "Use our project photography in your own listings, portfolio, and social — fully credited.",
+      "Use our project photography in your own listings, portfolio, and social, fully credited.",
   },
   {
     icon: Users,
@@ -60,7 +60,7 @@ const steps = [
   {
     n: "2",
     title: "Quick intro call",
-    desc: "15-minute video or coffee — we cover referral terms, communication, and what makes a great fit.",
+    desc: "15-minute video or coffee, we cover referral terms, communication, and what makes a great fit.",
   },
   {
     n: "3",

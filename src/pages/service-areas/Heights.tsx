@@ -34,17 +34,17 @@ const Heights = () => {
         <title>Luxury Bathroom Remodeling in The Heights TX | BoldREMO</title>
         <meta
           name="description"
-          content="Luxury bathroom remodeling in Houston Heights, TX. Historic home renovations, custom tile & spa-inspired designs. Book a $75 consult — (832) 513-5737."
+          content="Luxury bathroom remodeling in Houston Heights, TX. Historic home renovations, custom tile & spa-inspired designs. Book a $75 consult, (832) 513-5737."
         />
         <meta
           name="keywords"
           content="luxury bathroom remodeling Heights TX, bathroom renovation Houston Heights, bathroom contractor Heights, historic home bathroom remodel Heights"
         />
         <meta property="og:title" content="Luxury Bathroom Remodeling in The Heights TX | BoldREMO" />
-        <meta property="og:description" content="Luxury bathroom remodeling in Houston Heights, TX. Historic home renovations, custom tile & spa-inspired designs. Book a $75 consult — (832) 513-5737." />
+        <meta property="og:description" content="Luxury bathroom remodeling in Houston Heights, TX. Historic home renovations, custom tile & spa-inspired designs. Book a $75 consult, (832) 513-5737." />
         <meta property="og:url" content="https://www.boldremo.com/service-areas/heights" />
         <meta name="twitter:title" content="Luxury Bathroom Remodeling in The Heights TX | BoldREMO" />
-        <meta name="twitter:description" content="Luxury bathroom remodeling in Houston Heights, TX. Historic home renovations, custom tile & spa-inspired designs. Book a $75 consult — (832) 513-5737." />
+        <meta name="twitter:description" content="Luxury bathroom remodeling in Houston Heights, TX. Historic home renovations, custom tile & spa-inspired designs. Book a $75 consult, (832) 513-5737." />
         <meta name="twitter:url" content="https://www.boldremo.com/service-areas/heights" />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/heights" />
       </Helmet>
@@ -155,13 +155,13 @@ const Heights = () => {
                 What Heights Bathroom Remodels Usually Look Like
               </h2>
               <p>
-                The Heights is a mix of 1920s bungalows, mid-century cottages, and new construction squeezed onto old lots — no two bathrooms we work on look alike. In original Heights homes the recurring job is opening up a tight hall bath, dealing with cast iron drains and galvanized supply lines, and fitting a usable shower into a footprint built when people bathed in tubs. In renovated or new-build Heights homes the work shifts toward design-driven master baths: zero-entry showers, freestanding tubs, large-format porcelain, and custom vanities.
+                The Heights is a mix of 1920s bungalows, mid-century cottages, and new construction squeezed onto old lots, no two bathrooms we work on look alike. In original Heights homes the recurring job is opening up a tight hall bath, dealing with cast iron drains and galvanized supply lines, and fitting a usable shower into a footprint built when people bathed in tubs. In renovated or new-build Heights homes the work shifts toward design-driven master baths: zero-entry showers, freestanding tubs, large-format porcelain, and custom vanities.
               </p>
               <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
                 What <BrandName /> Brings to the Heights
               </h3>
               <p>
-                We have experience working in old houses that aren't square, plumb, or level — and the patience to make the finished bathroom look like it is. We know which inspectors handle this part of the city, we plan demo around tight street parking and narrow side yards, and we coordinate the plumbers and electricians needed when you open a 1925 wall and find surprises.
+                We have experience working in old houses that aren't square, plumb, or level, and the patience to make the finished bathroom look like it is. We know which inspectors handle this part of the city, we plan demo around tight street parking and narrow side yards, and we coordinate the plumbers and electricians needed when you open a 1925 wall and find surprises.
               </p>
               <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
                 How Our Pricing Works

@@ -50,7 +50,7 @@ const BathroomRemodelCost = () => {
               How Much Does a Bathroom Remodel Cost in Houston?
             </h1>
             <p className="text-lg text-foreground/85 leading-relaxed">
-              The honest answer is it depends — but that's not helpful when you're
+              The honest answer is it depends, but that's not helpful when you're
               trying to budget. Here's how BoldREMO breaks it down so you know
               what to expect before you call anyone.
             </p>
@@ -65,9 +65,9 @@ const BathroomRemodelCost = () => {
                 How BoldREMO Pricing Works
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                BoldREMO charges for labor and installation materials — waterproofing,
+                BoldREMO charges for labor and installation materials, waterproofing,
                 GoBoard, thinset, grout, shower glass, and everything needed to do the
-                job right. You purchase your own finish materials — tile, toilet, vanity,
+                job right. You purchase your own finish materials, tile, toilet, vanity,
                 faucets, fixtures, mirror, and hardware. This means you control the look
                 and the material budget. We control the quality of the work.
               </p>
@@ -75,7 +75,7 @@ const BathroomRemodelCost = () => {
 
             <article>
               <h2 className="text-3xl font-serif font-semibold text-foreground mb-4">
-                What You Pay BoldREMO — Labor and Installation Materials
+                What You Pay BoldREMO, Labor and Installation Materials
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -155,7 +155,7 @@ const BathroomRemodelCost = () => {
                   more precision labor.
                 </p>
                 <p>
-                  <strong className="text-foreground">Custom shower details</strong> —
+                  <strong className="text-foreground">Custom shower details</strong>,
                   multiple showerheads, built-in benches, specialty niches.
                 </p>
                 <p>
@@ -209,7 +209,7 @@ const BathroomRemodelCost = () => {
                 How to Get an Accurate Number
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Call (832) 513-5737 for a free rough estimate by phone — most scopes take
+                Call (832) 513-5737 for a free rough estimate by phone, most scopes take
                 about 10 minutes to ballpark. For exact pricing, schedule a $75 in-person
                 consultation. We measure, assess, discuss materials, and give you a written
                 proposal. The $75 is credited to your project.

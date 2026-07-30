@@ -34,17 +34,17 @@ const Kingwood = () => {
         <title>Luxury Bathroom Remodeling in Kingwood TX | BoldREMO</title>
         <meta
           name="description"
-          content="Luxury bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult — (832) 513-5737."
+          content="Luxury bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737."
         />
         <meta
           name="keywords"
           content="luxury bathroom remodeling Kingwood TX, Kingwood bathroom renovation, bathroom contractor Kingwood, luxury tile installation Kingwood"
         />
         <meta property="og:title" content="Luxury Bathroom Remodeling in Kingwood TX | BoldREMO" />
-        <meta property="og:description" content="Luxury bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult — (832) 513-5737." />
+        <meta property="og:description" content="Luxury bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737." />
         <meta property="og:url" content="https://www.boldremo.com/service-areas/kingwood" />
         <meta name="twitter:title" content="Luxury Bathroom Remodeling in Kingwood TX | BoldREMO" />
-        <meta name="twitter:description" content="Luxury bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult — (832) 513-5737." />
+        <meta name="twitter:description" content="Luxury bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737." />
         <meta name="twitter:url" content="https://www.boldremo.com/service-areas/kingwood" />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/kingwood" />
       </Helmet>
@@ -155,7 +155,7 @@ const Kingwood = () => {
                 What Kingwood Bathroom Remodels Usually Look Like
               </h2>
               <p>
-                Most Kingwood homes were built between the 1970s and early 2000s, and the bathrooms we're called into still reflect their era — beige tile, builder-grade vanities, garden tubs nobody uses, and fiberglass shower surrounds that have seen better days. The most common project we do here is a full master bath update: pulling the old tub-and-shower combo, building a larger walk-in shower with a bench and niche, replacing the double vanity, and re-tiling the floor. Guest bath refreshes and powder room updates are close behind, often timed with a kitchen project or before listing the home.
+                Most Kingwood homes were built between the 1970s and early 2000s, and the bathrooms we're called into still reflect their era, beige tile, builder-grade vanities, garden tubs nobody uses, and fiberglass shower surrounds that have seen better days. The most common project we do here is a full master bath update: pulling the old tub-and-shower combo, building a larger walk-in shower with a bench and niche, replacing the double vanity, and re-tiling the floor. Guest bath refreshes and powder room updates are close behind, often timed with a kitchen project or before listing the home.
               </p>
               <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
                 What <BrandName /> Brings to Kingwood
@@ -167,7 +167,7 @@ const Kingwood = () => {
                 How Our Pricing Works
               </h3>
               <p>
-                <BrandName /> charges for labor and installation materials — thinset, grout, backerboard, fasteners, plumbing rough-in parts — separately from the finish materials you supply. You pick the tile, vanity, fixtures, and lighting at whatever budget you want, and you only pay us to install them well. No markup on materials we never touched.
+                <BrandName /> charges for labor and installation materials, thinset, grout, backerboard, fasteners, plumbing rough-in parts, separately from the finish materials you supply. You pick the tile, vanity, fixtures, and lighting at whatever budget you want, and you only pay us to install them well. No markup on materials we never touched.
               </p>
               <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
                 How to Get Started

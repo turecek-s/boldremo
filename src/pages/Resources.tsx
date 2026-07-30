@@ -208,7 +208,7 @@ const Resources = () => {
                 Houston Bathroom Cost Calculator
               </h2>
               <p className="text-primary-foreground/85 text-lg max-w-2xl mx-auto mb-7">
-                Get a realistic price range for your bathroom remodel in under 60 seconds —
+                Get a realistic price range for your bathroom remodel in under 60 seconds,
                 tailored to your size, scope, neighborhood, and finishes.
               </p>
               <Button asChild size="lg" variant="secondary">

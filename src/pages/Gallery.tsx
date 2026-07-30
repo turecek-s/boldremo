@@ -151,7 +151,7 @@ const Gallery = () => {
                       {image.caption}
                     </p>
                     <p className="text-primary-foreground/90 text-sm">
-                      {image.location} — {image.value}
+                      {image.location}, {image.value}
                     </p>
                   </div>
                 </div>
