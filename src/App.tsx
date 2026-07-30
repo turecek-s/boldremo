@@ -24,6 +24,7 @@ const CostCalculator = lazy(() => import("./pages/CostCalculator"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const TubToShowerConversion = lazy(() => import("./pages/TubToShowerConversion"));
 const BathroomRemodelCost = lazy(() => import("./pages/BathroomRemodelCost"));
+const OAuthConsent = lazy(() => import("./pages/OAuthConsent"));
 
 // Service Area Pages
 const Houston = lazy(() => import("./pages/service-areas/Houston"));
@@ -56,6 +57,7 @@ const App = () => (
               <Route path="/cost-calculator" element={<CostCalculator />} />
               <Route path="/tub-to-shower-conversion-houston" element={<TubToShowerConversion />} />
               <Route path="/bathroom-remodel-cost-houston" element={<BathroomRemodelCost />} />
+              <Route path="/.lovable/oauth/consent" element={<OAuthConsent />} />
               {/* Service Area Routes */}
               <Route path="/service-areas/houston" element={<Houston />} />
               <Route path="/service-areas/heights" element={<Heights />} />

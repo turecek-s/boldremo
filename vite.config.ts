@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
+import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 import { prerenderRoutes } from "./vite-plugin-prerender";
 
 // https://vitejs.dev/config/
@@ -13,6 +14,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === "development" && componentTagger(),
+    mcpPlugin(),
     // Rewrite the hardcoded hero image preload href in index.html to match
     // the actually emitted hashed asset filename (prevents stale LCP preloads).
     {
