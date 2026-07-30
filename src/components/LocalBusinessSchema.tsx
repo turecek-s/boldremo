@@ -1,5 +1,8 @@
+import { TESTIMONIALS } from "@/data/testimonials";
+
 const LocalBusinessSchema = () => {
   const schemaData = {
+
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "@id": "https://www.boldremo.com/#organization",
@@ -133,8 +136,31 @@ const LocalBusinessSchema = () => {
       "https://youtube.com/@boldremo"
     ],
     "image": "https://www.boldremo.com/og-image.jpg",
-    "logo": "https://www.boldremo.com/favicon.png"
+    "logo": "https://www.boldremo.com/favicon.png",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": TESTIMONIALS.length.toString(),
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": TESTIMONIALS.map((t) => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": t.name
+      },
+      "datePublished": t.date,
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": t.rating.toString(),
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "reviewBody": t.text
+    }))
   };
+
 
   return (
     <script
