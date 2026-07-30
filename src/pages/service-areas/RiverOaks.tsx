@@ -34,17 +34,17 @@ const RiverOaks = () => {
         <title>Luxury Bathroom Remodeling in River Oaks TX | BoldREMO</title>
         <meta
           name="description"
-          content="Luxury bathroom remodeling for River Oaks estates. World-class craftsmanship for Houston's finest homes. Book a $75 consult — (832) 513-5737."
+          content="Luxury bathroom remodeling for River Oaks estates. World-class craftsmanship for Houston's finest homes. Book a $75 consult, (832) 513-5737."
         />
         <meta
           name="keywords"
           content="luxury bathroom remodeling River Oaks, River Oaks bathroom renovation, high-end bathroom contractor River Oaks TX, luxury bathroom remodel Houston"
         />
         <meta property="og:title" content="Luxury Bathroom Remodeling in River Oaks TX | BoldREMO" />
-        <meta property="og:description" content="Luxury bathroom remodeling for River Oaks estates. World-class craftsmanship for Houston's finest homes. Book a $75 consult — (832) 513-5737." />
+        <meta property="og:description" content="Luxury bathroom remodeling for River Oaks estates. World-class craftsmanship for Houston's finest homes. Book a $75 consult, (832) 513-5737." />
         <meta property="og:url" content="https://www.boldremo.com/service-areas/river-oaks" />
         <meta name="twitter:title" content="Luxury Bathroom Remodeling in River Oaks TX | BoldREMO" />
-        <meta name="twitter:description" content="Luxury bathroom remodeling for River Oaks estates. World-class craftsmanship for Houston's finest homes. Book a $75 consult — (832) 513-5737." />
+        <meta name="twitter:description" content="Luxury bathroom remodeling for River Oaks estates. World-class craftsmanship for Houston's finest homes. Book a $75 consult, (832) 513-5737." />
         <meta name="twitter:url" content="https://www.boldremo.com/service-areas/river-oaks" />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/river-oaks" />
       </Helmet>
@@ -155,13 +155,13 @@ const RiverOaks = () => {
                 What River Oaks Bathroom Remodels Usually Look Like
               </h2>
               <p>
-                River Oaks bathrooms are usually the largest and most detailed work we do. The homes range from original 1920s and 30s estates to extensive recent rebuilds, and the bathroom projects reflect that — primary suite renovations with stone slab walls, custom millwork vanities, steam showers, freestanding tubs in proper alcoves, heated floors, and lighting designed by the homeowner's designer. Guest bath and powder room updates also come up regularly, often as part of a broader interior refresh.
+                River Oaks bathrooms are usually the largest and most detailed work we do. The homes range from original 1920s and 30s estates to extensive recent rebuilds, and the bathroom projects reflect that, primary suite renovations with stone slab walls, custom millwork vanities, steam showers, freestanding tubs in proper alcoves, heated floors, and lighting designed by the homeowner's designer. Guest bath and powder room updates also come up regularly, often as part of a broader interior refresh.
               </p>
               <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
                 What <BrandName /> Brings to River Oaks
               </h3>
               <p>
-                We work directly with the designers, architects, and decorators you've already hired, we follow their drawings exactly, and we don't try to redirect the design. We're meticulous about protecting finished floors, art, and millwork in the rest of the house. We meet the standard of finish River Oaks homeowners expect — tile lines that read straight from across the room, consistent grout joints, and hardware that lands where it's supposed to land.
+                We work directly with the designers, architects, and decorators you've already hired, we follow their drawings exactly, and we don't try to redirect the design. We're meticulous about protecting finished floors, art, and millwork in the rest of the house. We meet the standard of finish River Oaks homeowners expect, tile lines that read straight from across the room, consistent grout joints, and hardware that lands where it's supposed to land.
               </p>
               <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
                 How Our Pricing Works

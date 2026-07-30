@@ -17,7 +17,7 @@ const packages = [
   },
   {
     title: "Signature Remodel",
-    description: "Our most popular package—a complete transformation with custom design elements.",
+    description: "Our most popular package, a complete transformation with custom design elements.",
     features: ["Full demolition", "Custom tile work", "New vanity & storage", "Layout modifications"],
     timeline: "14–21 days",
     image: boldremo7,

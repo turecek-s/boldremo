@@ -57,10 +57,10 @@ const TubToShowerConversion = () => {
             <p className="text-lg text-foreground/85 leading-relaxed">
               Most bathtubs in Houston stop being used long before anyone does
               something about them. When you're ready, BoldREMO turns that
-              unused tub into a custom walk-in shower — and while we're there,
+              unused tub into a custom walk-in shower, and while we're there,
               we transform the whole bathroom. New floor tile, vanity, toilet,
               fixtures, mirror, and paint. When the project is done, you have a
-              completely different bathroom — not just a new shower.
+              completely different bathroom, not just a new shower.
             </p>
           </div>
         </section>
@@ -80,7 +80,7 @@ const TubToShowerConversion = () => {
                 walls, center drain, and frameless glass. New floor tile. Vanity
                 and sink installation. Toilet replacement. Light fixtures and
                 mirror. Paint. Optional linen cabinet. We do all the labor and
-                supply all installation materials — waterproofing, thinset,
+                supply all installation materials, waterproofing, thinset,
                 grout, shower glass, GoBoard, and everything needed to do the
                 job right.
               </p>
@@ -91,12 +91,12 @@ const TubToShowerConversion = () => {
                 What You Supply
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                You choose and purchase your finish materials — the pieces you
+                You choose and purchase your finish materials, the pieces you
                 actually see every day. That includes: tile (floor and shower
                 walls), toilet, vanity and sink, faucet and hardware, light
                 fixtures, mirror, and paint color. We can help you think through
                 selections and pick up materials for you. This keeps your
-                project personal — you pick what goes in your home.
+                project personal, you pick what goes in your home.
               </p>
             </article>
 
@@ -107,8 +107,8 @@ const TubToShowerConversion = () => {
               <p className="text-muted-foreground leading-relaxed">
                 BoldREMO's labor and installation materials for a full
                 tub-to-shower bathroom transformation run $8,000 to $15,000
-                depending on bathroom size and scope. Your finish materials —
-                tile, toilet, vanity, fixtures, mirror — are on top of that. A
+                depending on bathroom size and scope. Your finish materials,
+                tile, toilet, vanity, fixtures, mirror, are on top of that. A
                 realistic budget for finish materials on a smaller bathroom runs
                 $2,000 to $6,000 depending on what you choose. So your total
                 all-in investment is typically $10,000 to $21,000. You get a
@@ -170,7 +170,7 @@ const TubToShowerConversion = () => {
                 How to Get Started
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Call (832) 513-5737 for a free rough estimate by phone — most
+                Call (832) 513-5737 for a free rough estimate by phone, most
                 projects take about 10 minutes to ballpark. If you want exact
                 pricing, we come to you for a $75 in-person consultation and
                 give you a written proposal. The $75 is credited to your

@@ -21,7 +21,7 @@ const steps = [
     icon: FileText,
     title: "Written Proposal & Timeline",
     description:
-      "Receive a comprehensive proposal with itemized costs, material selections, and a clear project timeline. No surprises—just transparent planning.",
+      "Receive a comprehensive proposal with itemized costs, material selections, and a clear project timeline. No surprises, just transparent planning.",
     number: "03",
   },
 ];

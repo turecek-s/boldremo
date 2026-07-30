@@ -149,7 +149,7 @@ export const CalculatorResult = ({ inputs, result, onReset }: Props) => {
           Ready for an exact quote?
         </h3>
         <p className="text-primary-foreground/85 mb-6 max-w-xl mx-auto">
-          Book a $75 in-home design consult — we'll measure, discuss your selections, and
+          Book a $75 in-home design consult, we'll measure, discuss your selections, and
           deliver a written proposal. The $75 is credited toward your project.
         </p>
         <Button asChild size="lg" variant="secondary">
@@ -183,7 +183,7 @@ export const CalculatorResult = ({ inputs, result, onReset }: Props) => {
                   Email me a printable estimate
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Get this estimate as a branded PDF — useful for budgeting or comparing quotes.
+                  Get this estimate as a branded PDF, useful for budgeting or comparing quotes.
                 </p>
               </div>
             </div>
@@ -215,7 +215,7 @@ export const CalculatorResult = ({ inputs, result, onReset }: Props) => {
               </Button>
             </form>
             <p className="text-xs text-muted-foreground mt-3">
-              No spam — just your estimate and occasional remodeling tips. Unsubscribe anytime.
+              No spam, just your estimate and occasional remodeling tips. Unsubscribe anytime.
             </p>
           </>
         )}

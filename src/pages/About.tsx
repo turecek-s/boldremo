@@ -45,7 +45,7 @@ const About = () => {
                   Your Vision, Our Expertise
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  At <BrandName />, we believe that your bathroom should be more than just a functional space—it should be a sanctuary that reflects your personal style and meets your unique needs.
+                  At <BrandName />, we believe that your bathroom should be more than just a functional space. It should be a sanctuary that reflects your personal style and meets your unique needs.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   Serving Houston, Heights, Bellaire, River Oaks & Kingwood, our team of skilled craftsmen brings years of experience in bathroom remodeling, tile installation, and home renovation. We're committed to transforming your vision into reality with precision, care, and attention to detail.
@@ -97,13 +97,13 @@ const About = () => {
                   Stan – Lead Craftsman & Owner
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Hi, I'm Stan, and I started <BrandName /> with a simple mission: to bring honest, high-quality craftsmanship to every home I work in. With over a decade of hands-on experience in bathroom remodeling and tile installation, I've built my reputation on doing the job right—the first time.
+                  Hi, I'm Stan, and I started <BrandName /> with a simple mission: to bring honest, high-quality craftsmanship to every home I work in. With over a decade of hands-on experience in bathroom remodeling and tile installation, I've built my reputation on doing the job right, the first time.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  I believe every project is personal. When you invite me into your home, you're trusting me with your vision, and I take that seriously. I'm not just a contractor—I'm the one who will be there from the first measurement to the final tile, making sure every detail exceeds your expectations.
+                  I believe every project is personal. When you invite me into your home, you're trusting me with your vision, and I take that seriously. I'm not just a contractor. I'm the one who will be there from the first measurement to the final tile, making sure every detail exceeds your expectations.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  When I'm not transforming bathrooms across Houston, you'll find me spending time with my family and staying up-to-date on the latest design trends and materials. I'm proud to serve Houston, Heights, Bellaire, River Oaks & Kingwood—and I'd love to help bring your dream bathroom to life.
+                  When I'm not transforming bathrooms across Houston, you'll find me spending time with my family and staying up-to-date on the latest design trends and materials. I'm proud to serve Houston, Heights, Bellaire, River Oaks & Kingwood, and I'd love to help bring your dream bathroom to life.
                 </p>
               </div>
             </div>

@@ -34,17 +34,17 @@ const Bellaire = () => {
         <title>Luxury Bathroom Remodeling in Bellaire TX | BoldREMO</title>
         <meta
           name="description"
-          content="Luxury bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult — (832) 513-5737."
+          content="Luxury bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult, (832) 513-5737."
         />
         <meta
           name="keywords"
           content="luxury bathroom remodeling Bellaire TX, Bellaire bathroom renovation, luxury bathroom contractor Bellaire, spa bathroom remodel Bellaire"
         />
         <meta property="og:title" content="Luxury Bathroom Remodeling in Bellaire TX | BoldREMO" />
-        <meta property="og:description" content="Luxury bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult — (832) 513-5737." />
+        <meta property="og:description" content="Luxury bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult, (832) 513-5737." />
         <meta property="og:url" content="https://www.boldremo.com/service-areas/bellaire" />
         <meta name="twitter:title" content="Luxury Bathroom Remodeling in Bellaire TX | BoldREMO" />
-        <meta name="twitter:description" content="Luxury bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult — (832) 513-5737." />
+        <meta name="twitter:description" content="Luxury bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult, (832) 513-5737." />
         <meta name="twitter:url" content="https://www.boldremo.com/service-areas/bellaire" />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/bellaire" />
       </Helmet>
@@ -155,7 +155,7 @@ const Bellaire = () => {
                 What Bellaire Bathroom Remodels Usually Look Like
               </h2>
               <p>
-                Bellaire is largely teardowns and new-builds at this point, but plenty of the original ranch homes are still standing and getting renovated rather than replaced. In the older homes, the jobs are usually master bath gut renovations — knocking out a wall to steal closet space, adding a walk-in shower, doubling up the vanity, and modernizing the plumbing. In the newer two-story homes built in the last fifteen years, the work is more about refreshing builder-grade finishes that aged faster than the house did: tile that looks dated, hardware that's chipping, mirrors and lighting chosen for resale rather than for living.
+                Bellaire is largely teardowns and new-builds at this point, but plenty of the original ranch homes are still standing and getting renovated rather than replaced. In the older homes, the jobs are usually master bath gut renovations, knocking out a wall to steal closet space, adding a walk-in shower, doubling up the vanity, and modernizing the plumbing. In the newer two-story homes built in the last fifteen years, the work is more about refreshing builder-grade finishes that aged faster than the house did: tile that looks dated, hardware that's chipping, mirrors and lighting chosen for resale rather than for living.
               </p>
               <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
                 What <BrandName /> Brings to Bellaire
@@ -167,7 +167,7 @@ const Bellaire = () => {
                 How Our Pricing Works
               </h3>
               <p>
-                <BrandName /> charges for labor and installation materials separately from the finish materials you supply. You source the tile, vanity, fixtures, and lighting at the price points you want, and we install them. You see exactly what's labor and what's materials — no markup on things we didn't buy.
+                <BrandName /> charges for labor and installation materials separately from the finish materials you supply. You source the tile, vanity, fixtures, and lighting at the price points you want, and we install them. You see exactly what's labor and what's materials, no markup on things we didn't buy.
               </p>
               <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
                 How to Get Started

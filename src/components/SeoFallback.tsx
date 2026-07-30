@@ -7,7 +7,7 @@ interface SeoFallbackProps {
 /**
  * Renders a visually-hidden HTML block with route-specific content
  * so non-JS crawlers (Bing, DuckDuckGo, AI bots) can index the page.
- * Does NOT set <title> or meta tags — use SeoHead for that, or rely
+ * Does NOT set <title> or meta tags, use SeoHead for that, or rely
  * on an existing Helmet block on the page.
  */
 export const SeoFallback = ({ path }: SeoFallbackProps) => {

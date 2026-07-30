@@ -263,7 +263,7 @@ const CostCalculator = () => {
           </div>
         </section>
 
-        {/* Trust strip — why this calculator is accurate */}
+        {/* Trust strip, why this calculator is accurate */}
         {!result && (
           <section className="pb-16 bg-background">
             <div className="container-custom">

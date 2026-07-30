@@ -176,7 +176,7 @@ function generateCustomerEmail(name: string, inputs: any, result: any): string {
         <h2 style="color:#ffffff;margin:0 0 12px;font-size:24px;font-weight:400;">Ready for an exact quote?</h2>
         <div style="width:40px;height:1px;background-color:#c9a227;margin:0 auto 16px;"></div>
         <p style="color:#cbd5e0;margin:0 0 20px;font-size:15px;font-family:'Segoe UI',sans-serif;line-height:1.6;">
-          Book a $75 in-home design consult — credited toward your project.
+          Book a $75 in-home design consult, credited toward your project.
         </p>
         <a href="https://www.boldremo.com/contact" style="display:inline-block;background-color:#c9a227;color:#1a365d;padding:14px 36px;text-decoration:none;font-weight:600;border-radius:2px;font-size:14px;letter-spacing:1px;text-transform:uppercase;font-family:'Segoe UI',sans-serif;">Book My Consultation</a>
       </div>
@@ -285,7 +285,7 @@ const handler = async (req: Request): Promise<Response> => {
     const { error: customerEmailError } = await resend.emails.send({
       from: "BoldREMO <info@boldremo.com>",
       to: [email],
-      subject: "Your Houston Bathroom Remodel Estimate — From BoldREMO",
+      subject: "Your Houston Bathroom Remodel Estimate, From BoldREMO",
       html: generateCustomerEmail(name, inputs, result),
     });
 

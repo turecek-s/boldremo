@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "Do you help with design decisions?",
     answer:
-      "Absolutely! Our team guides you through every design choice—from tile patterns and color palettes to fixture styles and layout optimization. We bring material samples, share inspiration photos, and leverage our experience to help you create a bathroom that reflects your style while maximizing functionality and value.",
+      "Absolutely! Our team guides you through every design choice, from tile patterns and color palettes to fixture styles and layout optimization. We bring material samples, share inspiration photos, and leverage our experience to help you create a bathroom that reflects your style while maximizing functionality and value.",
   },
   {
     question: "Are you licensed and insured?",

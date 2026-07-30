@@ -47,7 +47,7 @@ const SIZE_BASE: Record<BathroomSize, number> = {
   large: 38000,
 };
 
-// Square footage by size — used for tile calculations
+// Square footage by size, used for tile calculations
 const SIZE_SQFT: Record<BathroomSize, number> = {
   half: 25,
   small: 40,
@@ -130,7 +130,7 @@ export function calculateEstimate(inputs: CalculatorInputs): CalculatorResult {
   const scopeMult = SCOPE_MULTIPLIER[inputs.scope];
   const neighborhoodMult = NEIGHBORHOOD_MULTIPLIER[inputs.neighborhood];
 
-  // Tile (covers floor + most of shower walls — roughly 1.6× floor sqft)
+  // Tile (covers floor + most of shower walls, roughly 1.6× floor sqft)
   const tileSqft = Math.round(sqft * 1.6);
   const tileLow = tileSqft * TILE_PER_SQFT[inputs.tileGrade].low;
   const tileHigh = tileSqft * TILE_PER_SQFT[inputs.tileGrade].high;

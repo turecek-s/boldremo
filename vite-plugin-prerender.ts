@@ -6,7 +6,7 @@ import { resolve, dirname } from "path";
  * Per-route SEO content used during build to generate static HTML files
  * for each public route. This ensures non-JS crawlers (Bing, DuckDuckGo,
  * AI bots, and Google's first-pass crawler) see real content for every
- * URL — not the homepage shell.
+ * URL, not the homepage shell.
  *
  * IMPORTANT: keep this list in sync with src/lib/seo-content.ts.
  */
@@ -28,29 +28,29 @@ const ROUTES: RouteSeo[] = [
     title:
       "Tub to Shower Conversion Houston TX | Full Bathroom Transformation | BoldREMO",
     description:
-      "BoldREMO transforms Houston bathrooms — replace your unused tub with a custom shower and refresh the whole space. Honest pricing, quality work. Call (832) 513-5737.",
-    bodyHtml: `<h1>Tub to Shower Conversion in Houston, TX</h1><p>BoldREMO turns your unused tub into a custom walk-in shower and transforms the whole bathroom — new floor tile, vanity, toilet, fixtures, mirror, and paint.</p><h2>What's Included</h2><p>Custom shower with Schluter waterproofing and GoBoard backer, tile walls, center drain, frameless glass. New floor tile, vanity, toilet, light fixtures, mirror, paint. All labor and installation materials included.</p><h2>What You Supply</h2><p>Tile, toilet, vanity, faucet and hardware, light fixtures, mirror, paint color.</p><h2>Cost</h2><p>Labor and installation materials $8,000–$15,000. Finish materials typically $2,000–$6,000 on top. Total all-in $10,000–$21,000.</p><h2>Timeline</h2><p>7 to 12 days for most projects.</p><h2>FAQs</h2><p>Shower-only conversions start at $7,000. We work with tile you've purchased. We install frameless glass through a local Houston supplier.</p><p>Call (832) 513-5737 or email info@boldremo.com. Serving Heights, Bellaire, River Oaks, Kingwood, and all of Houston.</p>`,
+      "BoldREMO transforms Houston bathrooms, replace your unused tub with a custom shower and refresh the whole space. Honest pricing, quality work. Call (832) 513-5737.",
+    bodyHtml: `<h1>Tub to Shower Conversion in Houston, TX</h1><p>BoldREMO turns your unused tub into a custom walk-in shower and transforms the whole bathroom, new floor tile, vanity, toilet, fixtures, mirror, and paint.</p><h2>What's Included</h2><p>Custom shower with Schluter waterproofing and GoBoard backer, tile walls, center drain, frameless glass. New floor tile, vanity, toilet, light fixtures, mirror, paint. All labor and installation materials included.</p><h2>What You Supply</h2><p>Tile, toilet, vanity, faucet and hardware, light fixtures, mirror, paint color.</p><h2>Cost</h2><p>Labor and installation materials $8,000–$15,000. Finish materials typically $2,000–$6,000 on top. Total all-in $10,000–$21,000.</p><h2>Timeline</h2><p>7 to 12 days for most projects.</p><h2>FAQs</h2><p>Shower-only conversions start at $7,000. We work with tile you've purchased. We install frameless glass through a local Houston supplier.</p><p>Call (832) 513-5737 or email info@boldremo.com. Serving Heights, Bellaire, River Oaks, Kingwood, and all of Houston.</p>`,
   },
   {
     path: "/bathroom-remodel-cost-houston",
     title: "How Much Does a Bathroom Remodel Cost in Houston? | BoldREMO",
     description:
       "Real bathroom remodel cost data for Houston homeowners from BoldREMO. What you pay BoldREMO, what you spend on materials, and what to expect total. Call (832) 513-5737.",
-    bodyHtml: `<h1>How Much Does a Bathroom Remodel Cost in Houston?</h1><p>Here's how BoldREMO breaks it down so you know what to expect.</p><h2>How BoldREMO Pricing Works</h2><p>BoldREMO charges for labor and installation materials. You purchase your own finish materials — tile, toilet, vanity, faucets, fixtures, mirror, and hardware.</p><h2>What You Pay BoldREMO</h2><p>Shower-only conversion starting at $7,000. Full bathroom transformation $8,000–$15,000. Master bathroom renovation $15,000–$35,000. Luxury spa build $35,000 and up.</p><h2>What You Budget for Finish Materials</h2><p>Smaller bathroom $2,000–$6,000. Master bathroom $5,000–$20,000+.</p><h2>Total All-In Investment</h2><p>Smaller full bathroom $10,000–$21,000. Master bathroom $20,000–$55,000+. Luxury spa build $50,000 and up.</p><h2>What Drives Cost Up</h2><p>Layout changes, larger tile formats, custom shower details, heated floors, high-end stone, bathroom size.</p><h2>FAQs</h2><p>Why do quotes vary? Scope, materials, layout changes. Supply own materials? Yes. How long? 7–12 days smaller bath, 3–6 weeks master.</p><h2>Get an Accurate Number</h2><p>Call (832) 513-5737 for a free rough estimate. $75 in-person consultation credited to your project.</p>`,
+    bodyHtml: `<h1>How Much Does a Bathroom Remodel Cost in Houston?</h1><p>Here's how BoldREMO breaks it down so you know what to expect.</p><h2>How BoldREMO Pricing Works</h2><p>BoldREMO charges for labor and installation materials. You purchase your own finish materials, tile, toilet, vanity, faucets, fixtures, mirror, and hardware.</p><h2>What You Pay BoldREMO</h2><p>Shower-only conversion starting at $7,000. Full bathroom transformation $8,000–$15,000. Master bathroom renovation $15,000–$35,000. Luxury spa build $35,000 and up.</p><h2>What You Budget for Finish Materials</h2><p>Smaller bathroom $2,000–$6,000. Master bathroom $5,000–$20,000+.</p><h2>Total All-In Investment</h2><p>Smaller full bathroom $10,000–$21,000. Master bathroom $20,000–$55,000+. Luxury spa build $50,000 and up.</p><h2>What Drives Cost Up</h2><p>Layout changes, larger tile formats, custom shower details, heated floors, high-end stone, bathroom size.</p><h2>FAQs</h2><p>Why do quotes vary? Scope, materials, layout changes. Supply own materials? Yes. How long? 7–12 days smaller bath, 3–6 weeks master.</p><h2>Get an Accurate Number</h2><p>Call (832) 513-5737 for a free rough estimate. $75 in-person consultation credited to your project.</p>`,
   },
   {
     path: "/gallery",
     title: "Bathroom Remodel Gallery Houston | BoldREMO Project Photos",
     description:
       "Browse real bathroom remodel projects by BoldREMO across Houston, Heights, Bellaire, River Oaks & Kingwood. Walk-in showers, soaking tubs, custom tile.",
-    bodyHtml: `<h1>BoldREMO Bathroom Remodel Gallery — Houston, TX</h1><p>Explore real bathroom remodel projects completed by BoldREMO across Houston and surrounding neighborhoods.</p><h2>Featured Projects</h2><p>Master Bath Transformation in River Oaks — $29,000. Luxury Suite Renovation in Bellaire — $42,000. Spa-Style Retreat in River Oaks — $38,000. Accessible Luxury Bath in Houston Heights with walk-in tub and LED lighting.</p><p>Call BoldREMO at (832) 513-5737.</p>`,
+    bodyHtml: `<h1>BoldREMO Bathroom Remodel Gallery, Houston, TX</h1><p>Explore real bathroom remodel projects completed by BoldREMO across Houston and surrounding neighborhoods.</p><h2>Featured Projects</h2><p>Master Bath Transformation in River Oaks, $29,000. Luxury Suite Renovation in Bellaire, $42,000. Spa-Style Retreat in River Oaks, $38,000. Accessible Luxury Bath in Houston Heights with walk-in tub and LED lighting.</p><p>Call BoldREMO at (832) 513-5737.</p>`,
   },
   {
     path: "/about",
     title: "About BoldREMO | Houston Bathroom Remodeling Company",
     description:
-      "Meet BoldREMO — Houston's trusted luxury bathroom remodeling team led by Stan. Licensed, insured, and committed to quality craftsmanship and transparent pricing.",
-    bodyHtml: `<h1>About BoldREMO — Houston's Luxury Bathroom Remodeling Team</h1><p>BoldREMO is Houston's trusted partner for luxury bathroom remodeling and home renovation. Founded by Stan, our team brings decades of combined craftsmanship experience.</p><h2>Our Values</h2><p>Quality craftsmanship, transparent pricing, licensed and insured professionals, personalized designs, timely project completion, customer satisfaction guarantee.</p><p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com.</p>`,
+      "Meet BoldREMO, Houston's trusted luxury bathroom remodeling team led by Stan. Licensed, insured, and committed to quality craftsmanship and transparent pricing.",
+    bodyHtml: `<h1>About BoldREMO, Houston's Luxury Bathroom Remodeling Team</h1><p>BoldREMO is Houston's trusted partner for luxury bathroom remodeling and home renovation. Founded by Stan, our team brings decades of combined craftsmanship experience.</p><h2>Our Values</h2><p>Quality craftsmanship, transparent pricing, licensed and insured professionals, personalized designs, timely project completion, customer satisfaction guarantee.</p><p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com.</p>`,
   },
   {
     path: "/resources",
@@ -64,7 +64,7 @@ const ROUTES: RouteSeo[] = [
     title: "Contact BoldREMO | Houston Bathroom Remodeling Consultation",
     description:
       "Contact BoldREMO for a free rough estimate or $75 in-home design consult. Call (832) 513-5737 or email info@boldremo.com.",
-    bodyHtml: `<h1>Contact BoldREMO — Book Your Houston Bathroom Consult</h1><p>Get a free rough estimate by phone or email, or book a $75 in-home design consultation.</p><p>Call (832) 513-5737 Monday-Friday 8AM-6PM. Email info@boldremo.com.</p><p>Service area: Houston, Heights, Bellaire, River Oaks, Kingwood, Memorial, West University, Montrose, The Woodlands, Sugar Land.</p>`,
+    bodyHtml: `<h1>Contact BoldREMO, Book Your Houston Bathroom Consult</h1><p>Get a free rough estimate by phone or email, or book a $75 in-home design consultation.</p><p>Call (832) 513-5737 Monday-Friday 8AM-6PM. Email info@boldremo.com.</p><p>Service area: Houston, Heights, Bellaire, River Oaks, Kingwood, Memorial, West University, Montrose, The Woodlands, Sugar Land.</p>`,
   },
   {
     path: "/realtors-designers",
@@ -92,14 +92,14 @@ const ROUTES: RouteSeo[] = [
     title: "Bathroom Remodeling Houston Heights | BoldREMO",
     description:
       "Bathroom remodeling for Houston Heights homes. BoldREMO blends historic charm with modern luxury. Call (832) 513-5737.",
-    bodyHtml: `<h1>Bathroom Remodeling in Houston Heights</h1><p>BoldREMO specializes in bathroom remodeling for Houston Heights — historic bungalows and craftsman homes meet modern luxury. We respect original architecture while delivering contemporary functionality.</p><p>Call (832) 513-5737.</p>`,
+    bodyHtml: `<h1>Bathroom Remodeling in Houston Heights</h1><p>BoldREMO specializes in bathroom remodeling for Houston Heights, historic bungalows and craftsman homes meet modern luxury. We respect original architecture while delivering contemporary functionality.</p><p>Call (832) 513-5737.</p>`,
   },
   {
     path: "/service-areas/bellaire",
     title: "Bathroom Remodeling Bellaire TX | BoldREMO",
     description:
       "Bellaire bathroom remodeling and renovation. BoldREMO delivers luxury bathroom transformations for Bellaire family homes. Call (832) 513-5737.",
-    bodyHtml: `<h1>Bathroom Remodeling in Bellaire, TX</h1><p>BoldREMO provides premium bathroom remodeling services for Bellaire homeowners — from master suite spa retreats to durable family-friendly hall bathrooms.</p><p>Call (832) 513-5737.</p>`,
+    bodyHtml: `<h1>Bathroom Remodeling in Bellaire, TX</h1><p>BoldREMO provides premium bathroom remodeling services for Bellaire homeowners, from master suite spa retreats to durable family-friendly hall bathrooms.</p><p>Call (832) 513-5737.</p>`,
   },
   {
     path: "/service-areas/river-oaks",
@@ -113,7 +113,7 @@ const ROUTES: RouteSeo[] = [
     title: "Bathroom Remodeling Kingwood TX | BoldREMO",
     description:
       "Kingwood bathroom remodeling experts. Quality craftsmanship and attention to detail for Kingwood homeowners. Call (832) 513-5737.",
-    bodyHtml: `<h1>Bathroom Remodeling in Kingwood, TX</h1><p>BoldREMO serves Kingwood homeowners with quality bathroom remodeling — full remodels, custom tile and shower installation, vanity upgrades, accessibility renovations, and complete spa-style transformations.</p><p>Call (832) 513-5737.</p>`,
+    bodyHtml: `<h1>Bathroom Remodeling in Kingwood, TX</h1><p>BoldREMO serves Kingwood homeowners with quality bathroom remodeling, full remodels, custom tile and shower installation, vanity upgrades, accessibility renovations, and complete spa-style transformations.</p><p>Call (832) 513-5737.</p>`,
   },
   {
     path: "/blog",
@@ -179,7 +179,7 @@ export function prerenderRoutes(): Plugin {
 
       for (const route of ROUTES) {
         let html = baseHtml;
-        // Trailing slash form — Lovable hosting resolves /services/ to
+        // Trailing slash form, Lovable hosting resolves /services/ to
         // dist/services/index.html. The extensionless /services hits the
         // SPA fallback, so canonical and sitemap MUST advertise the slash form.
         const canonical = `https://www.boldremo.com${route.path}/`;
