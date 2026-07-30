@@ -14,6 +14,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === "development" && componentTagger(),
+    mcpPlugin(),
     // Rewrite the hardcoded hero image preload href in index.html to match
     // the actually emitted hashed asset filename (prevents stale LCP preloads).
     {
