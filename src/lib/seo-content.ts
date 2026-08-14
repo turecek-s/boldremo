@@ -288,6 +288,19 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       <p>Call BoldREMO at (832) 513-5737 to book your Kingwood bathroom consult.</p>
     `,
   },
+  "/service-areas/memorial": {
+    path: "/service-areas/memorial",
+    title: "Bathroom Remodeling Memorial Houston TX | BoldREMO",
+    description:
+      "Memorial bathroom remodeling experts. BoldREMO updates luxury new-builds and 1960s to 1980s Memorial homes with quality craftsmanship. Call (832) 513-5737.",
+    bodyHtml: `
+      <h1>Bathroom Remodeling in Memorial, Houston</h1>
+      <p>BoldREMO serves Memorial homeowners with upscale bathroom remodeling. Memorial is a heavily wooded area of large lots near Memorial Park and the Villages, with a mix of luxury new-builds and older homes from the 1960s through the 1980s that are ready for bathroom updates.</p>
+      <h2>Memorial Bathroom Renovation Services</h2>
+      <p>Full bathroom remodels, custom tile and shower installation, tub to shower conversions, vanity upgrades, and complete spa-style transformations for Memorial and Memorial Villages homes.</p>
+      <p>Call BoldREMO at (832) 513-5737 to book your Memorial bathroom consult.</p>
+    `,
+  },
 };
 
 /** Render the SEO content as a hidden HTML block (for crawlers). */

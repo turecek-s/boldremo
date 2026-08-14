@@ -28,6 +28,7 @@ const serviceAreaLinks = [
   { name: "River Oaks", path: "/service-areas/river-oaks" },
   { name: "Bellaire", path: "/service-areas/bellaire" },
   { name: "Kingwood", path: "/service-areas/kingwood" },
+  { name: "Memorial", path: "/service-areas/memorial" },
 ];
 
 export const Header = () => {
