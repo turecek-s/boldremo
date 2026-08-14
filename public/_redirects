@@ -34,4 +34,8 @@
 /blog/           /blog/index.html            200
 /blog/walk-in-tub-installation-houston     /blog/walk-in-tub-installation-houston/index.html     200
 /blog/walk-in-tub-installation-houston/    /blog/walk-in-tub-installation-houston/index.html     200
+/admin           /admin/index.html           200
+/admin/          /admin/index.html           200
+/.lovable/oauth/consent     /index.html       200
+/.lovable/oauth/consent/    /index.html       200
 /*               /404.html                   404
