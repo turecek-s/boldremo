@@ -116,6 +116,13 @@ const ROUTES: RouteSeo[] = [
     bodyHtml: `<h1>Bathroom Remodeling in Kingwood, TX</h1><p>BoldREMO serves Kingwood homeowners with quality bathroom remodeling, full remodels, custom tile and shower installation, vanity upgrades, accessibility renovations, and complete spa-style transformations.</p><p>Call (832) 513-5737.</p>`,
   },
   {
+    path: "/service-areas/memorial",
+    title: "Bathroom Remodeling Memorial Houston TX | BoldREMO",
+    description:
+      "Memorial bathroom remodeling experts. BoldREMO updates luxury new-builds and older Memorial homes with quality craftsmanship. Call (832) 513-5737.",
+    bodyHtml: `<h1>Bathroom Remodeling in Memorial, Houston</h1><p>BoldREMO serves Memorial homeowners with upscale bathroom remodeling. Memorial is a heavily wooded area of large lots near Memorial Park and the Villages, with a mix of luxury new-builds and older homes from the 1960s through the 1980s that need bathroom updates.</p><p>Full remodels, custom tile and shower installation, tub to shower conversions, vanity upgrades, and spa-style transformations for Memorial and Memorial Villages homes.</p><p>Call (832) 513-5737.</p>`,
+  },
+  {
     path: "/blog",
     title: "Blog | BoldREMO Bathroom Remodeling Houston",
     description:
@@ -253,6 +260,48 @@ export function prerenderRoutes(): Plugin {
         console.log(`[prerenderRoutes] wrote ${route.path}.html and ${route.path}/index.html`);
 
       }
+
+      // Static 404 page. Hosting serves this with a real 404 status for any
+      // unmatched URL, so nonexistent paths no longer return the homepage
+      // with a 200. React Router still renders NotFound.tsx once JS boots.
+      const notFoundTitle = "Page Not Found | BoldREMO";
+      const notFoundDescription =
+        "The page you are looking for does not exist. Return to the BoldREMO home page or call (832) 513-5737.";
+      let notFoundHtml = baseHtml
+        .replace(/\s*<title>[\s\S]*?<\/title>/i, "")
+        .replace(/\s*<link\s+rel=["']canonical["'][^>]*\/?>/gi, "")
+        .replace(/\s*<meta\s+name=["']description["'][^>]*\/?>/gi, "")
+        .replace(/\s*<meta\s+property=["']og:title["'][^>]*\/?>/gi, "")
+        .replace(/\s*<meta\s+property=["']og:description["'][^>]*\/?>/gi, "")
+        .replace(/\s*<meta\s+property=["']og:url["'][^>]*\/?>/gi, "")
+        .replace(/\s*<meta\s+name=["']twitter:title["'][^>]*\/?>/gi, "")
+        .replace(/\s*<meta\s+name=["']twitter:description["'][^>]*\/?>/gi, "")
+        .replace(/\s*<meta\s+name=["']twitter:url["'][^>]*\/?>/gi, "")
+        .replace(/\s*<meta\s+property=["']twitter:url["'][^>]*\/?>/gi, "");
+
+      notFoundHtml = notFoundHtml.replace(
+        "<head>",
+        `<head>
+  <title>${escapeHtml(notFoundTitle)}</title>
+  <meta name="description" content="${escapeAttr(notFoundDescription)}" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:title" content="${escapeAttr(notFoundTitle)}" />
+  <meta property="og:description" content="${escapeAttr(notFoundDescription)}" />
+  <meta name="twitter:title" content="${escapeAttr(notFoundTitle)}" />
+  <meta name="twitter:description" content="${escapeAttr(notFoundDescription)}" />`,
+      );
+
+      // Body content mirrors src/pages/NotFound.tsx so no-JS visitors and
+      // crawlers see the same not-found message. React hydration replaces it.
+      const notFoundBlock = `<div style="${HIDDEN_STYLE}" aria-hidden="true"><h1>404</h1><p>Oops! Page not found</p><p><a href="/">Return to Home</a></p></div>`;
+      notFoundHtml = notFoundHtml.replace(
+        /<div id="root">/,
+        `<div id="root">${notFoundBlock}`,
+      );
+
+      writeFileSync(resolve(distDir, "404.html"), notFoundHtml, "utf-8");
+      // eslint-disable-next-line no-console
+      console.log("[prerenderRoutes] wrote 404.html");
     },
   };
 }
