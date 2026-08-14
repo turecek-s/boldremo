@@ -34,6 +34,7 @@ const Heights = lazy(() => import("./pages/service-areas/Heights"));
 const Bellaire = lazy(() => import("./pages/service-areas/Bellaire"));
 const RiverOaks = lazy(() => import("./pages/service-areas/RiverOaks"));
 const Kingwood = lazy(() => import("./pages/service-areas/Kingwood"));
+const Memorial = lazy(() => import("./pages/service-areas/Memorial"));
 
 const queryClient = new QueryClient();
 
@@ -68,6 +69,7 @@ const App = () => (
               <Route path="/service-areas/bellaire" element={<Bellaire />} />
               <Route path="/service-areas/river-oaks" element={<RiverOaks />} />
               <Route path="/service-areas/kingwood" element={<Kingwood />} />
+              <Route path="/service-areas/memorial" element={<Memorial />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
