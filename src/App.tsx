@@ -27,6 +27,8 @@ const BathroomRemodelCost = lazy(() => import("./pages/BathroomRemodelCost"));
 const OAuthConsent = lazy(() => import("./pages/OAuthConsent"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const Terms = lazy(() => import("./pages/Terms"));
 
 // Service Area Pages
 const Houston = lazy(() => import("./pages/service-areas/Houston"));
