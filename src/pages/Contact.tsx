@@ -231,7 +231,6 @@ const Contact = () => {
                       name="smsConsent"
                       checked={smsConsent}
                       onCheckedChange={(checked) => setSmsConsent(checked === true)}
-                      aria-required="true"
                       className="mt-1"
                     />
                     <Label
