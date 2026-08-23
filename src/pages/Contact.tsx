@@ -21,17 +21,19 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!smsConsent) {
+      toast({
+        title: "Consent required",
+        description: "Please agree to receive SMS communications before submitting.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
-    
+
     const formData = new FormData(e.currentTarget);
-    const data = {
-      firstName: formData.get("firstName"),
-      lastName: formData.get("lastName"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      message: formData.get("message"),
-      timestamp: new Date().toISOString(),
-    };
 
     try {
       const { data: responseData, error } = await supabase.functions.invoke('send-contact-email', {
@@ -41,9 +43,11 @@ const Contact = () => {
           email: formData.get("email"),
           phone: formData.get("phone"),
           message: formData.get("message"),
+          smsConsent: true,
           website: formData.get("website"), // honeypot field
         },
       });
+
 
       if (error) throw error;
       
