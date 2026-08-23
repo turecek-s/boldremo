@@ -6,28 +6,34 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Phone, Mail, MapPin, Clock, MessageSquare } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [smsConsent, setSmsConsent] = useState(false);
+
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!smsConsent) {
+      toast({
+        title: "Consent required",
+        description: "Please agree to receive SMS communications before submitting.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
-    
+
     const formData = new FormData(e.currentTarget);
-    const data = {
-      firstName: formData.get("firstName"),
-      lastName: formData.get("lastName"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      message: formData.get("message"),
-      timestamp: new Date().toISOString(),
-    };
 
     try {
       const { data: responseData, error } = await supabase.functions.invoke('send-contact-email', {
@@ -37,9 +43,11 @@ const Contact = () => {
           email: formData.get("email"),
           phone: formData.get("phone"),
           message: formData.get("message"),
+          smsConsent: true,
           website: formData.get("website"), // honeypot field
         },
       });
+
 
       if (error) throw error;
       
@@ -59,6 +67,8 @@ const Contact = () => {
         description: "Thank you for contacting us. We'll get back to you shortly.",
       });
       (e.target as HTMLFormElement).reset();
+      setSmsConsent(false);
+
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({
@@ -164,10 +174,29 @@ const Contact = () => {
 
               {/* Contact Form */}
               <div className="bg-card border border-border rounded-lg p-8">
+                {/* SMS CTA */}
+                <div className="mb-8 rounded-lg border border-primary/30 bg-primary/5 p-5">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <MessageSquare className="h-5 w-5 text-primary" />
+                    </div>
+                    <p className="text-foreground font-serif text-lg leading-relaxed">
+                      Text us directly at{" "}
+                      <a
+                        href="tel:+12817332812"
+                        className="text-primary font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity"
+                      >
+                        (281) 733-2812
+                      </a>{" "}
+                      for fast estimates, project updates, and appointment scheduling!
+                    </p>
+                  </div>
+                </div>
                 <h2 className="text-2xl font-serif font-semibold text-foreground mb-6">
                   Book Design Consultation
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
+
                   {/* Honeypot field - hidden from users, bots will fill it */}
                   <div className="absolute -left-[9999px]" aria-hidden="true">
                     <Label htmlFor="website">Website</Label>
@@ -194,6 +223,32 @@ const Contact = () => {
                     <Label htmlFor="phone">Phone</Label>
                     <Input id="phone" name="phone" type="tel" required />
                   </div>
+
+                  <div className="flex items-start gap-3">
+                    <Checkbox
+                      id="smsConsent"
+                      name="smsConsent"
+                      checked={smsConsent}
+                      onCheckedChange={(checked) => setSmsConsent(checked === true)}
+                      aria-required="true"
+                      className="mt-1"
+                    />
+                    <Label
+                      htmlFor="smsConsent"
+                      className="text-xs font-normal leading-relaxed text-muted-foreground"
+                    >
+                      By providing your phone number and checking this box, you agree to receive SMS communications regarding your project estimate from BoldRemo at (281) 733-2812. Message frequency varies. Message and data rates may apply. Text STOP to unsubscribe or HELP for support. View our{" "}
+                      <Link to="/privacy-policy" className="text-primary underline underline-offset-2 hover:opacity-80 transition-opacity">
+                        Privacy Policy
+                      </Link>{" "}
+                      and{" "}
+                      <Link to="/terms" className="text-primary underline underline-offset-2 hover:opacity-80 transition-opacity">
+                        Terms of Service
+                      </Link>
+                      .
+                    </Label>
+                  </div>
+
                   
                   <div className="space-y-2">
                     <Label htmlFor="message">Tell us about your project</Label>

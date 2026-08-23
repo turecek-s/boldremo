@@ -21,7 +21,9 @@ const ContactSchema = z.object({
   email: z.string().email("Invalid email address").max(100, "Email too long"),
   phone: z.string().min(10, "Phone number too short").max(20, "Phone number too long").regex(/^[\d\s\-\+\(\)]+$/, "Invalid phone format"),
   message: z.string().min(10, "Message too short").max(2000, "Message too long").trim(),
+  smsConsent: z.boolean().optional().default(false),
 });
+
 
 // Simple in-memory rate limiting (resets on function cold start)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -117,7 +119,7 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    const { firstName, lastName, email, phone, message } = validationResult.data;
+    const { firstName, lastName, email, phone, message, smsConsent } = validationResult.data;
     console.log("Processing validated contact form for:", email);
 
     // Save to database
@@ -131,6 +133,7 @@ const handler = async (req: Request): Promise<Response> => {
         email: email,
         phone: phone,
         message: message,
+        sms_consent: smsConsent,
       });
 
     if (dbError) {
@@ -171,6 +174,7 @@ const handler = async (req: Request): Promise<Response> => {
           <p><strong>Name:</strong> ${safeFirstName} ${safeLastName}</p>
           <p><strong>Email:</strong> ${safeEmail}</p>
           <p><strong>Phone:</strong> ${safePhone}</p>
+          <p><strong>SMS Consent:</strong> ${smsConsent ? "Yes" : "No"}</p>
           <h3>Message:</h3>
           <p>${safeMessage}</p>
           <hr>
