@@ -54,6 +54,7 @@ export type Database = {
           last_name: string
           message: string
           phone: string
+          sms_consent: boolean
         }
         Insert: {
           created_at?: string
@@ -64,6 +65,7 @@ export type Database = {
           last_name: string
           message: string
           phone: string
+          sms_consent?: boolean
         }
         Update: {
           created_at?: string
@@ -74,6 +76,7 @@ export type Database = {
           last_name?: string
           message?: string
           phone?: string
+          sms_consent?: boolean
         }
         Relationships: []
       }
