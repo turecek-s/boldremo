@@ -152,7 +152,6 @@ const ROUTES: RouteSeo[] = [
     bodyHtml: `<h1>Custom Shower Installation in Houston, TX</h1><p>BoldREMO builds custom walk-in showers from scratch across Houston. GoBoard waterproofing, precision tile work, frameless glass, no subcontractors.</p><p>Call (832) 513-5737 for a free rough estimate or book a $75 in-person consultation.</p>`,
   },
   {
-  {
     path: "/privacy-policy",
     title: "Privacy Policy | BoldREMO",
     description:
