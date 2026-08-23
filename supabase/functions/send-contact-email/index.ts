@@ -21,7 +21,9 @@ const ContactSchema = z.object({
   email: z.string().email("Invalid email address").max(100, "Email too long"),
   phone: z.string().min(10, "Phone number too short").max(20, "Phone number too long").regex(/^[\d\s\-\+\(\)]+$/, "Invalid phone format"),
   message: z.string().min(10, "Message too short").max(2000, "Message too long").trim(),
+  smsConsent: z.boolean().optional().default(false),
 });
+
 
 // Simple in-memory rate limiting (resets on function cold start)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
