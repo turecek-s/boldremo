@@ -155,21 +155,32 @@ export const Footer = () => {
           <p className="text-primary-foreground/90 text-sm">
             © {new Date().getFullYear()} BoldREMO LLC. All rights reserved. | Luxury Bathroom Remodeling in Houston, Heights, Bellaire, River Oaks & Kingwood TX
           </p>
+          <p className="mt-3 text-primary-foreground/90 text-sm">
+            Questions or SMS support? Call or text{" "}
+            <a
+              href="tel:+12817332812"
+              className="underline underline-offset-4 hover:text-primary-foreground transition-colors"
+            >
+              (281) 733-2812
+            </a>
+            .
+          </p>
           <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
             <Link
               to="/privacy-policy"
-              className="text-primary-foreground/80 hover:text-primary-foreground text-xs transition-colors"
+              className="text-primary-foreground/90 hover:text-primary-foreground text-sm underline underline-offset-4 transition-colors"
             >
               Privacy Policy
             </Link>
-            <span className="text-primary-foreground/40 text-xs" aria-hidden="true">|</span>
+            <span className="text-primary-foreground/60 text-sm" aria-hidden="true">|</span>
             <Link
               to="/terms"
-              className="text-primary-foreground/80 hover:text-primary-foreground text-xs transition-colors"
+              className="text-primary-foreground/90 hover:text-primary-foreground text-sm underline underline-offset-4 transition-colors"
             >
               Terms &amp; Conditions
             </Link>
           </div>
+
         </div>
       </div>
     </footer>
