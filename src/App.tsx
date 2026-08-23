@@ -27,6 +27,8 @@ const BathroomRemodelCost = lazy(() => import("./pages/BathroomRemodelCost"));
 const OAuthConsent = lazy(() => import("./pages/OAuthConsent"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const Terms = lazy(() => import("./pages/Terms"));
 
 // Service Area Pages
 const Houston = lazy(() => import("./pages/service-areas/Houston"));
@@ -62,6 +64,8 @@ const App = () => (
               <Route path="/bathroom-remodel-cost-houston" element={<BathroomRemodelCost />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms" element={<Terms />} />
               <Route path="/.lovable/oauth/consent" element={<OAuthConsent />} />
               {/* Service Area Routes */}
               <Route path="/service-areas/houston" element={<Houston />} />

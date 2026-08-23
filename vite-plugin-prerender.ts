@@ -152,6 +152,21 @@ const ROUTES: RouteSeo[] = [
     bodyHtml: `<h1>Custom Shower Installation in Houston, TX</h1><p>BoldREMO builds custom walk-in showers from scratch across Houston. GoBoard waterproofing, precision tile work, frameless glass, no subcontractors.</p><p>Call (832) 513-5737 for a free rough estimate or book a $75 in-person consultation.</p>`,
   },
   {
+  {
+    path: "/privacy-policy",
+    title: "Privacy Policy | BoldREMO",
+    description:
+      "How BoldREMO collects, uses, and protects your information, including our SMS messaging privacy practices.",
+    bodyHtml: `<h1>Privacy Policy</h1><p>This Privacy Policy explains how BoldREMO LLC collects, uses, and protects information when you visit our website, contact us, or communicate with us by phone, email, or text message.</p><h2>Information We Collect</h2><p>Name, phone number, email address, home address, and details about your remodeling project, provided through our forms, calls, emails, or text messages.</p><h2>How We Use Your Information</h2><p>To schedule estimate visits and design consultations, provide pricing, communicate about your project, and follow up after a consultation.</p><h2>Mobile Information and SMS Privacy</h2><p>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties. Message and data rates may apply. Message frequency varies based on your interaction with our project and scheduling communications.</p><h2>How We Share Information</h2><p>We do not sell your information. We share it only with service providers who help us deliver our services.</p><h2>Your Choices</h2><p>Text STOP to opt out of text messages, or text HELP for assistance.</p><h2>Contact Us</h2><p>Questions about this Privacy Policy: info@boldremo.com or (832) 513-5737.</p>`,
+  },
+  {
+    path: "/terms",
+    title: "Terms & Conditions | BoldREMO",
+    description:
+      "Terms of service for BoldREMO, including our SMS messaging program terms, opt-out instructions, and general service terms.",
+    bodyHtml: `<h1>Terms &amp; Conditions</h1><p>By using this website, requesting an estimate, booking a consultation, or communicating with BoldREMO LLC by phone, email, or text message, you agree to these Terms &amp; Conditions.</p><h2>Our Services</h2><p>BoldREMO provides bathroom remodeling services, including tub-to-shower conversions and full bathroom renovations, across Houston, Heights, Bellaire, River Oaks, Kingwood, and Memorial.</p><h2>SMS Messaging Program Terms</h2><p>By opting in through our website form or by sending us an inbound text message, you agree to receive customer service updates, scheduling notifications, and project estimate communications from BoldREMO by SMS text message. Message frequency varies based on your project and scheduling activity. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages.</p><h2>Opt-Out Instructions</h2><p>Text STOP to our number at any time to opt out. We will send one final confirmation message.</p><h2>Help Instructions</h2><p>Text HELP to our number, or contact info@boldremo.com or (832) 513-5737.</p><h2>Estimates and Pricing</h2><p>Rough estimates are preliminary. Final pricing is determined after an in-person design consultation.</p><h2>Governing Law</h2><p>These terms are governed by the laws of the State of Texas.</p>`,
+  },
+  {
     path: "/admin",
     title: "Admin Dashboard | BoldREMO",
     description:

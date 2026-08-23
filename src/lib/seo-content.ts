@@ -301,6 +301,38 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       <p>Call BoldREMO at (832) 513-5737 to book your Memorial bathroom consult.</p>
     `,
   },
+  "/privacy-policy": {
+    path: "/privacy-policy",
+    title: "Privacy Policy | BoldREMO",
+    description:
+      "How BoldREMO collects, uses, and protects your information, including our SMS messaging privacy practices.",
+    bodyHtml: `
+      <h1>Privacy Policy</h1>
+      <p>This Privacy Policy explains how BoldREMO LLC collects, uses, and protects information when you visit our website, contact us, or communicate with us by phone, email, or text message.</p>
+      <h2>Information We Collect</h2>
+      <p>Name, phone number, email address, home address, and project details you provide through our forms, calls, emails, or text messages.</p>
+      <h2>Mobile Information and SMS Privacy</h2>
+      <p>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties. Message and data rates may apply. Message frequency varies based on your interaction with our project and scheduling communications.</p>
+      <h2>Your Choices</h2>
+      <p>Text STOP to opt out of text messages, or text HELP for assistance. Contact info@boldremo.com or (832) 513-5737.</p>
+    `,
+  },
+  "/terms": {
+    path: "/terms",
+    title: "Terms & Conditions | BoldREMO",
+    description:
+      "Terms of service for BoldREMO, including our SMS messaging program terms, opt-out instructions, and general service terms.",
+    bodyHtml: `
+      <h1>Terms &amp; Conditions</h1>
+      <p>By using this website, requesting an estimate, booking a consultation, or communicating with BoldREMO LLC by phone, email, or text message, you agree to these Terms &amp; Conditions.</p>
+      <h2>SMS Messaging Program Terms</h2>
+      <p>By opting in through our website form or by sending us an inbound text message, you agree to receive customer service updates, scheduling notifications, and project estimate communications from BoldREMO by SMS text message. Message frequency varies based on your project and scheduling activity. Message and data rates may apply. Carriers are not liable for delayed or undelivered messages.</p>
+      <h2>Opt-Out and Help</h2>
+      <p>Text STOP to opt out at any time. Text HELP for help, or contact info@boldremo.com or (832) 513-5737.</p>
+      <h2>Governing Law</h2>
+      <p>These Terms &amp; Conditions are governed by the laws of the State of Texas.</p>
+    `,
+  },
 };
 
 /** Render the SEO content as a hidden HTML block (for crawlers). */
