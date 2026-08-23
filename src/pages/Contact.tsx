@@ -221,8 +221,8 @@ const Contact = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone</Label>
-                    <Input id="phone" name="phone" type="tel" required />
+                    <Label htmlFor="phone">Phone (optional)</Label>
+                    <Input id="phone" name="phone" type="tel" />
                   </div>
 
                   <div className="flex items-start gap-3">
