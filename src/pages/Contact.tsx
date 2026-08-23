@@ -174,10 +174,29 @@ const Contact = () => {
 
               {/* Contact Form */}
               <div className="bg-card border border-border rounded-lg p-8">
+                {/* SMS CTA */}
+                <div className="mb-8 rounded-lg border border-primary/30 bg-primary/5 p-5">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <MessageSquare className="h-5 w-5 text-primary" />
+                    </div>
+                    <p className="text-foreground font-serif text-lg leading-relaxed">
+                      Text us directly at{" "}
+                      <a
+                        href="tel:+12817332812"
+                        className="text-primary font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity"
+                      >
+                        (281) 733-2812
+                      </a>{" "}
+                      for fast estimates, project updates, and appointment scheduling!
+                    </p>
+                  </div>
+                </div>
                 <h2 className="text-2xl font-serif font-semibold text-foreground mb-6">
                   Book Design Consultation
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
+
                   {/* Honeypot field - hidden from users, bots will fill it */}
                   <div className="absolute -left-[9999px]" aria-hidden="true">
                     <Label htmlFor="website">Website</Label>
