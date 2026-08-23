@@ -67,6 +67,8 @@ const Contact = () => {
         description: "Thank you for contacting us. We'll get back to you shortly.",
       });
       (e.target as HTMLFormElement).reset();
+      setSmsConsent(false);
+
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({
