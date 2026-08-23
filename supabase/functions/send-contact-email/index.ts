@@ -19,7 +19,10 @@ const ContactSchema = z.object({
   firstName: z.string().min(1, "First name is required").max(50, "First name too long").trim(),
   lastName: z.string().min(1, "Last name is required").max(50, "Last name too long").trim(),
   email: z.string().email("Invalid email address").max(100, "Email too long"),
-  phone: z.string().min(10, "Phone number too short").max(20, "Phone number too long").regex(/^[\d\s\-\+\(\)]+$/, "Invalid phone format"),
+  phone: z.union([
+    z.literal(""),
+    z.string().min(10, "Phone number too short").max(20, "Phone number too long").regex(/^[\d\s\-\+\(\)]+$/, "Invalid phone format"),
+  ]).optional().default(""),
   message: z.string().min(10, "Message too short").max(2000, "Message too long").trim(),
   smsConsent: z.boolean().optional().default(false),
 });
