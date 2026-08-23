@@ -223,6 +223,32 @@ const Contact = () => {
                     <Label htmlFor="phone">Phone</Label>
                     <Input id="phone" name="phone" type="tel" required />
                   </div>
+
+                  <div className="flex items-start gap-3">
+                    <Checkbox
+                      id="smsConsent"
+                      name="smsConsent"
+                      checked={smsConsent}
+                      onCheckedChange={(checked) => setSmsConsent(checked === true)}
+                      aria-required="true"
+                      className="mt-1"
+                    />
+                    <Label
+                      htmlFor="smsConsent"
+                      className="text-xs font-normal leading-relaxed text-muted-foreground"
+                    >
+                      By providing your phone number and checking this box, you agree to receive SMS communications regarding your project estimate from BoldRemo at (281) 733-2812. Message frequency varies. Message and data rates may apply. Text STOP to unsubscribe or HELP for support. View our{" "}
+                      <Link to="/privacy-policy" className="text-primary underline underline-offset-2 hover:opacity-80 transition-opacity">
+                        Privacy Policy
+                      </Link>{" "}
+                      and{" "}
+                      <Link to="/terms" className="text-primary underline underline-offset-2 hover:opacity-80 transition-opacity">
+                        Terms of Service
+                      </Link>
+                      .
+                    </Label>
+                  </div>
+
                   
                   <div className="space-y-2">
                     <Label htmlFor="message">Tell us about your project</Label>
