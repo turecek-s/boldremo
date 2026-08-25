@@ -29,6 +29,7 @@ export interface PriceBreakdown {
   fixtures: number;
   vanity: number;
   plumbing: number;
+  shower: number;
   contingency: number;
 }
 
@@ -158,6 +159,7 @@ export function calculateEstimate(inputs: CalculatorInputs): CalculatorResult {
     fixtures: Math.round(fixturesMid * neighborhoodMult),
     vanity: Math.round(vanityCost * neighborhoodMult),
     plumbing: Math.round(plumbingCost * neighborhoodMult),
+    shower: Math.round(showerCost * neighborhoodMult),
     contingency: 0,
   };
 
@@ -166,7 +168,8 @@ export function calculateEstimate(inputs: CalculatorInputs): CalculatorResult {
     breakdown.tile +
     breakdown.fixtures +
     breakdown.vanity +
-    breakdown.plumbing;
+    breakdown.plumbing +
+    breakdown.shower;
 
   // 12% contingency baked into the upper range
   breakdown.contingency = Math.round(subtotal * 0.12);
