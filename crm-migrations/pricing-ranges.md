@@ -32,18 +32,15 @@ no plumbing layout changes, existing shower kept. All prices rounded to nearest 
 ## Add-Ons (on top of base range)
 
 ### Shower
-| Option                  | Add to estimate |
-|-------------------------|-----------------|
-| Keep existing shower    | +$0             |
-| Standard shower rebuild | +$2,500         |
-| Walk-in shower          | +$5,500         |
-| Custom walk-in shower   | +$9,500         |
+| Option                  | Add to estimate (Houston) |
+|-------------------------|--------------------------|
+| Keep existing shower    | +$0                      |
+| Standard shower rebuild | +$2,500                  |
+| Walk-in shower          | +$5,500                  |
+| Custom walk-in shower   | +$9,500                  |
 
-> **Bug note:** As of this writing, the website calculator computes shower add-on costs
-> but does not include them in the final estimate total. The numbers in the base table
-> above assume "keep existing shower." When quoting a project that includes a new shower,
-> add the figures above manually. Tracking issue: fix in `calculateEstimate()` —
-> `showerCost` needs to be added into the `subtotal` line.
+Shower costs are included in the estimate total and subject to neighborhood premiums
+(e.g. a custom walk-in in River Oaks adds ~$11,875 rather than $9,500).
 
 ### Plumbing
 | Scope of plumbing work                        | Add to estimate |
@@ -94,13 +91,15 @@ Applied to the entire estimate (labor, tile, fixtures, vanity, plumbing).
 
 ## Quick Reference: Highest Realistic Projects
 
-| Scenario                                              | Range             |
-|-------------------------------------------------------|-------------------|
-| River Oaks luxury large master (stone, custom shower, major plumbing) | ~$80,000–$105,000 |
-| Memorial luxury large master (stone, walk-in, minor plumbing)         | ~$65,000–$88,000  |
-| Houston luxury large master (stone, walk-in)                          | ~$57,500–$78,000  |
+| Scenario                                                               | Range              |
+|------------------------------------------------------------------------|--------------------|
+| River Oaks luxury large master (stone, custom walk-in, major plumbing) | $82,000–$111,000   |
+| Memorial luxury large master (stone, walk-in, minor plumbing)          | $67,500–$91,000    |
+| Houston luxury large master (stone, walk-in)                           | $57,500–$77,500    |
+| Standard midrange (Houston, new standard shower)                       | $19,500–$26,500    |
 
-*All include 12% contingency baked into the upper end.*
+*All include 12% contingency and neighborhood premium. Shower costs are now
+correctly included after the bug fix to `calculateEstimate()`.*
 
 ---
 
@@ -120,7 +119,7 @@ Luxury finishes add 50–80% above midrange. Examples:
   Standard bath luxury: $27,000–$36,500
   Large master luxury:  $47,500–$64,500 (stone tile and custom shower can reach $80,000+)
 
-Common add-ons:
+Common add-ons (Houston base, neighborhood premiums apply):
   New standard shower: +$2,500
   Walk-in shower: +$5,500
   Custom walk-in: +$9,500
