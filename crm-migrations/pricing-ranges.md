@@ -1,36 +1,137 @@
 # BoldREMO Pricing Ranges
 
-These ranges are loaded at runtime from the `app_config` table (key: `pricing_guidance`).
-Edit that row directly in the Supabase dashboard or via the app — no code deployment needed.
+Derived from `src/lib/calculator-pricing.ts` (Houston market, 2026 labor + material rates).
+Edit the constants in that file to adjust; re-run the node script in the commit message to
+regenerate this table.
 
-This file is the canonical reference. After editing, copy the updated text into the
-`app_config` row so they stay in sync.
-
----
-
-## Standard Ranges
-
-| Project Type                       | Typical Range         |
-|------------------------------------|-----------------------|
-| Master bath full remodel           | $25,000 – $60,000     |
-| Guest / hall bath remodel          | $12,000 – $25,000     |
-| Half bath / powder room            | $5,000 – $12,000      |
-| Shower-only conversion or rebuild  | $8,000 – $20,000      |
-| Tub-to-shower conversion           | $6,000 – $15,000      |
-| Tile work only (labor + materials) | $4,000 – $12,000      |
-| Vanity replacement (single)        | $1,500 – $5,000       |
-| Vanity replacement (double)        | $3,000 – $8,000       |
-
-**Note:** Ranges assume typical scope. High-end tile, custom fixtures, layout changes,
-or structural work push to the top of the range or beyond. Always phrase as
-"typically ranges from X to Y depending on materials and scope" — never a firm quote.
+To update what the AI uses in SMS replies, copy the revised text from the
+**AI Prompt Block** section at the bottom into the `app_config` table row
+(key: `pricing_guidance`) in the Supabase dashboard — no code deployment needed.
 
 ---
 
-## Tier 1 vs Tier 2 pricing rules
+## Base Ranges by Bathroom Type and Scope
 
-- **Tier 1 (auto-send):** General range questions from the table above. Always use the
-  range language — never a number without a floor and ceiling.
-- **Tier 2 (approve first):** Any message where a specific dollar figure is relevant,
-  the lead pushes back on price, or a competitor quote is mentioned. Approve before
-  sending so the reply can be tailored to the negotiation.
+*Assumptions: Houston (no area premium), porcelain tile, single vanity (double for large master),
+no plumbing layout changes, existing shower kept. All prices rounded to nearest $500.*
+
+| Bathroom Type       | Refresh       | Midrange        | Luxury          |
+|---------------------|---------------|-----------------|-----------------|
+| Half bath           | $4,000–$5,500 | $6,500–$9,000   | $11,500–$15,500 |
+| Small full bath     | $7,500–$10,500| $11,500–$15,500 | $19,000–$25,500 |
+| Standard bath       | $11,500–$15,500| $17,000–$23,500 | $27,000–$36,500 |
+| Large master bath   | $20,500–$28,000| $30,500–$41,000 | $47,500–$64,500 |
+
+**Scope definitions:**
+- **Refresh** — cosmetic update: new tile, vanity, fixtures, hardware. No layout changes.
+- **Midrange** — full remodel: everything replaced, new shower if needed, some layout flexibility.
+- **Luxury** — high-end finishes throughout: custom tile, premium fixtures, built-in niches, etc.
+
+---
+
+## Add-Ons (on top of base range)
+
+### Shower
+| Option                  | Add to estimate |
+|-------------------------|-----------------|
+| Keep existing shower    | +$0             |
+| Standard shower rebuild | +$2,500         |
+| Walk-in shower          | +$5,500         |
+| Custom walk-in shower   | +$9,500         |
+
+> **Bug note:** As of this writing, the website calculator computes shower add-on costs
+> but does not include them in the final estimate total. The numbers in the base table
+> above assume "keep existing shower." When quoting a project that includes a new shower,
+> add the figures above manually. Tracking issue: fix in `calculateEstimate()` —
+> `showerCost` needs to be added into the `subtotal` line.
+
+### Plumbing
+| Scope of plumbing work                        | Add to estimate |
+|-----------------------------------------------|-----------------|
+| None (fixtures in same locations)             | +$0             |
+| Minor (new fixture hookups, supply lines)     | +$1,200         |
+| Major (moving drains, new walls, layout change)| +$4,500        |
+
+### Vanity (single vs. double)
+| Vanity   | Refresh | Midrange | Luxury  |
+|----------|---------|----------|---------|
+| Single   | $800    | $1,800   | $4,500  |
+| Double   | $1,600  | $3,500   | $8,500  |
+
+*The base table uses single vanity for all sizes except large master (double).*
+
+---
+
+## Tile — Installed Cost per Square Foot
+
+*Covers floor + shower walls (~1.6× floor square footage total.*
+
+| Tile Grade      | Installed (material + labor) |
+|-----------------|------------------------------|
+| Ceramic         | $12–$20 / sqft               |
+| Porcelain       | $18–$32 / sqft               |
+| Natural stone   | $35–$70 / sqft               |
+
+*Base table uses porcelain. Luxury projects with stone tile push the upper range higher:
+a large master with stone tile runs $52,000–$70,500.*
+
+---
+
+## Neighborhood Premiums
+
+Applied to the entire estimate (labor, tile, fixtures, vanity, plumbing).
+
+| Area            | Premium |
+|-----------------|---------|
+| Houston (base)  | —       |
+| The Heights     | +5%     |
+| Bellaire        | +10%    |
+| Memorial        | +15%    |
+| River Oaks      | +25%    |
+| Kingwood        | —       |
+
+---
+
+## Quick Reference: Highest Realistic Projects
+
+| Scenario                                              | Range             |
+|-------------------------------------------------------|-------------------|
+| River Oaks luxury large master (stone, custom shower, major plumbing) | ~$80,000–$105,000 |
+| Memorial luxury large master (stone, walk-in, minor plumbing)         | ~$65,000–$88,000  |
+| Houston luxury large master (stone, walk-in)                          | ~$57,500–$78,000  |
+
+*All include 12% contingency baked into the upper end.*
+
+---
+
+## AI Prompt Block
+
+Copy this into the `app_config` row (key: `pricing_guidance`) to update what the AI
+uses in Tier 1 auto-replies. Keep the phrasing — the system prompt tells the AI to
+always say "typically ranges from X to Y depending on materials and scope."
+
+```
+Half bath:           $4,000–$9,000   (refresh to midrange)
+Small full bath:     $7,500–$15,500  (refresh to midrange)
+Standard bath:       $11,500–$23,500 (refresh to midrange)
+Large master bath:   $20,500–$41,000 (refresh to midrange)
+
+Luxury finishes add 50–80% above midrange. Examples:
+  Standard bath luxury: $27,000–$36,500
+  Large master luxury:  $47,500–$64,500 (stone tile and custom shower can reach $80,000+)
+
+Common add-ons:
+  New standard shower: +$2,500
+  Walk-in shower: +$5,500
+  Custom walk-in: +$9,500
+  Moving plumbing (minor): +$1,200
+  Major layout change: +$4,500
+  Double vanity vs single: +$1,700 midrange, +$4,000 luxury
+
+Area premiums over Houston base:
+  Heights +5%, Bellaire +10%, Memorial +15%, River Oaks +25%
+
+All ranges include a 12% contingency and assume typical scope.
+High-end tile, custom fixtures, or structural work push to the top of the range or beyond.
+Always phrase as "typically ranges from X to Y depending on materials and scope" — never a firm quote.
+```
