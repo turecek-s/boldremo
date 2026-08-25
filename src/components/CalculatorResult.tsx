@@ -20,6 +20,7 @@ const BREAKDOWN_LABELS: Record<keyof Result["breakdown"], string> = {
   fixtures: "Fixtures & Lighting",
   vanity: "Vanity & Cabinetry",
   plumbing: "Plumbing Changes",
+  shower: "Shower / Tub Conversion",
   contingency: "12% Contingency",
 };
 
@@ -98,6 +99,7 @@ export const CalculatorResult = ({ inputs, result, onReset }: Props) => {
               "bg-primary/60",
               "bg-primary/45",
               "bg-primary/30",
+              "bg-primary/20",
               "bg-muted-foreground/40",
             ];
             return (
@@ -121,6 +123,7 @@ export const CalculatorResult = ({ inputs, result, onReset }: Props) => {
               "bg-primary/60",
               "bg-primary/45",
               "bg-primary/30",
+              "bg-primary/20",
               "bg-muted-foreground/40",
             ];
             return (

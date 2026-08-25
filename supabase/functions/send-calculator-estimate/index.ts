@@ -21,6 +21,7 @@ const BreakdownSchema = z.object({
   fixtures: z.number(),
   vanity: z.number(),
   plumbing: z.number(),
+  shower: z.number(),
   contingency: z.number(),
 });
 
@@ -119,6 +120,7 @@ const BREAKDOWN_LABELS: Record<string, string> = {
   fixtures: "Fixtures & Lighting",
   vanity: "Vanity & Cabinetry",
   plumbing: "Plumbing Changes",
+  shower: "Shower / Tub Conversion",
   contingency: "12% Contingency",
 };
 
