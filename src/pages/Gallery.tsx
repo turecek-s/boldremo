@@ -18,71 +18,61 @@ const images = [
     src: boldremo1, 
     alt: "Glass walk-in shower with marble tile and freestanding tub in Houston TX",
     caption: "Master Bath Transformation",
-    location: "River Oaks",
-    value: "$29,000"
+    location: "River Oaks"
   },
   { 
     src: boldremo2, 
     alt: "Luxury master bathroom with chandelier and glass shower in Bellaire Houston",
     caption: "Luxury Suite Renovation",
-    location: "Bellaire",
-    value: "$42,000"
+    location: "Bellaire"
   },
   { 
     src: boldremo3, 
     alt: "Modern bathroom with decorative tile accent wall and soaking tub in River Oaks TX",
     caption: "Spa-Style Retreat",
-    location: "River Oaks",
-    value: "$38,000"
+    location: "River Oaks"
   },
   { 
     src: boldremo4, 
     alt: "Walk-in tub with LED lighting and marble tile in Houston Heights TX",
     caption: "Accessible Luxury Bath",
-    location: "Heights",
-    value: "$24,000"
+    location: "Heights"
   },
   { 
     src: boldremo5, 
     alt: "Freestanding soaking tub with modern fixtures in Kingwood Houston",
     caption: "Modern Soaking Tub Install",
-    location: "Kingwood",
-    value: "$18,500"
+    location: "Kingwood"
   },
   { 
     src: boldremo6, 
     alt: "Custom walk-in shower with marble walls and bench in Bellaire TX",
     caption: "Walk-In Shower Remodel",
-    location: "Bellaire",
-    value: "$22,000"
+    location: "Bellaire"
   },
   { 
     src: boldremo7, 
     alt: "Herringbone tile shower surround with mosaic niche in River Oaks Houston",
     caption: "Herringbone Tile Feature",
-    location: "River Oaks",
-    value: "$26,000"
+    location: "River Oaks"
   },
   { 
     src: boldremo8, 
     alt: "Bathroom vanity with hexagon tile backsplash in Houston Heights TX",
     caption: "Guest Bath Refresh",
-    location: "Heights",
-    value: "$12,500"
+    location: "Heights"
   },
   { 
     src: boldremo9, 
     alt: "Luxury master bathroom with marble floors and glass shower in Kingwood TX",
     caption: "Complete Master Overhaul",
-    location: "Kingwood",
-    value: "$35,000"
+    location: "Kingwood"
   },
   { 
     src: boldremo10, 
     alt: "Modern bathroom with patterned tile floor and green vanity in Houston Heights",
     caption: "Bold Pattern Statement",
-    location: "Heights",
-    value: "$14,000"
+    location: "Heights"
   },
 ];
 
@@ -151,7 +141,7 @@ const Gallery = () => {
                       {image.caption}
                     </p>
                     <p className="text-primary-foreground/90 text-sm">
-                      {image.location}, {image.value}
+                      {image.location}
                     </p>
                   </div>
                 </div>
