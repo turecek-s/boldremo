@@ -129,12 +129,15 @@ Inbound SMS
 ## AI Prompt Key Rules (in classify() system prompt)
 
 1. **Scope**: Bathroom/tile ONLY. Deflect anything else with warm out-of-scope message.
-2. **Pricing**: Use ONLY figures from the OFFICIAL PRICING REFERENCE — never training-data prices.
-3. **No vague promises**: Never say "I'll follow up soon" in Tier 1/2. If follow-up needed → Tier 3.
-4. **No fabricated rules**: Never invent service area restrictions or business policies not in the prompt.
-5. **No specialty disclosure**: Never mention that the company specializes in bathrooms when responding.
-6. **Tone**: Warm, polished, composed. Like a trusted contractor, not a friend texting. No "Awesome!", minimal exclamation points.
-7. **Extended thinking**: claude-sonnet-5 uses thinking blocks; code finds text block by type, not index.
+2. **Pricing**: Use ONLY figures from the OFFICIAL PRICING REFERENCE — never training-data prices. Default to MIDRANGE unless lead explicitly says "luxury," "high-end," "premium," etc.
+3. **Pricing education**: When quoting a range, always follow with one sentence on what's included (waterproofing, permits, licensed labor, quality materials) + warranty for that tier.
+4. **Warranty**: Basic 2 yrs · Midrange 5 yrs · Luxury 7 yrs — workmanship only. Never promise manufacturer/material warranties.
+5. **No vague promises**: Never say "I'll follow up soon" in Tier 1/2. If follow-up needed → Tier 3.
+6. **No fabricated rules**: Never invent service area restrictions or business policies not in the prompt.
+7. **No specialty disclosure**: Never mention that the company specializes in bathrooms when responding.
+8. **Tone**: Warm, polished, composed. Like a trusted contractor, not a friend texting. No "Awesome!", minimal exclamation points.
+9. **Extended thinking**: claude-sonnet-5 uses thinking blocks; code finds text block by type, not index.
+10. **Tier 1 boundary**: Giving a price range from the table for clear-scope inquiries = Tier 1 auto-reply. Only firm bids, complaints, discount requests, or genuinely unusual projects → Tier 2.
 
 ---
 
@@ -161,6 +164,11 @@ Add-ons:
 Area premiums:
   Kingwood: no premium (Houston base rate)
   Heights +5%, Bellaire +10%, Memorial +15%, River Oaks +25%
+
+Warranty by finish tier:
+  Basic (entry-level finishes):    2 years workmanship
+  Midrange (standard finishes):    5 years workmanship
+  Luxury (premium/custom finishes): 7 years workmanship
 ```
 
 ---
@@ -210,6 +218,24 @@ Area premiums:
 - Conversation panel on lead detail: chat-style thread, manual send, pending reply inline approve/edit/discard, 5s polling
 - New server routes: POST /api/crm/send-sms, POST /api/crm/resolve-pending
 
-### 2026-09-20 — Session Notes Setup (this session)
+### 2026-09-20 — Session Notes Setup
 - CLAUDE.md created with architecture docs and session log
-- Architecture diagram artifact created
+- Architecture diagram artifact created: https://claude.ai/artifact/84oCC179EMoTY6HuJQc6Xa
+
+### 2026-09-20 — Notification + Pricing + UX Fixes
+**Owner notifications:**
+- Tier 2 approval SMS was truncating draft at 100 chars → now sends two SMS: approval prompt + full draft untruncated
+- All tiers now include the lead's inbound message in the owner notification (previously owner couldn't see what the lead wrote)
+- Tier 1 owner notification fires even if Twilio fails to deliver to the lead (shows "⚠️ Reply FAILED" so owner knows to follow up manually)
+
+**Pricing fixes:**
+- AI was defaulting to luxury-tier pricing when lead didn't specify → added hard rule to default to midrange unless lead says "luxury," "high-end," "premium," etc.
+- Tier 1/2 boundary clarified: quoting a range from the table = Tier 1 auto-reply; only firm bids/complaints/discounts → Tier 2
+
+**Customer education (new):**
+- Every price quote now includes one sentence explaining what's covered (waterproofing, permits, licensed labor, quality materials) so leads don't just compare raw numbers to cheaper unqualified quotes
+- Warranty quoted per tier: Basic 2yr · Midrange 5yr · Luxury 7yr (workmanship only, not manufacturer warranties)
+- app_config pricing_guidance updated in Supabase to include warranty tiers
+
+**Verified via internal test:**
+- Heights master bath + walk-in + double vanity → Tier 1, $29,000–$50,600, correct value education + 5yr warranty, no hallucinations
