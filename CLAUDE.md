@@ -143,32 +143,27 @@ Inbound SMS
 
 ## Pricing Reference (from app_config, last verified 2026-09-20)
 
-```
-Half bath:           $4,000–$9,000
-Small full bath:     $7,500–$15,500
-Standard bath:       $11,500–$23,500
-Large master bath:   $20,500–$41,000
+Base price = complete bathroom renovation (demo, waterproofing, tile, shower, vanity, fixtures, permits, labor). NO area premiums — price by scope only.
 
-Luxury finishes add 50–80% above midrange.
+```
+Half bath:         $4,000–$9,000
+Small full bath:   $7,500–$15,500
+Standard bath:     $11,500–$23,500
+Large master bath: $20,500–$41,000
+
+Luxury finishes add 50–80% above midrange:
   Standard bath luxury: $27,000–$36,500
   Large master luxury:  $47,500–$64,500 (can reach $80,000+)
 
-Add-ons:
-  New standard shower: +$2,500
-  Walk-in shower: +$5,500
-  Custom walk-in: +$9,500
-  Moving plumbing (minor): +$1,200
-  Major layout change: +$4,500
-  Double vanity vs single: +$1,700 midrange, +$4,000 luxury
-
-Area premiums:
-  Kingwood: no premium (Houston base rate)
-  Heights +5%, Bellaire +10%, Memorial +15%, River Oaks +25%
+True add-ons (structural changes only — fixtures are already included):
+  Minor plumbing relocation: +$1,200
+  Major layout change:       +$4,500
+  Custom walk-in shower upgrade (vs standard): +$4,000–$8,000
 
 Warranty by finish tier:
-  Basic (entry-level finishes):    2 years workmanship
-  Midrange (standard finishes):    5 years workmanship
-  Luxury (premium/custom finishes): 7 years workmanship
+  Basic (entry-level):    2 years workmanship
+  Midrange (standard):    5 years workmanship
+  Luxury (premium/custom): 7 years workmanship
 ```
 
 ---
@@ -239,3 +234,17 @@ Warranty by finish tier:
 
 **Verified via internal test:**
 - Heights master bath + walk-in + double vanity → Tier 1, $29,000–$50,600, correct value education + 5yr warranty, no hallucinations
+
+### 2026-09-20 — Pricing Model Rewrite
+**Area premiums removed:**
+- Leads were withholding location fearing price discrimination → all neighborhood premiums removed from pricing_guidance and prompt hard rules
+- Price is now scope-only, regardless of location
+
+**Fixtures-included pricing model:**
+- Previous model listed walk-in shower (+$5,500), double vanity (+$1,700), etc. as add-ons on top of base
+- New model: base price covers a COMPLETE full bathroom remodel (demo, shower, vanity, tile, waterproofing, plumbing, fixtures, permits, labor) — everything
+- True add-ons are only structural changes (plumbing relocation, layout change) or custom walk-in shower upgrade
+- If lead asks for partial service only (just tile, just vanity), quote lower-tier range + offer full remodel
+
+**Verified via internal test:**
+- Master bath + walk-in shower + double vanity → Tier 1, single range $20,500–$41,000, no fixture itemizing, 5yr warranty, no area premium
