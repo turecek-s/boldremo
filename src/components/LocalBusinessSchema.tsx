@@ -1,5 +1,4 @@
 const LocalBusinessSchema = () => {
-const LocalBusinessSchema = () => {
   const schemaData = {
 
     "@context": "https://schema.org",
