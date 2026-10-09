@@ -1,5 +1,3 @@
-import { TESTIMONIALS } from "@/data/testimonials";
-
 const LocalBusinessSchema = () => {
   const schemaData = {
 
@@ -57,6 +55,14 @@ const LocalBusinessSchema = () => {
       {
         "@type": "Neighborhood",
         "name": "Kingwood",
+        "containedInPlace": {
+          "@type": "City",
+          "name": "Houston"
+        }
+      },
+      {
+        "@type": "Neighborhood",
+        "name": "Memorial",
         "containedInPlace": {
           "@type": "City",
           "name": "Houston"
@@ -133,32 +139,12 @@ const LocalBusinessSchema = () => {
       "https://www.facebook.com/BoldREMOllc/",
       "https://www.instagram.com/boldremo_llc/",
       "https://www.linkedin.com/company/boldremo",
-      "https://youtube.com/@boldremo"
+      "https://youtube.com/@boldremo",
+      "https://share.google/TqWHKU1gwjtyFIbLV",
+      "https://www.tiktok.com/@boldremo_llc"
     ],
     "image": "https://www.boldremo.com/og-image.jpg",
-    "logo": "https://www.boldremo.com/favicon.png",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": TESTIMONIALS.length.toString(),
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": TESTIMONIALS.map((t) => ({
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": t.name
-      },
-      "datePublished": t.date,
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": t.rating.toString(),
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "reviewBody": t.text
-    }))
+    "logo": "https://www.boldremo.com/favicon.png"
   };
 
 
