@@ -1,4 +1,4 @@
-
+const LocalBusinessSchema = () => {
 const LocalBusinessSchema = () => {
   const schemaData = {
 
