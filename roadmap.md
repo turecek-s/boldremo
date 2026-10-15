@@ -5,3 +5,4 @@
 - [ ] Restore live review availability (blocked: Google Places project billing is disabled).
 - [x] Verify the build and desktop/mobile appearance.
 - [x] Replace the single hero photograph with the uploaded vanity before/after pair and verify common viewport widths and floating contact spacing.
+- [ ] Bundle the vanity photographs as static imports, publish, and verify both images on the production domain.

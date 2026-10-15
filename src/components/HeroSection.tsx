@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Star, Hammer, BadgeCheck } from "lucide-react";
-import beforeVanity from "@/assets/before-vanity.webp.asset.json";
-import afterVanity from "@/assets/after-vanity.webp.asset.json";
+import beforeVanity from "@/assets/before-vanity.webp";
+import afterVanity from "@/assets/after-vanity.webp";
 import { useGoogleReviews } from "@/hooks/use-google-reviews";
 
 export const HeroSection = () => {
@@ -28,7 +28,7 @@ export const HeroSection = () => {
           <div className="grid grid-cols-2 gap-1 sm:gap-2 mb-6" role="group" aria-label="The same BoldREMO bathroom before and after remodeling">
             <figure className="relative min-w-0 aspect-[3/4] sm:aspect-auto sm:h-[360px] overflow-hidden">
               <img
-                src={beforeVanity.url}
+                src={beforeVanity}
                 alt="Before remodeling: white vanity with a dark countertop, rectangular framed mirror, and worn terrazzo-style floor beside the toilet"
                 className="h-full w-full object-cover object-[center_65%]"
                 width={1512}
@@ -41,7 +41,7 @@ export const HeroSection = () => {
             </figure>
             <figure className="relative min-w-0 aspect-[3/4] sm:aspect-auto sm:h-[360px] overflow-hidden">
               <img
-                src={afterVanity.url}
+                src={afterVanity}
                 alt="After remodeling: dark wood vanity with a white quartz countertop, arched gold-framed mirror, two vertical lights, brushed-gold fixtures, and repainted walls"
                 className="h-full w-full object-cover object-[center_65%]"
                 width={1512}
