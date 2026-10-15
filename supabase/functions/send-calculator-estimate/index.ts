@@ -116,7 +116,7 @@ const PLUMBING_LABELS: Record<string, string> = {
 
 const BREAKDOWN_LABELS: Record<string, string> = {
   labor: "Labor & Installation",
-  tile: "Tile & Stone",
+  tile: "Tile",
   fixtures: "Fixtures & Lighting",
   vanity: "Vanity & Cabinetry",
   plumbing: "Plumbing Changes",

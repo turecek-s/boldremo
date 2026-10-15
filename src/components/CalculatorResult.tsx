@@ -16,7 +16,7 @@ interface Props {
 
 const BREAKDOWN_LABELS: Record<keyof Result["breakdown"], string> = {
   labor: "Labor & Installation",
-  tile: "Tile & Stone",
+  tile: "Tile",
   fixtures: "Fixtures & Lighting",
   vanity: "Vanity & Cabinetry",
   plumbing: "Plumbing Changes",
