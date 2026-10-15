@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Star, Hammer, BadgeCheck } from "lucide-react";
-import beforeVanity from "@/assets/before-vanity.webp";
-import afterVanity from "@/assets/after-vanity.webp";
+import { TubComparison } from "@/components/TubComparison";
 import { useGoogleReviews } from "@/hooks/use-google-reviews";
 
 export const HeroSection = () => {
@@ -13,8 +12,8 @@ export const HeroSection = () => {
 
   return (
     <section className="relative overflow-hidden bg-background pt-24 pb-20 md:pt-28 md:pb-12">
-      <div className="container-custom text-center px-4">
-        <div className="max-w-4xl mx-auto">
+      <div className="container-custom grid items-center gap-8 text-center px-4 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-10 lg:text-left xl:grid-cols-[minmax(0,1fr)_400px]">
+        <div className="min-w-0 max-w-2xl mx-auto lg:mx-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-semibold text-primary mb-4 text-balance">
             Houston Bathroom Remodeling
             <br />
@@ -25,36 +24,7 @@ export const HeroSection = () => {
             Get realistic project price ranges instantly, or book a $75 in-home design consult credited toward your project.
           </p>
 
-          <div className="grid grid-cols-2 gap-1 sm:gap-2 mb-6" role="group" aria-label="The same BoldREMO bathroom before and after remodeling">
-            <figure className="relative min-w-0 aspect-[3/4] sm:aspect-auto sm:h-[360px] overflow-hidden">
-              <img
-                src={beforeVanity}
-                alt="Before remodeling: white vanity with a dark countertop, rectangular framed mirror, and worn terrazzo-style floor beside the toilet"
-                className="h-full w-full object-cover object-[center_65%]"
-                width={1512}
-                height={2016}
-                loading="eager"
-                decoding="async"
-                fetchPriority="high"
-              />
-              <figcaption className="absolute left-3 top-3 bg-background px-3 py-1 text-xs sm:text-sm font-semibold text-foreground shadow-sm">Before</figcaption>
-            </figure>
-            <figure className="relative min-w-0 aspect-[3/4] sm:aspect-auto sm:h-[360px] overflow-hidden">
-              <img
-                src={afterVanity}
-                alt="After remodeling: dark wood vanity with a white quartz countertop, arched gold-framed mirror, two vertical lights, brushed-gold fixtures, and repainted walls"
-                className="h-full w-full object-cover object-[center_65%]"
-                width={1512}
-                height={2016}
-                loading="eager"
-                decoding="async"
-                fetchPriority="high"
-              />
-              <figcaption className="absolute left-3 top-3 bg-background px-3 py-1 text-xs sm:text-sm font-semibold text-foreground shadow-sm">After</figcaption>
-            </figure>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 lg:justify-start">
             <Button onClick={scrollToPricing} size="lg" className="min-w-[220px]">
               <ArrowRight className="h-5 w-5" />
               See Typical Project Prices
@@ -66,7 +36,7 @@ export const HeroSection = () => {
               </Link>
             </Button>
           </div>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-xs font-medium text-foreground sm:text-sm">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-xs font-medium text-foreground sm:text-sm lg:justify-start">
             {reviews && (
               <a
                 href="https://share.google/TqWHKU1gwjtyFIbLV"
@@ -93,6 +63,7 @@ export const HeroSection = () => {
             </span>
           </div>
         </div>
+        <TubComparison />
       </div>
     </section>
   );
