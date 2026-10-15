@@ -4,3 +4,4 @@
 - [x] Add a compact Stan introduction before pricing.
 - [ ] Restore live review availability (blocked: Google Places project billing is disabled).
 - [x] Verify the build and desktop/mobile appearance.
+- [ ] Replace the single hero photograph with the uploaded vanity before/after pair and verify common viewport widths and floating contact spacing.

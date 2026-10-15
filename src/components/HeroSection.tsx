@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Star, Hammer, BadgeCheck } from "lucide-react";
-import heroBathroom from "@/assets/boldremo-2.jpg";
+import beforeVanity from "@/assets/before-vanity.webp.asset.json";
+import afterVanity from "@/assets/after-vanity.webp.asset.json";
 import { useGoogleReviews } from "@/hooks/use-google-reviews";
 
 export const HeroSection = () => {
@@ -11,35 +12,47 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[720px] sm:min-h-[540px] h-[calc(100svh-160px)] md:h-[calc(100svh-128px)] flex items-center justify-center overflow-hidden pt-28 pb-20">
-      {/* Background Image - LCP element, priority loaded with native img for fastest paint */}
-      <div className="absolute inset-0">
-        <img
-          src={heroBathroom}
-          alt="BoldREMO finished bathroom with a freestanding tub beneath shuttered windows, chandelier, and frameless glass walk-in shower"
-          className="w-full h-full object-cover"
-          width={1170}
-          height={871}
-          sizes="100vw"
-          loading="eager"
-          decoding="sync"
-          fetchPriority="high"
-        />
-        <div className="hero-overlay absolute inset-0" />
-      </div>
-
-      {/* Content - H1 is visible immediately for LCP, then animates */}
-      <div className="relative z-10 container-custom text-center px-4">
+    <section className="relative overflow-hidden bg-background pt-24 pb-20 md:pt-28 md:pb-12">
+      <div className="container-custom text-center px-4">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-semibold text-primary mb-6 text-balance drop-shadow-lg">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-semibold text-primary mb-4 text-balance">
             Houston Bathroom Remodeling
             <br />
             <span className="text-foreground">Built Right, Start to Finish</span>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-foreground font-medium mb-10 drop-shadow-md max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-foreground font-medium mb-6 max-w-2xl mx-auto">
             Get realistic project price ranges instantly, or book a $75 in-home design consult credited toward your project.
           </p>
+
+          <div className="grid grid-cols-2 gap-1 sm:gap-2 mb-6" role="group" aria-label="The same BoldREMO bathroom before and after remodeling">
+            <figure className="relative min-w-0 aspect-[3/4] sm:aspect-auto sm:h-[360px] overflow-hidden">
+              <img
+                src={beforeVanity.url}
+                alt="Before remodeling: white vanity with a dark countertop, rectangular framed mirror, and worn terrazzo-style floor beside the toilet"
+                className="h-full w-full object-cover object-[center_65%]"
+                width={1512}
+                height={2016}
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+              />
+              <figcaption className="absolute left-3 top-3 bg-background px-3 py-1 text-xs sm:text-sm font-semibold text-foreground shadow-sm">Before</figcaption>
+            </figure>
+            <figure className="relative min-w-0 aspect-[3/4] sm:aspect-auto sm:h-[360px] overflow-hidden">
+              <img
+                src={afterVanity.url}
+                alt="After remodeling: dark wood vanity with a white quartz countertop, arched gold-framed mirror, two vertical lights, brushed-gold fixtures, and repainted walls"
+                className="h-full w-full object-cover object-[center_65%]"
+                width={1512}
+                height={2016}
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+              />
+              <figcaption className="absolute left-3 top-3 bg-background px-3 py-1 text-xs sm:text-sm font-semibold text-foreground shadow-sm">After</figcaption>
+            </figure>
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button onClick={scrollToPricing} size="lg" className="min-w-[220px]">
@@ -79,13 +92,6 @@ export const HeroSection = () => {
               200+ Houston Bathrooms Remodeled
             </span>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-5 left-0 right-0 flex justify-center motion-safe:md:animate-bounce">
-        <div className="w-6 h-10 border-2 border-foreground/40 rounded-full flex items-start justify-center p-1">
-          <div className="w-1.5 h-2.5 bg-foreground/60 rounded-full motion-safe:md:animate-pulse" />
         </div>
       </div>
     </section>
