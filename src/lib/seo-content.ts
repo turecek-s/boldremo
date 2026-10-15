@@ -92,11 +92,11 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       <p>Explore real bathroom remodel projects completed by BoldREMO across Houston and surrounding neighborhoods. Each project showcases our craftsmanship in tile work, custom showers, vanities, and full bathroom renovations.</p>
       <h2>Featured Project Types</h2>
       <p>Master Bath Transformation in River Oaks featuring a glass walk-in shower with marble tile and freestanding tub, a $29,000 renovation.</p>
-      <p>Luxury Suite Renovation in Bellaire with a chandelier, custom glass shower, and premium finishes, a $42,000 transformation.</p>
+      <p>Suite Renovation in Bellaire with a chandelier, custom glass shower, and premium finishes, a $42,000 transformation.</p>
       <p>Spa-Style Retreat in River Oaks featuring a decorative tile accent wall and freestanding soaking tub, a $38,000 project.</p>
-      <p>Accessible Luxury Bath in Houston Heights with a walk-in tub, LED lighting, and marble tile, designed for comfort and elegance.</p>
+      <p>Accessible Walk-In Bath in Houston Heights with a walk-in tub, LED lighting, and porcelain tile, designed for comfort and elegance.</p>
       <h2>What Our Gallery Showcases</h2>
-      <p>Glass walk-in showers, frameless enclosures, freestanding soaking tubs, marble and porcelain tile work, custom vanities, modern fixtures, and complete spa-style bathroom retreats. Every photo represents a real BoldREMO project completed in the greater Houston area.</p>
+      <p>Glass walk-in showers, frameless enclosures, freestanding soaking tubs, ceramic and porcelain tile work, custom vanities, modern fixtures, and complete spa-style bathroom retreats. Every photo represents a real BoldREMO project completed in the greater Houston area.</p>
       <p>Ready to transform your bathroom? Call BoldREMO at (832) 513-5737 or email info@boldremo.com.</p>
     `,
   },
@@ -104,10 +104,10 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/about",
     title: "About BoldREMO | Houston Bathroom Remodeling Company",
     description:
-      "Meet BoldREMO, Houston's trusted luxury bathroom remodeling team. Licensed, insured, with transparent pricing and quality craftsmanship.",
+      "Meet BoldREMO, Houston's trusted bathroom remodeling team. Licensed, insured, with transparent pricing and quality craftsmanship.",
     bodyHtml: `
-      <h1>About BoldREMO, Houston's Luxury Bathroom Remodeling Team</h1>
-      <p>BoldREMO is Houston's trusted partner for luxury bathroom remodeling and home renovation. Founded by Stan, our team brings decades of combined craftsmanship experience to every project across Houston, Heights, Bellaire, River Oaks, and Kingwood.</p>
+      <h1>About BoldREMO, Houston's Bathroom Remodeling Team</h1>
+      <p>BoldREMO is Houston's trusted partner for bathroom remodeling and home renovation. Founded by Stan, our team brings decades of combined craftsmanship experience to every project across Houston, Heights, Bellaire, River Oaks, and Kingwood.</p>
       <h2>Our Values</h2>
       <p>Quality craftsmanship on every project. Transparent pricing with no hidden costs. Licensed and insured professionals. Personalized designs for your unique space. Timely project completion. Customer satisfaction guarantee.</p>
       <h2>Why Homeowners Choose BoldREMO</h2>
@@ -194,12 +194,12 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
   },
   "/service-areas/river-oaks": {
     path: "/service-areas/river-oaks",
-    title: "Luxury Bathroom Remodeling River Oaks | BoldREMO",
+    title: "Bathroom Remodeling River Oaks | BoldREMO",
     description:
       "High-end bathroom remodeling for River Oaks estates. BoldREMO delivers spa-quality renovations with premium materials and impeccable craftsmanship. (832) 513-5737.",
     bodyHtml: `
-      <h1>Luxury Bathroom Remodeling in River Oaks</h1>
-      <p>BoldREMO delivers high-end bathroom renovations that match the elegance of River Oaks estates. Our River Oaks projects feature premium marble, frameless glass, freestanding soaking tubs, heated floors, and smart home integration.</p>
+      <h1>Bathroom Remodeling in River Oaks</h1>
+      <p>BoldREMO delivers high-end bathroom renovations that match the elegance of River Oaks estates. Our River Oaks projects feature premium porcelain tile, frameless glass, freestanding soaking tubs, heated floors, and smart home integration.</p>
       <h2>Spa-Quality Craftsmanship</h2>
       <p>Every River Oaks bathroom we build is treated as a personal sanctuary. We work with the finest materials and most experienced craftsmen to deliver renovations worthy of the neighborhood.</p>
       <p>Call BoldREMO at (832) 513-5737 to book your River Oaks bathroom consult.</p>
@@ -209,7 +209,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/blog",
     title: "Blog | BoldREMO Bathroom Remodeling Houston",
     description:
-      "Bathroom remodeling guides, project breakdowns, and honest cost information from BoldREMO, Houston's luxury bathroom remodeling company.",
+      "Bathroom remodeling guides, project breakdowns, and honest cost information from BoldREMO, Houston's bathroom remodeling company.",
     bodyHtml: `
       <h1>BoldREMO Blog</h1>
       <p>Project breakdowns, honest pricing, and practical guidance from the BoldREMO bathroom remodeling crew serving Houston, Heights, Bellaire, River Oaks, and Kingwood. Call (832) 513-5737.</p>
@@ -230,10 +230,10 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/press",
     title: "Press, Partners & Recognition | BoldREMO Houston",
     description:
-      "BoldREMO partners with Houston's leading suppliers to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.",
+      "BoldREMO partners with Houston's leading suppliers to deliver bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.",
     bodyHtml: `
       <h1>BoldREMO Press, Partners &amp; Recognition</h1>
-      <p>BoldREMO partners with Houston's leading suppliers to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.</p>
+      <p>BoldREMO partners with Houston's leading suppliers to deliver bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.</p>
       <h2>Trusted Suppliers</h2>
       <p>Ferguson Bath Kitchen &amp; Lighting.</p>
       <h2>Certifications</h2>
@@ -262,7 +262,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/realtors-designers",
     title: "Realtor & Designer Partnerships | BoldREMO Houston",
     description:
-      "Refer your clients to BoldREMO. Earn referral fees, give clients trade-priority scheduling, and partner with Houston's luxury bathroom remodeler.",
+      "Refer your clients to BoldREMO. Earn referral fees, give clients trade-priority scheduling, and partner with Houston's trusted bathroom remodeler.",
     bodyHtml: `
       <h1>For Realtors, Interior Designers &amp; Architects</h1>
       <p>BoldREMO partners with Houston's top realtors, interior designers, and architects across Heights, Bellaire, River Oaks, Kingwood, and Memorial. Refer your clients with confidence.</p>

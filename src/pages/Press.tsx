@@ -25,7 +25,7 @@ const Press = () => {
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
               BoldREMO partners with Houston's leading suppliers
-              to deliver luxury bathroom remodels across Heights, Bellaire, River Oaks,
+              to deliver bathroom remodels across Heights, Bellaire, River Oaks,
               Kingwood, and beyond.
             </p>
           </div>

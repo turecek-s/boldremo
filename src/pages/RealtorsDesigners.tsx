@@ -153,7 +153,7 @@ const RealtorsDesigners = () => {
               For Realtors, Interior Designers &amp; Architects
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-semibold text-foreground mb-4">
-              Partner with Houston's Luxury Bathroom Remodeler
+              Partner with Houston's Trusted Bathroom Remodeler
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Refer your clients to BoldREMO with confidence. Earn referral fees, give

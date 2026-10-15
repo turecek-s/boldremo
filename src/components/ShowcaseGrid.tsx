@@ -6,11 +6,11 @@ import boldremo10 from "@/assets/boldremo-10.jpg";
 import boldremo6 from "@/assets/boldremo-6.jpg";
 
 const images = [
-  { src: boldremo4, alt: "Walk-in tub with LED lighting and marble tile in Houston Heights TX" },
-  { src: boldremo9, alt: "Luxury master bathroom with marble floors and glass shower in Kingwood TX" },
+  { src: boldremo4, alt: "Walk-in tub with LED lighting and porcelain tile in Houston Heights TX" },
+  { src: boldremo9, alt: "Spa-style master bathroom with porcelain floors and glass shower in Kingwood TX" },
   { src: boldremo5, alt: "Freestanding soaking tub with modern fixtures in Kingwood Houston" },
   { src: boldremo10, alt: "Modern bathroom with patterned tile floor and green vanity in Houston Heights" },
-  { src: boldremo6, alt: "Custom walk-in shower with marble walls and bench in Bellaire TX" },
+  { src: boldremo6, alt: "Custom walk-in shower with porcelain tile walls and bench in Bellaire TX" },
 ];
 
 export const ShowcaseGrid = () => {

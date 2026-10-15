@@ -16,14 +16,14 @@ import boldremo10 from "@/assets/boldremo-10.jpg";
 const images = [
   { 
     src: boldremo1, 
-    alt: "Glass walk-in shower with marble tile and freestanding tub in Houston TX",
+    alt: "Glass walk-in shower with porcelain tile and freestanding tub in Houston TX",
     caption: "Master Bath Transformation",
     location: "River Oaks"
   },
   { 
     src: boldremo2, 
     alt: "Luxury master bathroom with chandelier and glass shower in Bellaire Houston",
-    caption: "Luxury Suite Renovation",
+    caption: "Suite Renovation",
     location: "Bellaire"
   },
   { 
@@ -34,8 +34,8 @@ const images = [
   },
   { 
     src: boldremo4, 
-    alt: "Walk-in tub with LED lighting and marble tile in Houston Heights TX",
-    caption: "Accessible Luxury Bath",
+    alt: "Walk-in tub with LED lighting and porcelain tile in Houston Heights TX",
+    caption: "Accessible Walk-In Bath",
     location: "Heights"
   },
   { 
@@ -46,7 +46,7 @@ const images = [
   },
   { 
     src: boldremo6, 
-    alt: "Custom walk-in shower with marble walls and bench in Bellaire TX",
+    alt: "Custom walk-in shower with porcelain tile walls and bench in Bellaire TX",
     caption: "Walk-In Shower Remodel",
     location: "Bellaire"
   },
@@ -64,7 +64,7 @@ const images = [
   },
   { 
     src: boldremo9, 
-    alt: "Luxury master bathroom with marble floors and glass shower in Kingwood TX",
+    alt: "Spa-style master bathroom with porcelain floors and glass shower in Kingwood TX",
     caption: "Complete Master Overhaul",
     location: "Kingwood"
   },
@@ -111,7 +111,7 @@ const Gallery = () => {
               Our Work
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Browse our portfolio of luxury bathroom remodeling projects across Houston, Heights, Bellaire, River Oaks & Kingwood.
+              Browse our portfolio of bathroom remodeling projects across Houston, Heights, Bellaire, River Oaks & Kingwood.
             </p>
           </div>
         </section>
