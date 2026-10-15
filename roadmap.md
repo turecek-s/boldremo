@@ -6,7 +6,7 @@
 - [x] Verify the build and desktop/mobile appearance.
 - [x] Replace the single hero photograph with the uploaded vanity before/after pair and verify common viewport widths and floating contact spacing.
 - [x] Bundle the vanity photographs as static imports and request publication.
-- [ ] Verify the new static image URLs on production.
+- [x] Verify the new static image URLs on production.
 - [x] Relabel Stan's experience stat, rewrite his waterproofing sentence, and link his introduction to About.
-- [ ] Check the review environment configuration and CORS on the actual request path.
-- [ ] Publish and verify all homepage corrections and photographs on production.
+- [x] Check the review environment configuration and CORS on the actual request path.
+- [x] Publish and verify all homepage corrections and photographs on production.
