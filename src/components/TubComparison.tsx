@@ -25,7 +25,9 @@ function ComparisonFrame({ position, onChange, onEnlarge }: FrameProps) {
       <img src={beforeTub} alt="Before remodeling: white bathtub with small square white wall tiles, basic chrome fixtures, and a worn terrazzo-style floor" width={768} height={1024} className="absolute inset-0 h-full w-full object-cover" style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }} decoding="async" loading="eager" />
       {onEnlarge && (
         <Button variant="ghost" onClick={onEnlarge} aria-label="Enlarge tub before and after comparison" className="absolute inset-0 h-full w-full rounded-none p-0 hover:bg-transparent focus-visible:ring-inset">
-          <Maximize2 className="absolute bottom-3 right-3 h-8 w-8 rounded-sm bg-background p-2 text-foreground shadow-sm" />
+          <span className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-sm bg-background text-foreground shadow-sm">
+            <Maximize2 className="h-4 w-4" />
+          </span>
         </Button>
       )}
       <span className="pointer-events-none absolute left-3 top-3 bg-background px-2.5 py-1 text-xs font-semibold text-foreground shadow-sm">Before</span>
