@@ -40,7 +40,7 @@ export interface CalculatorResult {
   summary: string;
 }
 
-// Base costs by size (mid-point estimate before scope/neighborhood multipliers)
+// Base costs by size (mid-point estimate before scope multiplier)
 const SIZE_BASE: Record<BathroomSize, number> = {
   half: 6500,
   small: 14000,
@@ -63,16 +63,6 @@ const SCOPE_MULTIPLIER: Record<ScopeLevel, number> = {
   luxury: 1.55,
 };
 
-// Neighborhood adjustment (reflects local labor + material expectations)
-const NEIGHBORHOOD_MULTIPLIER: Record<Neighborhood, number> = {
-  houston: 1.0,
-  heights: 1.05,
-  bellaire: 1.10,
-  "river-oaks": 1.25,
-  kingwood: 1.0,
-  memorial: 1.15,
-  other: 1.0,
-};
 
 // Shower add-ons (added on top of base)
 const SHOWER_COST: Record<ShowerType, number> = {
@@ -129,7 +119,6 @@ export function calculateEstimate(inputs: CalculatorInputs): CalculatorResult {
   const sqft = SIZE_SQFT[inputs.size];
   const baseSize = SIZE_BASE[inputs.size];
   const scopeMult = SCOPE_MULTIPLIER[inputs.scope];
-  const neighborhoodMult = NEIGHBORHOOD_MULTIPLIER[inputs.neighborhood];
 
   // Tile (covers floor + most of shower walls, roughly 1.6× floor sqft)
   const tileSqft = Math.round(sqft * 1.6);
@@ -152,14 +141,14 @@ export function calculateEstimate(inputs: CalculatorInputs): CalculatorResult {
   // Fixtures (faucets, lighting, mirrors, hardware)
   const fixturesMid = baseSize * 0.18 * scopeMult;
 
-  // Apply neighborhood multiplier across the board
+  // Area never affects price; estimates depend only on scope, size and materials
   const breakdown: PriceBreakdown = {
-    labor: Math.round(laborMid * neighborhoodMult),
-    tile: Math.round(tileMid * neighborhoodMult),
-    fixtures: Math.round(fixturesMid * neighborhoodMult),
-    vanity: Math.round(vanityCost * neighborhoodMult),
-    plumbing: Math.round(plumbingCost * neighborhoodMult),
-    shower: Math.round(showerCost * neighborhoodMult),
+    labor: Math.round(laborMid),
+    tile: Math.round(tileMid),
+    fixtures: Math.round(fixturesMid),
+    vanity: Math.round(vanityCost),
+    plumbing: Math.round(plumbingCost),
+    shower: Math.round(showerCost),
     contingency: 0,
   };
 

@@ -51,7 +51,7 @@ const STEPS: Step[] = [
   {
     key: "neighborhood",
     label: "Where is your home?",
-    helper: "Local market rates vary across Houston neighborhoods.",
+    helper: "Helps us route your request. Your area does not change the estimate.",
     options: [
       { value: "houston", label: "Houston" },
       { value: "heights", label: "The Heights" },
