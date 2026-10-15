@@ -91,7 +91,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       <h1>BoldREMO Bathroom Remodel Gallery, Houston, TX</h1>
       <p>Explore real bathroom remodel projects completed by BoldREMO across Houston and surrounding neighborhoods. Each project showcases our craftsmanship in tile work, custom showers, vanities, and full bathroom renovations.</p>
       <h2>Featured Project Types</h2>
-      <p>Master Bath Transformation in River Oaks featuring a glass walk-in shower with marble tile and freestanding tub, a $29,000 renovation.</p>
+      <p>Master Bath Transformation in River Oaks featuring a glass walk-in shower with porcelain tile and freestanding tub, a $29,000 renovation.</p>
       <p>Suite Renovation in Bellaire with a chandelier, custom glass shower, and premium finishes, a $42,000 transformation.</p>
       <p>Spa-Style Retreat in River Oaks featuring a decorative tile accent wall and freestanding soaking tub, a $38,000 project.</p>
       <p>Accessible Walk-In Bath in Houston Heights with a walk-in tub, LED lighting, and porcelain tile, designed for comfort and elegance.</p>
