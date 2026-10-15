@@ -31,20 +31,20 @@ const Kingwood = () => {
   return (
     <>
       <Helmet>
-        <title>Luxury Bathroom Remodeling in Kingwood TX | BoldREMO</title>
+        <title>Bathroom Remodeling in Kingwood TX | BoldREMO</title>
         <meta
           name="description"
-          content="Luxury bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737."
+          content="Bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737."
         />
         <meta
           name="keywords"
-          content="luxury bathroom remodeling Kingwood TX, Kingwood bathroom renovation, bathroom contractor Kingwood, luxury tile installation Kingwood"
+          content="bathroom remodeling Kingwood TX, Kingwood bathroom renovation, bathroom contractor Kingwood, tile installation Kingwood"
         />
-        <meta property="og:title" content="Luxury Bathroom Remodeling in Kingwood TX | BoldREMO" />
-        <meta property="og:description" content="Luxury bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737." />
+        <meta property="og:title" content="Bathroom Remodeling in Kingwood TX | BoldREMO" />
+        <meta property="og:description" content="Bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737." />
         <meta property="og:url" content="https://www.boldremo.com/service-areas/kingwood" />
-        <meta name="twitter:title" content="Luxury Bathroom Remodeling in Kingwood TX | BoldREMO" />
-        <meta name="twitter:description" content="Luxury bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737." />
+        <meta name="twitter:title" content="Bathroom Remodeling in Kingwood TX | BoldREMO" />
+        <meta name="twitter:description" content="Bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737." />
         <meta name="twitter:url" content="https://www.boldremo.com/service-areas/kingwood" />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/kingwood" />
       </Helmet>
@@ -134,7 +134,7 @@ const Kingwood = () => {
               <div className="bg-card p-8 rounded-lg shadow-sm">
                 <h3 className="text-xl font-serif font-bold mb-4">Quality Materials</h3>
                 <p className="text-muted-foreground">
-                  We source premium materials that withstand Houston's humidity while delivering the luxury look Kingwood homeowners expect.
+                  We source premium materials that withstand Houston's humidity while delivering the quality finish Kingwood homeowners expect.
                 </p>
               </div>
               <div className="bg-card p-8 rounded-lg shadow-sm">

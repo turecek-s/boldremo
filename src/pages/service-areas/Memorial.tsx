@@ -31,20 +31,20 @@ const Memorial = () => {
   return (
     <>
       <Helmet>
-        <title>Luxury Bathroom Remodeling in Memorial Houston | BoldREMO</title>
+        <title>Bathroom Remodeling in Memorial Houston | BoldREMO</title>
         <meta
           name="description"
-          content="Luxury bathroom remodeling in Memorial, Houston. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737."
+          content="Bathroom remodeling in Memorial, Houston. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737."
         />
         <meta
           name="keywords"
-          content="luxury bathroom remodeling Memorial Houston, Memorial bathroom renovation, bathroom contractor Memorial Villages, luxury tile installation Memorial"
+          content="bathroom remodeling Memorial Houston, Memorial bathroom renovation, bathroom contractor Memorial Villages, tile installation Memorial"
         />
-        <meta property="og:title" content="Luxury Bathroom Remodeling in Memorial Houston | BoldREMO" />
-        <meta property="og:description" content="Luxury bathroom remodeling in Memorial, Houston. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737." />
+        <meta property="og:title" content="Bathroom Remodeling in Memorial Houston | BoldREMO" />
+        <meta property="og:description" content="Bathroom remodeling in Memorial, Houston. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737." />
         <meta property="og:url" content="https://www.boldremo.com/service-areas/memorial" />
-        <meta name="twitter:title" content="Luxury Bathroom Remodeling in Memorial Houston | BoldREMO" />
-        <meta name="twitter:description" content="Luxury bathroom remodeling in Memorial, Houston. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737." />
+        <meta name="twitter:title" content="Bathroom Remodeling in Memorial Houston | BoldREMO" />
+        <meta name="twitter:description" content="Bathroom remodeling in Memorial, Houston. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737." />
         <meta name="twitter:url" content="https://www.boldremo.com/service-areas/memorial" />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/memorial" />
       </Helmet>
