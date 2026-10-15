@@ -85,7 +85,7 @@ export const HeroSection = () => {
             )}
             <span className="inline-flex items-center gap-1.5">
               <BadgeCheck className="h-4 w-4 shrink-0" aria-hidden="true" />
-              10+ Years in Business
+              10+ Years of Craftsmanship Experience
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Hammer className="h-4 w-4 shrink-0" aria-hidden="true" />
