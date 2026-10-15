@@ -28,6 +28,8 @@ export function useGoogleReviews() {
         });
         if (!response.ok) return;
         const data = await response.json();
+        // An unavailable review lookup answers normally with available:false.
+        if (data?.available === false) return;
         if (
           active &&
           typeof data?.rating === "number" && Number.isFinite(data.rating) &&
