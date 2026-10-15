@@ -30,7 +30,7 @@ export const HeroSection = () => {
       <div className="relative z-10 container-custom text-center px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-semibold text-primary mb-6 text-balance drop-shadow-lg">
-            Houston Luxury Bathroom Remodeling
+            Houston Bathroom Remodeling
             <br />
             <span className="text-foreground">Built Right, Start to Finish</span>
           </h1>
