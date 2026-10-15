@@ -1,3 +1,4 @@
+// @ts-nocheck -- run with `bun test`; bun types are not installed
 import { describe, expect, test } from "bun:test";
 import { calculateEstimate, type CalculatorInputs, type Neighborhood } from "./calculator-pricing";
 
