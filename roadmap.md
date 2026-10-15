@@ -12,3 +12,4 @@
 - [x] Publish and verify all homepage corrections and photographs on production.
 - [x] Replace the vanity pair with a compact draggable tub comparison and enlarged dialog, preserving hero copy and founder bar.
 - [x] Verify dragging, enlargement, photo delivery and layout on mobile/tablet/desktop, then publish and check production.
+- [x] Replace the founder waterproofing jargon with a plain craftsman sentence, publish, and verify on production.
