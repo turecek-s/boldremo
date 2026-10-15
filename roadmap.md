@@ -15,3 +15,4 @@
 
 ## Open items
 - [ ] Homepage feels visually overwhelming overall per owner feedback (Oct 2026) — revisit layout/hierarchy/spacing holistically in a future session, not urgent.
+- [ ] Restore live review availability (blocked: Google Places project billing is disabled).
