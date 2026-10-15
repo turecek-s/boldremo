@@ -253,7 +253,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       <h2>Houston Bathroom Remodel Cost Ranges</h2>
       <p>Half bath refresh: $4,500 – $9,000. Small full bath mid-range remodel: $14,000 – $22,000. Standard bathroom mid-range remodel: $18,000 – $28,000. Large master bath full luxury renovation: $45,000 – $85,000+. River Oaks and Memorial projects typically run 15-25% higher due to local rates and material expectations.</p>
       <h2>What Drives Bathroom Remodel Costs in Houston</h2>
-      <p>Labor accounts for 40-50% of total cost. Tile material (ceramic, porcelain, or natural stone) and the square footage covered have the biggest material impact. Walk-in glass showers and double vanities each add several thousand dollars. Moving plumbing fixtures requires opening walls and adds $1,200 – $4,500.</p>
+      <p>Labor accounts for 40-50% of total cost. Tile material (ceramic, porcelain, or large-format premium porcelain) and the square footage covered have the biggest material impact. Walk-in glass showers and double vanities each add several thousand dollars. Moving plumbing fixtures requires opening walls and adds $1,200 – $4,500.</p>
       <h2>Get an Exact Quote</h2>
       <p>For an exact written proposal, book a $75 in-home design consult with BoldREMO. We'll measure, discuss material selections, and deliver a detailed proposal. The $75 is credited toward your project. Call (832) 513-5737 or email info@boldremo.com.</p>
     `,
