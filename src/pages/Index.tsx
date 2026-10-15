@@ -1,7 +1,8 @@
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
+import { FounderCredibility } from "@/components/FounderCredibility";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import ImageGallerySchema from "@/components/ImageGallerySchema";
 
@@ -38,6 +39,7 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        <FounderCredibility />
         <LazySection>
           <Suspense fallback={<SectionFallback />}>
             <PricingSection />
