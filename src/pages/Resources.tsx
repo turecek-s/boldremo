@@ -376,7 +376,7 @@ const Resources = () => {
                 <p>
                   Houston homeowners are embracing spa-inspired designs with large-format tiles, frameless glass showers, 
                   and floating vanities. Neutral palettes with warm wood accents remain popular in Heights bungalows, 
-                  while River Oaks homes often feature luxury marble and statement lighting.
+                  while River Oaks homes often feature elegant porcelain tile and statement lighting.
                 </p>
               </div>
             </div>

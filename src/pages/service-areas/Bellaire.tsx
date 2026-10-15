@@ -11,7 +11,7 @@ import serviceBathroom from "@/assets/service-bathroom.jpg";
 
 const Bellaire = () => {
   const services = [
-    "Luxury bathroom renovations",
+    "Custom bathroom renovations",
     "Custom tile installation",
     "Spa-inspired bathroom designs",
     "Vanity and countertop installation",
@@ -31,20 +31,20 @@ const Bellaire = () => {
   return (
     <>
       <Helmet>
-        <title>Luxury Bathroom Remodeling in Bellaire TX | BoldREMO</title>
+        <title>Bathroom Remodeling in Bellaire TX | BoldREMO</title>
         <meta
           name="description"
-          content="Luxury bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult, (832) 513-5737."
+          content="Bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult, (832) 513-5737."
         />
         <meta
           name="keywords"
-          content="luxury bathroom remodeling Bellaire TX, Bellaire bathroom renovation, luxury bathroom contractor Bellaire, spa bathroom remodel Bellaire"
+          content="bathroom remodeling Bellaire TX, Bellaire bathroom renovation, bathroom contractor Bellaire, spa bathroom remodel Bellaire"
         />
-        <meta property="og:title" content="Luxury Bathroom Remodeling in Bellaire TX | BoldREMO" />
-        <meta property="og:description" content="Luxury bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult, (832) 513-5737." />
+        <meta property="og:title" content="Bathroom Remodeling in Bellaire TX | BoldREMO" />
+        <meta property="og:description" content="Bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult, (832) 513-5737." />
         <meta property="og:url" content="https://www.boldremo.com/service-areas/bellaire" />
-        <meta name="twitter:title" content="Luxury Bathroom Remodeling in Bellaire TX | BoldREMO" />
-        <meta name="twitter:description" content="Luxury bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult, (832) 513-5737." />
+        <meta name="twitter:title" content="Bathroom Remodeling in Bellaire TX | BoldREMO" />
+        <meta name="twitter:description" content="Bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult, (832) 513-5737." />
         <meta name="twitter:url" content="https://www.boldremo.com/service-areas/bellaire" />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/bellaire" />
       </Helmet>
@@ -66,7 +66,7 @@ const Bellaire = () => {
                 Bathroom Remodeling in Bellaire, Texas
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                Create the luxury bathroom you deserve in your Bellaire home. <BrandName /> delivers sophisticated bathroom renovations with the quality and attention to detail that Bellaire homeowners expect.
+                Create the bathroom you deserve in your Bellaire home. <BrandName /> delivers sophisticated bathroom renovations with the quality and attention to detail that Bellaire homeowners expect.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" variant="secondary">
@@ -126,7 +126,7 @@ const Bellaire = () => {
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-serif font-bold mb-4">Luxury Focus</h3>
+                <h3 className="text-xl font-serif font-bold mb-4">Premium Focus</h3>
                 <p className="text-muted-foreground">
                   We specialize in high-end bathroom renovations that meet the elevated standards of Bellaire homeowners.
                 </p>
@@ -189,7 +189,7 @@ const Bellaire = () => {
               Serving Bellaire & Surrounding Areas
             </h2>
             <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8">
-              We provide luxury bathroom remodeling services throughout Bellaire and the surrounding Southwest Houston communities.
+              We provide bathroom remodeling services throughout Bellaire and the surrounding Southwest Houston communities.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {neighborhoods.map((neighborhood) => (

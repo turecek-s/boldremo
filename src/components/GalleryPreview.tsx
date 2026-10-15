@@ -7,8 +7,8 @@ import boldremo2 from "@/assets/boldremo-2.jpg";
 import boldremo3 from "@/assets/boldremo-3.jpg";
 
 const images = [
-  { src: boldremo1, alt: "Glass walk-in shower with marble tile and freestanding tub in Houston TX" },
-  { src: boldremo2, alt: "Luxury master bathroom with chandelier and glass shower in Bellaire Houston" },
+  { src: boldremo1, alt: "Glass walk-in shower with porcelain tile and freestanding tub in Houston TX" },
+  { src: boldremo2, alt: "Spa-style master bathroom with chandelier and glass shower in Bellaire Houston" },
   { src: boldremo3, alt: "Modern bathroom with decorative tile accent wall and soaking tub in River Oaks TX" },
 ];
 

@@ -22,7 +22,7 @@ const images = [
   },
   { 
     src: boldremo2, 
-    alt: "Luxury master bathroom with chandelier and glass shower in Bellaire Houston",
+    alt: "Spa-style master bathroom with chandelier and glass shower in Bellaire Houston",
     caption: "Suite Renovation",
     location: "Bellaire"
   },

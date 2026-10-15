@@ -89,7 +89,7 @@ const STEPS: Step[] = [
     options: [
       { value: "ceramic", label: "Standard ceramic", description: "$12–$20/sq ft installed" },
       { value: "porcelain", label: "Porcelain", description: "$18–$32/sq ft installed" },
-      { value: "stone", label: "Natural stone or marble", description: "$35–$70/sq ft installed" },
+      { value: "stone", label: "Large-format premium porcelain", description: "$35–$70/sq ft installed" },
     ],
   },
   {
