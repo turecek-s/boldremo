@@ -18,7 +18,7 @@ const Blog = () => {
       <SeoHead
         path="/blog"
         title="Blog | BoldREMO Bathroom Remodeling Houston"
-        description="Bathroom remodeling guides, project breakdowns, and honest cost information from BoldREMO, Houston's luxury bathroom remodeling company."
+        description="Bathroom remodeling guides, project breakdowns, and honest cost information from BoldREMO, Houston's bathroom remodeling company."
       />
       <Header />
       <main>

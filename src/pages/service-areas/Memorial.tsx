@@ -66,7 +66,7 @@ const Memorial = () => {
                 Bathroom Remodeling in Memorial, Houston
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                Upscale bathroom renovations for Memorial homes, from luxury new-builds near Memorial Park to mid-century houses tucked behind mature oaks in the Villages. <BrandName /> delivers craftsmanship that matches the neighborhood.
+                Upscale bathroom renovations for Memorial homes, from new-builds near Memorial Park to mid-century houses tucked behind mature oaks in the Villages. <BrandName /> delivers craftsmanship that matches the neighborhood.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" variant="secondary">
@@ -92,7 +92,7 @@ const Memorial = () => {
                   Memorial's Trusted Bathroom Remodeling Experts
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  Memorial is one of Houston's most established luxury pockets, a heavily wooded stretch of large lots and winding streets between Memorial Park and the Villages. The homes range from brand new custom builds to ranch and contemporary houses put up in the 1960s through the 1980s, and that mix is exactly why no two projects here look the same.
+                  Memorial is one of Houston's most established neighborhoods, a heavily wooded stretch of large lots and winding streets between Memorial Park and the Villages. The homes range from brand new custom builds to ranch and contemporary houses put up in the 1960s through the 1980s, and that mix is exactly why no two projects here look the same.
                 </p>
                 <p className="text-muted-foreground mb-8">
                   We plan Memorial jobs around the realities of the area, narrow driveways under mature trees, tight lot access for material deliveries, and older plumbing that needs a careful look before demo starts.

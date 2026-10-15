@@ -92,7 +92,7 @@ const Bellaire = () => {
                   Bellaire's Premier Bathroom Renovation Team
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  Bellaire homes deserve exceptional craftsmanship. Our team specializes in creating spa-inspired bathrooms that add both luxury and value to your property. From elegant master suites to sophisticated powder rooms, we bring your vision to life.
+                  Bellaire homes deserve exceptional craftsmanship. Our team specializes in creating spa-inspired bathrooms that add both comfort and value to your property. From elegant master suites to sophisticated powder rooms, we bring your vision to life.
                 </p>
                 <p className="text-muted-foreground mb-8">
                   We work closely with Bellaire homeowners to design bathrooms that reflect their lifestyle, using premium materials and expert installation techniques.
@@ -109,7 +109,7 @@ const Bellaire = () => {
               <div className="relative">
                 <img
                   src={serviceBathroom}
-                  alt="Luxury bathroom remodeling in Bellaire TX"
+                  alt="Bathroom remodeling in Bellaire TX"
                   className="rounded-lg shadow-lg w-full"
                   loading="lazy"
                 />

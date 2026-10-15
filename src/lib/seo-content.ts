@@ -170,10 +170,10 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/service-areas/heights",
     title: "Bathroom Remodeling Houston Heights | BoldREMO",
     description:
-      "Bathroom remodeling for Houston Heights homes. BoldREMO blends historic charm with modern luxury. Custom tile, walk-in showers, full renovations. (832) 513-5737.",
+      "Bathroom remodeling for Houston Heights homes. BoldREMO blends historic charm with modern comfort. Custom tile, walk-in showers, full renovations. (832) 513-5737.",
     bodyHtml: `
       <h1>Bathroom Remodeling in Houston Heights</h1>
-      <p>BoldREMO specializes in bathroom remodeling for Houston Heights, a neighborhood where historic bungalows and craftsman homes meet modern luxury. We respect original architecture while delivering contemporary functionality and high-end finishes.</p>
+      <p>BoldREMO specializes in bathroom remodeling for Houston Heights, a neighborhood where historic bungalows and craftsman homes meet modern comfort. We respect original architecture while delivering contemporary functionality and high-end finishes.</p>
       <h2>Heights-Specific Expertise</h2>
       <p>Working with older Heights homes requires careful planning around existing plumbing, original tile, and unique layouts. Our team has deep experience updating Heights bathrooms while preserving the character that makes the neighborhood special.</p>
       <p>Call BoldREMO at (832) 513-5737 to book your Heights bathroom consult.</p>
@@ -183,7 +183,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/service-areas/bellaire",
     title: "Bathroom Remodeling Bellaire TX | BoldREMO",
     description:
-      "Bellaire bathroom remodeling and renovation. BoldREMO delivers luxury bathroom transformations for Bellaire family homes. Call (832) 513-5737.",
+      "Bellaire bathroom remodeling and renovation. BoldREMO delivers bathroom transformations for Bellaire family homes. Call (832) 513-5737.",
     bodyHtml: `
       <h1>Bathroom Remodeling in Bellaire, TX</h1>
       <p>BoldREMO provides premium bathroom remodeling services for Bellaire homeowners. Known for excellent schools and family-friendly atmosphere, Bellaire deserves bathrooms that match its quality of life.</p>
@@ -292,10 +292,10 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/service-areas/memorial",
     title: "Bathroom Remodeling Memorial Houston TX | BoldREMO",
     description:
-      "Memorial bathroom remodeling experts. BoldREMO updates luxury new-builds and 1960s to 1980s Memorial homes with quality craftsmanship. Call (832) 513-5737.",
+      "Memorial bathroom remodeling experts. BoldREMO updates new-builds and 1960s to 1980s Memorial homes with quality craftsmanship. Call (832) 513-5737.",
     bodyHtml: `
       <h1>Bathroom Remodeling in Memorial, Houston</h1>
-      <p>BoldREMO serves Memorial homeowners with upscale bathroom remodeling. Memorial is a heavily wooded area of large lots near Memorial Park and the Villages, with a mix of luxury new-builds and older homes from the 1960s through the 1980s that are ready for bathroom updates.</p>
+      <p>BoldREMO serves Memorial homeowners with upscale bathroom remodeling. Memorial is a heavily wooded area of large lots near Memorial Park and the Villages, with a mix of new-builds and older homes from the 1960s through the 1980s that are ready for bathroom updates.</p>
       <h2>Memorial Bathroom Renovation Services</h2>
       <p>Full bathroom remodels, custom tile and shower installation, tub to shower conversions, vanity upgrades, and complete spa-style transformations for Memorial and Memorial Villages homes.</p>
       <p>Call BoldREMO at (832) 513-5737 to book your Memorial bathroom consult.</p>

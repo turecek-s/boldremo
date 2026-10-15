@@ -16,7 +16,7 @@ const RiverOaks = () => {
     "High-end fixture installation",
     "Master suite transformations",
     "Designer vanity installation",
-    "Luxury flooring services",
+    "Premium flooring services",
   ];
 
   const neighborhoods = [
@@ -92,7 +92,7 @@ const RiverOaks = () => {
                   River Oaks' Exclusive Bathroom Renovation Partner
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  River Oaks homes represent the pinnacle of Houston luxury living. Our bathroom renovation services match that standard with meticulous attention to detail, premium materials, and designs that complement the grandeur of your estate.
+                  River Oaks homes represent the pinnacle of Houston upscale living. Our bathroom renovation services match that standard with meticulous attention to detail, premium materials, and designs that complement the grandeur of your estate.
                 </p>
                 <p className="text-muted-foreground mb-8">
                   From expansive master suites to elegant guest bathrooms, we create spaces that reflect the sophistication and quality that River Oaks homeowners demand.
@@ -109,7 +109,7 @@ const RiverOaks = () => {
               <div className="relative">
                 <img
                   src={serviceBathroom}
-                  alt="Luxury bathroom remodeling in River Oaks Houston"
+                  alt="Bathroom remodeling in River Oaks Houston"
                   className="rounded-lg shadow-lg w-full"
                   loading="lazy"
                 />

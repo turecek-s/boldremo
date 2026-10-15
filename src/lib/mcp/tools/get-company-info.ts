@@ -10,7 +10,7 @@ export default defineTool({
   handler: () => {
     const info = {
       company: "BoldREMO",
-      focus: "Luxury bathroom remodeling in Houston, Texas",
+      focus: "Bathroom remodeling in Houston, Texas",
       owner: "Stan",
       phone: "(832) 513-5737",
       email: "info@boldremo.com",
