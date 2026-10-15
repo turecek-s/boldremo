@@ -106,7 +106,7 @@ const VANITY_LABELS: Record<string, string> = {
 const TILE_LABELS: Record<string, string> = {
   ceramic: "Standard ceramic",
   porcelain: "Porcelain",
-  stone: "Natural stone or marble",
+  stone: "Large-format premium porcelain",
 };
 const PLUMBING_LABELS: Record<string, string> = {
   none: "None",
