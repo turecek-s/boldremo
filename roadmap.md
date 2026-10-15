@@ -3,4 +3,4 @@
 - [x] Add live Google review totals with a quiet static fallback.
 - [x] Add a compact Stan introduction before pricing.
 - [ ] Restore live review availability (blocked: Google Places project billing is disabled).
-- [ ] Verify the build and desktop/mobile appearance.
+- [x] Verify the build and desktop/mobile appearance.

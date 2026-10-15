@@ -11,7 +11,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[540px] h-[calc(100svh-160px)] md:h-[calc(100svh-128px)] flex items-center justify-center overflow-hidden pt-28 pb-20">
+    <section className="relative min-h-[720px] sm:min-h-[540px] h-[calc(100svh-160px)] md:h-[calc(100svh-128px)] flex items-center justify-center overflow-hidden pt-28 pb-20">
       {/* Background Image - LCP element, priority loaded with native img for fastest paint */}
       <div className="absolute inset-0">
         <img
