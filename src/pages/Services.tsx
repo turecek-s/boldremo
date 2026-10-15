@@ -48,7 +48,7 @@ const Services = () => {
               Our Services
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Luxury bathroom remodeling in Houston, Heights, Bellaire, River Oaks & Kingwood.
+              Bathroom remodeling in Houston, Heights, Bellaire, River Oaks & Kingwood.
             </p>
           </div>
         </section>

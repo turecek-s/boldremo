@@ -31,7 +31,7 @@ const About = () => {
               About <BrandName />
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Houston's trusted partner for luxury bathroom remodeling and home renovation.
+              Houston's trusted partner for bathroom remodeling and home renovation.
             </p>
           </div>
         </section>
