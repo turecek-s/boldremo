@@ -100,7 +100,7 @@ export const Header = () => {
               <span className="font-semibold text-secondary">REMO</span>
             </span>
             <span className="flex justify-between w-full text-[6px] font-medium uppercase text-primary-foreground/70 mt-0.5 leading-tight whitespace-nowrap">
-              {"BATHROOM REMODELING HOUSTON".split("").map((ch, i) => (
+              {"BATHROOM REMODELING".split("").map((ch, i) => (
                 <span key={i}>{ch === " " ? "\u00A0" : ch}</span>
               ))}
             </span>
