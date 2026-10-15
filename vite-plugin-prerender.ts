@@ -187,7 +187,10 @@ const ROUTES: RouteSeo[] = [
 export function prerenderRoutes(): Plugin {
   return {
     name: "boldremo-prerender-routes",
-    apply: "build",
+    transformIndexHtml(html) {
+      // The hero image is imported by its component; remove the stale hashed preload.
+      return html.replace(/\s*<link\b(?=[^>]*rel=["']preload["'])(?=[^>]*as=["']image["'])(?=[^>]*hero-bathroom)[^>]*\/?>/gi, "");
+    },
     closeBundle() {
       const distDir = resolve(process.cwd(), "dist");
       const indexPath = resolve(distDir, "index.html");

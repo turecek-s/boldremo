@@ -16,7 +16,7 @@ export const FounderCredibility = () => (
           <h2 className="text-lg font-semibold text-foreground">Meet Stan</h2>
           <p className="text-sm text-muted-foreground">Stan · Owner &amp; Lead Craftsman</p>
         </div>
-        <p className="mt-2 text-sm leading-relaxed text-foreground md:mt-0 md:border-l md:border-border md:pl-8 md:text-base">
+        <p className="mt-2 pr-16 text-sm leading-relaxed text-foreground sm:pr-0 md:mt-0 md:border-l md:border-border md:pl-8 md:text-base">
           Custom showers waterproofed with the Schluter system and GoBoard backer.
         </p>
       </div>
