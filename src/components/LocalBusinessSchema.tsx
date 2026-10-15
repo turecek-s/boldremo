@@ -5,8 +5,7 @@ const LocalBusinessSchema = () => {
     "@type": "HomeAndConstructionBusiness",
     "@id": "https://www.boldremo.com/#organization",
     "name": "BoldREMO LLC",
-    "alternateName": "BoldREMO Luxury Bathroom Remodeling",
-    "description": "BoldREMO LLC is a professional luxury bathroom remodeling and tile installation contractor serving Houston, The Heights, Bellaire, River Oaks & Kingwood TX. Specializing in luxury bathroom renovations, walk-in showers, custom tile work, and flooring installation.",
+"description": "BoldREMO LLC is a professional bathroom remodeling and tile installation contractor serving Houston, The Heights, Bellaire, River Oaks & Kingwood TX. Specializing in bathroom renovations, walk-in showers, custom tile work, and flooring installation.",
     "url": "https://www.boldremo.com",
     "telephone": "+1-832-513-5737",
     "email": "info@boldremo.com",
@@ -69,8 +68,7 @@ const LocalBusinessSchema = () => {
         }
       }
     ],
-    "serviceType": [
-      "Luxury Bathroom Remodeling",
+"serviceType": [
       "Bathroom Renovation",
       "Walk-in Shower Installation",
       "Tile Installation",
@@ -80,16 +78,16 @@ const LocalBusinessSchema = () => {
       "Bathtub to Shower Conversion",
       "Spa Bathroom Design"
     ],
-    "hasOfferCatalog": {
+"hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Luxury Bathroom Remodeling Services",
+      "name": "Bathroom Remodeling Services",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
             "name": "Complete Bathroom Remodeling",
-            "description": "Full luxury bathroom renovation including fixtures, tile, vanities, and more"
+            "description": "Full bathroom renovation including fixtures, tile, vanities, and more"
           }
         },
         {
