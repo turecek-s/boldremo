@@ -18,10 +18,10 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/services",
     title: "Bathroom Remodeling Services Houston | BoldREMO",
     description:
-      "Complete bathroom remodeling, custom showers, tile installation, vanities & full home renovations in Houston, Heights, Bellaire, River Oaks & Kingwood.",
+      "Complete bathroom remodeling, custom showers, tile installation, vanities & full home renovations in Houston, Heights, Bellaire, River Oaks, Kingwood & Memorial.",
     bodyHtml: `
       <h1>Bathroom Remodeling Services in Houston, TX</h1>
-      <p>BoldREMO offers comprehensive bathroom remodeling and home renovation services across Houston, Heights, Bellaire, River Oaks, and Kingwood. Every project is handled by licensed, insured craftsmen with transparent pricing and clear timelines.</p>
+      <p>BoldREMO offers comprehensive bathroom remodeling and home renovation services across Houston, Heights, Bellaire, River Oaks, Kingwood, and Memorial. Every project is handled by licensed, insured craftsmen with transparent pricing and clear timelines.</p>
       <h2>Complete Bathroom Remodeling</h2>
       <p>Full bathroom renovations tailored to your style and needs. From layout redesign to fixture selection, we handle every detail of your bathroom transformation.</p>
       <h2>Tile and Flooring Installation</h2>
@@ -79,14 +79,14 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       <p>Most full bathroom transformations take 7 to 12 days.</p>
       <h2>FAQs</h2>
       <p>Shower-only conversions start at $7,000. We work with tile you've purchased. We install frameless glass through a local Houston supplier.</p>
-      <p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com. Serving Heights, Bellaire, River Oaks, Kingwood, and all of Houston.</p>
+      <p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com. Serving Heights, Bellaire, River Oaks, Kingwood, Memorial, and all of Houston.</p>
     `,
   },
   "/gallery": {
     path: "/gallery",
     title: "Bathroom Remodel Gallery Houston | BoldREMO Project Photos",
     description:
-      "Browse real bathroom remodel projects by BoldREMO across Houston, Heights, Bellaire, River Oaks & Kingwood. Walk-in showers, soaking tubs, custom tile.",
+      "Browse real bathroom remodel projects by BoldREMO across Houston, Heights, Bellaire, River Oaks, Kingwood & Memorial. Walk-in showers, soaking tubs, custom tile.",
     bodyHtml: `
       <h1>BoldREMO Bathroom Remodel Gallery, Houston, TX</h1>
       <p>Explore real bathroom remodel projects completed by BoldREMO across Houston and surrounding neighborhoods. Each project showcases our craftsmanship in tile work, custom showers, vanities, and full bathroom renovations.</p>
@@ -107,7 +107,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       "Meet BoldREMO, Houston's trusted bathroom remodeling team. Licensed, insured, with transparent pricing and quality craftsmanship.",
     bodyHtml: `
       <h1>About BoldREMO, Houston's Bathroom Remodeling Team</h1>
-      <p>BoldREMO is Houston's trusted partner for bathroom remodeling and home renovation. Founded by Stan, our team brings decades of combined craftsmanship experience to every project across Houston, Heights, Bellaire, River Oaks, and Kingwood.</p>
+      <p>BoldREMO is Houston's trusted partner for bathroom remodeling and home renovation. Founded by Stan, our team brings decades of combined craftsmanship experience to every project across Houston, Heights, Bellaire, River Oaks, Kingwood, and Memorial.</p>
       <h2>Our Values</h2>
       <p>Quality craftsmanship on every project. Transparent pricing with no hidden costs. Licensed and insured professionals. Personalized designs for your unique space. Timely project completion. Customer satisfaction guarantee.</p>
       <h2>Why Homeowners Choose BoldREMO</h2>
@@ -212,7 +212,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       "Bathroom remodeling guides, project breakdowns, and honest cost information from BoldREMO, Houston's bathroom remodeling company.",
     bodyHtml: `
       <h1>BoldREMO Blog</h1>
-      <p>Project breakdowns, honest pricing, and practical guidance from the BoldREMO bathroom remodeling crew serving Houston, Heights, Bellaire, River Oaks, and Kingwood. Call (832) 513-5737.</p>
+      <p>Project breakdowns, honest pricing, and practical guidance from the BoldREMO bathroom remodeling crew serving Houston, Heights, Bellaire, River Oaks, Kingwood, and Memorial. Call (832) 513-5737.</p>
     `,
   },
   "/blog/walk-in-tub-installation-houston": {
@@ -223,17 +223,17 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       "Considering a walk-in tub for aging in place? See what a proper walk-in tub installation actually involves in a Houston bathroom remodel, from waterproofing to door seal testing.",
     bodyHtml: `
       <h1>Walk-In Tub Installation Houston: What Goes Into an Aging-in-Place Bathroom Remodel</h1>
-      <p>A walk-in tub installation in Houston involves floor leveling, full waterproofing, plumbing changes, door seal testing, and finish tile work. Labor and installation typically fall in the $8,000 to $15,000 range, with the tub unit and finish materials adding to that. BoldREMO installs walk-in tubs across Houston, the Heights, Bellaire, River Oaks, and Kingwood. Call (832) 513-5737.</p>
+      <p>A walk-in tub installation in Houston involves floor leveling, full waterproofing, plumbing changes, door seal testing, and finish tile work. Labor and installation typically fall in the $8,000 to $15,000 range, with the tub unit and finish materials adding to that. BoldREMO installs walk-in tubs across Houston, the Heights, Bellaire, River Oaks, Kingwood, and Memorial. Call (832) 513-5737.</p>
     `,
   },
   "/press": {
     path: "/press",
     title: "Press, Partners & Recognition | BoldREMO Houston",
     description:
-      "BoldREMO partners with Houston's leading suppliers to deliver bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.",
+      "BoldREMO partners with Houston's leading suppliers to deliver bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, Memorial, and beyond.",
     bodyHtml: `
       <h1>BoldREMO Press, Partners &amp; Recognition</h1>
-      <p>BoldREMO partners with Houston's leading suppliers to deliver bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, and beyond.</p>
+      <p>BoldREMO partners with Houston's leading suppliers to deliver bathroom remodels across Heights, Bellaire, River Oaks, Kingwood, Memorial, and beyond.</p>
       <h2>Trusted Suppliers</h2>
       <p>Ferguson Bath Kitchen &amp; Lighting.</p>
       <h2>Certifications</h2>

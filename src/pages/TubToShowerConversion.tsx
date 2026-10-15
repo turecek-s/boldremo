@@ -180,7 +180,7 @@ const TubToShowerConversion = () => {
 
             <div className="bg-card border border-border rounded-lg p-8 text-center">
               <p className="text-lg text-foreground mb-6">
-                We serve Heights, Bellaire, River Oaks, Kingwood, and all of
+                We serve Heights, Bellaire, River Oaks, Kingwood, Memorial, and all of
                 Houston.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

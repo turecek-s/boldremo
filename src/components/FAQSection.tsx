@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "What areas of Houston do you serve?",
     answer:
-      "BoldREMO proudly serves Houston, Heights, Bellaire, River Oaks, Kingwood, and surrounding communities. Our team of experienced contractors brings quality bathroom remodeling and tile installation services to homeowners throughout these areas.",
+      "BoldREMO proudly serves Houston, Heights, Bellaire, River Oaks, Kingwood, Memorial, and surrounding communities. Our team of experienced contractors brings quality bathroom remodeling and tile installation services to homeowners throughout these areas.",
   },
   {
     question: "Can you work with my existing layout or do I need a complete redesign?",

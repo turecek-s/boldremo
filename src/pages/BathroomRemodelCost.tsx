@@ -242,7 +242,7 @@ const BathroomRemodelCost = () => {
                 </Button>
               </div>
               <p className="mt-6 text-sm text-muted-foreground">
-                We serve Heights, Bellaire, River Oaks, Kingwood, and all of Houston.
+                We serve Heights, Bellaire, River Oaks, Kingwood, Memorial, and all of Houston.
               </p>
             </div>
           </div>

@@ -87,9 +87,9 @@ export const BLOG_POSTS: BlogPost[] = [
           "If you're getting quotes for a walk-in tub, ask directly: will you test the door seal before calling the job done? Will you check and correct floor level before installation? A contractor who hesitates on either question is telling you something.",
       },
       {
-        heading: "Serving Houston, Heights, Bellaire, River Oaks, and Kingwood",
+        heading: "Serving Houston, Heights, Bellaire, River Oaks, Kingwood, and Memorial",
         paragraph:
-          "BoldREMO installs walk-in tubs and full bathroom remodels throughout the Houston area, including the Heights, Bellaire, River Oaks, and Kingwood. If you're exploring aging-in-place options for yourself or a family member, we're happy to talk through what makes sense for your bathroom.",
+          "BoldREMO installs walk-in tubs and full bathroom remodels throughout the Houston area, including the Heights, Bellaire, River Oaks, Kingwood, and Memorial. If you're exploring aging-in-place options for yourself or a family member, we're happy to talk through what makes sense for your bathroom.",
       },
     ],
   },
