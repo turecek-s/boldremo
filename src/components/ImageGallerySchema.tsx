@@ -46,7 +46,7 @@ const ImageGallerySchema = () => {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
     "name": "BoldREMO Bathroom Remodeling Portfolio - Houston TX",
-    "description": "Browse our gallery of bathroom remodeling and tile installation projects in Houston, Heights, Bellaire, River Oaks, and Kingwood Texas. See examples of our professional craftsmanship.",
+    "description": "Browse our gallery of bathroom remodeling and tile installation projects in Houston, Heights, Bellaire, River Oaks, Kingwood, and Memorial Texas. See examples of our professional craftsmanship.",
     "url": "https://boldremo.com/gallery",
     "mainEntity": {
       "@type": "ItemList",

@@ -80,7 +80,7 @@ const galleryJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "BoldREMO Bathroom Remodel Gallery",
-  "description": "Browse real bathroom remodel projects by BoldREMO across Houston, Heights, Bellaire, River Oaks & Kingwood. Walk-in showers, soaking tubs, custom tile.",
+  "description": "Browse real bathroom remodel projects by BoldREMO across Houston, Heights, Bellaire, River Oaks, Kingwood & Memorial. Walk-in showers, soaking tubs, custom tile.",
   "url": "https://www.boldremo.com/gallery",
   "mainEntity": {
     "@type": "ImageGallery",
@@ -111,7 +111,7 @@ const Gallery = () => {
               Our Work
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Browse our portfolio of bathroom remodeling projects across Houston, Heights, Bellaire, River Oaks & Kingwood.
+              Browse our portfolio of bathroom remodeling projects across Houston, Heights, Bellaire, River Oaks, Kingwood & Memorial.
             </p>
           </div>
         </section>

@@ -35,7 +35,7 @@ export const Footer = () => {
               </span>
             </Link>
             <p className="text-primary-foreground/90 text-sm leading-relaxed mb-6">
-              Houston's Premier Bathroom Remodeling Company. Proudly serving Houston, Heights, Bellaire, River Oaks & Kingwood.
+              Houston's Premier Bathroom Remodeling Company. Proudly serving Houston, Heights, Bellaire, River Oaks, Kingwood & Memorial.
             </p>
             <div className="flex flex-wrap gap-3">
               {socialLinks.map((social) => (
@@ -153,7 +153,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center">
           <p className="text-primary-foreground/90 text-sm">
-            © {new Date().getFullYear()} BoldREMO LLC. All rights reserved. | Bathroom Remodeling in Houston, Heights, Bellaire, River Oaks & Kingwood TX
+            © {new Date().getFullYear()} BoldREMO LLC. All rights reserved. | Bathroom Remodeling in Houston, Heights, Bellaire, River Oaks, Kingwood & Memorial TX
           </p>
           <p className="mt-3 text-primary-foreground/90 text-sm">
             Questions or SMS support? Call or text{" "}

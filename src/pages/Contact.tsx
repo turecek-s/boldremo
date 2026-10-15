@@ -154,7 +154,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Service Areas</h3>
                       <p className="text-muted-foreground">
-                        Houston, Heights, Bellaire, River Oaks & Kingwood
+                        Houston, Heights, Bellaire, River Oaks, Kingwood & Memorial
                       </p>
                     </div>
                   </div>

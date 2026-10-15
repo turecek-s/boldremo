@@ -1,6 +1,6 @@
 # BoldRemo - Houston Bathroom Remodeling
 
-> BoldRemo is Houston's premier bathroom remodeling company serving Heights, Bellaire, River Oaks, and Kingwood.
+> BoldRemo is Houston's premier bathroom remodeling company serving Heights, Bellaire, River Oaks, Kingwood, and Memorial.
 
 ## About
 BoldRemo specializes in bathroom renovations, custom tile installation, and flooring services in the Houston metropolitan area. We transform outdated bathrooms into stunning, functional spaces.

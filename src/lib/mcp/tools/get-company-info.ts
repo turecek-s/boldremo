@@ -15,7 +15,7 @@ export default defineTool({
       phone: "(832) 513-5737",
       email: "info@boldremo.com",
       website: "https://www.boldremo.com",
-      serviceAreas: ["Houston", "Heights", "Bellaire", "River Oaks", "Kingwood"],
+      serviceAreas: ["Houston", "Heights", "Bellaire", "River Oaks", "Kingwood", "Memorial"],
       process: [
         "Free rough estimate",
         "$75 in-home design consult",

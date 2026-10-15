@@ -177,7 +177,7 @@ const RealtorsDesigners = () => {
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Built for top realtors and designers serving Houston, Heights, Bellaire,
-                River Oaks, and Kingwood.
+                River Oaks, Kingwood, and Memorial.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
