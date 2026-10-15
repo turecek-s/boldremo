@@ -10,5 +10,5 @@
 - [x] Relabel Stan's experience stat, rewrite his waterproofing sentence, and link his introduction to About.
 - [x] Check the review environment configuration and CORS on the actual request path.
 - [x] Publish and verify all homepage corrections and photographs on production.
-- [ ] Replace the vanity pair with a compact draggable tub comparison and enlarged dialog, preserving hero copy and founder bar.
-- [ ] Verify dragging, enlargement, photo delivery and layout on mobile/tablet/desktop, then publish and check production.
+- [x] Replace the vanity pair with a compact draggable tub comparison and enlarged dialog, preserving hero copy and founder bar.
+- [x] Verify dragging, enlargement, photo delivery and layout on mobile/tablet/desktop, then publish and check production.
