@@ -2,8 +2,8 @@ import { useRef, useState, type PointerEvent } from "react";
 import { ChevronsLeftRight, Maximize2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import beforeTub from "@/assets/before-tub.webp.asset.json";
-import afterTub from "@/assets/after-tub.webp.asset.json";
+import beforeTub from "@/assets/before-tub.webp";
+import afterTub from "@/assets/after-tub.webp";
 
 type FrameProps = {
   position: number;
@@ -21,8 +21,8 @@ function ComparisonFrame({ position, onChange, onEnlarge }: FrameProps) {
 
   return (
     <div ref={frame} className="relative h-full w-full overflow-hidden rounded-md border border-border bg-muted" role="group" aria-label="Tub and shower before and after remodeling">
-      <img src={afterTub.url} alt="After remodeling: white tub, large-format veined tile, a wide built-in niche, brushed-gold rain shower and handheld, and recessed ceiling lights" width={768} height={1024} className="absolute inset-0 h-full w-full object-cover" decoding="async" loading="eager" />
-      <img src={beforeTub.url} alt="Before remodeling: white bathtub with small square white wall tiles, basic chrome fixtures, and a worn terrazzo-style floor" width={768} height={1024} className="absolute inset-0 h-full w-full object-cover" style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }} decoding="async" loading="eager" />
+      <img src={afterTub} alt="After remodeling: white tub, large-format veined tile, a wide built-in niche, brushed-gold rain shower and handheld, and recessed ceiling lights" width={768} height={1024} className="absolute inset-0 h-full w-full object-cover" decoding="async" loading="eager" />
+      <img src={beforeTub} alt="Before remodeling: white bathtub with small square white wall tiles, basic chrome fixtures, and a worn terrazzo-style floor" width={768} height={1024} className="absolute inset-0 h-full w-full object-cover" style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }} decoding="async" loading="eager" />
       {onEnlarge && (
         <Button variant="ghost" onClick={onEnlarge} aria-label="Enlarge tub before and after comparison" className="absolute inset-0 h-full w-full rounded-none p-0 hover:bg-transparent focus-visible:ring-inset">
           <Maximize2 className="absolute bottom-3 right-3 h-8 w-8 rounded-sm bg-background p-2 text-foreground shadow-sm" />
@@ -69,7 +69,7 @@ export function TubComparison() {
       </div>
       <DialogContent className="w-[calc(100%-2rem)] max-w-[560px] gap-3 p-4 sm:p-5 motion-reduce:animate-none">
         <DialogTitle className="pr-8 text-base tracking-normal">Tub &amp; shower transformation</DialogTitle>
-        <div className="mx-auto aspect-[3/4] max-h-[75dvh] w-auto max-w-full">
+        <div className="mx-auto aspect-[3/4] w-[min(100%,56.25dvh)]">
           <ComparisonFrame position={position} onChange={setPosition} />
         </div>
       </DialogContent>
