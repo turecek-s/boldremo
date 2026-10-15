@@ -79,7 +79,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       <p>Most full bathroom transformations take 7 to 12 days.</p>
       <h2>FAQs</h2>
       <p>Shower-only conversions start at $7,000. We work with tile you've purchased. We install frameless glass through a local Houston supplier.</p>
-      <p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com. Serving Heights, Bellaire, River Oaks, Kingwood, and all of Houston.</p>
+      <p>Call BoldREMO at (832) 513-5737 or email info@boldremo.com. Serving Heights, Bellaire, River Oaks, Kingwood, Memorial, and all of Houston.</p>
     `,
   },
   "/gallery": {
