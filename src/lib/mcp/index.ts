@@ -11,7 +11,7 @@ export default defineMcp({
   title: "BoldREMO website",
   version: "0.1.0",
   instructions:
-    "Tools for the BoldREMO luxury bathroom remodeling website (Houston, TX). Use `get_company_info` and `get_pricing` for company, service-area, and package details. Use `list_contact_submissions` and `mark_submission_read` to review website leads (admin accounts only).",
+    "Tools for the BoldREMO bathroom remodeling website (Houston, TX). Use `get_company_info` and `get_pricing` for company, service-area, and package details. Use `list_contact_submissions` and `mark_submission_read` to review website leads (admin accounts only).",
   auth: auth.oauth.issuer({
     issuer: `https://${projectRef}.supabase.co/auth/v1`,
     acceptedAudiences: "authenticated",

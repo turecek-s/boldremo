@@ -1,7 +1,7 @@
 const ImageGallerySchema = () => {
   const galleryImages = [
     {
-      name: "Luxury bathroom remodel with custom tile work in Houston Heights TX",
+      name: "Bathroom remodel with custom tile work in Houston Heights TX",
       description: "Professional bathroom remodeling featuring custom tile installation and modern fixtures by BoldREMO in Houston Heights, Texas",
       contentUrl: "https://boldremo.com/assets/gallery-1.jpg"
     },
@@ -12,7 +12,7 @@ const ImageGallerySchema = () => {
     },
     {
       name: "Master bathroom transformation in River Oaks TX",
-      description: "Elegant master bathroom remodel with walk-in shower and luxury finishes in River Oaks, Houston",
+      description: "Elegant master bathroom remodel with walk-in shower and premium finishes in River Oaks, Houston",
       contentUrl: "https://boldremo.com/assets/gallery-3.jpg"
     },
     {
@@ -32,11 +32,11 @@ const ImageGallerySchema = () => {
     },
     {
       name: "Expert tile and flooring installation in River Oaks Houston",
-      description: "Premium tile and flooring services for luxury homes in River Oaks, Texas",
+      description: "Premium tile and flooring services for homes in River Oaks, Texas",
       contentUrl: "https://boldremo.com/assets/showcase-4.jpg"
     },
     {
-      name: "Luxury bathroom remodeling services in Kingwood Texas",
+      name: "Bathroom remodeling services in Kingwood Texas",
       description: "Complete bathroom renovation by BoldREMO serving Kingwood and greater Houston area",
       contentUrl: "https://boldremo.com/assets/showcase-5.jpg"
     }
