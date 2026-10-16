@@ -173,7 +173,7 @@ const Heights = () => {
                 How to Get Started
               </h3>
               <p>
-                Every Heights bathroom is a little different, so we start with what you've got. Text or email photos of the existing room, rough dimensions, and the changes you have in mind, and we can usually give you a ballpark by phone in about ten minutes. For exact numbers, book a $75 in-person consultation: we walk the space, look at what's behind the walls where we can, talk through materials, and follow up with a written proposal.
+                Every Heights bathroom is a little different, so we start with what you've got. Text or email photos of the existing room, rough dimensions, and the changes you have in mind, and we can usually give you a ballpark by phone in about ten minutes. For exact numbers, book a $75 in-person consultation: we walk the space, talk through materials, and follow up with a written proposal.
               </p>
               <p className="text-foreground font-medium pt-2">
                 Call (832) 513-5737 for a free rough estimate by phone, or book a $75 in-person consultation credited to your project.
