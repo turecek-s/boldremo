@@ -34,17 +34,17 @@ const Bellaire = () => {
         <title>Bathroom Remodeling in Bellaire TX | BoldREMO</title>
         <meta
           name="description"
-          content="Bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult, (832) 513-5737."
+          content="Bellaire bathroom remodeling for original ranch homes and newer two-stories, scheduled around the school day. Book a $75 design consult, (832) 513-5737."
         />
         <meta
           name="keywords"
           content="bathroom remodeling Bellaire TX, Bellaire bathroom renovation, bathroom contractor Bellaire, spa bathroom remodel Bellaire"
         />
         <meta property="og:title" content="Bathroom Remodeling in Bellaire TX | BoldREMO" />
-        <meta property="og:description" content="Bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult, (832) 513-5737." />
+        <meta property="og:description" content="Bellaire bathroom remodeling for original ranch homes and newer two-stories, scheduled around the school day. Book a $75 design consult, (832) 513-5737." />
         <meta property="og:url" content="https://www.boldremo.com/service-areas/bellaire" />
         <meta name="twitter:title" content="Bathroom Remodeling in Bellaire TX | BoldREMO" />
-        <meta name="twitter:description" content="Bathroom remodeling in Bellaire, TX. BoldREMO crafts spa-inspired bathrooms with premium materials. Book a $75 design consult, (832) 513-5737." />
+        <meta name="twitter:description" content="Bellaire bathroom remodeling for original ranch homes and newer two-stories, scheduled around the school day. Book a $75 design consult, (832) 513-5737." />
         <meta name="twitter:url" content="https://www.boldremo.com/service-areas/bellaire" />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/bellaire" />
       </Helmet>
@@ -167,13 +167,13 @@ const Bellaire = () => {
                 How Our Pricing Works
               </h3>
               <p>
-                <BrandName /> charges for labor and installation materials separately from the finish materials you supply. You source the tile, vanity, fixtures, and lighting at the price points you want, and we install them. You see exactly what's labor and what's materials, no markup on things we didn't buy.
+                Family budgets deserve clear numbers. We price our labor and installation materials as one part of the bill, and the finish materials you supply as another. You shop for tile, a vanity, fixtures, and lighting at the price points that suit your household, and we handle the installation. There's no markup on materials we didn't buy.
               </p>
               <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
                 How to Get Started
               </h3>
               <p>
-                Send photos, rough dimensions, and what you'd change. We'll give you a rough estimate by phone in about ten minutes. For exact numbers we schedule a $75 in-person consultation, measure the space, and write you a proposal.
+                Getting a number doesn't have to wait for a free evening. Send photos, rough dimensions, and a short list of what you'd change whenever it's convenient, and we'll call with a rough estimate that takes about ten minutes. When you're ready for exact pricing, we set up a $75 in-person consultation at a time that works around your family's schedule, measure the space, and write up a proposal.
               </p>
               <p className="text-foreground font-medium pt-2">
                 Call (832) 513-5737 for a free rough estimate by phone, or book a $75 in-person consultation credited to your project.

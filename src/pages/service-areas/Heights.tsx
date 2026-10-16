@@ -34,17 +34,17 @@ const Heights = () => {
         <title>Bathroom Remodeling in The Heights TX | BoldREMO</title>
         <meta
           name="description"
-          content="Bathroom remodeling in Houston Heights, TX. Historic home renovations, custom tile & spa-inspired designs. Book a $75 consult, (832) 513-5737."
+          content="Heights bathroom remodeling for 1920s bungalows and new builds, from tight hall baths to design-driven master suites. Book a $75 consult, (832) 513-5737."
         />
         <meta
           name="keywords"
           content="bathroom remodeling Heights TX, bathroom renovation Houston Heights, bathroom contractor Heights, historic home bathroom remodel Heights"
         />
         <meta property="og:title" content="Bathroom Remodeling in The Heights TX | BoldREMO" />
-        <meta property="og:description" content="Bathroom remodeling in Houston Heights, TX. Historic home renovations, custom tile & spa-inspired designs. Book a $75 consult, (832) 513-5737." />
+        <meta property="og:description" content="Heights bathroom remodeling for 1920s bungalows and new builds, from tight hall baths to design-driven master suites. Book a $75 consult, (832) 513-5737." />
         <meta property="og:url" content="https://www.boldremo.com/service-areas/heights" />
         <meta name="twitter:title" content="Bathroom Remodeling in The Heights TX | BoldREMO" />
-        <meta name="twitter:description" content="Bathroom remodeling in Houston Heights, TX. Historic home renovations, custom tile & spa-inspired designs. Book a $75 consult, (832) 513-5737." />
+        <meta name="twitter:description" content="Heights bathroom remodeling for 1920s bungalows and new builds, from tight hall baths to design-driven master suites. Book a $75 consult, (832) 513-5737." />
         <meta name="twitter:url" content="https://www.boldremo.com/service-areas/heights" />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/heights" />
       </Helmet>
@@ -167,13 +167,13 @@ const Heights = () => {
                 How Our Pricing Works
               </h3>
               <p>
-                <BrandName /> charges for labor and installation materials separately from the finish materials you supply. You pick the tile, fixtures, vanity, and lighting at your budget; we install them. Nothing hidden, nothing marked up that we didn't actually buy.
+                Old houses hide enough surprises without the bill adding more. Our labor and installation materials are priced on their own line, apart from the finish materials you supply. You choose the tile, fixtures, vanity, and lighting at the level you're comfortable with, and we put them in. We never mark up materials we didn't purchase.
               </p>
               <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
                 How to Get Started
               </h3>
               <p>
-                Text or email us photos of the existing bathroom along with rough dimensions and what you want changed. Most projects we can ballpark on the phone in about ten minutes. If you want exact pricing, we schedule a $75 in-person consultation, walk the space, talk through materials, and send you a written proposal.
+                Every Heights bathroom is a little different, so we start with what you've got. Text or email photos of the existing room, rough dimensions, and the changes you have in mind, and we can usually give you a ballpark by phone in about ten minutes. For exact numbers, book a $75 in-person consultation: we walk the space, look at what's behind the walls where we can, talk through materials, and follow up with a written proposal.
               </p>
               <p className="text-foreground font-medium pt-2">
                 Call (832) 513-5737 for a free rough estimate by phone, or book a $75 in-person consultation credited to your project.

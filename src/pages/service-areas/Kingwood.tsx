@@ -34,17 +34,17 @@ const Kingwood = () => {
         <title>Bathroom Remodeling in Kingwood TX | BoldREMO</title>
         <meta
           name="description"
-          content="Bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737."
+          content="Kingwood bathroom remodeling for 1970s to 2000s homes: garden tubs out, walk-in showers in, HOA paperwork handled. Book a $75 design consult, (832) 513-5737."
         />
         <meta
           name="keywords"
           content="bathroom remodeling Kingwood TX, Kingwood bathroom renovation, bathroom contractor Kingwood, tile installation Kingwood"
         />
         <meta property="og:title" content="Bathroom Remodeling in Kingwood TX | BoldREMO" />
-        <meta property="og:description" content="Bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737." />
+        <meta property="og:description" content="Kingwood bathroom remodeling for 1970s to 2000s homes: garden tubs out, walk-in showers in, HOA paperwork handled. Book a $75 design consult, (832) 513-5737." />
         <meta property="og:url" content="https://www.boldremo.com/service-areas/kingwood" />
         <meta name="twitter:title" content="Bathroom Remodeling in Kingwood TX | BoldREMO" />
-        <meta name="twitter:description" content="Bathroom remodeling in Kingwood, TX. BoldREMO delivers expert craftsmanship & quality materials. Book a $75 design consult, (832) 513-5737." />
+        <meta name="twitter:description" content="Kingwood bathroom remodeling for 1970s to 2000s homes: garden tubs out, walk-in showers in, HOA paperwork handled. Book a $75 design consult, (832) 513-5737." />
         <meta name="twitter:url" content="https://www.boldremo.com/service-areas/kingwood" />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/kingwood" />
       </Helmet>
@@ -167,13 +167,13 @@ const Kingwood = () => {
                 How Our Pricing Works
               </h3>
               <p>
-                <BrandName /> charges for labor and installation materials, thinset, grout, backerboard, fasteners, plumbing rough-in parts, separately from the finish materials you supply. You pick the tile, vanity, fixtures, and lighting at whatever budget you want, and you only pay us to install them well. No markup on materials we never touched.
+                Here's how it works. You buy the finish materials, tile, vanity, fixtures, lighting, at whatever price fits your budget. We bill separately for labor and the installation materials that go behind them: thinset, grout, backerboard, fasteners, and plumbing rough-in parts. If we didn't buy it, we don't mark it up.
               </p>
               <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
                 How to Get Started
               </h3>
               <p>
-                Send us photos of the bathroom and rough dimensions, or just tell us what you want changed. We'll ballpark it on the phone in about ten minutes. If the numbers make sense, we come out for a $75 in-person consultation, measure properly, and write you a real proposal.
+                Start simple: snap a few photos of the bathroom, jot down rough measurements, or just tell us what bugs you about it. A ten-minute phone call usually gets you a ballpark. If that works for you, we'll come out for a $75 in-person consultation, take real measurements, and put a written proposal in your hands.
               </p>
               <p className="text-foreground font-medium pt-2">
                 Call (832) 513-5737 for a free rough estimate by phone, or book a $75 in-person consultation credited to your project.
