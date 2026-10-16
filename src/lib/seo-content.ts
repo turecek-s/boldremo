@@ -170,7 +170,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/service-areas/heights",
     title: "Bathroom Remodeling Houston Heights | BoldREMO",
     description:
-      "Bathroom remodeling for Houston Heights homes. BoldREMO blends historic charm with modern comfort. Custom tile, walk-in showers, full renovations. (832) 513-5737.",
+      "Heights bathroom remodeling for 1920s bungalows and new builds, from tight hall baths to design-driven master suites. Book a $75 consult, (832) 513-5737.",
     bodyHtml: `
       <h1>Bathroom Remodeling in Houston Heights</h1>
       <p>BoldREMO specializes in bathroom remodeling for Houston Heights, a neighborhood where historic bungalows and craftsman homes meet modern comfort. We respect original architecture while delivering contemporary functionality and high-end finishes.</p>
@@ -183,7 +183,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/service-areas/bellaire",
     title: "Bathroom Remodeling Bellaire TX | BoldREMO",
     description:
-      "Bellaire bathroom remodeling and renovation. BoldREMO delivers bathroom transformations for Bellaire family homes. Call (832) 513-5737.",
+      "Bellaire bathroom remodeling for original ranch homes and newer two-stories, scheduled around the school day. Book a $75 design consult, (832) 513-5737.",
     bodyHtml: `
       <h1>Bathroom Remodeling in Bellaire, TX</h1>
       <p>BoldREMO provides premium bathroom remodeling services for Bellaire homeowners. Known for excellent schools and family-friendly atmosphere, Bellaire deserves bathrooms that match its quality of life.</p>
@@ -196,7 +196,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/service-areas/river-oaks",
     title: "Bathroom Remodeling River Oaks | BoldREMO",
     description:
-      "High-end bathroom remodeling for River Oaks estates. BoldREMO delivers spa-quality renovations with premium materials and impeccable craftsmanship. (832) 513-5737.",
+      "River Oaks bathroom remodeling built to your designer's drawings, from primary suites to powder rooms. Book a $75 consult, (832) 513-5737.",
     bodyHtml: `
       <h1>Bathroom Remodeling in River Oaks</h1>
       <p>BoldREMO delivers high-end bathroom renovations that match the elegance of River Oaks estates. Our River Oaks projects feature premium porcelain tile, frameless glass, freestanding soaking tubs, heated floors, and smart home integration.</p>
@@ -279,7 +279,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/service-areas/kingwood",
     title: "Bathroom Remodeling Kingwood TX | BoldREMO",
     description:
-      "Kingwood bathroom remodeling experts. BoldREMO delivers quality craftsmanship and attention to detail for Kingwood homeowners. Call (832) 513-5737.",
+      "Kingwood bathroom remodeling for 1970s to 2000s homes: garden tubs out, walk-in showers in, HOA paperwork handled. Book a $75 design consult, (832) 513-5737.",
     bodyHtml: `
       <h1>Bathroom Remodeling in Kingwood, TX</h1>
       <p>BoldREMO serves Kingwood homeowners with quality bathroom remodeling and renovation services. Known as Houston's "Livable Forest," Kingwood combines suburban tranquility with refined home interiors.</p>
@@ -292,7 +292,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     path: "/service-areas/memorial",
     title: "Bathroom Remodeling Memorial Houston TX | BoldREMO",
     description:
-      "Memorial bathroom remodeling experts. BoldREMO updates new-builds and 1960s to 1980s Memorial homes with quality craftsmanship. Call (832) 513-5737.",
+      "Memorial bathroom remodeling: opening up 1960s to 1980s master baths and upgrading finishes in newer custom builds. Book a $75 consult, (832) 513-5737.",
     bodyHtml: `
       <h1>Bathroom Remodeling in Memorial, Houston</h1>
       <p>BoldREMO serves Memorial homeowners with upscale bathroom remodeling. Memorial is a heavily wooded area of large lots near Memorial Park and the Villages, with a mix of new-builds and older homes from the 1960s through the 1980s that are ready for bathroom updates.</p>

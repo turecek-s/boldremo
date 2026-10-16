@@ -22,7 +22,6 @@ const RiverOaks = () => {
   const neighborhoods = [
     "River Oaks",
     "Tanglewood",
-    "Memorial",
     "Galleria Area",
     "Highland Village",
     "Upper Kirby",
@@ -34,17 +33,17 @@ const RiverOaks = () => {
         <title>Bathroom Remodeling in River Oaks TX | BoldREMO</title>
         <meta
           name="description"
-          content="Bathroom remodeling for River Oaks estates. World-class craftsmanship for Houston's finest homes. Book a $75 consult, (832) 513-5737."
+          content="River Oaks bathroom remodeling built to your designer's drawings, from primary suites to powder rooms. Book a $75 consult, (832) 513-5737."
         />
         <meta
           name="keywords"
           content="bathroom remodeling River Oaks, River Oaks bathroom renovation, high-end bathroom contractor River Oaks TX, bathroom remodel Houston"
         />
         <meta property="og:title" content="Bathroom Remodeling in River Oaks TX | BoldREMO" />
-        <meta property="og:description" content="Bathroom remodeling for River Oaks estates. World-class craftsmanship for Houston's finest homes. Book a $75 consult, (832) 513-5737." />
+        <meta property="og:description" content="River Oaks bathroom remodeling built to your designer's drawings, from primary suites to powder rooms. Book a $75 consult, (832) 513-5737." />
         <meta property="og:url" content="https://www.boldremo.com/service-areas/river-oaks" />
         <meta name="twitter:title" content="Bathroom Remodeling in River Oaks TX | BoldREMO" />
-        <meta name="twitter:description" content="Bathroom remodeling for River Oaks estates. World-class craftsmanship for Houston's finest homes. Book a $75 consult, (832) 513-5737." />
+        <meta name="twitter:description" content="River Oaks bathroom remodeling built to your designer's drawings, from primary suites to powder rooms. Book a $75 consult, (832) 513-5737." />
         <meta name="twitter:url" content="https://www.boldremo.com/service-areas/river-oaks" />
         <link rel="canonical" href="https://www.boldremo.com/service-areas/river-oaks" />
       </Helmet>
@@ -167,13 +166,13 @@ const RiverOaks = () => {
                 How Our Pricing Works
               </h3>
               <p>
-                <BrandName /> charges for labor and installation materials separately from the finish materials you supply through your designer or directly. You see exactly what you're paying us versus what you're paying for stone, tile, fixtures, and cabinetry. No hidden markup on materials we didn't buy.
+                Our pricing is built to sit cleanly alongside your design team's budget. Labor and installation materials are billed by us; finish materials come from you, either through your designer or purchased directly. That way the line between our work and your tile, fixtures, and cabinetry is always visible, and we never mark up materials we didn't buy.
               </p>
               <h3 className="text-2xl font-serif font-bold text-foreground pt-4">
                 How to Get Started
               </h3>
               <p>
-                Have your designer send drawings and a finish schedule, or send us photos and dimensions and tell us what you want changed. We'll give you a rough estimate by phone. For exact pricing we schedule a $75 in-person consultation, walk the space, and send you a written proposal.
+                Projects here often start with your designer. Have them send drawings and a finish schedule, or send photos and dimensions yourself along with the changes you're considering. We'll follow with a rough estimate by phone. For exact pricing, we arrange a $75 in-person consultation to walk the space, then deliver a written proposal your designer can review.
               </p>
               <p className="text-foreground font-medium pt-2">
                 Call (832) 513-5737 for a free rough estimate by phone, or book a $75 in-person consultation credited to your project.
