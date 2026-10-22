@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { SeoHead } from "@/components/SeoHead";
+import { AreaLinkedText } from "@/components/AreaLinkedText";
 import { Button } from "@/components/ui/button";
 import { Bath, Grid3X3, Paintbrush, Droplets, Wrench } from "lucide-react";
 
@@ -48,7 +49,7 @@ const Services = () => {
               Our Services
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Bathroom remodeling in Houston, Heights, Bellaire, River Oaks, Kingwood & Memorial.
+              <AreaLinkedText text="Bathroom remodeling in Houston, Heights, Bellaire, River Oaks, Kingwood & Memorial." />
             </p>
           </div>
         </section>

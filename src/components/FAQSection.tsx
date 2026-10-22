@@ -1,3 +1,4 @@
+import { AreaLinkedText } from "@/components/AreaLinkedText";
 import {
   Accordion,
   AccordionContent,
@@ -99,7 +100,7 @@ export const FAQSection = () => {
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed">
-                  {faq.answer}
+                  <AreaLinkedText text={faq.answer} />
                 </AccordionContent>
               </AccordionItem>
             ))}
