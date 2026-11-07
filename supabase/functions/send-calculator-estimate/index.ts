@@ -305,7 +305,7 @@ const handler = async (req: Request): Promise<Response> => {
       });
 
     if (dbError) {
-      console.error("DB insert error:", dbError);
+      console.error(`calculator_leads insert failed: code=${dbError.code ?? "?"} message=${dbError.message ?? "?"}`);
     } else {
       console.log("Calculator lead saved");
     }
