@@ -5,3 +5,4 @@
 - Verify homepage comparison image delivery on the published domain after publication; preview-only checks cannot establish production availability.
 - Bundle homepage comparison photos as static WebP imports because the asset proxy has failed image loading in browser checks.- Set per-route title, description, canonical and OG tags in each route's head() via seoHead() reading ROUTE_SEO, so crawlers get them in server-rendered HTML; never reintroduce react-helmet or hidden fallback copy.
 - Keep public URLs in trailing-slash form (router trailingSlash "always"; router-compat useLocation strips it for comparisons) because canonicals, the sitemap and indexed pages use it.
+- Apply permanent page redirects in the server entry: retired shower URLs go directly to Services, and only same-origin GET/HEAD slash-normalization redirects become 301, leaving other responses untouched.
