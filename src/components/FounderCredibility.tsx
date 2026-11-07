@@ -1,5 +1,5 @@
 import stanHeadshot from "@/assets/stan-headshot.webp";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ArrowUpRight } from "lucide-react";
 
 export const FounderCredibility = () => (
@@ -7,7 +7,7 @@ export const FounderCredibility = () => (
     <Link
       to="/about"
       aria-label="Meet Stan: read his story on the About page"
-      className="container-custom group flex cursor-pointer items-center gap-4 py-5 transition-colors hover:bg-muted/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring md:gap-6 md:py-6"
+      className="container-custom group flex cursor-pointer items-center gap-4 py-5 transition-colors hover:bg-muted/50 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring md:gap-6 md:py-6"
     >
       <img
         src={stanHeadshot}

@@ -1,0 +1,7 @@
+{"functions": [
+  {"name": "get-google-reviews", "classification": "internal-only", "signal": "raw fetch from src/hooks/use-google-reviews.ts; kept on backend so the Google Places key stays in backend secrets", "outcome": "left"},
+  {"name": "mcp", "classification": "MCP server", "signal": "fixed MCP endpoint used by AI agents with OAuth", "outcome": "left"},
+  {"name": "send-calculator-estimate", "classification": "internal-only", "signal": "invoked from calculator; needs service-role key (backend-only) for lead storage and rate limiting", "outcome": "left"},
+  {"name": "send-contact-email", "classification": "internal-only", "signal": "invoked from Contact and RealtorsDesigners; needs service-role key (backend-only) and Gmail secrets", "outcome": "left"},
+  {"name": "send-guide-email", "classification": "internal-only", "signal": "invoked from LeadCaptureSection; needs service-role key (backend-only)", "outcome": "left"}
+]}

@@ -109,9 +109,9 @@ const CostCalculator = () => {
   const [answers, setAnswers] = useState<Partial<CalculatorInputs>>({});
   const [result, setResult] = useState<Result | null>(null);
 
-  const currentStep = STEPS[step];
+  const currentStep = STEPS[step] ?? STEPS[0]!;
   const isLastStep = step === STEPS.length - 1;
-  const currentAnswer = answers[currentStep?.key];
+  const currentAnswer = answers[currentStep.key];
 
   const handleSelect = (value: string) => {
     setAnswers({ ...answers, [currentStep.key]: value });

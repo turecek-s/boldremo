@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 
 const AREA_ROUTES: Record<string, string> = {
   Houston: "/service-areas/houston",

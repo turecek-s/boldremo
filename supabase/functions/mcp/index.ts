@@ -3,10 +3,10 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.25.0";
+import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.25.1";
 
 // src/lib/mcp/tools/get-company-info.ts
-import { defineTool } from "npm:@lovable.dev/mcp-js@0.25.0";
+import { defineTool } from "npm:@lovable.dev/mcp-js@0.25.1";
 var get_company_info_default = defineTool({
   name: "get_company_info",
   title: "Get company info",
@@ -37,7 +37,7 @@ var get_company_info_default = defineTool({
 });
 
 // src/lib/mcp/tools/get-pricing.ts
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.25.0";
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.25.1";
 var tiers = [
   {
     title: "Guest / Hall Bathroom Remodel",
@@ -72,7 +72,7 @@ var get_pricing_default = defineTool2({
 
 // src/lib/mcp/tools/list-contact-submissions.ts
 import { createClient } from "npm:@supabase/supabase-js@^2.89.0";
-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.25.0";
+import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.25.1";
 import { z } from "npm:zod@^4.4.3";
 function supabaseForUser(ctx) {
   return createClient(process.env.SUPABASE_URL, process.env.SUPABASE_PUBLISHABLE_KEY, {
@@ -108,7 +108,7 @@ var list_contact_submissions_default = defineTool3({
 });
 
 // src/lib/mcp/tools/mark-submission-read.ts
-import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.25.0";
+import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.25.1";
 import { z as z2 } from "npm:zod@^4.4.3";
 var mark_submission_read_default = defineTool4({
   name: "mark_submission_read",
@@ -151,5 +151,5 @@ var mcp_default = defineMcp({
 });
 
 // lovable-mcp-supabase-entry.ts
-import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.25.0/stacks/supabase";
+import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.25.1/stacks/supabase";
 Deno.serve(createSupabaseHandler(mcp_default, { functionName: "mcp" }));

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Linkedin, Star } from "lucide-react";
 
 const TikTokIcon = ({ className }: { className?: string }) => (

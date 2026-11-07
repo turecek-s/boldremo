@@ -1,11 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { Button } from "@/components/ui/button";
 import { BrandName } from "@/components/BrandName";
-import { SeoFallback } from "@/components/SeoFallback";
 import { Phone, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
 import serviceBathroom from "@/assets/service-bathroom.jpg";
 
@@ -30,26 +28,6 @@ const Heights = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Bathroom Remodeling in The Heights TX | BoldREMO</title>
-        <meta
-          name="description"
-          content="Heights bathroom remodeling for 1920s bungalows and new builds, from tight hall baths to design-driven master suites. Book a $75 consult, (832) 513-5737."
-        />
-        <meta
-          name="keywords"
-          content="bathroom remodeling Heights TX, bathroom renovation Houston Heights, bathroom contractor Heights, historic home bathroom remodel Heights"
-        />
-        <meta property="og:title" content="Bathroom Remodeling in The Heights TX | BoldREMO" />
-        <meta property="og:description" content="Heights bathroom remodeling for 1920s bungalows and new builds, from tight hall baths to design-driven master suites. Book a $75 consult, (832) 513-5737." />
-        <meta property="og:url" content="https://www.boldremo.com/service-areas/heights" />
-        <meta name="twitter:title" content="Bathroom Remodeling in The Heights TX | BoldREMO" />
-        <meta name="twitter:description" content="Heights bathroom remodeling for 1920s bungalows and new builds, from tight hall baths to design-driven master suites. Book a $75 consult, (832) 513-5737." />
-        <meta name="twitter:url" content="https://www.boldremo.com/service-areas/heights" />
-        <link rel="canonical" href="https://www.boldremo.com/service-areas/heights" />
-      </Helmet>
-
-      <SeoFallback path="/service-areas/heights" />
       <LocalBusinessSchema />
       <Header />
 

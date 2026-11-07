@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { SeoHead } from "@/components/SeoHead";
 import { CTASection } from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Award, Handshake, ShieldCheck } from "lucide-react";
 import { PARTNERS, CERTIFICATIONS } from "@/data/partners";
 

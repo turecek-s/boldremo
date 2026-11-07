@@ -1,11 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { Button } from "@/components/ui/button";
 import { BrandName } from "@/components/BrandName";
-import { SeoFallback } from "@/components/SeoFallback";
 import { Phone, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
 import serviceBathroom from "@/assets/service-bathroom.jpg";
 
@@ -28,26 +26,6 @@ const Houston = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Bathroom Remodeling Houston TX | BoldREMO</title>
-        <meta
-          name="description"
-          content="Houston's premier bathroom remodeling. BoldREMO transforms bathrooms across Heights, Bellaire, River Oaks & Kingwood. Call (832) 513-5737."
-        />
-        <meta
-          name="keywords"
-          content="bathroom remodeling Houston, Houston bathroom renovation, bathroom contractor Houston TX, bathroom remodel Houston Texas"
-        />
-        <meta property="og:title" content="Bathroom Remodeling Houston TX | BoldREMO" />
-        <meta property="og:description" content="Houston's premier bathroom remodeling. BoldREMO transforms bathrooms across Heights, Bellaire, River Oaks & Kingwood. Call (832) 513-5737." />
-        <meta property="og:url" content="https://www.boldremo.com/service-areas/houston" />
-        <meta name="twitter:title" content="Bathroom Remodeling Houston TX | BoldREMO" />
-        <meta name="twitter:description" content="Houston's premier bathroom remodeling. BoldREMO transforms bathrooms across Heights, Bellaire, River Oaks & Kingwood. Call (832) 513-5737." />
-        <meta name="twitter:url" content="https://www.boldremo.com/service-areas/houston" />
-        <link rel="canonical" href="https://www.boldremo.com/service-areas/houston" />
-      </Helmet>
-
-      <SeoFallback path="/service-areas/houston" />
       <LocalBusinessSchema />
       <Header />
 

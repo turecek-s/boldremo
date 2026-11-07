@@ -1,0 +1,14 @@
+{
+  "customizations": [
+    { "token": "brand color variables (navy/taupe palette, light + dark)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--hero-overlay / --navy / --taupe / --warm-white / --gold-accent", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "font-serif / font-sans (Cormorant Garamond, Montserrat) + @font-face", "source": "tailwind.config.ts + src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "colors navy/taupe/warm-white/gold-accent utilities", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "section-padding / container-custom / text-gradient", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "animate-fade-up / fade-in / scale-in / delayed variants + keyframes", "source": "src/index.css + tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "hero-overlay utility", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "text-balance / content-visibility-auto", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "mobile performance + print media rules", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "container (center, 2rem padding, 1400px)", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" }
+  ]
+}

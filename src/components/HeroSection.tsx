@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Star, Hammer, BadgeCheck } from "lucide-react";
 import { TubComparison } from "@/components/TubComparison";

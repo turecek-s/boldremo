@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Button } from "@/components/ui/button";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { Clock, ArrowRight } from "lucide-react";

@@ -1,11 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { Button } from "@/components/ui/button";
 import { BrandName } from "@/components/BrandName";
-import { SeoFallback } from "@/components/SeoFallback";
 import { Phone, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
 import serviceBathroom from "@/assets/service-bathroom.jpg";
 
@@ -30,26 +28,6 @@ const Memorial = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Bathroom Remodeling in Memorial Houston | BoldREMO</title>
-        <meta
-          name="description"
-          content="Memorial bathroom remodeling: opening up 1960s to 1980s master baths and upgrading finishes in newer custom builds. Book a $75 consult, (832) 513-5737."
-        />
-        <meta
-          name="keywords"
-          content="bathroom remodeling Memorial Houston, Memorial bathroom renovation, bathroom contractor Memorial Villages, tile installation Memorial"
-        />
-        <meta property="og:title" content="Bathroom Remodeling in Memorial Houston | BoldREMO" />
-        <meta property="og:description" content="Memorial bathroom remodeling: opening up 1960s to 1980s master baths and upgrading finishes in newer custom builds. Book a $75 consult, (832) 513-5737." />
-        <meta property="og:url" content="https://www.boldremo.com/service-areas/memorial" />
-        <meta name="twitter:title" content="Bathroom Remodeling in Memorial Houston | BoldREMO" />
-        <meta name="twitter:description" content="Memorial bathroom remodeling: opening up 1960s to 1980s master baths and upgrading finishes in newer custom builds. Book a $75 consult, (832) 513-5737." />
-        <meta name="twitter:url" content="https://www.boldremo.com/service-areas/memorial" />
-        <link rel="canonical" href="https://www.boldremo.com/service-areas/memorial" />
-      </Helmet>
-
-      <SeoFallback path="/service-areas/memorial" />
       <LocalBusinessSchema />
       <Header />
 

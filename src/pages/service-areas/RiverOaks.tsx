@@ -1,11 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { Button } from "@/components/ui/button";
 import { BrandName } from "@/components/BrandName";
-import { SeoFallback } from "@/components/SeoFallback";
 import { Phone, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
 import serviceBathroom from "@/assets/service-bathroom.jpg";
 
@@ -29,26 +27,6 @@ const RiverOaks = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Bathroom Remodeling in River Oaks TX | BoldREMO</title>
-        <meta
-          name="description"
-          content="River Oaks bathroom remodeling built to your designer's drawings, from primary suites to powder rooms. Book a $75 consult, (832) 513-5737."
-        />
-        <meta
-          name="keywords"
-          content="bathroom remodeling River Oaks, River Oaks bathroom renovation, high-end bathroom contractor River Oaks TX, bathroom remodel Houston"
-        />
-        <meta property="og:title" content="Bathroom Remodeling in River Oaks TX | BoldREMO" />
-        <meta property="og:description" content="River Oaks bathroom remodeling built to your designer's drawings, from primary suites to powder rooms. Book a $75 consult, (832) 513-5737." />
-        <meta property="og:url" content="https://www.boldremo.com/service-areas/river-oaks" />
-        <meta name="twitter:title" content="Bathroom Remodeling in River Oaks TX | BoldREMO" />
-        <meta name="twitter:description" content="River Oaks bathroom remodeling built to your designer's drawings, from primary suites to powder rooms. Book a $75 consult, (832) 513-5737." />
-        <meta name="twitter:url" content="https://www.boldremo.com/service-areas/river-oaks" />
-        <link rel="canonical" href="https://www.boldremo.com/service-areas/river-oaks" />
-      </Helmet>
-
-      <SeoFallback path="/service-areas/river-oaks" />
       <LocalBusinessSchema />
       <Header />
 

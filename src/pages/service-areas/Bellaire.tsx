@@ -1,11 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { Button } from "@/components/ui/button";
 import { BrandName } from "@/components/BrandName";
-import { SeoFallback } from "@/components/SeoFallback";
 import { Phone, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
 import serviceBathroom from "@/assets/service-bathroom.jpg";
 
@@ -30,26 +28,6 @@ const Bellaire = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Bathroom Remodeling in Bellaire TX | BoldREMO</title>
-        <meta
-          name="description"
-          content="Bellaire bathroom remodeling for original ranch homes and newer two-stories, scheduled around the school day. Book a $75 design consult, (832) 513-5737."
-        />
-        <meta
-          name="keywords"
-          content="bathroom remodeling Bellaire TX, Bellaire bathroom renovation, bathroom contractor Bellaire, spa bathroom remodel Bellaire"
-        />
-        <meta property="og:title" content="Bathroom Remodeling in Bellaire TX | BoldREMO" />
-        <meta property="og:description" content="Bellaire bathroom remodeling for original ranch homes and newer two-stories, scheduled around the school day. Book a $75 design consult, (832) 513-5737." />
-        <meta property="og:url" content="https://www.boldremo.com/service-areas/bellaire" />
-        <meta name="twitter:title" content="Bathroom Remodeling in Bellaire TX | BoldREMO" />
-        <meta name="twitter:description" content="Bellaire bathroom remodeling for original ranch homes and newer two-stories, scheduled around the school day. Book a $75 design consult, (832) 513-5737." />
-        <meta name="twitter:url" content="https://www.boldremo.com/service-areas/bellaire" />
-        <link rel="canonical" href="https://www.boldremo.com/service-areas/bellaire" />
-      </Helmet>
-
-      <SeoFallback path="/service-areas/bellaire" />
       <LocalBusinessSchema />
       <Header />
 

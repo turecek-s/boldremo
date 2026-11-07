@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/lib/router-compat";
 
 const tabs = [
   { name: "Privacy Policy", path: "/privacy-policy" },
