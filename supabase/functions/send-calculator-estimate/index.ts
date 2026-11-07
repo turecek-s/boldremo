@@ -225,6 +225,33 @@ function generateOwnerNotification(name: string, email: string, inputs: any, res
 </body></html>`;
 }
 
+
+// Forward a copy of the lead to the CRM. Never throws; never logs token or personal data.
+async function forwardToCrm(lead: {
+  firstName: string; lastName: string; email: string; phone: string;
+  message: string; smsConsent: boolean; formType: string; details: string;
+}): Promise<void> {
+  const token = Deno.env.get("CRM_WEB_LEAD_TOKEN");
+  if (!token) return;
+  try {
+    const res = await fetch("https://boldremo-flow.lovable.app/api/public/web-lead", {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-web-lead-token": token },
+      body: JSON.stringify(lead),
+      signal: AbortSignal.timeout(5000),
+    });
+    if (res.status !== 200) console.error(`CRM forward failed: status ${res.status}`);
+    await res.body?.cancel();
+  } catch (e) {
+    console.error(`CRM forward failed: ${e instanceof Error ? e.name : "unknown error"}`);
+  }
+}
+
+function splitName(name: string): { firstName: string; lastName: string } {
+  const parts = name.trim().split(/\s+/);
+  return { firstName: parts[0] ?? "", lastName: parts.slice(1).join(" ") };
+}
+
 const handler = async (req: Request): Promise<Response> => {
   console.log("Calculator estimate request received");
 
@@ -282,6 +309,21 @@ const handler = async (req: Request): Promise<Response> => {
     } else {
       console.log("Calculator lead saved");
     }
+
+    await forwardToCrm({
+      ...splitName(name), email, phone: "", smsConsent: false, formType: "calculator",
+      message: "Cost calculator estimate request",
+      details: [
+        `Estimate: $${result.low.toLocaleString()} - $${result.high.toLocaleString()}`,
+        `Size: ${SIZE_LABELS[inputs.size] || inputs.size}`,
+        `Scope: ${SCOPE_LABELS[inputs.scope] || inputs.scope}`,
+        `Area: ${NEIGHBORHOOD_LABELS[inputs.neighborhood] || inputs.neighborhood}`,
+        `Shower: ${SHOWER_LABELS[inputs.shower] || inputs.shower}`,
+        `Vanity: ${VANITY_LABELS[inputs.vanityCount] || inputs.vanityCount}`,
+        `Tile: ${TILE_LABELS[inputs.tileGrade] || inputs.tileGrade}`,
+        `Plumbing: ${PLUMBING_LABELS[inputs.plumbing] || inputs.plumbing}`,
+      ].join("; "),
+    });
 
     // Send customer email
     const { error: customerEmailError } = await resend.emails.send({

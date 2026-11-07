@@ -255,6 +255,33 @@ function generateGuideEmailHtml(name: string): string {
 `;
 }
 
+
+// Forward a copy of the lead to the CRM. Never throws; never logs token or personal data.
+async function forwardToCrm(lead: {
+  firstName: string; lastName: string; email: string; phone: string;
+  message: string; smsConsent: boolean; formType: string; details: string;
+}): Promise<void> {
+  const token = Deno.env.get("CRM_WEB_LEAD_TOKEN");
+  if (!token) return;
+  try {
+    const res = await fetch("https://boldremo-flow.lovable.app/api/public/web-lead", {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-web-lead-token": token },
+      body: JSON.stringify(lead),
+      signal: AbortSignal.timeout(5000),
+    });
+    if (res.status !== 200) console.error(`CRM forward failed: status ${res.status}`);
+    await res.body?.cancel();
+  } catch (e) {
+    console.error(`CRM forward failed: ${e instanceof Error ? e.name : "unknown error"}`);
+  }
+}
+
+function splitName(name: string): { firstName: string; lastName: string } {
+  const parts = name.trim().split(/\s+/);
+  return { firstName: parts[0] ?? "", lastName: parts.slice(1).join(" ") };
+}
+
 const handler = async (req: Request): Promise<Response> => {
   console.log("Received guide request");
 
@@ -316,6 +343,11 @@ const handler = async (req: Request): Promise<Response> => {
     } else {
       console.log("Guide request saved to database");
     }
+
+    await forwardToCrm({
+      ...splitName(name), email, phone: "", smsConsent: false, formType: "guide",
+      message: "Requested the Bathroom Remodel Planning Guide", details: "",
+    });
 
     // Send email via Resend
     try {
