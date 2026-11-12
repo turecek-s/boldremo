@@ -1,3 +1,4 @@
+import { Link } from "@/lib/router-compat";
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -284,6 +285,31 @@ const CostCalculator = () => {
             </div>
           </section>
         )}
+
+        <section className="section-padding bg-muted">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">What Affects the Cost of a Bathroom Remodel in Houston</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">Five choices drive most of the price:</p>
+              <ul className="space-y-4 text-muted-foreground leading-relaxed list-disc pl-5">
+                <li><strong className="text-foreground">Size.</strong> A half bath is about 25 sq ft and a large master bath is 100+ sq ft, and more floor and wall area means more tile and labor.</li>
+                <li><strong className="text-foreground">Scope.</strong> A refresh updates paint, fixtures and the vanity. A mid-range remodel adds new tile and a new shower. A full luxury renovation adds premium finishes and custom features.</li>
+                <li><strong className="text-foreground">Shower.</strong> Shower work is one of the biggest cost drivers, from keeping what you have to a walk-in glass shower with custom tile.</li>
+                <li><strong className="text-foreground">Tile.</strong> Standard ceramic runs about $12 to $20 per sq ft installed, porcelain about $18 to $32, and large-format premium porcelain about $35 to $70.</li>
+                <li><strong className="text-foreground">Plumbing changes.</strong> Keeping fixtures where they are costs less than moving the toilet, shower or sink, which means opening walls and re-routing pipes.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section className="section-padding bg-background">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">How to Use Your Estimate</h2>
+              <p className="text-muted-foreground leading-relaxed">The calculator gives a range, not a quote. Exact pricing is set at an in-home consultation, where we see your space and agree on the scope. For a sense of typical numbers, tub to shower conversions start at $7,000 and most full bathroom remodels come in around $10,000 to $21,000 all in. You can read more in our <Link to="/bathroom-remodel-cost-houston" className="text-primary underline underline-offset-2 hover:text-primary/80">bathroom remodel cost guide</Link>, or <Link to="/contact" className="text-primary underline underline-offset-2 hover:text-primary/80">contact us</Link> to book a consultation.</p>
+
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

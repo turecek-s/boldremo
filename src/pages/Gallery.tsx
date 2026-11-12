@@ -1,3 +1,4 @@
+import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
@@ -146,6 +147,17 @@ const Gallery = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding bg-muted">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">About Our Bathroom Remodeling Projects</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">These photos come from bathroom remodels we have completed across Houston, including the Heights, Bellaire, River Oaks and Kingwood. The work shown includes glass walk-in showers, freestanding soaking tubs, a walk-in tub with LED lighting, herringbone and mosaic tile, patterned tile floors and custom vanities.</p>
+              <p className="text-muted-foreground leading-relaxed">Every bathroom is planned around the home and the homeowner, so no two projects look alike. The cost depends on size, tile, shower style and plumbing changes. Try our <Link to="/cost-calculator" className="text-primary underline underline-offset-2 hover:text-primary/80">cost calculator</Link>, browse our <Link to="/services" className="text-primary underline underline-offset-2 hover:text-primary/80">services</Link>, or <Link to="/contact" className="text-primary underline underline-offset-2 hover:text-primary/80">book a consultation</Link> to talk through your own bathroom.</p>
+
             </div>
           </div>
         </section>

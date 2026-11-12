@@ -88,6 +88,40 @@ const Services = () => {
           </div>
         </section>
 
+        <section className="section-padding bg-muted">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">How a Bathroom Project Works</h2>
+              <ul className="space-y-4 text-muted-foreground leading-relaxed list-disc pl-5">
+                <li><strong className="text-foreground">Rough estimate.</strong> Tell us about your bathroom by phone, email or with our cost calculator and we will give you a free rough price range.</li>
+                <li><strong className="text-foreground">Design consultation.</strong> We visit your home, measure the space and talk through layout, tile and fixtures. The consultation fee is credited toward your project if you move forward with us.</li>
+                <li><strong className="text-foreground">Final price.</strong> Exact pricing is set after the consultation, once we have seen your space and agreed on the scope.</li>
+                <li><strong className="text-foreground">Build.</strong> We handle demolition, plumbing, waterproofing, tile, and the vanity and fixture installation.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section className="section-padding bg-background">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">What Bathroom Remodeling Costs in Houston</h2>
+              <p className="text-muted-foreground leading-relaxed">Tub to shower conversions start at $7,000. Full bathroom transformations typically run $8,000 to $15,000 in labor and installation, and most full remodels come in around $10,000 to $21,000 all in once tile, vanity and fixtures are included. Use our <Link to="/cost-calculator" className="text-primary underline underline-offset-2 hover:text-primary/80">cost calculator</Link> for a range based on your own bathroom, or read our <Link to="/bathroom-remodel-cost-houston" className="text-primary underline underline-offset-2 hover:text-primary/80">bathroom remodel cost guide</Link>.</p>
+
+            </div>
+          </div>
+        </section>
+        <section className="section-padding bg-muted">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-6">Popular Bathroom Projects</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">Tub to shower conversions are one of our most requested projects. See how the conversion works and what it costs on our <Link to="/tub-to-shower-conversion-houston" className="text-primary underline underline-offset-2 hover:text-primary/80">tub to shower conversion page</Link>.</p>
+              <p className="text-muted-foreground leading-relaxed mb-4">Walk-in tubs and aging-in-place bathrooms need extra care with floor leveling, waterproofing and door seal testing. Read <Link to="/blog/walk-in-tub-installation-houston" className="text-primary underline underline-offset-2 hover:text-primary/80">what goes into a walk-in tub installation</Link>.</p>
+              <p className="text-muted-foreground leading-relaxed"><AreaLinkedText text="We serve Houston, Heights, Bellaire, River Oaks, Kingwood & Memorial." /></p>
+
+            </div>
+          </div>
+        </section>
+
         <CTASection />
       </main>
       <Footer />
