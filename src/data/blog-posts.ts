@@ -17,6 +17,7 @@ export type BlogSection = {
 export type BlogPost = {
   slug: string;
   title: string;
+  seoTitle?: string;
   focusKeyword: string;
   metaDescription: string;
   excerpt: string;
@@ -32,6 +33,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "walk-in-tub-installation-houston",
     title:
       "Walk-In Tub Installation Houston: What Goes Into an Aging-in-Place Bathroom Remodel",
+    seoTitle: "Walk-In Tub Installation Houston | BoldREMO",
     focusKeyword: "walk-in tub installation Houston",
     metaDescription:
       "Considering a walk-in tub for aging in place? See what a proper walk-in tub installation actually involves in a Houston bathroom remodel, from waterproofing to door seal testing.",

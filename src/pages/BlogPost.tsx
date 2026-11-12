@@ -84,7 +84,7 @@ const BlogPost = () => {
     <>
       <SeoHead
         path={`/blog/${post.slug}`}
-        title={post.title}
+        title={post.seoTitle ?? post.title}
         description={post.metaDescription}
         jsonLd={jsonLd}
       />

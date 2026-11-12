@@ -217,8 +217,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
   },
   "/blog/walk-in-tub-installation-houston": {
     path: "/blog/walk-in-tub-installation-houston",
-    title:
-      "Walk-In Tub Installation Houston: What Goes Into an Aging-in-Place Bathroom Remodel",
+    title: "Walk-In Tub Installation Houston | BoldREMO",
     description:
       "Considering a walk-in tub for aging in place? See what a proper walk-in tub installation actually involves in a Houston bathroom remodel, from waterproofing to door seal testing.",
     bodyHtml: `

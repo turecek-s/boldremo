@@ -68,7 +68,7 @@ const LocalBusinessSchema = () => {
         }
       }
     ],
-"serviceType": [
+"knowsAbout": [
       "Bathroom Renovation",
       "Walk-in Shower Installation",
       "Tile Installation",

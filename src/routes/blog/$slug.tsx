@@ -7,7 +7,7 @@ export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
     const post = getBlogPost(params.slug);
     if (!post) throw notFound();
-    return { title: post.title, description: post.metaDescription };
+    return { title: post.seoTitle ?? post.title, description: post.metaDescription };
   },
   head: ({ params, loaderData }) =>
     seoHead(`/blog/${params.slug}`, {

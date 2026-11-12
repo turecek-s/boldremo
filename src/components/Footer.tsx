@@ -88,8 +88,12 @@ export const Footer = () => {
                   { name: "Gallery", path: "/gallery" },
                   { name: "About Us", path: "/about" },
                   { name: "Services", path: "/services" },
+                  { name: "Tub to Shower Conversion", path: "/tub-to-shower-conversion-houston" },
+                  { name: "Bathroom Remodel Cost", path: "/bathroom-remodel-cost-houston" },
                   { name: "Cost Calculator", path: "/cost-calculator" },
                   { name: "Blog", path: "/blog" },
+                  { name: "Resources", path: "/resources" },
+                  { name: "Press", path: "/press" },
                   { name: "For Realtors & Designers", path: "/realtors-designers" },
                   { name: "Contact", path: "/contact" },
                 ].map((link) => (
