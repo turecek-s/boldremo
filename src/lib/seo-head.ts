@@ -37,6 +37,12 @@ export function seoHead(path: string, opts: SeoOptions = {}) {
     { name: "twitter:title", content: title },
     { name: "twitter:description", content: description },
     { name: "twitter:url", content: url },
+    ...(seo?.ogImage
+      ? [
+          { property: "og:image", content: seo.ogImage },
+          { name: "twitter:image", content: seo.ogImage },
+        ]
+      : []),
     ...(opts.noindex ? [{ name: "robots", content: "noindex, nofollow" }] : []),
   ];
 

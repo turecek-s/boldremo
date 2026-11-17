@@ -8,6 +8,8 @@ export type RouteSeo = {
   description: string;
   /** Hidden HTML body content (will be visually hidden via inline style). */
   bodyHtml: string;
+  /** Optional absolute URL used for og:image and twitter:image. */
+  ogImage?: string;
 };
 
 const HIDDEN_STYLE =
@@ -223,6 +225,17 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     bodyHtml: `
       <h1>Walk-In Tub Installation Houston: What Goes Into an Aging-in-Place Bathroom Remodel</h1>
       <p>A walk-in tub installation in Houston involves floor leveling, full waterproofing, plumbing changes, door seal testing, and finish tile work. Labor and installation typically fall in the $8,000 to $15,000 range, with the tub unit and finish materials adding to that. BoldREMO installs walk-in tubs across Houston, the Heights, Bellaire, River Oaks, Kingwood, and Memorial. Call (832) 513-5737.</p>
+    `,
+  },
+  "/blog/kingwood-bathroom-remodel": {
+    path: "/blog/kingwood-bathroom-remodel",
+    title: "Kingwood Bathroom Remodel: Before and After | BoldREMO",
+    description:
+      "See a Kingwood bathroom remodel by BoldREMO: dated tile and an old tub replaced with large-format wall tile, a full-width niche, gold fixtures and a new vanity.",
+    ogImage: "https://www.boldremo.com/blog/kingwood-bathroom-remodel/kingwood-bathroom-remodel-after-tub-shower.webp",
+    bodyHtml: `
+      <h1>Kingwood Bathroom Remodel: Dated Tile Tub Surround to a Bright Modern Bath</h1>
+      <p>This Kingwood bathroom remodel is our own. We replaced a dated square-tile tub surround, speckled floor tile and a tired vanity with large-format wall tile to the ceiling, a full-width blush tile niche, brushed gold fixtures and a furniture-style vanity. The whole remodel took two weeks. Our team has remodeled 200+ bathrooms across the Houston area, including Kingwood, the Heights, Bellaire, Memorial and River Oaks.</p>
     `,
   },
   "/press": {

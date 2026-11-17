@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Link, useParams } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -49,6 +50,8 @@ const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = getBlogPost(slug);
 
+  const [openImage, setOpenImage] = useState<{ src: string; alt: string } | null>(null);
+
   if (!post) return <NotFound />;
 
   const jsonLd = {
@@ -63,6 +66,7 @@ const BlogPost = () => {
     image: {
       "@type": "ImageObject",
       caption: post.imageAlt,
+      ...(post.heroImage ? { url: `https://boldremo.com${post.heroImage}` } : {}),
     },
     author: {
       "@type": "Organization",
@@ -111,6 +115,19 @@ const BlogPost = () => {
               {formatDate(post.publishDate)}
             </time>
           </div>
+          {post.heroImage && (
+            <div className="container-custom max-w-4xl mt-10">
+              <img
+                src={post.heroImage}
+                alt={post.imageAlt}
+                width={1200}
+                height={1600}
+                loading="eager"
+                fetchPriority="high"
+                className="mx-auto w-full max-h-[640px] object-cover rounded-xl"
+              />
+            </div>
+          )}
         </section>
 
         <section className="section-padding bg-background">
@@ -142,6 +159,49 @@ const BlogPost = () => {
                 )}
               </article>
             ))}
+
+            {post.gallery && post.gallery.length > 0 && (
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-foreground mb-6">
+                  Before and After Photos
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+                  {post.gallery.map((photo) => (
+                    <button
+                      key={photo.src}
+                      type="button"
+                      onClick={() => setOpenImage(photo)}
+                      className="relative block overflow-hidden rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      aria-label={`View larger: ${photo.alt}`}
+                    >
+                      <img
+                        src={photo.src}
+                        alt={photo.alt}
+                        width={1200}
+                        height={1600}
+                        loading="lazy"
+                        className="w-full aspect-[3/4] object-cover transition-transform hover:scale-105"
+                      />
+                      <span className="absolute top-2 left-2 rounded-full bg-background/90 px-2.5 py-0.5 text-xs font-semibold text-foreground">
+                        {photo.label}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+                <Dialog open={!!openImage} onOpenChange={(open) => !open && setOpenImage(null)}>
+                  <DialogContent className="max-w-3xl p-2">
+                    <DialogTitle className="sr-only">{openImage?.alt ?? "Photo"}</DialogTitle>
+                    {openImage && (
+                      <img
+                        src={openImage.src}
+                        alt={openImage.alt}
+                        className="w-full max-h-[85vh] object-contain rounded-md"
+                      />
+                    )}
+                  </DialogContent>
+                </Dialog>
+              </div>
+            )}
 
             {post.tiktokUrl && (
               <div>

@@ -38,11 +38,25 @@ const Blog = () => {
         <section className="section-padding bg-background">
           <div className="container-custom max-w-4xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {BLOG_POSTS.map((post) => (
+              {[...BLOG_POSTS]
+                .sort((a, b) => b.publishDate.localeCompare(a.publishDate))
+                .map((post) => (
                 <article
                   key={post.slug}
                   className="rounded-xl border border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-md"
                 >
+                  {post.heroImage && (
+                    <Link to={`/blog/${post.slug}`} className="block mb-5">
+                      <img
+                        src={post.heroImage}
+                        alt={post.imageAlt}
+                        width={1200}
+                        height={900}
+                        loading="lazy"
+                        className="w-full aspect-[4/3] object-cover rounded-lg"
+                      />
+                    </Link>
+                  )}
                   <p className="text-xs uppercase tracking-widest text-secondary mb-3">
                     {post.category}
                   </p>
