@@ -168,12 +168,9 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     gallery: [
       { label: "After", src: "/blog/kingwood-bathroom-remodel/kingwood-bathroom-remodel-after-tub-shower.webp", alt: 'Kingwood bathroom remodel with large-format light beige wall tile to the ceiling, full-width blush tile niche and brushed gold rain shower over a new tub' },
-      { label: "After", src: "/blog/kingwood-bathroom-remodel/kingwood-bathroom-remodel-after-shower-niche.webp", alt: 'New tub and shower in a Kingwood TX bathroom with gold edge trim, handheld shower and recessed lights' },
       { label: "After", src: "/blog/kingwood-bathroom-remodel/kingwood-bathroom-remodel-after-shower-side.webp", alt: 'Side view of a remodeled tub surround with a long shower niche and brushed gold shower fixtures' },
       { label: "After", src: "/blog/kingwood-bathroom-remodel/kingwood-bathroom-remodel-after-vanity.webp", alt: 'Espresso freestanding vanity with white top, arched backlit mirror cabinet and gold sconces on a tile accent wall' },
-      { label: "After", src: "/blog/kingwood-bathroom-remodel/kingwood-bathroom-remodel-after-full-room.webp", alt: 'Full view of a remodeled Kingwood bathroom with lavender walls, tile accent wall and new vanity' },
       { label: "Before", src: "/blog/kingwood-bathroom-remodel/kingwood-bathroom-remodel-before-tub.webp", alt: 'Before the remodel: old tub with small white square tile surround' },
-      { label: "Before", src: "/blog/kingwood-bathroom-remodel/kingwood-bathroom-remodel-before-vanity.webp", alt: 'Before the remodel: white vanity with dark top, mosaic backsplash and speckled floor tile' },
       { label: "Before", src: "/blog/kingwood-bathroom-remodel/kingwood-bathroom-remodel-before-full-room.webp", alt: 'Before the remodel: full view of the dated bathroom with textured walls and three-light fixture' },
     ],
   },
