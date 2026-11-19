@@ -14,7 +14,8 @@ const serviceLinks = [
 ];
 
 const resourceLinks = [
-  { name: "Cost Calculator", path: "/resources#cost-calculator" },
+  { name: "Cost Calculator", path: "/cost-calculator/" },
+  { name: "Blog", path: "/blog/" },
   { name: "In-Depth Guides", path: "/resources#guides" },
   { name: "Remodel Checklist", path: "/resources#checklist" },
   { name: "Quick Tips from Pros", path: "/resources#tips" },
@@ -71,9 +72,13 @@ export const Header = () => {
   }, []);
 
   const isServiceAreaActive = location.pathname.startsWith("/service-areas");
+  // Public URLs carry a trailing slash, so compare both sides without one.
+  const withoutTrailingSlash = (path: string) =>
+    path.length > 1 ? path.replace(/\/+$/, "") : path;
+  const currentPath = withoutTrailingSlash(location.pathname);
   const isResourcesActive =
-    location.pathname === "/resources" ||
-    resourceLinks.some((r) => r.path === location.pathname);
+    currentPath === "/resources" ||
+    resourceLinks.some((r) => withoutTrailingSlash(r.path) === currentPath);
   const isServicesActive =
     location.pathname === "/services" ||
     serviceLinks.some((s) => s.path === location.pathname);

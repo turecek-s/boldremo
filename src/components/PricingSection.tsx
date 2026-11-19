@@ -83,6 +83,16 @@ export const PricingSection = () => {
         <p className="text-center text-muted-foreground text-sm max-w-2xl mx-auto">
           <em>Every home is different. Final pricing is confirmed after an in-home consult.</em>
         </p>
+        <p className="text-center text-muted-foreground text-sm max-w-2xl mx-auto mt-2">
+          You can also get a range based on your bathroom with our{" "}
+          <Link
+            to="/cost-calculator/"
+            className="text-primary underline underline-offset-2 hover:text-primary/80"
+          >
+            cost calculator
+          </Link>
+          .
+        </p>
       </div>
     </section>
   );

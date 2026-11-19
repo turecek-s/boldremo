@@ -220,7 +220,7 @@ const BathroomRemodelCost = () => {
               <p className="text-lg text-foreground mb-6">
                 Want a faster estimate? Try our{" "}
                 <Link
-                  to="/cost-calculator"
+                  to="/cost-calculator/"
                   className="text-primary underline font-medium"
                 >
                   Cost Calculator
