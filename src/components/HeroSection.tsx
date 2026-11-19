@@ -15,7 +15,7 @@ export const HeroSection = () => {
       <div className="container-custom grid items-center gap-8 text-center px-4 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-10 lg:text-left xl:grid-cols-[minmax(0,1fr)_400px]">
         <div className="min-w-0 max-w-2xl mx-auto lg:mx-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-semibold text-primary mb-4 text-balance">
-            Houston Bathroom Remodeling
+            Houston Bathroom Remodeling{' '}
             <br />
             <span className="text-foreground">Built Right, Start to Finish</span>
           </h1>
