@@ -13,13 +13,7 @@ const LocalBusinessSchema = () => {
       "@type": "PostalAddress",
       "addressLocality": "Houston",
       "addressRegion": "TX",
-      "postalCode": "77007",
       "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "29.7604",
-      "longitude": "-95.3698"
     },
     "areaServed": [
       {
@@ -62,6 +56,18 @@ const LocalBusinessSchema = () => {
       {
         "@type": "Neighborhood",
         "name": "Memorial",
+        "containedInPlace": {
+          "@type": "City",
+          "name": "Houston"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Humble"
+      },
+      {
+        "@type": "Neighborhood",
+        "name": "Rice Military",
         "containedInPlace": {
           "@type": "City",
           "name": "Houston"
@@ -111,7 +117,7 @@ const LocalBusinessSchema = () => {
           "itemOffered": {
             "@type": "Service",
             "name": "Luxury Spa Bathroom",
-            "description": "Premium spa-inspired bathroom design and build with high-end finishes"
+            "description": "Spa-inspired bathroom design and build with quality finishes"
           }
         }
       ]
