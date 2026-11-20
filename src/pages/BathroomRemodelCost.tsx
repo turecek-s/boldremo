@@ -162,7 +162,7 @@ const BathroomRemodelCost = () => {
                   <strong className="text-foreground">Heated floors.</strong>
                 </p>
                 <p>
-                  <strong className="text-foreground">High-end stone or imported tile.</strong>
+                  <strong className="text-foreground">Quality stone or imported tile.</strong>
                 </p>
                 <p>
                   <strong className="text-foreground">Size of the bathroom.</strong>

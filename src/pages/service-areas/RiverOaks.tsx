@@ -11,7 +11,7 @@ const RiverOaks = () => {
   const services = [
     "Estate bathroom renovations",
     "Custom tile and stonework",
-    "High-end fixture installation",
+    "Quality fixture installation",
     "Master suite transformations",
     "Designer vanity installation",
     "Premium flooring services",

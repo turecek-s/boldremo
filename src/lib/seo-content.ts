@@ -55,7 +55,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       <h2>Total All-In Investment</h2>
       <p>Smaller full bathroom transformation $10,000 to $21,000 total. Master bathroom renovation $20,000 to $55,000+ total. Luxury spa build $50,000 and up.</p>
       <h2>What Drives Cost Up</h2>
-      <p>Layout changes, larger tile formats, custom shower details, heated floors, high-end stone, and bathroom size.</p>
+      <p>Layout changes, larger tile formats, custom shower details, heated floors, quality stone, and bathroom size.</p>
       <h2>A Few Things People Ask</h2>
       <p>Why do remodel quotes vary so much? Because scope, materials, and layout changes all drive cost. Can I supply my own materials? Yes. How long does a remodel take? 7 to 12 days for smaller full bathroom, 3 to 6 weeks for master renovation.</p>
       <h2>How to Get an Accurate Number</h2>
@@ -175,7 +175,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       "Heights bathroom remodeling for 1920s bungalows and new builds, from tight hall baths to design-driven master suites. Book a $75 consult, (832) 513-5737.",
     bodyHtml: `
       <h1>Bathroom Remodeling in Houston Heights</h1>
-      <p>BoldREMO specializes in bathroom remodeling for Houston Heights, a neighborhood where historic bungalows and craftsman homes meet modern comfort. We respect original architecture while delivering contemporary functionality and high-end finishes.</p>
+      <p>BoldREMO specializes in bathroom remodeling for Houston Heights, a neighborhood where historic bungalows and craftsman homes meet modern comfort. We respect original architecture while delivering contemporary functionality and quality finishes.</p>
       <h2>Heights-Specific Expertise</h2>
       <p>Working with older Heights homes requires careful planning around existing plumbing, original tile, and unique layouts. Our team has deep experience updating Heights bathrooms while preserving the character that makes the neighborhood special.</p>
       <p>Call BoldREMO at (832) 513-5737 to book your Heights bathroom consult.</p>
@@ -201,7 +201,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
       "River Oaks bathroom remodeling built to your designer's drawings, from primary suites to powder rooms. Book a $75 consult, (832) 513-5737.",
     bodyHtml: `
       <h1>Bathroom Remodeling in River Oaks</h1>
-      <p>BoldREMO delivers high-end bathroom renovations that match the elegance of River Oaks estates. Our River Oaks projects feature premium porcelain tile, frameless glass, freestanding soaking tubs, heated floors, and smart home integration.</p>
+      <p>BoldREMO delivers quality bathroom renovations that match the elegance of River Oaks estates. Our River Oaks projects feature premium porcelain tile, frameless glass, freestanding soaking tubs, heated floors, and smart home integration.</p>
       <h2>Spa-Quality Craftsmanship</h2>
       <p>Every River Oaks bathroom we build is treated as a personal sanctuary. We work with the finest materials and most experienced craftsmen to deliver renovations worthy of the neighborhood.</p>
       <p>Call BoldREMO at (832) 513-5737 to book your River Oaks bathroom consult.</p>

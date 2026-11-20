@@ -106,7 +106,7 @@ const Bellaire = () => {
               <div className="bg-card p-8 rounded-lg shadow-sm">
                 <h3 className="text-xl font-serif font-bold mb-4">Premium Focus</h3>
                 <p className="text-muted-foreground">
-                  We specialize in high-end bathroom renovations that meet the elevated standards of Bellaire homeowners.
+                  We specialize in quality bathroom renovations that meet the elevated standards of Bellaire homeowners.
                 </p>
               </div>
               <div className="bg-card p-8 rounded-lg shadow-sm">
