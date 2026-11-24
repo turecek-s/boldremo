@@ -40,9 +40,9 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
   },
   "/bathroom-remodel-cost-houston": {
     path: "/bathroom-remodel-cost-houston",
-    title: "How Much Does a Bathroom Remodel Cost in Houston? | BoldREMO",
+    title: "Bathroom Remodel Cost in Houston: What to Budget | BoldREMO",
     description:
-      "Real bathroom remodel cost data for Houston homeowners from BoldREMO. What you pay BoldREMO, what you spend on materials, and what to expect total. Call (832) 513-5737.",
+      "Real Houston bathroom remodel cost ranges from BoldREMO. See labor, materials you buy, and typical totals. Free rough estimates by phone or text.",
     bodyHtml: `
       <h1>How Much Does a Bathroom Remodel Cost in Houston?</h1>
       <p>The honest answer is it depends, but here's how BoldREMO breaks it down so you know what to expect before you call anyone.</p>
@@ -86,9 +86,9 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
   },
   "/gallery": {
     path: "/gallery",
-    title: "Bathroom Remodel Gallery Houston | BoldREMO Project Photos",
+    title: "Real Bathroom Remodel Photos in Houston | BoldREMO",
     description:
-      "Browse real bathroom remodel projects by BoldREMO across Houston, Heights, Bellaire, River Oaks, Kingwood & Memorial. Walk-in showers, soaking tubs, custom tile.",
+      "Browse real BoldREMO bathroom remodels in Houston, Heights, Bellaire, River Oaks, Kingwood, and Memorial. Walk-in showers, soaking tubs, and custom tile.",
     bodyHtml: `
       <h1>BoldREMO Bathroom Remodel Gallery, Houston, TX</h1>
       <p>Explore real bathroom remodel projects completed by BoldREMO across Houston and surrounding neighborhoods. Each project showcases our craftsmanship in tile work, custom showers, vanities, and full bathroom renovations.</p>
@@ -302,9 +302,9 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
   },
   "/service-areas/memorial": {
     path: "/service-areas/memorial",
-    title: "Bathroom Remodeling Memorial Houston TX | BoldREMO",
+    title: "Quality Bathroom Remodels in Memorial, Houston | BoldREMO",
     description:
-      "Memorial bathroom remodeling: opening up 1960s to 1980s master baths and upgrading finishes in newer custom builds. Book a $75 consult, (832) 513-5737.",
+      "Bathroom remodeling in Memorial, Houston by BoldREMO. Quality work for older homes and newer builds. Free rough estimates by phone, email, or text.",
     bodyHtml: `
       <h1>Bathroom Remodeling in Memorial, Houston</h1>
       <p>BoldREMO serves Memorial homeowners with upscale bathroom remodeling. Memorial is a heavily wooded area of large lots near Memorial Park and the Villages, with a mix of new-builds and older homes from the 1960s through the 1980s that are ready for bathroom updates.</p>

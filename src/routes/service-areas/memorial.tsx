@@ -3,6 +3,6 @@ import Memorial from "@/pages/service-areas/Memorial";
 import { seoHead } from "@/lib/seo-head";
 
 export const Route = createFileRoute("/service-areas/memorial")({
-  head: () => seoHead("/service-areas/memorial", { title: "Bathroom Remodeling in Memorial Houston | BoldREMO" }),
+  head: () => seoHead("/service-areas/memorial", { title: "Quality Bathroom Remodels in Memorial, Houston | BoldREMO" }),
   component: Memorial,
 });

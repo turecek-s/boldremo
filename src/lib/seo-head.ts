@@ -2,9 +2,9 @@ import { ROUTE_SEO } from "@/lib/seo-content";
 
 export const SITE_URL = "https://www.boldremo.com";
 
-export const HOME_TITLE = "BoldREMO | Bathroom Remodeling & Tile Installation Houston";
+export const HOME_TITLE = "Bathroom and Kitchen Remodeling in Houston | BoldREMO";
 export const HOME_DESCRIPTION =
-  "Houston bathroom remodeling experts. Custom renovations & tile installation in Heights, Bellaire, River Oaks, Kingwood & Memorial. Call (832) 513-5737";
+  "Quality bathroom and kitchen remodels in Houston, Heights, Bellaire, River Oaks, Kingwood, and Memorial by BoldREMO. Free rough estimates by phone or text.";
 
 /** Canonical URL for a route path. Public URLs always use the trailing-slash form. */
 export function canonicalUrl(path: string): string {
