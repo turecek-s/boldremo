@@ -12,6 +12,7 @@ export const FounderCredibility = () => (
       <img
         src={stanHeadshot}
         alt="Stan, BoldREMO owner and lead craftsman"
+        loading="lazy"
         width={72}
         height={72}
         className="h-16 w-16 shrink-0 rounded-full object-cover md:h-[72px] md:w-[72px]"
