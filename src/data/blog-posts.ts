@@ -12,6 +12,8 @@ export type BlogSection = {
   heading?: string;
   paragraph: string;
   bullets?: BlogBullet[];
+  /** Area names to link to their area pages (first mention each). */
+  linkAreas?: string[];
 };
 
 export type BlogPost = {
@@ -28,6 +30,7 @@ export type BlogPost = {
   gallery?: { src: string; alt: string; label: "Before" | "After" }[];
   tiktokUrl?: string;
   body: BlogSection[];
+  relatedLinks?: { label: string; to: string }[];
 };
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -92,6 +95,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         heading: "Serving Houston, Heights, Bellaire, River Oaks, Kingwood, and Memorial",
+        linkAreas: ["Houston", "Heights", "Bellaire", "River Oaks", "Kingwood", "Memorial"],
         paragraph:
           "BoldREMO installs walk-in tubs and full bathroom remodels throughout the Houston area, including the Heights, Bellaire, River Oaks, Kingwood, and Memorial. If you're exploring aging-in-place options for yourself or a family member, we're happy to talk through what makes sense for your bathroom.",
       },
@@ -163,6 +167,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         heading: 'Planning a Bathroom Remodel in Kingwood or Houston?',
+        linkAreas: ['Kingwood'],
         paragraph: 'Our team has remodeled 200+ bathrooms across the Houston area, including Kingwood, the Heights, Bellaire, Memorial and River Oaks. If your bathroom has dated tile, an old tub or a vanity that no longer works for you, contact BoldREMO to talk about your Kingwood bathroom remodel and get an estimate.',
       },
     ],

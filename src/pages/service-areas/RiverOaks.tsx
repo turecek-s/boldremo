@@ -6,6 +6,14 @@ import { Button } from "@/components/ui/button";
 import { BrandName } from "@/components/BrandName";
 import { Phone, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
 import serviceBathroom from "@/assets/service-bathroom.jpg";
+import { RelatedPages } from "@/components/RelatedPages";
+const relatedLinks = [
+  { label: "Tub to shower conversion", to: "/tub-to-shower-conversion-houston/" },
+  { label: "Bathroom remodel cost guide", to: "/bathroom-remodel-cost-houston/" },
+  { label: "Our work gallery", to: "/gallery/" },
+  { label: "Walk-in tub installation", to: "/blog/walk-in-tub-installation-houston/" },
+];
+
 
 const RiverOaks = () => {
   const services = [
@@ -178,6 +186,13 @@ const RiverOaks = () => {
                 </span>
               ))}
             </div>
+          </div>
+        </section>
+
+
+        <section className="pb-16 bg-background">
+          <div className="container-custom max-w-3xl">
+            <RelatedPages links={relatedLinks} />
           </div>
         </section>
 

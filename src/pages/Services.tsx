@@ -77,6 +77,21 @@ const Services = () => {
               ))}
             </div>
 
+            <div className="mt-10 text-center text-muted-foreground space-y-2">
+              <p>
+                We serve:{" "}
+                <Link to="/service-areas/houston/" className="text-primary underline underline-offset-2 hover:text-primary/80">Houston</Link>,{" "}
+                <Link to="/service-areas/heights/" className="text-primary underline underline-offset-2 hover:text-primary/80">The Heights</Link>,{" "}
+                <Link to="/service-areas/bellaire/" className="text-primary underline underline-offset-2 hover:text-primary/80">Bellaire</Link>,{" "}
+                <Link to="/service-areas/river-oaks/" className="text-primary underline underline-offset-2 hover:text-primary/80">River Oaks</Link>,{" "}
+                <Link to="/service-areas/kingwood/" className="text-primary underline underline-offset-2 hover:text-primary/80">Kingwood</Link>,{" "}
+                <Link to="/service-areas/memorial/" className="text-primary underline underline-offset-2 hover:text-primary/80">Memorial</Link>
+              </p>
+              <p>
+                <Link to="/blog/kingwood-bathroom-remodel/" className="text-primary underline underline-offset-2 hover:text-primary/80">Before and after: a Kingwood bathroom remodel</Link>
+              </p>
+            </div>
+
             <div className="mt-16 text-center">
               <p className="text-lg text-muted-foreground mb-6">
                 Ready to start your bathroom renovation project?

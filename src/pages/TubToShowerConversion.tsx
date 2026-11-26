@@ -2,6 +2,7 @@ import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
+import { RelatedPages } from "@/components/RelatedPages";
 import { SeoHead } from "@/components/SeoHead";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail } from "lucide-react";
@@ -201,6 +202,18 @@ const TubToShowerConversion = () => {
                 Or <Link to="/contact" className="text-primary underline">book your bathroom consult online</Link>.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section className="pb-16 bg-background">
+          <div className="container-custom max-w-3xl">
+            <RelatedPages
+              links={[
+                { label: "Bathroom remodel cost guide", to: "/bathroom-remodel-cost-houston/" },
+                { label: "Walk-in tub installation", to: "/blog/walk-in-tub-installation-houston/" },
+                { label: "Our work gallery", to: "/gallery/" },
+              ]}
+            />
           </div>
         </section>
 

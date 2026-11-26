@@ -4,6 +4,8 @@ import { Link, useParams } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
+import { AreaLinkedText } from "@/components/AreaLinkedText";
+import { RelatedPages } from "@/components/RelatedPages";
 import { SeoHead } from "@/components/SeoHead";
 import NotFound from "@/pages/NotFound";
 import { getBlogPost, getTikTokVideoId } from "@/data/blog-posts";
@@ -140,7 +142,11 @@ const BlogPost = () => {
                   </h2>
                 )}
                 <p className="text-muted-foreground leading-relaxed">
-                  {section.paragraph}
+                  {section.linkAreas ? (
+                    <AreaLinkedText text={section.paragraph} only={section.linkAreas} />
+                  ) : (
+                    section.paragraph
+                  )}
                 </p>
                 {section.bullets && (
                   <ul className="mt-4 space-y-3">
@@ -210,6 +216,10 @@ const BlogPost = () => {
                 </h2>
                 <TikTokEmbed url={post.tiktokUrl} />
               </div>
+            )}
+
+            {post.relatedLinks && post.relatedLinks.length > 0 && (
+              <RelatedPages links={post.relatedLinks} />
             )}
           </div>
         </section>
