@@ -105,15 +105,15 @@ export const BLOG_POSTS: BlogPost[] = [
     metaDescription:
       "See a Kingwood bathroom remodel by BoldREMO: dated tile and an old tub replaced with large-format wall tile, a full-width niche, gold fixtures and a new vanity.",
     excerpt:
-      "This Kingwood bathroom remodel is our own. We replaced a dated square-tile tub surround, speckled floor tile and a tired vanity with large-format wall tile to the ceiling, a full-width blush tile niche, brushed gold fixtures and a furniture-style vanity.",
+      "In this Kingwood bathroom remodel, we replaced a dated square-tile tub surround, speckled floor tile and a tired vanity with large-format wall tile to the ceiling, a full-width blush tile niche, brushed gold fixtures and a furniture-style vanity.",
     category: "Bathroom Remodels",
     publishDate: "2026-11-17",
     heroImage: "/blog/kingwood-bathroom-remodel/kingwood-bathroom-remodel-after-tub-shower.webp",
     imageAlt: 'Kingwood bathroom remodel with large-format light beige wall tile to the ceiling, full-width blush tile niche and brushed gold rain shower over a new tub',
     body: [
       {
-        heading: 'A Kingwood Bathroom Remodel Close to Home',
-        paragraph: 'This Kingwood bathroom remodel is a little different from our usual project write-ups, because it is our own home. We wanted a bathroom that feels bright and calm, is easy to clean in Houston humidity, and shows the kind of finish work we do for clients every day.',
+        heading: 'About This Kingwood Bathroom Remodel',
+        paragraph: 'For this Kingwood bathroom remodel, the goal was a bathroom that feels bright and calm, is easy to clean in Houston humidity, and shows the kind of finish work we do for clients every day.',
       },
       {
         heading: 'Before: What We Started With',

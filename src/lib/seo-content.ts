@@ -235,7 +235,7 @@ export const ROUTE_SEO: Record<string, RouteSeo> = {
     ogImage: "https://www.boldremo.com/blog/kingwood-bathroom-remodel/kingwood-bathroom-remodel-after-tub-shower.webp",
     bodyHtml: `
       <h1>Kingwood Bathroom Remodel: Dated Tile Tub Surround to a Bright Modern Bath</h1>
-      <p>This Kingwood bathroom remodel is our own. We replaced a dated square-tile tub surround, speckled floor tile and a tired vanity with large-format wall tile to the ceiling, a full-width blush tile niche, brushed gold fixtures and a furniture-style vanity. The whole remodel took two weeks. Our team has remodeled 200+ bathrooms across the Houston area, including Kingwood, the Heights, Bellaire, Memorial and River Oaks.</p>
+      <p>In this Kingwood bathroom remodel, we replaced a dated square-tile tub surround, speckled floor tile and a tired vanity with large-format wall tile to the ceiling, a full-width blush tile niche, brushed gold fixtures and a furniture-style vanity. For this Kingwood bathroom remodel, the goal was a bathroom that feels bright and calm, is easy to clean in Houston humidity, and shows the kind of finish work we do for clients every day. The whole remodel took two weeks. Our team has remodeled 200+ bathrooms across the Houston area, including Kingwood, the Heights, Bellaire, Memorial and River Oaks.</p>
     `,
   },
   "/press": {
