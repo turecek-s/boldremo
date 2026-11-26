@@ -9,9 +9,11 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!post) throw notFound();
     return { title: post.seoTitle ?? post.title, description: post.metaDescription };
   },
-  head: ({ params, loaderData }) =>
-    seoHead(`/blog/${params.slug}`, {
+  head: ({ params, loaderData }) => {
+    const head = seoHead(`/blog/${params.slug}`, {
       ...(loaderData ? { title: loaderData.title, description: loaderData.description } : {}),
-    }),
+    });
+    return { ...head, meta: [...head.meta, { property: "og:type", content: "article" }] };
+  },
   component: BlogPost,
 });

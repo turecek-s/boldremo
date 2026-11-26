@@ -6,7 +6,7 @@ const LocalBusinessSchema = () => {
     "@id": "https://www.boldremo.com/#organization",
     "name": "BoldREMO LLC",
 "description": "BoldREMO LLC is a professional bathroom remodeling and tile installation contractor serving Houston, The Heights, Bellaire, River Oaks, Kingwood & Memorial TX. Specializing in bathroom renovations, walk-in showers, custom tile work, and flooring installation.",
-    "url": "https://www.boldremo.com",
+    "url": "https://www.boldremo.com/",
     "telephone": "+1-832-513-5737",
     "email": "info@boldremo.com",
     "address": {

@@ -138,11 +138,11 @@ const resourcesJsonLd = {
   "@type": "Article",
   "headline": "Bathroom Remodeling Resources & Planning Guides",
   "description": "Free bathroom remodeling guides, cost breakdowns, planning checklists, and tips from Houston's BoldREMO team. Plan your renovation with confidence.",
-  "url": "https://www.boldremo.com/resources",
+  "url": "https://www.boldremo.com/resources/",
   "author": {
     "@type": "Organization",
     "name": "BoldREMO",
-    "url": "https://www.boldremo.com",
+    "url": "https://www.boldremo.com/",
   },
   "publisher": {
     "@type": "Organization",
@@ -154,7 +154,7 @@ const resourcesJsonLd = {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.boldremo.com/resources",
+    "@id": "https://www.boldremo.com/resources/",
   },
 };
 

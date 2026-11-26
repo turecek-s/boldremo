@@ -4,7 +4,6 @@ import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
 import { FounderCredibility } from "@/components/FounderCredibility";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
-import ImageGallerySchema from "@/components/ImageGallerySchema";
 
 // Lazy load below-the-fold sections to reduce initial JS
 const PricingSection = lazy(() => import("@/components/PricingSection").then((m) => ({ default: m.PricingSection })));
@@ -35,7 +34,6 @@ const Index = () => {
   return (
     <>
       <LocalBusinessSchema />
-      <ImageGallerySchema />
       <Header />
       <main>
         <HeroSection />

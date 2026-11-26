@@ -66,21 +66,21 @@ const BlogPost = () => {
     image: {
       "@type": "ImageObject",
       caption: post.imageAlt,
-      ...(post.heroImage ? { url: `https://boldremo.com${post.heroImage}` } : {}),
+      ...(post.heroImage ? { url: `https://www.boldremo.com${post.heroImage}` } : {}),
     },
     author: {
       "@type": "Organization",
       name: "BoldREMO LLC",
-      url: "https://www.boldremo.com",
+      url: "https://www.boldremo.com/",
     },
     publisher: {
       "@type": "Organization",
       name: "BoldREMO LLC",
-      url: "https://www.boldremo.com",
+      url: "https://www.boldremo.com/",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.boldremo.com/blog/${post.slug}`,
+      "@id": `https://www.boldremo.com/blog/${post.slug}/`,
     },
   };
 
