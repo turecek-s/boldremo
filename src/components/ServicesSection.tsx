@@ -2,8 +2,8 @@ import { Link } from "@/lib/router-compat";
 import { Button } from "@/components/ui/button";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { Clock, ArrowRight } from "lucide-react";
-import boldremo7 from "@/assets/boldremo-7.jpg";
-import boldremo8 from "@/assets/boldremo-8.jpg";
+import boldremo7 from "@/assets/boldremo-7.webp";
+import boldremo8 from "@/assets/boldremo-8.webp";
 import serviceBathroom from "@/assets/service-bathroom.jpg";
 
 const packages = [

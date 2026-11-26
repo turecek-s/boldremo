@@ -2,14 +2,14 @@ import { Link } from "@/lib/router-compat";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
-import boldremo1 from "@/assets/boldremo-1.jpg";
-import boldremo2 from "@/assets/boldremo-2.jpg";
-import boldremo3 from "@/assets/boldremo-3.jpg";
+import boldremo1 from "@/assets/boldremo-1.webp";
+import boldremo2 from "@/assets/boldremo-2.webp";
+import boldremo3 from "@/assets/boldremo-3.webp";
 
 const images = [
-  { src: boldremo1, alt: "Glass walk-in shower with porcelain tile and freestanding tub in Houston TX" },
-  { src: boldremo2, alt: "Spa-style master bathroom with chandelier and glass shower in Bellaire Houston" },
-  { src: boldremo3, alt: "Modern bathroom with decorative tile accent wall and soaking tub in River Oaks TX" },
+  { src: boldremo1, width: 1080, height: 1440, alt: "Glass walk-in shower with porcelain tile and freestanding tub in Houston TX" },
+  { src: boldremo2, width: 1080, height: 804, alt: "Spa-style master bathroom with chandelier and glass shower in Bellaire Houston" },
+  { src: boldremo3, width: 1080, height: 1440, alt: "Modern bathroom with decorative tile accent wall and soaking tub in River Oaks TX" },
 ];
 
 export const GalleryPreview = () => {
@@ -31,6 +31,8 @@ export const GalleryPreview = () => {
               <ResponsiveImage
                 src={image.src}
                 alt={image.alt}
+                width={image.width}
+                height={image.height}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />

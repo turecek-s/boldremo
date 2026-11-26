@@ -3,16 +3,16 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { SeoHead } from "@/components/SeoHead";
-import boldremo1 from "@/assets/boldremo-1.jpg";
-import boldremo2 from "@/assets/boldremo-2.jpg";
-import boldremo3 from "@/assets/boldremo-3.jpg";
-import boldremo4 from "@/assets/boldremo-4.jpg";
-import boldremo5 from "@/assets/boldremo-5.jpg";
-import boldremo6 from "@/assets/boldremo-6.jpg";
-import boldremo7 from "@/assets/boldremo-7.jpg";
-import boldremo8 from "@/assets/boldremo-8.jpg";
-import boldremo9 from "@/assets/boldremo-9.jpg";
-import boldremo10 from "@/assets/boldremo-10.jpg";
+import boldremo1 from "@/assets/boldremo-1.webp";
+import boldremo2 from "@/assets/boldremo-2.webp";
+import boldremo3 from "@/assets/boldremo-3.webp";
+import boldremo4 from "@/assets/boldremo-4.webp";
+import boldremo5 from "@/assets/boldremo-5.webp";
+import boldremo6 from "@/assets/boldremo-6.webp";
+import boldremo7 from "@/assets/boldremo-7.webp";
+import boldremo8 from "@/assets/boldremo-8.webp";
+import boldremo9 from "@/assets/boldremo-9.webp";
+import boldremo10 from "@/assets/boldremo-10.webp";
 
 const images = [
   { 

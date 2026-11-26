@@ -5,7 +5,7 @@ import { BrandName } from "@/components/BrandName";
 import { SeoHead } from "@/components/SeoHead";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { CheckCircle } from "lucide-react";
-import boldremo9 from "@/assets/boldremo-9.jpg";
+import boldremo9 from "@/assets/boldremo-9.webp";
 import stanHeadshot from "@/assets/stan-headshot.webp";
 
 const values = [
@@ -64,6 +64,8 @@ const About = () => {
                   src={boldremo9}
                   alt="BoldREMO bathroom remodeling craftsmanship"
                   className="w-full rounded-lg shadow-xl"
+                  width={659}
+                  height={879}
                   loading="lazy"
                 />
                 <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary rounded-lg flex items-center justify-center text-primary-foreground">
